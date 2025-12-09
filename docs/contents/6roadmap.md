@@ -1,0 +1,46 @@
+# Global QQ Roadmap
+
+## 2026 Roadmap
+
+### Q1 2026 – Macro, Fundamentals, Tokenomics
+
+In Q1 2026 we focus on the **core structural layer**:
+
+- **Macro & Crypto Macro agents (b)**  
+  Global Market regime, liquidity conditions, BTC/ETH cycle and sector rotations.
+- **Fundamentals agents (x)**  
+  Team, company setup, product, execution quality.
+      - Versions
+      - v0 – Internal alpha
+      - v1 – Public dashboard
+    
+- **Tokenomics agents (y)**  
+  Supply, emissions, unlocks, allocation and incentive design.
+
+Objective: deliver the **first full QQ Score** driven by macro context, project quality and token design.
+
+---
+
+### Q2 2026 – On-Chain & Technical Analysis
+
+In Q2 2026 we add the **behavioural and market-structure layer**:
+
+- **On-chain agents (z)**  
+  Holders, smart money, liquidity distribution, on-chain activity.
+- **Technical Analysis agents (a)**  
+  Trend, key levels, volatility and market structure.
+
+Objective: make QQ **market-aware**, combining structural quality (Q1) with **real usage on-chain** and **price action on charts**.
+
+### Q3 2026 – API & agent-to-agent
+
+
+---
+
+### Cadence & Principles
+
+- Cadence: **progressive rollout**, starting from Q1 2026, with agents released and improved on a continuous basis.
+- Principles:
+  - **Incremental** – add one dimension at a time, keep it explainable.
+  - **Versioned** – each change tracked in the Changelog with model version.
+  - **Data-first** – every new agent goes live only after passing stability and data-quality checks.

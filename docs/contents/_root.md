@@ -1,0 +1,178 @@
+- QQ Documentation
+
+  - Overview
+    - What is QQ
+    - Why QQ exists
+    - How QQ Scores & AI Agents work
+
+- AI Agents
+    - What is an “AI Agent”
+    - What is “x”
+    - What is “y”
+    - What is “z”
+    - What is “a”
+    - What is “b”
+    - How they interact with each other
+    - Weights between macro scores
+    - Score range (0–100 / percentile / ranking)
+    - Decay / time-based update mechanisms
+    
+  - How to Read QQ Scores
+    - How to interpret scores
+    - What “undervalued / overvalued” means in QQ
+    - 3 differents timeframes time-based update mechanisms per chi vuole accellerare accettando il rischio o chi opera più sul lungo termine
+    - Score range (0–100 / percentile / 3 ranking for different timeframes ( 24h, 30g, 365g)
+    - Known limitations of the system
+    - How an agent contributes to the final score improving by time
+    
+  - Pipeline
+    - Score update frequency: we know that timing matters. its for this that we try to go more close to source of datas. maintein this to the top is a priority for us
+    - Quality checks and anti-spam filters
+
+  
+  
+- Tokenomics
+
+- Airdrop
+
+- Global QQ Roadmap
+  - Global Roadmap
+      - v2 – API & agent-to-agent
+
+
+- Macro Score #1 – Fundamentals
+  - Fundamentals Score
+    - About Fundamentals
+      - What it measures (team, company, product)
+      - Why it matters
+    - AI Agents (5)
+      - Agent F1 – Team & Governance
+      - Agent F2 – Product & PMF
+      - Agent F3 – Security & Compliance
+      - Agent F4 – Business Model & Revenue
+      - Agent F5 – Partners & Backers
+    - Score Tokenomics – Fundamentals
+      - Internal weights between the 5 agents
+      - Fundamentals score range
+      - Update rules
+    - Data Sources
+      - Whitepaper, website, pitch deck
+      - GitHub / docs / audits
+    - Examples & Case Studies
+      - Example of high Fundamentals project
+      - Example of low Fundamentals project
+
+- Macro Score #2 – Tokenomics
+  - Tokenomics Score
+    - About Tokenomics
+      - What it measures (emission, inflation/deflation, utility)
+    - AI Agents (5)
+      - Agent T1 – Emission & Schedule
+      - Agent T2 – Supply Distribution
+      - Agent T3 – Utility & Sink Mechanisms
+      - Agent T4 – Incentive Design (LP, staking, farming)
+      - Agent T5 – Vesting & Unlock Risk
+    - Score Tokenomics – Tokenomics
+      - Internal weights between the 5 agents
+      - Ranges and critical thresholds
+    - Roadmap – Tokenomics Agents
+      - Month 6 – Launch T1
+      - Month 7 – Launch T2
+      - Month 8 – Launch T3
+      - Month 9 – Launch T4
+      - Month 10 – Launch T5
+    - Data Sources
+      - Tokenomics docs
+      - Explorer & allocation data
+    - Examples & Case Studies
+
+- Macro Score #3 – On-Chain
+  - On-Chain Score
+    - About On-Chain
+      - What it measures (holders, distribution, key movements)
+    - AI Agents (5)
+      - Agent O1 – Holder Distribution
+      - Agent O2 – Whale & Smart Money Tracking
+      - Agent O3 – Liquidity Concentration & Fragmentation
+      - Agent O4 – On-chain Activity & Retention
+      - Agent O5 – Risk Flags (wash, sybil, CEX exposure)
+    - Score Tokenomics – On-Chain
+      - Internal weights
+      - Alert triggers
+    - Roadmap – On-Chain Agents
+      - Month 11 – Launch O1
+      - Month 12 – Launch O2
+      - Month 13 – Launch O3
+      - Month 14 – Launch O4
+      - Month 15 – Launch O5
+    - Data Sources
+      - Chain list (ETH, SOL, etc.)
+      - Providers / APIs used
+    - Examples & Case Studies
+
+- Macro Score #4 – DeFi & Liquidity
+  - DeFi & Liquidity Score
+    - About DeFi & Liquidity
+      - DEX, lending, stablecoins, market depth
+    - AI Agents (5)
+      - Agent D1 – DEX Liquidity & Slippage
+      - Agent D2 – Lending & Borrowing Health
+      - Agent D3 – Yield Quality & Sustainability
+      - Agent D4 – Protocol Dependency & Stack Risk
+      - Agent D5 – Cross-chain Liquidity & Bridges
+    - Score Tokenomics – DeFi & Liquidity
+      - Internal weights and key metrics (TVL, depth, etc.)
+    - Roadmap – DeFi Agents
+      - Month 16 – Launch D1
+      - Month 17 – Launch D2
+      - Month 18 – Launch D3
+      - Month 19 – Launch D4
+      - Month 20 – Launch D5
+    - Data Sources
+      - DeFiLlama, Dune, etc.
+    - Examples & Case Studies
+
+- Macro Score #5 – Narrative & Sentiment
+  - Narrative & Sentiment Score
+    - About Narrative & Sentiment
+      - What it measures (hype, narrative, social, KOL)
+    - AI Agents (5)
+      - Agent N1 – Social Volume & Velocity
+      - Agent N2 – KOL Quality & Track Record
+      - Agent N3 – News & Narrative Alignment
+      - Agent N4 – Community Health & Retention
+      - Agent N5 – Sentiment vs Price Divergence
+    - Score Tokenomics – Narrative
+      - Internal weights
+      - “Overhype” / “underrated” thresholds
+    - Roadmap – Narrative Agents
+      - Month 21 – Launch N1
+      - Month 22 – Launch N2
+      - Month 23 – Launch N3
+      - Month 24 – Launch N4
+      - Month 25 – Launch N5
+    - Data Sources
+      - X, Reddit, Telegram, etc.
+    - Examples & Case Studies
+
+
+- Integrations & API
+  - API & Access
+    - How to query scores via API
+    - Output formats (JSON, etc.)
+
+Contributions
+
+  - Contribute to QQ
+    - How to propose new agents
+    - How to propose new metrics / categories
+    - feedback
+
+- FAQ & Changelog
+  - FAQ
+    - Common questions about scores, data, limits
+  - Changelog
+    - Release notes for:
+      - New agents
+      - Weight changes
+      - New integrations
