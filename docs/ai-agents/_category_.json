@@ -1,6 +1,6 @@
 {
-  "label": "__Tutorial - Basics",
-  "position": 99,
+  "label": "AI Agents",
+  "position": 3,
   "link": {
     "type": "generated-index",
     "description": "5 minutes to learn the most important Docusaurus concepts."
