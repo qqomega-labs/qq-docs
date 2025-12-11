@@ -1,0 +1,91 @@
+/**
+ * Footer Wrapper Styles - Crypto Theme
+ * Glassmorphism with gradient accents
+ */
+
+.footerWrapper {
+  /* Glassmorphism footer */
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.98) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Add top border with gradient */
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+
+  /* Add subtle box shadow */
+  box-shadow: 0 -4px 32px 0 rgba(0, 0, 0, 0.3);
+
+  position: relative;
+
+  /* Ensure footer stays at bottom */
+  margin-top: auto;
+}
+
+/* Add gradient accent line at top of footer */
+.footerWrapper::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--qq-gradient-crypto-pink);
+  opacity: 0.7;
+}
+
+/* Light mode adjustments */
+[data-theme='light'] .footerWrapper {
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.95) 100%);
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Enhance footer links with glow effect on hover */
+.footerWrapper :global(.footer__link-item) {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+@media (hover: hover) {
+  .footerWrapper :global(.footer__link-item:hover) {
+    color: var(--ifm-color-primary);
+    text-shadow: 0 0 8px rgba(244, 114, 182, 0.5);
+    transform: translateX(4px);
+  }
+}
+
+/* Style footer title */
+.footerWrapper :global(.footer__title) {
+  background: var(--qq-gradient-crypto-pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* Copyright section styling */
+.footerWrapper :global(.footer__copyright) {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  opacity: 0.8;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footerWrapper {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* Fallback for non-backdrop-filter browsers */
+@supports not (backdrop-filter: blur(1px)) {
+  .footerWrapper {
+    background: rgba(11, 10, 8, 0.98);
+  }
+
+  [data-theme='light'] .footerWrapper {
+    background: rgba(255, 255, 255, 0.98);
+  }
+}

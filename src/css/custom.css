@@ -1,30 +1,1338 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * QQ Omega Crypto Theme - Custom CSS
+ * Bun-inspired pink/dark aesthetic with glassmorphism
+ * Mobile-first responsive design
  */
 
-/* You can override the default Infima variables here. */
+/* ============================================
+   CSS CUSTOM PROPERTIES - COLOR PALETTE
+   ============================================ */
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* --- Bun-Inspired Pink/Cyan Palette --- */
+  /* Pink accents */
+  --qq-color-pink-hot: #f472b6;
+  --qq-color-pink-magenta: #EE81C3;
+  --qq-color-pink-soft: #f4b6de;
+  --qq-color-pink-dark: #db2777;
+  --qq-color-pink-darker: #be185d;
+
+  /* Cyan/Teal highlights */
+  --qq-color-cyan-bright: #00a6e1;
+  --qq-color-cyan-teal: #06b6d4;
+  --qq-color-cyan-dark: #0891b2;
+
+  /* Purple accents */
+  --qq-color-purple-light: #a855f7;
+  --qq-color-purple-dark: #7e22ce;
+
+  /* Light mode backgrounds - neutral darker grays */
+  --qq-bg-light: #d8d8d8;
+  --qq-bg-light-surface: #c8c8c8;
+  --qq-bg-light-card: #e0e0e0;
+  --qq-bg-light-border: #a8a8a8;
+  --qq-text-light: #1a1a1a;
+  --qq-text-light-secondary: #303030;
+
+  /* --- Gradients --- */
+  --qq-gradient-crypto-pink: linear-gradient(135deg, #f472b6 0%, #db2777 100%);
+  --qq-gradient-crypto-purple: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+  --qq-gradient-crypto-cyan: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  --qq-gradient-glass: linear-gradient(135deg, rgba(244, 114, 182, 0.1) 0%, transparent 100%);
+
+  /* --- Glassmorphism Properties --- */
+  --qq-glass-blur: 16px;
+  --qq-glass-bg-light: rgba(224, 224, 224, 0.85);
+  --qq-glass-border-light: rgba(70, 70, 70, 0.25);
+  --qq-glass-shadow-light: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+
+  /* --- Shadows --- */
+  --qq-shadow-glow: 0 0 20px rgba(244, 114, 182, 0.5);
+  --qq-shadow-glow-strong: 0 0 40px rgba(244, 114, 182, 0.8);
+
+  /* --- Infima Framework Overrides (Light Mode) --- */
+  --ifm-color-primary: #f472b6;
+  --ifm-color-primary-dark: #f25aab;
+  --ifm-color-primary-darker: #f14da5;
+  --ifm-color-primary-darkest: #ee2a8c;
+  --ifm-color-primary-light: #f68ac1;
+  --ifm-color-primary-lighter: #f797c7;
+  --ifm-color-primary-lightest: #fab8d8;
+
+  --ifm-background-color: #d8d8d8;
+  --ifm-background-surface-color: #e0e0e0;
+  --ifm-navbar-background-color: rgba(224, 224, 224, 0.95);
+  --ifm-navbar-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  --ifm-navbar-link-color: #303030;
+  --ifm-footer-background-color: #c8c8c8;
+  --ifm-footer-title-color: #f472b6;
+
+  --ifm-link-color: #f472b6;
+  --ifm-link-hover-color: #db2777;
+
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+  --docusaurus-highlighted-code-line-bg: rgba(244, 114, 182, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ============================================
+   DARK MODE THEME
+   ============================================ */
+
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Dark mode backgrounds - darker than #282828 */
+  --qq-bg-dark: #0f0f0f;
+  --qq-bg-dark-surface: #0b0a08;
+  --qq-bg-dark-surface-light: #1a1a1a;
+  --qq-bg-dark-pure: #000000;
+  --qq-text-dark: #e5e5e5;
+  --qq-text-dark-secondary: #a3a3a3;
+
+  /* Glassmorphism for dark mode */
+  --qq-glass-bg-dark: rgba(11, 10, 8, 0.4);
+  --qq-glass-border-dark: rgba(255, 255, 255, 0.1);
+  --qq-glass-shadow-dark: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+  /* Infima overrides for dark mode */
+  --ifm-color-primary: #f472b6;
+  --ifm-color-primary-dark: #f25aab;
+  --ifm-color-primary-darker: #f14da5;
+  --ifm-color-primary-darkest: #ee2a8c;
+  --ifm-color-primary-light: #f68ac1;
+  --ifm-color-primary-lighter: #f797c7;
+  --ifm-color-primary-lightest: #fab8d8;
+
+  --ifm-background-color: #0f0f0f;
+  --ifm-background-surface-color: #0b0a08;
+
+  --ifm-navbar-background-color: rgba(11, 10, 8, 0.85);
+  --ifm-navbar-shadow: 0 1px 2px 0 rgba(244, 114, 182, 0.2);
+
+  --ifm-footer-background-color: #000000;
+  --ifm-footer-title-color: #f472b6;
+
+  --ifm-link-color: #00a6e1;
+  --ifm-link-hover-color: #06b6d4;
+
+  --ifm-menu-color-background-active: rgba(244, 114, 182, 0.15);
+  --ifm-menu-color-background-hover: rgba(244, 114, 182, 0.08);
+
+  --docusaurus-highlighted-code-line-bg: rgba(244, 114, 182, 0.15);
+}
+
+/* ============================================
+   GLASSMORPHISM UTILITY CLASSES
+   ============================================ */
+
+.glass-card {
+  background: var(--qq-glass-bg-light);
+  backdrop-filter: blur(var(--qq-glass-blur));
+  -webkit-backdrop-filter: blur(var(--qq-glass-blur));
+  border-radius: 16px;
+  border: 2px solid var(--qq-glass-border-light);
+  box-shadow: var(--qq-glass-shadow-light);
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .glass-card {
+  background: var(--qq-glass-bg-dark);
+  border: 2px solid var(--qq-glass-border-dark);
+  box-shadow: var(--qq-glass-shadow-dark);
+}
+
+/* Glass card with pink tint */
+.glass-card-pink {
+  background: rgba(244, 114, 182, 0.12);
+  backdrop-filter: blur(var(--qq-glass-blur));
+  -webkit-backdrop-filter: blur(var(--qq-glass-blur));
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+}
+
+/* Glass card with cyan tint */
+.glass-card-cyan {
+  background: rgba(0, 166, 225, 0.12);
+  backdrop-filter: blur(var(--qq-glass-blur));
+  -webkit-backdrop-filter: blur(var(--qq-glass-blur));
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(1px)) {
+  .glass-card,
+  .glass-card-pink,
+  .glass-card-cyan {
+    background: rgba(20, 21, 26, 0.95);
+  }
+
+  [data-theme='light'] .glass-card,
+  [data-theme='light'] .glass-card-pink,
+  [data-theme='light'] .glass-card-cyan {
+    background: rgba(224, 224, 224, 0.95);
+  }
+}
+
+/* ============================================
+   GRADIENT UTILITIES
+   ============================================ */
+
+.gradient-text {
+  background: var(--qq-gradient-crypto-pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text-purple {
+  background: var(--qq-gradient-crypto-purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text-cyan {
+  background: var(--qq-gradient-crypto-cyan);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-bg-pink {
+  background: var(--qq-gradient-crypto-pink);
+}
+
+.gradient-bg-purple {
+  background: var(--qq-gradient-crypto-purple);
+}
+
+.gradient-bg-cyan {
+  background: var(--qq-gradient-crypto-cyan);
+}
+
+/* ============================================
+   GLOW EFFECTS
+   ============================================ */
+
+.crypto-glow {
+  box-shadow: var(--qq-shadow-glow);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Only apply hover glow on devices that support hover */
+@media (hover: hover) {
+  .crypto-glow:hover {
+    box-shadow: var(--qq-shadow-glow-strong);
+  }
+}
+
+.crypto-glow-pink {
+  box-shadow: 0 0 20px rgba(244, 114, 182, 0.5);
+}
+
+.crypto-glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 166, 225, 0.5);
+}
+
+.crypto-glow-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.4);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(244, 114, 182, 0.8);
+    opacity: 0.8;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+/* ============================================
+   NAVBAR ENHANCEMENTS
+   ============================================ */
+
+.navbar {
+  background: rgba(11, 10, 8, 0.15) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+[data-theme='light'] .navbar {
+  background: rgba(224, 224, 224, 0.25) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+}
+
+[data-theme='light'] .navbar__link {
+  color: #303030;
+}
+
+[data-theme='light'] .navbar__link--active {
+  color: var(--ifm-color-primary) !important;
+}
+
+[data-theme='light'] .navbar__item {
+  color: #303030;
+}
+
+.navbar__title {
+  background: var(--qq-gradient-crypto-pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.navbar__logo {
+  transition: transform 0.3s ease;
+  height: 1.25rem;
+}
+
+@media (hover: hover) {
+  .navbar__logo:hover {
+    transform: scale(1.05);
+  }
+}
+
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--ifm-navbar-link-color);
+  transition: color 0.2s ease;
+}
+
+.navbar__link--active {
+  color: var(--ifm-color-primary) !important;
+  font-weight: 600;
+}
+
+@media (hover: hover) {
+  .navbar__link:hover {
+    color: var(--ifm-color-primary);
+  }
+}
+
+.navbar__item {
+  font-size: 0.75rem;
+  color: var(--ifm-navbar-link-color);
+}
+
+.navbar__item--active {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Mobile menu toggle */
+.navbar__toggle {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(244, 114, 182, 0.1);
+  border-radius: 8px;
+}
+
+[data-theme='light'] .navbar__toggle {
+  border-color: rgba(0, 0, 0, 0.15);
+  background: rgba(244, 114, 182, 0.08);
+}
+
+/* Theme toggle button */
+.clean-btn[title*="theme"],
+.clean-btn[title*="Switch"],
+button[aria-label*="theme"],
+button[aria-label*="Switch"] {
+  transition: all 0.2s ease;
+}
+
+@media (hover: hover) {
+  .clean-btn[title*="theme"]:hover,
+  .clean-btn[title*="Switch"]:hover,
+  button[aria-label*="theme"]:hover,
+  button[aria-label*="Switch"]:hover {
+    color: var(--ifm-color-primary);
+    background: rgba(244, 114, 182, 0.1);
+    border-radius: 6px;
+  }
+}
+
+[data-theme='light'] .clean-btn[title*="theme"],
+[data-theme='light'] .clean-btn[title*="Switch"],
+[data-theme='light'] button[aria-label*="theme"],
+[data-theme='light'] button[aria-label*="Switch"] {
+  color: #303030;
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  [data-theme='light'] .clean-btn[title*="theme"]:hover,
+  [data-theme='light'] .clean-btn[title*="Switch"]:hover,
+  [data-theme='light'] button[aria-label*="theme"]:hover,
+  [data-theme='light'] button[aria-label*="Switch"]:hover {
+    color: var(--ifm-color-primary);
+    opacity: 1;
+    background: rgba(244, 114, 182, 0.1);
+  }
+}
+
+/* Search button */
+.navbar__search-input,
+.DocSearch-Button {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+[data-theme='light'] .navbar__search-input,
+[data-theme='light'] .DocSearch-Button {
+  background: rgba(0, 0, 0, 0.08) !important;
+  border-color: rgba(0, 0, 0, 0.25);
+  color: #303030;
+}
+
+[data-theme='light'] .DocSearch-Button-Placeholder,
+[data-theme='light'] .DocSearch-Button-Keys,
+[data-theme='light'] .DocSearch-Button-Key {
+  color: #303030;
+}
+
+[data-theme='light'] .navbar__search-input::placeholder {
+  color: #505050;
+}
+
+@media (hover: hover) {
+  .navbar__search-input:hover,
+  .DocSearch-Button:hover {
+    border-color: var(--ifm-color-primary);
+  }
+
+  [data-theme='light'] .navbar__search-input:hover,
+  [data-theme='light'] .DocSearch-Button:hover {
+    background: rgba(244, 114, 182, 0.05) !important;
+    border-color: var(--ifm-color-primary);
+  }
+}
+
+/* Search icon */
+.DocSearch-Search-Icon {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme='light'] .DocSearch-Search-Icon {
+  color: #303030 !important;
+  opacity: 1;
+}
+
+/* Keyboard shortcuts in search button */
+.DocSearch-Button-Key {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 0.4em;
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 0.75rem;
+}
+
+/* Light mode keyboard shortcuts - force dark colors */
+[data-theme='light'] .DocSearch-Button-Key,
+[data-theme='light'] .DocSearch-Button-Key *,
+[data-theme='light'] .DocSearch-Button-Key kbd,
+[data-theme='light'] .DocSearch-Button-Key span {
+  background: rgba(0, 0, 0, 0.1) !important;
+  border-color: rgba(0, 0, 0, 0.25) !important;
+  color: #1a1a1a !important;
+  fill: #1a1a1a !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  font-weight: 600 !important;
+}
+
+[data-theme='light'] .DocSearch-Button-Key {
+  border: 1px solid rgba(0, 0, 0, 0.25) !important;
+}
+
+.DocSearch-Button-Keys {
+  opacity: 0.9;
+}
+
+[data-theme='light'] .DocSearch-Button-Keys,
+[data-theme='light'] .DocSearch-Button-Keys * {
+  opacity: 1 !important;
+  color: #1a1a1a !important;
+}
+
+/* Navbar icons in light mode */
+[data-theme='light'] .navbar svg,
+[data-theme='light'] .navbar__item svg {
+  color: #303030;
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  [data-theme='light'] .navbar__item:hover svg {
+    color: var(--ifm-color-primary);
+    opacity: 1;
+  }
+}
+
+/* Mobile sidebar menu links */
+.navbar-sidebar .menu__link {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.navbar-sidebar .menu__link:hover {
+  background: rgba(244, 114, 182, 0.1);
+}
+
+.navbar-sidebar .menu__link--active {
+  background: rgba(244, 114, 182, 0.15);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* ============================================
+   DOC ITEM LAYOUT ENHANCEMENTS
+   ============================================ */
+
+/* Main doc content area with subtle glass effect */
+.theme-doc-markdown {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+[data-theme='light'] .theme-doc-markdown {
+  background: rgba(232, 232, 232, 0.8);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Headings with gradient accent */
+.theme-doc-markdown h1 {
+  background: var(--qq-gradient-crypto-pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.theme-doc-markdown h2 {
+  color: var(--ifm-heading-color);
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-doc-markdown h3 {
+  color: var(--ifm-heading-color);
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+/* Links with glow effect */
+.theme-doc-markdown a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(244, 114, 182, 0.4);
+  transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+  .theme-doc-markdown a:hover {
+    color: var(--qq-color-pink-dark);
+    border-bottom-color: var(--qq-color-pink-dark);
+    text-shadow: 0 0 8px rgba(244, 114, 182, 0.4);
+  }
+}
+
+/* Code blocks with enhanced styling */
+.theme-doc-markdown pre {
+  background: rgba(20, 21, 26, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='light'] .theme-doc-markdown pre {
+  background: rgba(220, 220, 220, 0.95);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Inline code */
+.theme-doc-markdown code {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-weight: 500;
+  color: var(--ifm-code-color);
+}
+
+[data-theme='light'] .theme-doc-markdown code {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.theme-doc-markdown pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Blockquotes with glass effect */
+.theme-doc-markdown blockquote {
+  background: rgba(244, 114, 182, 0.08);
+  border-left: 4px solid var(--ifm-color-primary);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Admonitions (info, warning, etc.) with enhanced glass */
+.alert {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border-width: 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alert--info {
+  background: rgba(0, 166, 225, 0.1);
+  border-color: rgba(0, 166, 225, 0.3);
+}
+
+.alert--warning {
+  background: rgba(255, 193, 7, 0.1);
+  border-color: rgba(255, 193, 7, 0.3);
+}
+
+.alert--danger {
+  background: rgba(220, 53, 69, 0.1);
+  border-color: rgba(220, 53, 69, 0.3);
+}
+
+.alert--success {
+  background: rgba(40, 167, 69, 0.1);
+  border-color: rgba(40, 167, 69, 0.3);
+}
+
+/* Pagination with glow */
+.pagination-nav__link {
+  background: rgba(244, 114, 182, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+  .pagination-nav__link:hover {
+    background: rgba(244, 114, 182, 0.12);
+    border-color: var(--ifm-color-primary);
+    box-shadow: 0 4px 16px rgba(244, 114, 182, 0.3);
+    transform: translateY(-2px);
+  }
+}
+
+/* Pagination arrows and labels */
+.pagination-nav__label::before,
+.pagination-nav__label::after {
+  color: var(--ifm-color-primary) !important;
+}
+
+.pagination-nav__sublabel {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* Edit this page link */
+.theme-edit-this-page,
+.theme-doc-footer-edit-meta-row a {
+  color: var(--ifm-color-primary) !important;
+  transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+  .theme-edit-this-page:hover,
+  .theme-doc-footer-edit-meta-row a:hover {
+    color: var(--qq-color-pink-dark) !important;
+    text-shadow: 0 0 8px rgba(244, 114, 182, 0.4);
+  }
+}
+
+/* Direct link icons (heading anchors) */
+.hash-link {
+  color: var(--ifm-color-primary) !important;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+  .hash-link:hover {
+    opacity: 1;
+    color: var(--qq-color-pink-dark) !important;
+  }
+}
+
+.theme-doc-markdown h1 .hash-link,
+.theme-doc-markdown h2 .hash-link,
+.theme-doc-markdown h3 .hash-link,
+.theme-doc-markdown h4 .hash-link,
+.theme-doc-markdown h5 .hash-link,
+.theme-doc-markdown h6 .hash-link {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* ============================================
+   TOC (TABLE OF CONTENTS) ENHANCEMENTS
+   ============================================ */
+
+/* TOC container - ensure it's above content on mobile */
+.table-of-contents {
+  position: relative;
+  z-index: 50;
+  background: rgba(244, 114, 182, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+}
+
+[data-theme='light'] .table-of-contents {
+  background: rgba(232, 232, 232, 0.8);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* TOC links */
+.table-of-contents__link {
+  color: var(--ifm-color-content-secondary);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  display: block;
+}
+
+@media (hover: hover) {
+  .table-of-contents__link:hover {
+    color: var(--ifm-color-primary);
+    background: rgba(244, 114, 182, 0.08);
+  }
+}
+
+/* Active TOC link */
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  background: rgba(244, 114, 182, 0.12);
+  border-left: 3px solid var(--ifm-color-primary);
+  padding-left: calc(0.5rem - 3px);
+}
+
+/* TOC column on desktop - higher z-index */
+.col.col--3 {
+  position: relative;
+  z-index: 50;
+}
+
+/* Main content column - lower z-index */
+.col.col--9 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile TOC adjustments */
+@media (max-width: 996px) {
+  .table-of-contents {
+    position: relative;
+    z-index: 50;
+  }
+
+  /* TOC collapsible button on mobile */
+  .tocCollapsible {
+    position: relative;
+    z-index: 50;
+  }
+
+  .tocCollapsibleButton {
+    background: rgba(244, 114, 182, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ============================================
+   SIDEBAR ENHANCEMENTS
+   ============================================ */
+
+/* Sidebar with glassmorphism */
+aside.theme-doc-sidebar-container {
+  background: rgba(11, 10, 8, 0.6) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='light'] aside.theme-doc-sidebar-container {
+  background: rgba(224, 224, 224, 0.95) !important;
+  border-right-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Section titles/categories - elegant and refined */
+.theme-doc-sidebar-item-category > .menu__list-item-collapsible > .menu__link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ifm-menu-color);
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+/* Reduce spacing between menu items */
+.menu__list-item {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Tighter spacing for category items */
+.theme-doc-sidebar-item-category {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Regular menu links - smaller */
+.menu__link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ifm-menu-color);
+  transition: all 0.2s ease;
+}
+
+/* Child document links - even smaller */
+.menu__list .menu__list .menu__link {
+  font-size: 0.7rem;
+}
+
+/* Vertical line for nested items */
+.menu__list .menu__list {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+[data-theme='light'] .menu__list .menu__list {
+  border-left-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Active state - pink color and background */
+.menu__link--active {
+  font-weight: 600;
+  color: var(--ifm-color-primary) !important;
+  background: rgba(244, 114, 182, 0.15) !important;
+}
+
+/* Hover state - pink color and background */
+@media (hover: hover) {
+  .menu__link:not(.menu__link--active):hover {
+    color: var(--ifm-color-primary);
+    background: var(--ifm-menu-color-background-hover);
+  }
+
+  .theme-doc-sidebar-item-category > .menu__list-item-collapsible > .menu__link:hover {
+    color: var(--ifm-color-primary);
+  }
+}
+
+/* ============================================
+   CODE BLOCKS ENHANCEMENTS
+   ============================================ */
+
+code {
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--ifm-code-color);
+}
+
+[data-theme='light'] code {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* ============================================
+   BACK TO TOP BUTTON
+   ============================================ */
+
+.theme-back-to-top-button {
+  background: rgba(11, 10, 8, 0.15) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-theme='light'] .theme-back-to-top-button {
+  background: rgba(224, 224, 224, 0.25) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.6) inset !important;
+}
+
+.theme-back-to-top-button svg {
+  color: var(--ifm-color-primary);
+  fill: var(--ifm-color-primary);
+}
+
+@media (hover: hover) {
+  .theme-back-to-top-button:hover {
+    background: rgba(244, 114, 182, 0.2) !important;
+    border-color: var(--ifm-color-primary) !important;
+    box-shadow: 0 4px 20px rgba(244, 114, 182, 0.4), 0 0 0 1px var(--ifm-color-primary) inset !important;
+    transform: translateY(-2px);
+  }
+
+  [data-theme='light'] .theme-back-to-top-button:hover {
+    background: rgba(244, 114, 182, 0.15) !important;
+    box-shadow: 0 4px 16px rgba(244, 114, 182, 0.3), 0 0 0 1px var(--ifm-color-primary) inset !important;
+  }
+}
+
+/* ============================================
+   BUTTONS & CTAs
+   ============================================ */
+
+.button {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button--primary {
+  background: var(--qq-gradient-crypto-pink);
+  border: none;
+}
+
+@media (hover: hover) {
+  .button--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--qq-shadow-glow);
+  }
+}
+
+.button--secondary {
+  background: transparent;
+  border: 1px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+@media (hover: hover) {
+  .button--secondary:hover {
+    background: rgba(244, 114, 182, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+/* ============================================
+   CARDS & CONTENT
+   ============================================ */
+
+.card {
+  border-radius: 16px;
+  border: 2px solid var(--qq-glass-border-light);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+[data-theme='dark'] .card {
+  border-color: var(--qq-glass-border-dark);
+  background: rgba(11, 10, 8, 0.4);
+}
+
+[data-theme='light'] .card {
+  background: rgba(232, 232, 232, 0.85);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--qq-shadow-glow);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ifm-color-primary) transparent;
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--qq-color-pink-dark);
+}
+
+/* Override any remaining blue colors */
+a {
+  color: var(--ifm-color-primary);
+  text-decoration-color: var(--ifm-color-primary);
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+a:hover {
+  color: var(--qq-color-pink-dark);
+  text-decoration-color: var(--qq-color-pink-dark);
+  border-bottom-color: var(--qq-color-pink-dark);
+}
+
+/* Last updated, tags, and other metadata */
+.theme-last-updated,
+.theme-doc-footer,
+.theme-doc-footer-edit-meta-row {
+  color: var(--ifm-color-content-secondary);
+}
+
+.theme-doc-footer a,
+.theme-last-updated a {
+  color: var(--ifm-footer-link-color);
+  border-bottom-color: transparent;
+  transition: color 0.2s ease;
+}
+
+.theme-doc-footer a:hover,
+.theme-last-updated a:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Footer - match docs content styling */
+.footer {
+  background: var(--ifm-background-color) !important;
+  color: var(--ifm-color-content-secondary);
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  position: relative;
+  padding-top: 3rem;
+}
+
+[data-theme='light'] .footer {
+  border-top-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Override any footer dividers to be gray */
+.footer hr,
+.footer__separator,
+.footer > hr,
+.footer > div > hr {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme='light'] .footer hr,
+[data-theme='light'] .footer__separator,
+[data-theme='light'] .footer > hr,
+[data-theme='light'] .footer > div > hr {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  border-top-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.footer__link-item {
+  color: var(--ifm-color-content-secondary);
+  transition: color 0.2s ease;
+}
+
+@media (hover: hover) {
+  .footer__link-item:hover {
+    color: var(--ifm-color-primary);
+  }
+}
+
+/* Footer section titles - keep pink */
+.footer__title {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.footer__copyright {
+  color: var(--ifm-color-content-secondary);
+  opacity: 0.7;
+}
+
+/* Breadcrumbs */
+.breadcrumbs__link {
+  color: var(--ifm-breadcrumb-color-active);
+  transition: color 0.2s ease;
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--ifm-color-primary);
+}
+
+@media (hover: hover) {
+  .breadcrumbs__link:hover {
+    color: var(--ifm-color-primary);
+    text-shadow: 0 0 8px rgba(244, 114, 182, 0.4);
+  }
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(244, 114, 182, 0.3);
+  color: var(--ifm-font-color-base);
+}
+
+/* Doc version badge and tags */
+.badge,
+.theme-doc-version-badge {
+  background: rgba(244, 114, 182, 0.15);
+  color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+/* Table of contents links */
+.table-of-contents a {
+  color: var(--ifm-color-content-secondary);
+}
+
+.table-of-contents a:hover,
+.table-of-contents .table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* ============================================
+   Z-INDEX HIERARCHY FOR LAYOUT
+   ============================================ */
+
+/* Ensure proper stacking order across all viewports */
+.main-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Doc content area */
+.theme-doc-markdown {
+  position: relative;
+  z-index: 1;
+}
+
+/* Sidebar navigation */
+aside.theme-doc-sidebar-container {
+  position: relative;
+  z-index: 10;
+}
+
+/* Mobile sidebar - needs to be above everything */
+.navbar-sidebar {
+  z-index: 100 !important;
+}
+
+.navbar-sidebar__backdrop {
+  z-index: 99 !important;
+}
+
+/* ============================================
+   MOBILE-FIRST RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* Reduce blur on mobile for better performance */
+@media (max-width: 768px) {
+  :root {
+    --qq-glass-blur: 12px;
+  }
+
+  .glass-card,
+  .glass-card-pink,
+  .glass-card-cyan {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Increase touch targets */
+  .button,
+  .menu__link,
+  .navbar__link {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+  }
+
+  /* Larger font sizes for readability */
+  .markdown h1 {
+    font-size: 2rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .glass-card {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1024px) {
+  /* Full blur effect on desktop */
+  .glass-card {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  /* Enhanced animations on desktop */
+  @media (hover: hover) {
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+    }
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .glass-card,
+  .glass-card-pink,
+  .glass-card-cyan {
+    background: white;
+    border: 1px solid #ccc;
+    backdrop-filter: none;
+  }
+
+  .gradient-text,
+  .gradient-text-purple,
+  .gradient-text-cyan {
+    -webkit-text-fill-color: initial;
+    color: black;
+  }
 }
