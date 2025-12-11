@@ -40,7 +40,7 @@ const config: Config = {
       "classic",
       {
         docs: {
-          routeBasePath: "/",
+          routeBasePath: "/docs",
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/qqomega-labs/qq-docs/tree/main/",
         },
@@ -70,7 +70,7 @@ const config: Config = {
         language: ["en"],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
-        docsRouteBasePath: "/",
+        docsRouteBasePath: "/docs",
         indexBlog: true,
         indexPages: true,
         searchBarPosition: "right",
@@ -114,44 +114,33 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-      links: [
-        {
-          title: "Docs",
-          items: [
-            {
-              label: "Intro",
-              to: "/docs/intro",
-            },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Github",
-              href: "https://github.com/qqomega-labs",
-            },
-            // {
-            //   label: "Discord",
-            //   href: "https://discordapp.com/invite/docusaurus",
-            // },
-            {
-              label: "X",
-              href: "https://x.com/docusaurus",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} | QQ Omega Labs | Built with Docusaurus 🦖`,
+      links: [],
+      // Future sections - uncomment when ready to add footer links
+      // links: [
+      //   {
+      //     title: "Links",
+      //     items: [
+      //       {
+      //         label: "GitHub",
+      //         href: "https://github.com/qqomega-labs",
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: "Community",
+      //     items: [
+      //       {
+      //         label: "Discord",
+      //         href: "https://discord.gg/qqomega",
+      //       },
+      //       {
+      //         label: "X",
+      //         href: "https://x.com/qqomega",
+      //       },
+      //     ],
+      //   },
+      // ],
+      copyright: `Copyright © ${new Date().getFullYear()} QQ Omega Labs`,
     },
     prism: {
       theme: prismThemes.github,

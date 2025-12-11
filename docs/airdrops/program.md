@@ -30,7 +30,7 @@ Its **exact design, criteria and mechanics are intentionally not public**.
 - No complete “how to qualify” guide will be released.
 - There is **no guarantee** that any specific action or behaviour will receive rewards.
 - Any future clarifications or checkpoints (snapshots, claims, deadlines, etc.) will be announced only through:
-  - **@QQagents** on X  
+  - **@QQagents** on X
   - Updates to this documentation
 
 ---

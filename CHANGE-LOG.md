@@ -2,6 +2,115 @@
 
 ## [Unreleased] - 2025-12-11
 
+### Routing & Build Issues
+
+- **Fixed broken links** causing build failures
+  - All pages had broken footer link to `/docs/intro` (60+ broken link errors)
+  - Root cause: docs were at root path (`/`) but footer linked to `/docs/intro`
+  - Solution: Changed docs route base path from `/` to `/docs`
+  - Cleanup: Removed `intro.md`
+
+- **Resolved duplicate routes warning**
+  - Conflict: Custom homepage (`src/pages/index.tsx`) and docs both at root `/`
+  - Implemented Option 2: Keep custom homepage, move docs to `/docs`
+  - Changes made:
+    - Updated `routeBasePath` from `/` to `/docs` in `docusaurus.config.ts`
+    - Updated search plugin `docsRouteBasePath` from `/` to `/docs`
+    - Updated footer "Intro" link to `/docs/category/about-qq-omega`
+    - Updated homepage redirect from `/intro` to `/docs/category/about-qq-omega`
+
+- **Build now completes successfully** without errors or warnings
+
+#### Files Modified (Session 4)
+
+- `docusaurus.config.ts` - Changed docs routing configuration and footer links
+- `src/pages/index.tsx` - Updated redirect target to category page
+
+### UI Enhancements (Session 5)
+
+#### Animated Gradient Effects
+
+- **Enhanced gradient visibility and animation**
+  - Updated gradient colors to be more vibrant: `#ff6ec7 → #ff1493 → #db2777`
+  - Added animated gradient with 5-color stops for smooth flow
+  - Created `@keyframes gradient-flow` animation (6s ease-in-out infinite)
+  - Applied animated gradient to:
+    - H1 headings in markdown content
+    - `.gradient-text` utility class
+    - `.gradient-bg-pink` utility class
+    - Primary buttons
+  - Background size: 200% for smooth animation effect
+
+- **Added subtle smokey effect to gradient text**
+  - Multi-layered drop-shadows for depth:
+    - H1: 4px, 12px, and 20px blur layers
+    - Gradient text: 3px, 10px, and 18px blur layers
+  - Creates soft, diffused pink glow around text
+  - Deep pink color `rgba(255, 20, 147)` for authentic pink tone
+
+#### Footer Enhancements
+
+- **Animated electron effect on footer border**
+  - Single pink electron travels left to right across footer border
+  - Animation: 10s ease-in-out infinite
+  - Gradient: `#db2777 → #ff1493 → #ff6ec7 → #ff1493 → #db2777`
+  - Enhanced with drop-shadow glow: `0 0 4px rgba(244, 114, 182, 0.8)`
+  - Delay between passes for single electron visibility
+
+- **Footer credits synchronized animation**
+  - Copyright text glows when electron passes through
+  - Rapid flash animation (0.6s duration at ~20% of cycle)
+  - Color transition: white → subtle pastel pink → white
+  - Minimal scale pulse: 1 → 1.008 → 1
+  - Pink text-shadow glow synced with electron position
+  - Uses `@keyframes electron-glow` animation
+
+- **Minimalistic footer cleanup**
+  - Removed all link sections (Docs, Community, More)
+  - Simplified copyright: `Copyright © 2025 QQ Omega Labs`
+  - Future-ready: All link sections commented out for easy re-activation
+  - Kept electron animation border for visual interest
+
+#### Content Styling Improvements
+
+- **Removed backgrounds and borders from markdown content**
+  - Main content area: transparent background, no border
+  - H2 headings: removed bottom border
+  - Links: removed underline borders
+  - Code blocks: transparent background, no borders
+  - Inline code: transparent background, no borders
+  - Blockquotes: transparent background, no left border
+  - Admonitions: transparent backgrounds, no borders
+  - Pagination: kept glassmorphism effects (navigation elements)
+
+- **Elegant link hover effects**
+  - Replaced "cheap" darker pink hover with subtle opacity change (85%)
+  - Animated underline on markdown links: slides in left to right on hover
+  - Removed color changes for "Edit this page" and hash links
+  - All links maintain consistent pink color on hover
+  - Global link hover: opacity reduction instead of darker pink
+
+#### Breadcrumb Styling
+
+- **Refined breadcrumb colors**
+  - Non-active items (Home, intermediate pages): normal text color
+  - Active/current page only: pink `var(--ifm-color-primary)`
+  - Separators: normal color with 50% opacity
+  - Hover: subtle opacity change, no color shift
+
+#### Site Branding
+
+- **Removed gradient from navbar title**
+  - Site name "QQ Omega" now uses default navbar color
+  - Light mode: dark gray `#303030`
+  - Dark mode: white/light gray
+
+#### Files Modified (Session 5)
+
+- `src/css/custom.css` - Major animation and styling updates
+- `src/theme/Footer/styles.module.css` - Electron animation implementation
+- `docusaurus.config.ts` - Footer cleanup and simplification
+
 ### UI Refinements (Session 3)
 
 #### Mobile Menu Light Mode Fixes

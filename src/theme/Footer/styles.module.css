@@ -5,7 +5,12 @@
 
 .footerWrapper {
   /* Glassmorphism footer */
-  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0.98) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.85) 20%,
+    rgba(0, 0, 0, 0.98) 100%
+  );
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
@@ -21,21 +26,73 @@
   margin-top: auto;
 }
 
-/* Add gradient accent line at top of footer */
+/* Electron animation - single pink light passing through with delay */
+@keyframes electron-pass {
+  0% {
+    background-position: -30% 0;
+  }
+  40% {
+    background-position: 130% 0;
+  }
+  40.01%, 100% {
+    background-position: -30% 0;
+  }
+}
+
+/* Add gradient accent line at top of footer with electron animation */
 .footerWrapper::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--qq-gradient-crypto-pink);
-  opacity: 0.7;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 46%,
+      rgba(244, 114, 182, 0.4) 48%,
+      rgba(244, 114, 182, 1) 50%,
+      rgba(244, 114, 182, 0.4) 52%,
+      rgba(0, 0, 0, 0.15) 54%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  opacity: 1;
+  filter: drop-shadow(0 0 4px rgba(244, 114, 182, 0.8));
+  animation: electron-pass 10s ease-in-out infinite;
+}
+
+/* Light mode electron */
+[data-theme="light"] .footerWrapper::before {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 46%,
+      rgba(219, 39, 119, 0.5) 48%,
+      rgba(219, 39, 119, 1) 50%,
+      rgba(219, 39, 119, 0.5) 52%,
+      rgba(0, 0, 0, 0.15) 54%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  opacity: 1;
+  filter: drop-shadow(0 0 4px rgba(219, 39, 119, 0.8));
+  animation: electron-pass 10s ease-in-out infinite;
 }
 
 /* Light mode adjustments */
-[data-theme='light'] .footerWrapper {
-  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.95) 100%);
+[data-theme="light"] .footerWrapper {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.8) 20%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
   border-top-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -85,7 +142,7 @@
     background: rgba(11, 10, 8, 0.98);
   }
 
-  [data-theme='light'] .footerWrapper {
+  [data-theme="light"] .footerWrapper {
     background: rgba(255, 255, 255, 0.98);
   }
 }
