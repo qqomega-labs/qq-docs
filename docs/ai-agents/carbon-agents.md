@@ -6,7 +6,7 @@ sidebar_position: 2
 ## Carbon | Fundamentals Swarm
 
 Carbon is the element that makes complex life possible: it links into chains, lattices, and frameworks that remain stable under pressure.
-In QQ Omega, **Carbon** plays a similar role in understanding how structured and resilient a crypto project truly is, thanks to a coordinated swarm of narrow expert ai agents, each focused on a specific dimension of fundamental strength.
+In QQ-Omega, **Carbon** plays a similar role in understanding how structured and resilient a crypto project truly is, thanks to a coordinated swarm of narrow expert ai agents, each focused on a specific dimension of fundamental strength.
 
 ### What Carbon Is
 
