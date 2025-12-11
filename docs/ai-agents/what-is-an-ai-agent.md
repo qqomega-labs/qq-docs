@@ -3,7 +3,7 @@ title: What is an AI Agent
 sidebar_position: 1
 ---
 
-## What Is an `AI Agent` (and what is a swarm?)
+## What Is an AI Agent (and what is a swarm?)
 
 In QQ, an **AI Agent** is a small specialist.  
 Think of it like a **doctor with one job**: one only checks the heart, another only checks the lungs, another only reads the blood tests.
@@ -59,8 +59,8 @@ You can read them like this:
 
 So:
 
-- **Agent** = one small specialist with one job.  
-- **Swarm** = many agents focused on the same theme.  
+- **Agent** = one small specialist with one job.
+- **Swarm** = many agents focused on the same theme.
 - **Element** (Carbon, Gold, Hydrogen, Silicon, Oxygen, Phosphorus) = **one swarm of agents** with a clear mandate.
 
 QQ-Omega doesn’t rely on one “big brain” giving one opinion.  

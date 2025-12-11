@@ -42,10 +42,7 @@ const config: Config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/qqomega-labs/qq-docs/tree/main/",
         },
         blog: {
           showReadingTime: true,
@@ -53,11 +50,7 @@ const config: Config = {
             type: ["rss", "atom"],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          // Useful options to enforce blogging best practices
+          editUrl: "https://github.com/qqomega-labs/qq-docs/tree/main/",
           onInlineTags: "warn",
           onInlineAuthors: "warn",
           onUntruncatedBlogPosts: "warn",
@@ -69,24 +62,48 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["en"],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        docsRouteBasePath: "/",
+        indexBlog: true,
+        indexPages: true,
+        searchBarPosition: "right",
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     colorMode: {
+      defaultMode: "dark",
+      disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: "QQ Omega",
       logo: {
-        alt: "My Site Logo",
+        alt: "QQ Omega Logo",
         src: "img/logo.svg",
       },
+      style: "dark",
       items: [
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
           label: "Docs",
+        },
+        {
+          to: "/blog",
+          label: "Blog",
+          position: "left",
         },
         {
           href: "https://github.com/qqomega-labs",
@@ -96,7 +113,7 @@ const config: Config = {
       ],
     },
     footer: {
-      style: "light",
+      style: "dark",
       links: [
         {
           title: "Docs",
@@ -139,6 +156,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash', 'typescript', 'javascript', 'json', 'jsx', 'tsx', 'python', 'solidity'],
     },
   } satisfies Preset.ThemeConfig,
 };

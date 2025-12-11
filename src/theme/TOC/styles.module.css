@@ -1,0 +1,186 @@
+/**
+ * TOC (Table of Contents) Styles - Crypto Theme
+ * Glassmorphism sticky sidebar
+ */
+
+.tocWrapper {
+  /* Ensure proper layout */
+  display: contents;
+}
+
+/* TOC container with glassmorphism */
+.tocWrapper :global(.table-of-contents) {
+  background: rgba(244, 114, 182, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 2rem);
+  max-height: calc(100vh - var(--ifm-navbar-height) - 4rem);
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+[data-theme='light'] .tocWrapper :global(.table-of-contents) {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* TOC heading */
+.tocWrapper :global(.table-of-contents__left-border) {
+  border-left: 2px solid var(--ifm-color-primary);
+}
+
+.tocWrapper :global(.table-of-contents li) {
+  margin: 0.5rem 0;
+}
+
+/* TOC links */
+.tocWrapper :global(.table-of-contents__link) {
+  color: var(--ifm-color-content-secondary);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  display: block;
+  font-size: 0.9rem;
+}
+
+@media (hover: hover) {
+  .tocWrapper :global(.table-of-contents__link:hover) {
+    color: var(--ifm-color-primary);
+    background: rgba(244, 114, 182, 0.08);
+    text-shadow: 0 0 6px rgba(244, 114, 182, 0.3);
+    transform: translateX(4px);
+  }
+}
+
+/* Active TOC link */
+.tocWrapper :global(.table-of-contents__link--active) {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  background: rgba(244, 114, 182, 0.12);
+  border-left: 3px solid var(--ifm-color-primary);
+  padding-left: calc(0.5rem - 3px);
+}
+
+.tocWrapper :global(.table-of-contents__link--active code) {
+  background: rgba(244, 114, 182, 0.2);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* Nested TOC items */
+.tocWrapper :global(.table-of-contents ul) {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.tocWrapper :global(.table-of-contents ul ul) {
+  padding-left: 0.75rem;
+}
+
+/* Code in TOC links */
+.tocWrapper :global(.table-of-contents code) {
+  background: rgba(244, 114, 182, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+  font-size: 0.85em;
+}
+
+/* Scrollbar styling for TOC */
+.tocWrapper :global(.table-of-contents)::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tocWrapper :global(.table-of-contents)::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 3px;
+}
+
+.tocWrapper :global(.table-of-contents)::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-primary);
+  border-radius: 3px;
+}
+
+.tocWrapper :global(.table-of-contents)::-webkit-scrollbar-thumb:hover {
+  background: var(--qq-color-pink-dark);
+}
+
+/* TOC heading/title */
+.tocWrapper :global(.table-of-contents__heading) {
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile: hide TOC or show as collapsible */
+@media (max-width: 996px) {
+  .tocWrapper :global(.table-of-contents) {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tocWrapper :global(.table-of-contents) {
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+  }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1024px) {
+  .tocWrapper :global(.table-of-contents) {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Add subtle glow on hover */
+  @media (hover: hover) {
+    .tocWrapper :global(.table-of-contents:hover) {
+      box-shadow: 0 4px 20px rgba(244, 114, 182, 0.15);
+    }
+  }
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(1px)) {
+  .tocWrapper :global(.table-of-contents) {
+    background: rgba(20, 21, 26, 0.95);
+  }
+
+  [data-theme='light'] .tocWrapper :global(.table-of-contents) {
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tocWrapper :global(.table-of-contents),
+  .tocWrapper :global(.table-of-contents__link) {
+    transition: none;
+  }
+
+  @media (hover: hover) {
+    .tocWrapper :global(.table-of-contents__link:hover) {
+      transform: none;
+    }
+  }
+}
+
+/* Print: hide TOC */
+@media print {
+  .tocWrapper :global(.table-of-contents) {
+    display: none;
+  }
+}
