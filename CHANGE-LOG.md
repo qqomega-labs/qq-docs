@@ -2,6 +2,22 @@
 
 ## [Unreleased] - 2025-12-11
 
+### UI Refinements (Session 3)
+
+#### Mobile Menu Light Mode Fixes
+
+- Fixed "Back to main menu" button text color in light mode
+  - Changed from white to dark gray (#1a1a1a) to match menu section texts
+  - Added `opacity: 1` and `filter: none` to ensure full visibility
+  - Applied to all button states (default, hover, and child elements)
+  - Targeted both `.menu__link--back` and `.navbar-sidebar__back` classes
+- Fixed arrow indicator colors in light mode
+  - Corrected pseudo-element from `::after` to `::before` for `.menu__caret`
+  - Set `border-left-color: #000000` for dark visibility
+  - Added `opacity: 1` and `filter: none` to prevent transparency issues
+- Consolidated all light mode mobile menu styling for better maintainability
+- Removed redundant CSS rules that were causing style conflicts
+
 ### UI Refinements (Session 2)
 
 #### Navbar & Navigation
