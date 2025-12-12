@@ -3,7 +3,7 @@ title: Gold Agents
 sidebar_position: 3
 ---
 
-## Gold | Tokenomics Swarm
+## 🟡 Gold | Tokenomics Swarm
 
 Gold is the element humans have historically trusted to store value: scarce, hard to debase, and difficult to fake.  
 In QQ Omega, **Gold** plays a similar role in understanding how hard or fragile a token really is as a store of value, by dissecting its supply schedule, value capture mechanisms, and incentive design.

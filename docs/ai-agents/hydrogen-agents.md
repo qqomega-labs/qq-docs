@@ -3,7 +3,7 @@ title: Hydrogen Agents
 sidebar_position: 4
 ---
 
-## Hydrogen | On-chain Flows Swarm
+## 🔵 Hydrogen | On-chain Flows Swarm
 
 Hydrogen is the simplest and most abundant element in the universe: it flows, combines, and reveals where energy actually goes.  
 In QQ Omega, **Hydrogen** plays a similar role for **on-chain behavior**: it shows who really holds a token, how capital moves between actors, and how these flows change across time.

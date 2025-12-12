@@ -20,7 +20,7 @@ The QQ team may **modify, delay, or pause** the program at any time.
 
 ---
 
-### Season 1 – Status
+### Season 1
 
 **Status:** Live ✅
 
