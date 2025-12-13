@@ -441,7 +441,7 @@
 
 .navbar__logo {
   transition: transform 0.3s ease;
-  height: 1.25rem;
+  height: 3rem;
 }
 
 @media (hover: hover) {

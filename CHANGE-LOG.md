@@ -2,6 +2,8 @@
 
 ## [Unreleased] - 2025-12-13
 
+### Logo Update
+
 ### Dark Mode Theme Update - Purple Aesthetic
 
 - **Updated dark mode from blue to darkened purple theme**

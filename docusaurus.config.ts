@@ -90,7 +90,7 @@ const config: Config = {
       title: "QQ Omega",
       logo: {
         alt: "QQ Omega Logo",
-        src: "img/logo.svg",
+        src: "img/QQlogo.svg",
       },
       style: "dark",
       items: [
