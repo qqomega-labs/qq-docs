@@ -2,7 +2,66 @@
 
 ## [Unreleased] - 2025-12-13
 
-### Logo Update
+### Logo & Brand Color Update
+
+- **Updated to new QQ logo**
+  - Switched from `logo.svg` to `QQlogo.png`
+  - Increased logo size from 1.25rem to 3rem for better visibility
+  - Logo properly displays in both light and dark modes
+
+- **Complete color palette refresh to match new logo**
+  - Updated primary pink from `#f472b6` to `#ff1d64` (logo hot pink)
+  - Updated all pink variants:
+    - Pink hot: `#ff1d64` (logo color)
+    - Pink magenta: `#ff2e75`
+    - Pink soft: `#ff5c94`
+    - Pink dark: `#e01858`
+    - Pink darker: `#c0144a`
+  - Updated complementary colors:
+    - Cyan bright: `#00d4ff`
+    - Cyan teal: `#00bfea`
+    - Cyan dark: `#0099cc`
+    - Purple light: `#b366ff`
+    - Purple dark: `#8f3de6`
+  - Applied new colors to all components:
+    - Navbar, footer, sidebar borders
+    - TOC (table of contents)
+    - CryptoCard component
+    - GlassButton component
+    - Scrollbars
+    - All glow effects and shadows
+
+- **Enhanced gradient animations**
+  - Updated animated gradient with 11 color stops for smoother transitions
+  - Gradient flow: `#c0144a → #e01858 → #ff0055 → #ff1d64 → #ff4486 → #ff5c94 (center) → ...`
+  - Slowed animation from 4s to 10s for smooth flow
+  - Increased background size from 200% to 300% for more visible movement
+  - Applied to:
+    - H1 headings
+    - `.gradient-text` utility class
+    - `.gradient-bg-pink` backgrounds
+    - Primary buttons
+
+- **Electron animation improvements**
+  - Updated footer border electron to use exact logo color `#ff1d64`
+  - Synchronized electron pass with footer text glow at 20% mark
+  - Slowed electron travel time for smoother movement
+  - Changed background to `transparent` for seamless blending
+  - Removed static border - only animated electron visible
+  - Fixed animation continuity when switching light/dark modes
+  - Updated `electron-glow` animation colors:
+    - Peak glow now uses `rgba(255, 29, 100, 1)` instead of lighter pink variants
+    - Consistent logo color across all animation states
+
+- **Light/Dark mode fixes**
+  - Fixed navbar title (site name) to respect theme changes:
+    - Dark mode: `#e5e5e5` (light gray)
+    - Light mode: `#303030` (dark gray)
+  - Fixed footer title and copyright section theme support:
+    - Dark mode: Gradient pink text
+    - Light mode: Solid pink color, visible borders
+  - Updated footer link hover text-shadow for both modes
+  - Added `--ifm-navbar-link-color` to dark mode theme variables
 
 ### Dark Mode Theme Update - Purple Aesthetic
 

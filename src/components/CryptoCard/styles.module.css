@@ -45,8 +45,8 @@
    ============================================ */
 
 .variantPink {
-  background: rgba(244, 114, 182, 0.1);
-  border-color: rgba(244, 114, 182, 0.25);
+  background: rgba(255, 29, 100, 0.1);
+  border-color: rgba(255, 29, 100, 0.25);
 }
 
 .variantCyan {
@@ -64,19 +64,19 @@
    ============================================ */
 
 .cryptoGlow {
-  box-shadow: 0 0 20px rgba(244, 114, 182, 0.5);
+  box-shadow: 0 0 20px rgba(255, 29, 100, 0.5);
 }
 
 /* Only apply hover effects on devices that support hover */
 @media (hover: hover) {
   .cryptoGlow:hover {
-    box-shadow: 0 0 40px rgba(244, 114, 182, 0.8);
+    box-shadow: 0 0 40px rgba(255, 29, 100, 0.8);
     transform: translateY(-4px);
   }
 
   .cryptoCard:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px 0 rgba(244, 114, 182, 0.2);
+    box-shadow: 0 12px 40px 0 rgba(255, 29, 100, 0.2);
   }
 }
 

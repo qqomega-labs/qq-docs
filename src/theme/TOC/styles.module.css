@@ -10,7 +10,7 @@
 
 /* TOC container with glassmorphism */
 .tocWrapper :global(.table-of-contents) {
-  background: rgba(244, 114, 182, 0.05);
+  background: rgba(255, 29, 100, 0.05);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 12px;
@@ -50,8 +50,8 @@
 @media (hover: hover) {
   .tocWrapper :global(.table-of-contents__link:hover) {
     color: var(--ifm-color-primary);
-    background: rgba(244, 114, 182, 0.08);
-    text-shadow: 0 0 6px rgba(244, 114, 182, 0.3);
+    background: rgba(255, 29, 100, 0.08);
+    text-shadow: 0 0 6px rgba(255, 29, 100, 0.3);
     transform: translateX(4px);
   }
 }
@@ -60,13 +60,13 @@
 .tocWrapper :global(.table-of-contents__link--active) {
   color: var(--ifm-color-primary);
   font-weight: 600;
-  background: rgba(244, 114, 182, 0.12);
+  background: rgba(255, 29, 100, 0.12);
   border-left: 3px solid var(--ifm-color-primary);
   padding-left: calc(0.5rem - 3px);
 }
 
 .tocWrapper :global(.table-of-contents__link--active code) {
-  background: rgba(244, 114, 182, 0.2);
+  background: rgba(255, 29, 100, 0.2);
   color: var(--ifm-color-primary);
   font-weight: 600;
 }
@@ -83,7 +83,7 @@
 
 /* Code in TOC links */
 .tocWrapper :global(.table-of-contents code) {
-  background: rgba(244, 114, 182, 0.1);
+  background: rgba(255, 29, 100, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 3px;
   padding: 0.1em 0.3em;
@@ -148,7 +148,7 @@
   /* Add subtle glow on hover */
   @media (hover: hover) {
     .tocWrapper :global(.table-of-contents:hover) {
-      box-shadow: 0 4px 20px rgba(244, 114, 182, 0.15);
+      box-shadow: 0 4px 20px rgba(255, 29, 100, 0.15);
     }
   }
 }

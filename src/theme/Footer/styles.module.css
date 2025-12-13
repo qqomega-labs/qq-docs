@@ -14,8 +14,8 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
-  /* Add top border with gradient */
-  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  /* No static border - only electron animation */
+  border-top: none;
 
   /* Add subtle box shadow */
   box-shadow: 0 -4px 32px 0 rgba(0, 0, 0, 0.3);
@@ -26,15 +26,18 @@
   margin-top: auto;
 }
 
-/* Electron animation - single pink light passing through with delay */
+/* Electron animation - synchronized with text glow at 20% */
 @keyframes electron-pass {
-  0% {
+  0%, 15% {
     background-position: -30% 0;
   }
-  40% {
+  20% {
+    background-position: 50% 0;
+  }
+  25% {
     background-position: 130% 0;
   }
-  40.01%, 100% {
+  25.01%, 100% {
     background-position: -30% 0;
   }
 }
@@ -50,39 +53,22 @@
   background:
     linear-gradient(
       90deg,
-      rgba(0, 0, 0, 0.15) 0%,
-      rgba(0, 0, 0, 0.15) 46%,
-      rgba(244, 114, 182, 0.4) 48%,
-      rgba(244, 114, 182, 1) 50%,
-      rgba(244, 114, 182, 0.4) 52%,
-      rgba(0, 0, 0, 0.15) 54%,
-      rgba(0, 0, 0, 0.15) 100%
+      transparent 0%,
+      transparent 49%,
+      rgba(255, 29, 100, 1) 50%,
+      transparent 51%,
+      transparent 100%
     );
   background-size: 300% 100%;
   background-repeat: no-repeat;
-  opacity: 1;
-  filter: drop-shadow(0 0 4px rgba(244, 114, 182, 0.8));
+  filter: drop-shadow(0 0 4px rgba(255, 29, 100, 0.8));
   animation: electron-pass 10s ease-in-out infinite;
+  animation-play-state: running;
 }
 
-/* Light mode electron */
+/* Light mode electron - only change filter, keep animation running */
 [data-theme="light"] .footerWrapper::before {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.15) 0%,
-      rgba(0, 0, 0, 0.15) 46%,
-      rgba(219, 39, 119, 0.5) 48%,
-      rgba(219, 39, 119, 1) 50%,
-      rgba(219, 39, 119, 0.5) 52%,
-      rgba(0, 0, 0, 0.15) 54%,
-      rgba(0, 0, 0, 0.15) 100%
-    );
-  background-size: 300% 100%;
-  background-repeat: no-repeat;
-  opacity: 1;
-  filter: drop-shadow(0 0 4px rgba(219, 39, 119, 0.8));
-  animation: electron-pass 10s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(255, 29, 100, 0.8));
 }
 
 /* Light mode adjustments */
@@ -93,7 +79,7 @@
     rgba(255, 255, 255, 0.8) 20%,
     rgba(255, 255, 255, 0.95) 100%
   );
-  border-top-color: rgba(0, 0, 0, 0.1);
+  border-top: none;
 }
 
 /* Enhance footer links with glow effect on hover */
@@ -105,8 +91,13 @@
 @media (hover: hover) {
   .footerWrapper :global(.footer__link-item:hover) {
     color: var(--ifm-color-primary);
-    text-shadow: 0 0 8px rgba(244, 114, 182, 0.5);
+    text-shadow: 0 0 8px rgba(255, 29, 100, 0.5);
     transform: translateX(4px);
+  }
+
+  /* Light mode - reduce text shadow intensity */
+  [data-theme="light"] .footerWrapper :global(.footer__link-item:hover) {
+    text-shadow: 0 0 6px rgba(255, 29, 100, 0.3);
   }
 }
 
@@ -120,12 +111,24 @@
   font-weight: 700;
 }
 
+/* Light mode footer title */
+[data-theme="light"] .footerWrapper :global(.footer__title) {
+  color: var(--ifm-color-primary);
+  background: none;
+  -webkit-text-fill-color: var(--ifm-color-primary);
+}
+
 /* Copyright section styling */
 .footerWrapper :global(.footer__copyright) {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 1.5rem;
   margin-top: 1.5rem;
   opacity: 0.8;
+}
+
+/* Light mode copyright section */
+[data-theme="light"] .footerWrapper :global(.footer__copyright) {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Mobile responsiveness */

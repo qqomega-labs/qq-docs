@@ -71,7 +71,7 @@
 @media (hover: hover) {
   .variantSecondary:hover {
     transform: translateY(-2px);
-    background: rgba(244, 114, 182, 0.2);
+    background: rgba(255, 29, 100, 0.2);
     border-color: var(--ifm-color-primary);
   }
 
@@ -89,7 +89,7 @@
 
 @media (hover: hover) {
   .variantOutline:hover {
-    background: rgba(244, 114, 182, 0.1);
+    background: rgba(255, 29, 100, 0.1);
     transform: translateY(-2px);
   }
 
