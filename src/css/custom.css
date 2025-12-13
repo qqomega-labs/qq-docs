@@ -99,18 +99,18 @@
    ============================================ */
 
 [data-theme="dark"] {
-  /* Dark mode backgrounds - nightly dark blue theme (almost black) */
-  --qq-bg-dark: #0a0f1a;
-  --qq-bg-dark-surface: #0d1117;
-  --qq-bg-dark-surface-light: #161b22;
-  --qq-bg-dark-pure: #050810;
+  /* Dark mode backgrounds - darkened purple theme (almost black) */
+  --qq-bg-dark: #0f0a1a;
+  --qq-bg-dark-surface: #15101d;
+  --qq-bg-dark-surface-light: #1c1625;
+  --qq-bg-dark-pure: #0a0510;
   --qq-text-dark: #e5e5e5;
   --qq-text-dark-secondary: #a3a3a3;
 
   /* Glassmorphism for dark mode */
-  --qq-glass-bg-dark: rgba(13, 17, 23, 0.4);
+  --qq-glass-bg-dark: rgba(21, 16, 29, 0.4);
   --qq-glass-border-dark: rgba(255, 255, 255, 0.1);
-  --qq-glass-shadow-dark: 0 8px 32px 0 rgba(5, 8, 16, 0.3);
+  --qq-glass-shadow-dark: 0 8px 32px 0 rgba(10, 5, 16, 0.3);
 
   /* Infima overrides for dark mode */
   --ifm-color-primary: #f472b6;
@@ -121,13 +121,13 @@
   --ifm-color-primary-lighter: #f797c7;
   --ifm-color-primary-lightest: #fab8d8;
 
-  --ifm-background-color: #0a0f1a;
-  --ifm-background-surface-color: #0d1117;
+  --ifm-background-color: #0f0a1a;
+  --ifm-background-surface-color: #15101d;
 
-  --ifm-navbar-background-color: rgba(13, 17, 23, 0.85);
+  --ifm-navbar-background-color: rgba(21, 16, 29, 0.85);
   --ifm-navbar-shadow: 0 1px 2px 0 rgba(244, 114, 182, 0.2);
 
-  --ifm-footer-background-color: #050810;
+  --ifm-footer-background-color: #0a0510;
   --ifm-footer-title-color: #f472b6;
 
   --ifm-link-color: #00a6e1;
@@ -182,7 +182,7 @@
   .glass-card,
   .glass-card-pink,
   .glass-card-cyan {
-    background: rgba(13, 17, 23, 0.95);
+    background: rgba(21, 16, 29, 0.95);
   }
 
   [data-theme="light"] .glass-card,
@@ -403,7 +403,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(13, 17, 23, 0.15);
+  background: rgba(21, 16, 29, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: -1;
@@ -867,32 +867,155 @@ button[aria-label*="Switch"] svg {
 }
 
 /* Admonitions (info, warning, etc.) with enhanced glass */
-.alert {
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border-radius: 12px;
-  border: none;
-  box-shadow: none;
+.alert,
+.admonition,
+.theme-admonition {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-radius: 12px !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  padding: 1rem 1.25rem !important;
+  margin: 1.5rem 0 !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
 }
 
-.alert--info {
-  background: transparent;
-  border: none;
+/* Fallback for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(1px)) {
+  .alert,
+  .admonition,
+  .theme-admonition {
+    background: rgba(21, 16, 29, 0.85) !important;
+  }
+
+  [data-theme="light"] .alert,
+  [data-theme="light"] .admonition,
+  [data-theme="light"] .theme-admonition {
+    background: rgba(224, 224, 224, 0.85) !important;
+  }
 }
 
-.alert--warning {
-  background: transparent;
-  border: none;
+/* Hover effect for all admonitions */
+@media (hover: hover) {
+  .alert:hover,
+  .admonition:hover,
+  .theme-admonition:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+  }
 }
 
-.alert--danger {
-  background: transparent;
-  border: none;
+/* Note (blue) */
+.alert--info,
+.admonition-note,
+.theme-admonition-note {
+  background: rgba(6, 182, 212, 0.05) !important;
+  border-color: rgba(6, 182, 212, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(6, 182, 212, 0.1), inset 0 0 40px rgba(6, 182, 212, 0.03) !important;
 }
 
-.alert--success {
-  background: transparent;
-  border: none;
+[data-theme="light"] .alert--info,
+[data-theme="light"] .admonition-note,
+[data-theme="light"] .theme-admonition-note {
+  background: rgba(6, 182, 212, 0.04) !important;
+  border-color: rgba(6, 182, 212, 0.4) !important;
+}
+
+/* Tip (green) */
+.alert--success,
+.admonition-tip,
+.theme-admonition-tip {
+  background: rgba(34, 197, 94, 0.05) !important;
+  border-color: rgba(34, 197, 94, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.1), inset 0 0 40px rgba(34, 197, 94, 0.03) !important;
+}
+
+[data-theme="light"] .alert--success,
+[data-theme="light"] .admonition-tip,
+[data-theme="light"] .theme-admonition-tip {
+  background: rgba(34, 197, 94, 0.04) !important;
+  border-color: rgba(34, 197, 94, 0.4) !important;
+}
+
+/* Info (cyan) */
+.admonition-info,
+.theme-admonition-info {
+  background: rgba(0, 166, 225, 0.05) !important;
+  border-color: rgba(0, 166, 225, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(0, 166, 225, 0.1), inset 0 0 40px rgba(0, 166, 225, 0.03) !important;
+}
+
+[data-theme="light"] .admonition-info,
+[data-theme="light"] .theme-admonition-info {
+  background: rgba(0, 166, 225, 0.04) !important;
+  border-color: rgba(0, 166, 225, 0.4) !important;
+}
+
+/* Warning (yellow/orange) */
+.alert--warning,
+.admonition-warning,
+.admonition-caution,
+.theme-admonition-warning,
+.theme-admonition-caution {
+  background: rgba(251, 146, 60, 0.05) !important;
+  border-color: rgba(251, 146, 60, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(251, 146, 60, 0.1), inset 0 0 40px rgba(251, 146, 60, 0.03) !important;
+}
+
+[data-theme="light"] .alert--warning,
+[data-theme="light"] .admonition-warning,
+[data-theme="light"] .admonition-caution,
+[data-theme="light"] .theme-admonition-warning,
+[data-theme="light"] .theme-admonition-caution {
+  background: rgba(251, 146, 60, 0.04) !important;
+  border-color: rgba(251, 146, 60, 0.4) !important;
+}
+
+/* Danger (red) */
+.alert--danger,
+.admonition-danger,
+.theme-admonition-danger {
+  background: rgba(239, 68, 68, 0.05) !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.1), inset 0 0 40px rgba(239, 68, 68, 0.03) !important;
+}
+
+[data-theme="light"] .alert--danger,
+[data-theme="light"] .admonition-danger,
+[data-theme="light"] .theme-admonition-danger {
+  background: rgba(239, 68, 68, 0.04) !important;
+  border-color: rgba(239, 68, 68, 0.4) !important;
+}
+
+/* Admonition heading/title */
+.admonition-heading,
+.alert__heading {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+
+/* Admonition icon */
+.admonition-icon,
+.alert__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Admonition content */
+.admonition-content {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.admonition-content p:last-child {
+  margin-bottom: 0;
 }
 
 /* Pagination with glow */
@@ -1047,7 +1170,7 @@ button[aria-label*="Switch"] svg {
 
 /* Sidebar with glassmorphism */
 aside.theme-doc-sidebar-container {
-  background: rgba(13, 17, 23, 0.6) !important;
+  background: rgba(21, 16, 29, 0.6) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-right: 1px solid rgba(255, 255, 255, 0.08);
@@ -1155,12 +1278,12 @@ pre code {
    ============================================ */
 
 .theme-back-to-top-button {
-  background: rgba(13, 17, 23, 0.15) !important;
+  background: rgba(21, 16, 29, 0.15) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   box-shadow:
-    0 4px 24px rgba(5, 8, 16, 0.15),
+    0 4px 24px rgba(10, 5, 16, 0.15),
     0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
   transition: all 0.3s ease !important;
 }
@@ -1250,7 +1373,7 @@ pre code {
 
 [data-theme="dark"] .card {
   border-color: var(--qq-glass-border-dark);
-  background: rgba(13, 17, 23, 0.4);
+  background: rgba(21, 16, 29, 0.4);
 }
 
 [data-theme="light"] .card {
@@ -1294,27 +1417,60 @@ pre code {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--ifm-color-primary) transparent;
+  scrollbar-color: rgba(219, 39, 119, 0.6) rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] * {
+  scrollbar-color: rgba(219, 39, 119, 0.5) rgba(0, 0, 0, 0.05);
 }
 
 /* WebKit browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
+  -webkit-appearance: none;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 5px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--ifm-color-primary);
-  border-radius: 4px;
+  background: rgba(219, 39, 119, 0.6);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--ifm-color-primary);
-  opacity: 0.9;
+  background: rgba(244, 114, 182, 0.85);
+  box-shadow: 0 0 8px rgba(244, 114, 182, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(244, 114, 182, 0.95);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: rgba(219, 39, 119, 0.5);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 114, 182, 0.75);
+  box-shadow: 0 0 6px rgba(244, 114, 182, 0.3);
+}
+
+/* Force scrollbar to always be visible on webkit browsers */
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+  min-height: 40px;
+  min-width: 40px;
 }
 
 /* Override any remaining blue colors */
@@ -1495,7 +1651,7 @@ aside.theme-doc-sidebar-container {
 }
 
 [data-theme="dark"] .navbar-sidebar {
-  background: #0d1117 !important;
+  background: #15101d !important;
 }
 
 [data-theme="light"] .navbar-sidebar {

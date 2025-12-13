@@ -2,23 +2,49 @@
 
 ## [Unreleased] - 2025-12-13
 
-### Dark Mode Color Refinement
+### Dark Mode Theme Update - Purple Aesthetic
 
-- **Updated dark mode from black to nightly dark blue theme**
-  - Changed background colors to almost-black dark blue for a more sophisticated night theme
-  - Main background: `#0a0f1a` (very dark blue-gray, almost black)
-  - Surface: `#0d1117` (GitHub dark-inspired dark blue)
-  - Surface light: `#161b22` (slightly lighter dark blue for contrast)
-  - Pure background: `#050810` (deepest blue-black for footer)
-  - Updated all components to use new dark blue palette:
+- **Updated dark mode from blue to darkened purple theme**
+  - Changed background colors to purple-tinted almost-black
+  - Main background: `#0f0a1a` (darkened purple, almost black)
+  - Surface: `#15101d` (purple surface)
+  - Surface light: `#1c1625` (lighter purple surface for contrast)
+  - Pure background: `#0a0510` (deepest purple-black for footer)
+  - Updated all components to use new purple palette:
     - Navbar glassmorphism background
     - Sidebar backgrounds
     - Card backgrounds
     - Glass card fallbacks
     - Back to top button
     - Mobile sidebar
-  - Maintains subtle blue undertone while appearing almost black
-  - Creates a more elegant "nightly" aesthetic compared to pure black
+  - Maintains subtle purple undertone while appearing almost black
+  - Creates cohesive aesthetic with existing pink/purple accent colors
+
+- **Enhanced scrollbar visibility and styling**
+  - Increased scrollbar width from 8px to 10px for better visibility
+  - Toned down pink color: `rgba(219, 39, 119, 0.6)` for subtle, elegant appearance
+  - Safari compatibility: Added `-webkit-appearance: none` and minimum thumb size
+  - Hover effects: Brightens to `rgba(244, 114, 182, 0.85)` with pink glow shadow
+  - Active state: Even brighter at `rgba(244, 114, 182, 0.95)` when dragging
+  - Smooth transitions (0.3s) for all state changes
+  - Added subtle track background with rounded corners
+  - Separate styling for light/dark modes
+  - Improved Firefox scrollbar support with `scrollbar-color`
+
+- **Glassmorphism admonitions (badges)**
+  - Made all admonitions truly transparent with 12px backdrop blur
+  - Reduced background opacity from 0.12 to 0.05
+  - Fine 1px borders for refined, techy grid aesthetic (changed from 2px)
+  - Added subtle inner glow with inset shadow
+  - Color-coded borders and glows for each type:
+    - `:::note` - Cyan glass with blue tint
+    - `:::tip` - Green glass with emerald tint
+    - `:::info` - Bright cyan glass
+    - `:::warning` / `:::caution` - Orange glass
+    - `:::danger` - Red glass
+  - Hover effect lifts cards with enhanced shadow
+  - Fixed glassmorphism effects with `!important` overrides and proper Docusaurus class selectors
+  - Fallback support for browsers without backdrop-filter
 
 ## [Unreleased] - 2025-12-11
 
