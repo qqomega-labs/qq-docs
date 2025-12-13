@@ -140,7 +140,7 @@ const config: Config = {
       //     ],
       //   },
       // ],
-      copyright: `Copyright © ${new Date().getFullYear()} QQ Omega Labs`,
+      copyright: `Copyright © ${new Date().getFullYear()} QQ Omega Labs. Built with <a href="https://docusaurus.io" target="_blank" rel="noopener noreferrer">Docusaurus</a>.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -1563,6 +1563,21 @@ a:hover {
   will-change: opacity, transform, text-shadow;
 }
 
+.footer__copyright a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+@media (hover: hover) {
+  .footer__copyright a:hover {
+    opacity: 1;
+    border-bottom-color: var(--ifm-color-primary);
+  }
+}
+
 /* Breadcrumbs - only active/current item is pink */
 .breadcrumbs__link {
   color: var(--ifm-font-color-base);
