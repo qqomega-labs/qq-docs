@@ -99,18 +99,18 @@
    ============================================ */
 
 [data-theme="dark"] {
-  /* Dark mode backgrounds - darker than #282828 */
-  --qq-bg-dark: #0f0f0f;
-  --qq-bg-dark-surface: #0b0a08;
-  --qq-bg-dark-surface-light: #1a1a1a;
-  --qq-bg-dark-pure: #000000;
+  /* Dark mode backgrounds - nightly dark blue theme (almost black) */
+  --qq-bg-dark: #0a0f1a;
+  --qq-bg-dark-surface: #0d1117;
+  --qq-bg-dark-surface-light: #161b22;
+  --qq-bg-dark-pure: #050810;
   --qq-text-dark: #e5e5e5;
   --qq-text-dark-secondary: #a3a3a3;
 
   /* Glassmorphism for dark mode */
-  --qq-glass-bg-dark: rgba(11, 10, 8, 0.4);
+  --qq-glass-bg-dark: rgba(13, 17, 23, 0.4);
   --qq-glass-border-dark: rgba(255, 255, 255, 0.1);
-  --qq-glass-shadow-dark: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --qq-glass-shadow-dark: 0 8px 32px 0 rgba(5, 8, 16, 0.3);
 
   /* Infima overrides for dark mode */
   --ifm-color-primary: #f472b6;
@@ -121,13 +121,13 @@
   --ifm-color-primary-lighter: #f797c7;
   --ifm-color-primary-lightest: #fab8d8;
 
-  --ifm-background-color: #0f0f0f;
-  --ifm-background-surface-color: #0b0a08;
+  --ifm-background-color: #0a0f1a;
+  --ifm-background-surface-color: #0d1117;
 
-  --ifm-navbar-background-color: rgba(11, 10, 8, 0.85);
+  --ifm-navbar-background-color: rgba(13, 17, 23, 0.85);
   --ifm-navbar-shadow: 0 1px 2px 0 rgba(244, 114, 182, 0.2);
 
-  --ifm-footer-background-color: #000000;
+  --ifm-footer-background-color: #050810;
   --ifm-footer-title-color: #f472b6;
 
   --ifm-link-color: #00a6e1;
@@ -182,7 +182,7 @@
   .glass-card,
   .glass-card-pink,
   .glass-card-cyan {
-    background: rgba(20, 21, 26, 0.95);
+    background: rgba(13, 17, 23, 0.95);
   }
 
   [data-theme="light"] .glass-card,
@@ -403,7 +403,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(11, 10, 8, 0.15);
+  background: rgba(13, 17, 23, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: -1;
@@ -1047,7 +1047,7 @@ button[aria-label*="Switch"] svg {
 
 /* Sidebar with glassmorphism */
 aside.theme-doc-sidebar-container {
-  background: rgba(11, 10, 8, 0.6) !important;
+  background: rgba(13, 17, 23, 0.6) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-right: 1px solid rgba(255, 255, 255, 0.08);
@@ -1155,12 +1155,12 @@ pre code {
    ============================================ */
 
 .theme-back-to-top-button {
-  background: rgba(11, 10, 8, 0.15) !important;
+  background: rgba(13, 17, 23, 0.15) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.15),
+    0 4px 24px rgba(5, 8, 16, 0.15),
     0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
   transition: all 0.3s ease !important;
 }
@@ -1250,7 +1250,7 @@ pre code {
 
 [data-theme="dark"] .card {
   border-color: var(--qq-glass-border-dark);
-  background: rgba(11, 10, 8, 0.4);
+  background: rgba(13, 17, 23, 0.4);
 }
 
 [data-theme="light"] .card {
@@ -1495,7 +1495,7 @@ aside.theme-doc-sidebar-container {
 }
 
 [data-theme="dark"] .navbar-sidebar {
-  background: #0b0a08 !important;
+  background: #0d1117 !important;
 }
 
 [data-theme="light"] .navbar-sidebar {

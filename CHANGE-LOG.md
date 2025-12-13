@@ -1,5 +1,25 @@
 # Change Log
 
+## [Unreleased] - 2025-12-13
+
+### Dark Mode Color Refinement
+
+- **Updated dark mode from black to nightly dark blue theme**
+  - Changed background colors to almost-black dark blue for a more sophisticated night theme
+  - Main background: `#0a0f1a` (very dark blue-gray, almost black)
+  - Surface: `#0d1117` (GitHub dark-inspired dark blue)
+  - Surface light: `#161b22` (slightly lighter dark blue for contrast)
+  - Pure background: `#050810` (deepest blue-black for footer)
+  - Updated all components to use new dark blue palette:
+    - Navbar glassmorphism background
+    - Sidebar backgrounds
+    - Card backgrounds
+    - Glass card fallbacks
+    - Back to top button
+    - Mobile sidebar
+  - Maintains subtle blue undertone while appearing almost black
+  - Creates a more elegant "nightly" aesthetic compared to pure black
+
 ## [Unreleased] - 2025-12-11
 
 ### Routing & Build Issues
