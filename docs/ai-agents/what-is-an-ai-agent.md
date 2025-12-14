@@ -1,9 +1,9 @@
 ---
-title: What is an AI Agent
+title: What is a swarm of AI Agent
 sidebar_position: 1
 ---
 
-## What Is an AI Agent (and what is a swarm?)
+## What Is an AI Agent?
 
 In QQ, an **AI Agent** is a small specialist.  
 Think of it like a **doctor with one job**: one only checks the heart, another only checks the lungs, another only reads the blood tests.
