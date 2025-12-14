@@ -807,7 +807,19 @@ button[aria-label*="Switch"] svg {
   border: none;
 }
 
-/* Headings with gradient accent */
+/* Body text - mobile first (base) */
+.theme-doc-markdown p,
+.theme-doc-markdown li {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.theme-doc-markdown ul,
+.theme-doc-markdown ol {
+  font-size: 1rem;
+}
+
+/* Headings with gradient accent - mobile first */
 .theme-doc-markdown h1 {
   background: var(--qq-gradient-crypto-pink-animated);
   background-size: 300% 100%;
@@ -816,6 +828,7 @@ button[aria-label*="Switch"] svg {
   background-clip: text;
   font-weight: 800;
   margin-bottom: 1.5rem;
+  font-size: 2.25rem;
   filter:
     drop-shadow(0 0 5px rgba(255, 29, 100, 0.5))
     drop-shadow(0 0 15px rgba(255, 29, 100, 0.25))
@@ -830,12 +843,26 @@ button[aria-label*="Switch"] svg {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: none;
+  font-size: 1.4rem;
 }
 
 .theme-doc-markdown h3 {
   color: var(--ifm-heading-color);
   font-weight: 600;
   margin-top: 2rem;
+  font-size: 1.15rem;
+}
+
+.theme-doc-markdown h4 {
+  font-size: 1.05rem;
+}
+
+.theme-doc-markdown h5 {
+  font-size: 0.95rem;
+}
+
+.theme-doc-markdown h6 {
+  font-size: 0.9rem;
 }
 
 /* Links - elegant techy style with animated underline */
@@ -912,6 +939,8 @@ button[aria-label*="Switch"] svg {
   border-radius: 0 8px 8px 0;
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 /* Admonitions (info, warning, etc.) with enhanced glass */
@@ -1056,7 +1085,7 @@ button[aria-label*="Switch"] svg {
   justify-content: center;
 }
 
-/* Admonition content */
+/* Admonition content - mobile first */
 .admonition-content {
   font-size: 0.95rem;
   line-height: 1.6;
@@ -1064,6 +1093,11 @@ button[aria-label*="Switch"] svg {
 
 .admonition-content p:last-child {
   margin-bottom: 0;
+}
+
+.admonition-content p,
+.admonition-content li {
+  font-size: 0.95rem;
 }
 
 /* Pagination with glow */
@@ -1921,7 +1955,7 @@ aside.theme-doc-sidebar-container {
    MOBILE-FIRST RESPONSIVE ADJUSTMENTS
    ============================================ */
 
-/* Reduce blur on mobile for better performance */
+/* Mobile optimizations - better performance and readability */
 @media (max-width: 768px) {
   :root {
     --qq-glass-blur: 12px;
@@ -1943,13 +1977,31 @@ aside.theme-doc-sidebar-container {
     padding: 12px 16px;
   }
 
-  /* Larger font sizes for readability */
-  .markdown h1 {
-    font-size: 2rem;
+  /* Mobile typography - optimized for small screens */
+  .theme-doc-markdown h1 {
+    font-size: 2.25rem;
   }
 
-  .markdown h2 {
-    font-size: 1.5rem;
+  .theme-doc-markdown h2 {
+    font-size: 1.4rem;
+  }
+
+  .theme-doc-markdown h3 {
+    font-size: 1.15rem;
+  }
+
+  .theme-doc-markdown p,
+  .theme-doc-markdown li {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .theme-doc-markdown blockquote {
+    font-size: 0.95rem;
+  }
+
+  .theme-doc-markdown {
+    padding: 1.5rem 1rem;
   }
 }
 
@@ -1959,6 +2011,29 @@ aside.theme-doc-sidebar-container {
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
   }
+
+  /* Tablet typography - balanced */
+  .theme-doc-markdown h1 {
+    font-size: 2.5rem;
+  }
+
+  .theme-doc-markdown h2 {
+    font-size: 1.6rem;
+  }
+
+  .theme-doc-markdown h3 {
+    font-size: 1.3rem;
+  }
+
+  .theme-doc-markdown p,
+  .theme-doc-markdown li {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .theme-doc-markdown blockquote {
+    font-size: 0.95rem;
+  }
 }
 
 /* Desktop enhancements */
@@ -1967,6 +2042,39 @@ aside.theme-doc-sidebar-container {
   .glass-card {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+  }
+
+  /* Desktop typography - optimal for larger screens */
+  .theme-doc-markdown h1 {
+    font-size: 3rem;
+  }
+
+  .theme-doc-markdown h2 {
+    font-size: 1.75rem;
+  }
+
+  .theme-doc-markdown h3 {
+    font-size: 1.4rem;
+  }
+
+  .theme-doc-markdown h4 {
+    font-size: 1.15rem;
+  }
+
+  .theme-doc-markdown p,
+  .theme-doc-markdown li {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .theme-doc-markdown blockquote {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .admonition-content p,
+  .admonition-content li {
+    font-size: 1rem;
   }
 
   /* Enhanced animations on desktop */

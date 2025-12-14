@@ -2,7 +2,7 @@
 
 ## [Unreleased] - 2025-12-14
 
-### Agent Pages & TOC Updates
+### Agent Pages & UI Enhancements
 
 - **Added element icons to agent page titles**
   - Inline images in all 6 agent pages (Carbon, Gold, Hydrogen, Silicon, Oxygen, Phosphorus)
@@ -11,12 +11,30 @@
   - Vertically aligned with title text
 
 - **TOC (Table of Contents) refinements**
-  - Reduced font sizes to match sidebar subtitles:
-  - Significantly reduced padding and spacing:
-  - Fixed hover animation color issues:
-    - Removed color transition to prevent off-palette pinks
+  - Reduced font sizes to match sidebar subtitles (0.65-0.7rem)
+  - Significantly reduced padding and spacing for compact appearance
+  - Fixed Safari M1 hover animation glitches:
+    - Removed all color transitions (`transition: none !important`)
     - Color changes instantly to exact palette pink (#ff1d64)
-    - Only background and transform animate smoothly
+    - Background highlights appear instantly without animation
+    - No off-palette color interpolation during hover
+
+- **Sidebar navigation fixes**
+  - Applied same Safari M1 fix to sidebar subtitles
+  - Removed `transition: all 0.2s ease` from `.menu__link`
+  - Removed `transition: color 0.2s ease` from category titles
+  - Instant color changes on hover prevent Safari rendering glitches
+
+- **Responsive typography system (mobile-first)**
+  - Comprehensive font sizing across all breakpoints
+  - Optimized line heights for each breakpoint
+  - Added responsive sizing for all content elements:
+    - Paragraphs and list items
+    - Blockquotes
+    - Admonition content
+    - All heading levels (H1-H6)
+  - Mobile padding reduced to 1.5rem × 1rem for more screen space
+  - Enhanced readability on all devices
 
 ## [Unreleased] - 2025-12-13
 
