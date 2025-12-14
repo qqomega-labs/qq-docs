@@ -3,7 +3,7 @@ title: Oxygen Agents
 sidebar_position: 6
 ---
 
-## ⚪️ Oxygen | Macro & Market Regime Swarm
+## <img src="/img/Iot.png" alt="Oxygen" style={{height: '2.5em', verticalAlign: 'middle'}} /> Oxygen | Macro & Market Regime Swarm
 
 Oxygen is the element that makes breathing and combustion possible: it’s everywhere, invisible, and yet it decides whether systems can move or suffocate.  
 In QQ Omega, **Oxygen** plays a similar role in understanding the **macro regime** and **risk appetite** surrounding crypto: the background environment that doesn’t live on a single chart, but quietly pushes everything up or down.

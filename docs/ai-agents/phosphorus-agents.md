@@ -3,7 +3,7 @@ title: Phosphorus Agents
 sidebar_position: 7
 ---
 
-## 🟢 Phosphorus | Orchestration & Scoring Swarm
+## <img src="/img/Ipt.png" alt="Phosphorus" style={{height: '2.5em', verticalAlign: 'middle'}} /> Phosphorus | Orchestration & Scoring Swarm
 
 Phosphorus is the element that stores and releases energy in living systems, wiring together otherwise separate processes.  
 In QQ Omega, **Phosphorus** plays a similar role: it **orchestrates all other elements**, aggregates their signals into coherent scores, and turns raw analysis into **actionable insight**.

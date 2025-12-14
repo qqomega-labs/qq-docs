@@ -1158,7 +1158,6 @@ button[aria-label*="Switch"] svg {
 /* TOC links */
 .table-of-contents__link {
   color: var(--ifm-color-content-secondary);
-  transition: all 0.3s ease;
   border-radius: 4px;
   padding: 0.25rem 0.5rem;
   display: block;
@@ -1238,7 +1237,7 @@ aside.theme-doc-sidebar-container {
   color: var(--ifm-menu-color);
   margin-top: 0.5rem;
   margin-bottom: 0.25rem;
-  transition: color 0.2s ease;
+  transition: none;
 }
 
 /* Reduce spacing between menu items */
@@ -1258,7 +1257,7 @@ aside.theme-doc-sidebar-container {
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--ifm-menu-color);
-  transition: all 0.2s ease;
+  transition: none;
 }
 
 /* Child document links - even smaller */

@@ -1,5 +1,23 @@
 # Change Log
 
+## [Unreleased] - 2025-12-14
+
+### Agent Pages & TOC Updates
+
+- **Added element icons to agent page titles**
+  - Inline images in all 6 agent pages (Carbon, Gold, Hydrogen, Silicon, Oxygen, Phosphorus)
+  - Using transparent PNG versions (`Ict.png`, `Igt.png`, `Iht.png`, `Ist.png`, `Iot.png`, `Ipt.png`)
+  - Icon size: 2.5em for better visibility
+  - Vertically aligned with title text
+
+- **TOC (Table of Contents) refinements**
+  - Reduced font sizes to match sidebar subtitles:
+  - Significantly reduced padding and spacing:
+  - Fixed hover animation color issues:
+    - Removed color transition to prevent off-palette pinks
+    - Color changes instantly to exact palette pink (#ff1d64)
+    - Only background and transform animate smoothly
+
 ## [Unreleased] - 2025-12-13
 
 ### Logo & Brand Color Update

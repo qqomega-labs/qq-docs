@@ -15,12 +15,12 @@
   -webkit-backdrop-filter: blur(12px);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 1.5rem;
+  padding: 0.75rem;
   position: sticky;
   top: calc(var(--ifm-navbar-height) + 2rem);
   max-height: calc(100vh - var(--ifm-navbar-height) - 4rem);
   overflow-y: auto;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.2s ease;
 }
 
 [data-theme='light'] .tocWrapper :global(.table-of-contents) {
@@ -34,25 +34,25 @@
 }
 
 .tocWrapper :global(.table-of-contents li) {
-  margin: 0.5rem 0;
+  margin: 0.2rem 0;
 }
 
 /* TOC links */
 .tocWrapper :global(.table-of-contents__link) {
   color: var(--ifm-color-content-secondary);
-  transition: all 0.3s ease;
   border-radius: 4px;
-  padding: 0.25rem 0.5rem;
+  padding: 0.15rem 0.35rem;
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  font-weight: 500;
+  transition: none !important;
 }
 
 @media (hover: hover) {
   .tocWrapper :global(.table-of-contents__link:hover) {
     color: var(--ifm-color-primary);
     background: rgba(255, 29, 100, 0.08);
-    text-shadow: 0 0 6px rgba(255, 29, 100, 0.3);
-    transform: translateX(4px);
   }
 }
 
@@ -62,7 +62,7 @@
   font-weight: 600;
   background: rgba(255, 29, 100, 0.12);
   border-left: 3px solid var(--ifm-color-primary);
-  padding-left: calc(0.5rem - 3px);
+  padding-left: calc(0.35rem - 3px);
 }
 
 .tocWrapper :global(.table-of-contents__link--active code) {
@@ -73,12 +73,12 @@
 
 /* Nested TOC items */
 .tocWrapper :global(.table-of-contents ul) {
-  padding-left: 1rem;
-  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 .tocWrapper :global(.table-of-contents ul ul) {
-  padding-left: 0.75rem;
+  padding-left: 0.4rem;
 }
 
 /* Code in TOC links */
@@ -112,12 +112,12 @@
 /* TOC heading/title */
 .tocWrapper :global(.table-of-contents__heading) {
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--ifm-color-primary);
-  margin-bottom: 1rem;
-  padding-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.35rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -126,7 +126,18 @@
   .tocWrapper :global(.table-of-contents) {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 1rem;
+    padding: 0.6rem;
+  }
+
+  .tocWrapper :global(.table-of-contents__link) {
+    font-size: 0.65rem;
+    padding: 0.12rem 0.3rem;
+  }
+
+  .tocWrapper :global(.table-of-contents__heading) {
+    font-size: 0.65rem;
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.25rem;
   }
 }
 
@@ -136,6 +147,14 @@
     backdrop-filter: blur(11px);
     -webkit-backdrop-filter: blur(11px);
   }
+
+  .tocWrapper :global(.table-of-contents__link) {
+    font-size: 0.68rem;
+  }
+
+  .tocWrapper :global(.table-of-contents__heading) {
+    font-size: 0.68rem;
+  }
 }
 
 /* Desktop enhancements */
@@ -143,6 +162,14 @@
   .tocWrapper :global(.table-of-contents) {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+  }
+
+  .tocWrapper :global(.table-of-contents__link) {
+    font-size: 0.7rem;
+  }
+
+  .tocWrapper :global(.table-of-contents__heading) {
+    font-size: 0.7rem;
   }
 
   /* Add subtle glow on hover */

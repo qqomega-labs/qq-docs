@@ -3,7 +3,7 @@ title: Silicon Agents
 sidebar_position: 5
 ---
 
-## 🔴 Silicon | Technical Analysis Swarm
+## <img src="/img/Ist.png" alt="Silicon" style={{height: '2.5em', verticalAlign: 'middle'}} /> Silicon | Technical Analysis Swarm
 
 Silicon is the base material of modern computing: it turns raw electrical noise into precise, structured signals.  
 In QQ Omega, **Silicon** plays a similar role for **price action**: it takes noisy OHLCV data and organizes it into clear views on **trend, momentum, volatility and key levels**.
