@@ -35,6 +35,31 @@
     - All heading levels (H1-H6)
   - Mobile padding reduced to 1.5rem × 1rem for more screen space
   - Enhanced readability on all devices
+  - Breakpoint-specific heading sizes:
+    - Mobile (< 768px): H1 2.25rem, H2 1.75rem, H3 1.4rem, H4 1.2rem, H5 1.1rem, H6 1rem
+    - Tablet (768-1024px): H1 2.5rem, H2 1.875rem, H3 1.5rem, H4 1.25rem, H5 1.15rem, H6 1rem
+    - Desktop (> 1024px): H1 3rem, H2 2rem, H3 1.6rem, H4 1.3rem, H5 1.2rem, H6 1rem
+
+- **Category page card styling**
+  - Removed emoji document icons (📄️) from category index pages
+  - CSS technique: `font-size: 0` on card titles to hide all text content
+  - Used `::after` pseudo-element with `attr(title)` to restore clean text
+  - Increased card title size to 1.35rem for better visibility and hierarchy
+  - Icons remain visible on actual article pages, only removed from category listings
+
+- **Border color standardization**
+  - Changed all structural borders from pink to neutral gray
+  - Works in both light and dark modes:
+    - Dark mode: `rgba(255, 255, 255, 0.1)` (white with 10% opacity)
+    - Light mode: `rgba(0, 0, 0, 0.1)` (black with 10% opacity)
+  - Updated elements:
+    - Navbar border-bottom
+    - Sidebar border-right
+    - TOC container border
+    - Footer border-top
+    - Footer dividers (hr elements)
+  - Pink color reserved for interactive elements (hovers, active states, text accents)
+  - Creates cleaner, more professional UI grid aesthetic
 
 ## [Unreleased] - 2025-12-13
 
