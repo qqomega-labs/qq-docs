@@ -1,14 +1,14 @@
 ---
-title: Fee Burn
+title: Burn Mechanism
 sidebar_position: 2
 ---
 
-### Fee Burn – How It Works
+### How It Works
 
 Every month, all LP fees collected in $QQ are processed as follows:
 
 - **burn up to 500 $QQ**.
-- If the fees in $QQ are more than 500 $QQ, anything above that amount is **sent to the airdrop wallet**.
+- If the fees in $QQ on Base+Solana are more than 500 $QQ, anything above that amount is **sent to the airdrop wallet**.
 
 So, every month:
 
