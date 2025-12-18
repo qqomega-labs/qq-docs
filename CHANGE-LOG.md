@@ -1,5 +1,9 @@
 # Change Log
 
+## [Unreleased] - 2025-12-18
+
+- Web icons setup.
+
 ## [Unreleased] - 2025-12-14
 
 ### Agent Pages & UI Enhancements

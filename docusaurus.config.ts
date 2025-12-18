@@ -7,12 +7,55 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "QQ Omega Labs Docs",
   tagline: "Official Documentation",
-  favicon: "img/favicon.ico",
+  favicon: "favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
+
+  // Favicon and PWA configuration
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/icon1.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/icon0.svg",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/apple-icon.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "manifest",
+        href: "/manifest.json",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "apple-mobile-web-app-title",
+        content: "QQ docs",
+      },
+    },
+  ],
 
   // Set the production url of your site here
   url: "https://your-docusaurus-site.example.com",
