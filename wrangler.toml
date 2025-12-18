@@ -1,0 +1,7 @@
+name = "qq-docs"
+compatibility_date = "2025-12-18"
+
+[site]
+bucket = "./build"
+
+pages_build_output_dir = "./build"
