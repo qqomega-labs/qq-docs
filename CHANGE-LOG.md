@@ -3,6 +3,7 @@
 ## [Unreleased] - 2025-12-18
 
 - Web icons setup.
+- Updated website url.
 
 ## [Unreleased] - 2025-12-14
 
