@@ -4,6 +4,7 @@
 
 - Web icons setup.
 - Updated website url.
+- Updated scripts.
 
 ## [Unreleased] - 2025-12-14
 
