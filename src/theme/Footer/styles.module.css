@@ -1,0 +1,151 @@
+/**
+ * Footer Wrapper Styles - Crypto Theme
+ * Glassmorphism with gradient accents
+ */
+
+.footerWrapper {
+  /* Glassmorphism footer */
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.85) 20%,
+    rgba(0, 0, 0, 0.98) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* No static border - only electron animation */
+  border-top: none;
+
+  /* Add subtle box shadow */
+  box-shadow: 0 -4px 32px 0 rgba(0, 0, 0, 0.3);
+
+  position: relative;
+
+  /* Ensure footer stays at bottom */
+  margin-top: auto;
+}
+
+/* Electron animation - synchronized with text glow at 20% */
+@keyframes electron-pass {
+  0%, 15% {
+    background-position: -30% 0;
+  }
+  20% {
+    background-position: 50% 0;
+  }
+  25% {
+    background-position: 130% 0;
+  }
+  25.01%, 100% {
+    background-position: -30% 0;
+  }
+}
+
+/* Add gradient accent line at top of footer with electron animation */
+.footerWrapper::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 49%,
+      rgba(255, 29, 100, 1) 50%,
+      transparent 51%,
+      transparent 100%
+    );
+  background-size: 300% 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 4px rgba(255, 29, 100, 0.8));
+  animation: electron-pass 10s ease-in-out infinite;
+  animation-play-state: running;
+}
+
+/* Light mode electron - only change filter, keep animation running */
+[data-theme="light"] .footerWrapper::before {
+  filter: drop-shadow(0 0 4px rgba(255, 29, 100, 0.8));
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .footerWrapper {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.8) 20%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  border-top: none;
+}
+
+/* Enhance footer links with glow effect on hover */
+.footerWrapper :global(.footer__link-item) {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+@media (hover: hover) {
+  .footerWrapper :global(.footer__link-item:hover) {
+    color: var(--ifm-color-primary);
+    text-shadow: 0 0 8px rgba(255, 29, 100, 0.5);
+    transform: translateX(4px);
+  }
+
+  /* Light mode - reduce text shadow intensity */
+  [data-theme="light"] .footerWrapper :global(.footer__link-item:hover) {
+    text-shadow: 0 0 6px rgba(255, 29, 100, 0.3);
+  }
+}
+
+/* Style footer title */
+.footerWrapper :global(.footer__title) {
+  background: var(--qq-gradient-crypto-pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* Light mode footer title */
+[data-theme="light"] .footerWrapper :global(.footer__title) {
+  color: var(--ifm-color-primary);
+  background: none;
+  -webkit-text-fill-color: var(--ifm-color-primary);
+}
+
+/* Copyright section styling */
+.footerWrapper :global(.footer__copyright) {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  opacity: 0.8;
+}
+
+/* Light mode copyright section */
+[data-theme="light"] .footerWrapper :global(.footer__copyright) {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footerWrapper {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* Fallback for non-backdrop-filter browsers */
+@supports not (backdrop-filter: blur(1px)) {
+  .footerWrapper {
+    background: rgba(11, 10, 8, 0.98);
+  }
+
+  [data-theme="light"] .footerWrapper {
+    background: rgba(255, 255, 255, 0.98);
+  }
+}

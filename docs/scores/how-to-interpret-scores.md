@@ -9,11 +9,14 @@ QQ uses a **0–10 score** for each area (Fundamentals, Tokenomics, On-chain, TA
 
 General reading:
 
-- **8,5 – 10** → VERY CHEAP → very strong on that dimension
-- **6,5 – 8,4** → CHEAP → solid, with some risks or unknowns
-- **3,6 – 6,4** → FAIR VALUE → neutral / mixed signals
-- **1,6 – 3,5** → EXPENSIVE → weak, several red flags
-- **0 – 1,5** → VERY EXPENSIVE → very fragile / highly risky
+|   range   |     label      |                meaning                 |
+|:---------:|:--------------:|:--------------------------------------:|
+|  8,5 – 10 |   very cheap   | very strong on that dimension          |
+| 6,5 – 8,4 |     cheap      | solid, with some risks or unknowns     |
+| 3,6 – 6,4 |   fair value   | neutral / mixed signals                |
+| 1,6 – 3,5 |   expensive   | weak, several red flags                |
+|  0 – 1,5  | very expensive | very fragile / highly risky            |
+
 
 ### What “cheap / expensive” means in QQ
 
@@ -21,7 +24,7 @@ In QQ, “undervalued / overvalued” is **not a price prediction**.
 It is a **mismatch signal** between:
 
 - the **quality scores** (Fundamentals, Tokenomics, On-chain, etc.)
-- and the **market behaviour** (price, volume, narrative, flows).
+- and the **market behaviour** in the timeframe analyzed (price, volume, narrative, flows).
 
 Examples:
 

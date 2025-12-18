@@ -3,7 +3,7 @@ title: Agent contributions
 sidebar_position: 5
 ---
 
-## How an agent contributes to the final score over time
+## How it contributes to the final score over time
 
 Each agent:
 
@@ -21,4 +21,4 @@ As a result:
 - The **contribution of each agent** to the final score becomes **more calibrated**.
 - The system learns which signals are **truly predictive** vs **pure noise**.
 
-QQ is designed as a **living system**, not a fixed static model.
+QQ Omega is designed as a **living system** that evolves with new data, not a fixed static model.

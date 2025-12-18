@@ -8,7 +8,7 @@ sidebar_position: 3
 1. **Data collection**  
    QQ-Omega pulls organize data On-chain (holders, flows, liquidity, token, etc.) and Off-chain (product, docs, news, macro-economy)
 2. **AI agents per area**  
-   Each macro score is made of **5 different organizated groups of AI agents called** `TODO`.  
+   Each macro score is made of **5 different organizated groups of AI agents**
    Here's two example:
    - Fundamentals → one agent for team, one for product, one for security, etc.
    - Tokenomics → one for emissions, one for unlocks, one for utility, etc.

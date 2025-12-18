@@ -1,0 +1,260 @@
+/**
+ * CryptoCard Component Styles
+ * Glassmorphism card with crypto-themed variants
+ */
+
+.cryptoCard {
+  /* Use global glassmorphism variables */
+  background: var(--qq-glass-bg-light);
+  backdrop-filter: blur(var(--qq-glass-blur));
+  -webkit-backdrop-filter: blur(var(--qq-glass-blur));
+
+  border-radius: 12px;
+  border: 1px solid var(--qq-glass-border-light);
+  box-shadow: var(--qq-glass-shadow-light);
+
+  padding: 2rem;
+
+  transition: all 0.3s ease;
+
+  /* Ensure proper stacking */
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .cryptoCard {
+  background: var(--qq-glass-bg-dark);
+  border-color: var(--qq-glass-border-dark);
+  box-shadow: var(--qq-glass-shadow-dark);
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(1px)) {
+  .cryptoCard {
+    background: rgba(20, 21, 26, 0.95);
+  }
+
+  [data-theme='light'] .cryptoCard {
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+/* ============================================
+   VARIANTS
+   ============================================ */
+
+.variantPink {
+  background: rgba(255, 29, 100, 0.1);
+  border-color: rgba(255, 29, 100, 0.25);
+}
+
+.variantCyan {
+  background: rgba(0, 166, 225, 0.1);
+  border-color: rgba(0, 166, 225, 0.25);
+}
+
+.variantPurple {
+  background: rgba(168, 85, 247, 0.1);
+  border-color: rgba(168, 85, 247, 0.25);
+}
+
+/* ============================================
+   GLOW EFFECT
+   ============================================ */
+
+.cryptoGlow {
+  box-shadow: 0 0 20px rgba(255, 29, 100, 0.5);
+}
+
+/* Only apply hover effects on devices that support hover */
+@media (hover: hover) {
+  .cryptoGlow:hover {
+    box-shadow: 0 0 40px rgba(255, 29, 100, 0.8);
+    transform: translateY(-4px);
+  }
+
+  .cryptoCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px 0 rgba(255, 29, 100, 0.2);
+  }
+}
+
+/* ============================================
+   ICON CONTAINER
+   ============================================ */
+
+.iconContainer {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  /* Ensure icon color inheritance */
+  color: var(--ifm-color-primary);
+}
+
+.iconAnimated {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ============================================
+   TITLE
+   ============================================ */
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+
+  /* Use gradient text for default variant */
+  background: var(--qq-gradient-crypto-pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Variant-specific title colors */
+.variantCyan .title {
+  background: var(--qq-gradient-crypto-cyan);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.variantPurple .title {
+  background: var(--qq-gradient-crypto-purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   DESCRIPTION
+   ============================================ */
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--qq-text-light-secondary);
+  margin: 0;
+}
+
+[data-theme='dark'] .description {
+  color: var(--qq-text-dark-secondary);
+}
+
+.description p {
+  margin: 0;
+}
+
+.description p:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   MOBILE-FIRST RESPONSIVE
+   ============================================ */
+
+/* Mobile: reduce padding, smaller text */
+@media (max-width: 768px) {
+  .cryptoCard {
+    padding: 1.5rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .iconContainer {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet: moderate sizing */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cryptoCard {
+    padding: 1.75rem;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .title {
+    font-size: 1.375rem;
+  }
+
+  .iconContainer {
+    font-size: 2.75rem;
+  }
+}
+
+/* Desktop: full sizing */
+@media (min-width: 1024px) {
+  .cryptoCard {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  /* Enhanced hover effect on desktop */
+  @media (hover: hover) {
+    .cryptoCard:hover {
+      transform: translateY(-4px) scale(1.02);
+    }
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .iconAnimated {
+    animation: none;
+  }
+
+  .cryptoCard,
+  .cryptoGlow {
+    transition: none;
+  }
+
+  @media (hover: hover) {
+    .cryptoCard:hover,
+    .cryptoGlow:hover {
+      transform: none;
+    }
+  }
+}
+
+/* Print styles */
+@media print {
+  .cryptoCard {
+    background: white;
+    border: 1px solid #ccc;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .title {
+    -webkit-text-fill-color: initial;
+    color: black;
+  }
+}

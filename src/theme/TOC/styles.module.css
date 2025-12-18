@@ -1,0 +1,213 @@
+/**
+ * TOC (Table of Contents) Styles - Crypto Theme
+ * Glassmorphism sticky sidebar
+ */
+
+.tocWrapper {
+  /* Ensure proper layout */
+  display: contents;
+}
+
+/* TOC container with glassmorphism */
+.tocWrapper :global(.table-of-contents) {
+  background: rgba(255, 29, 100, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.75rem;
+  position: sticky;
+  top: calc(var(--ifm-navbar-height) + 2rem);
+  max-height: calc(100vh - var(--ifm-navbar-height) - 4rem);
+  overflow-y: auto;
+  transition: box-shadow 0.2s ease;
+}
+
+[data-theme='light'] .tocWrapper :global(.table-of-contents) {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* TOC heading */
+.tocWrapper :global(.table-of-contents__left-border) {
+  border-left: 2px solid var(--ifm-color-primary);
+}
+
+.tocWrapper :global(.table-of-contents li) {
+  margin: 0.2rem 0;
+}
+
+/* TOC links */
+.tocWrapper :global(.table-of-contents__link) {
+  color: var(--ifm-color-content-secondary);
+  border-radius: 4px;
+  padding: 0.15rem 0.35rem;
+  display: block;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  font-weight: 500;
+  transition: none !important;
+}
+
+@media (hover: hover) {
+  .tocWrapper :global(.table-of-contents__link:hover) {
+    color: var(--ifm-color-primary);
+    background: rgba(255, 29, 100, 0.08);
+  }
+}
+
+/* Active TOC link */
+.tocWrapper :global(.table-of-contents__link--active) {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  background: rgba(255, 29, 100, 0.12);
+  border-left: 3px solid var(--ifm-color-primary);
+  padding-left: calc(0.35rem - 3px);
+}
+
+.tocWrapper :global(.table-of-contents__link--active code) {
+  background: rgba(255, 29, 100, 0.2);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* Nested TOC items */
+.tocWrapper :global(.table-of-contents ul) {
+  padding-left: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.tocWrapper :global(.table-of-contents ul ul) {
+  padding-left: 0.4rem;
+}
+
+/* Code in TOC links */
+.tocWrapper :global(.table-of-contents code) {
+  background: rgba(255, 29, 100, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+  font-size: 0.85em;
+}
+
+/* Scrollbar styling for TOC */
+.tocWrapper :global(.table-of-contents)::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tocWrapper :global(.table-of-contents)::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 3px;
+}
+
+.tocWrapper :global(.table-of-contents)::-webkit-scrollbar-thumb {
+  background: var(--ifm-color-primary);
+  border-radius: 3px;
+}
+
+.tocWrapper :global(.table-of-contents)::-webkit-scrollbar-thumb:hover {
+  background: var(--qq-color-pink-dark);
+}
+
+/* TOC heading/title */
+.tocWrapper :global(.table-of-contents__heading) {
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile: hide TOC or show as collapsible */
+@media (max-width: 996px) {
+  .tocWrapper :global(.table-of-contents) {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.6rem;
+  }
+
+  .tocWrapper :global(.table-of-contents__link) {
+    font-size: 0.65rem;
+    padding: 0.12rem 0.3rem;
+  }
+
+  .tocWrapper :global(.table-of-contents__heading) {
+    font-size: 0.65rem;
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.25rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tocWrapper :global(.table-of-contents) {
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+  }
+
+  .tocWrapper :global(.table-of-contents__link) {
+    font-size: 0.68rem;
+  }
+
+  .tocWrapper :global(.table-of-contents__heading) {
+    font-size: 0.68rem;
+  }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1024px) {
+  .tocWrapper :global(.table-of-contents) {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .tocWrapper :global(.table-of-contents__link) {
+    font-size: 0.7rem;
+  }
+
+  .tocWrapper :global(.table-of-contents__heading) {
+    font-size: 0.7rem;
+  }
+
+  /* Add subtle glow on hover */
+  @media (hover: hover) {
+    .tocWrapper :global(.table-of-contents:hover) {
+      box-shadow: 0 4px 20px rgba(255, 29, 100, 0.15);
+    }
+  }
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(1px)) {
+  .tocWrapper :global(.table-of-contents) {
+    background: rgba(20, 21, 26, 0.95);
+  }
+
+  [data-theme='light'] .tocWrapper :global(.table-of-contents) {
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tocWrapper :global(.table-of-contents),
+  .tocWrapper :global(.table-of-contents__link) {
+    transition: none;
+  }
+
+  @media (hover: hover) {
+    .tocWrapper :global(.table-of-contents__link:hover) {
+      transform: none;
+    }
+  }
+}
+
+/* Print: hide TOC */
+@media print {
+  .tocWrapper :global(.table-of-contents) {
+    display: none;
+  }
+}
