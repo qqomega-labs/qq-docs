@@ -2,10 +2,12 @@
 
 ## [Unreleased] - 2025-12-18
 
-- Web icons setup.
-- Updated website url.
-- Updated scripts.
+- Web icons setup
+- Updated website url
+- Updated scripts
 - Add `wrangler.toml` to configure Cloudflare Pages deployment with correct build output directory for Docusaurus static site.
+- Removed `wrangler.toml` because we are on pages
+- Added `package-lock.json` for Cloudflare Pages compatibility
 
 ## [Unreleased] - 2025-12-14
 
