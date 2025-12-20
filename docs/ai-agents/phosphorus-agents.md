@@ -1,5 +1,5 @@
 ---
-title: Phosphorus Agents
+title: Phosphorus Swarm
 sidebar_position: 7
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Silicon Agents
+title: Silicon Swarm
 sidebar_position: 5
 ---
 

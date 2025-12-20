@@ -1,26 +1,30 @@
 ---
-title: How Scores & AI agents work
+title: Scores & AI agents
 sidebar_position: 3
 ---
 
-## How QQ Scores & AI Agents work
+
+## How QQ Scores & AI Agents Work?
+
+### TLDR 
+**Data → AI agents → Scores → Clear overview for your decisions.**
+
+### Details
 
 1. **Data collection**  
-   QQ-Omega pulls organize data On-chain (holders, flows, liquidity, token, etc.) and Off-chain (product, docs, news, macro-economy)
+   QQ Omega collects and organizes on-chain data such as holders, flows, liquidity, and token activity, as well as off-chain data such as products, documentation, news, and macroeconomic context.
+
 2. **AI agents per area**  
-   Each macro score is made of **5 different organizated groups of AI agents**
-   Here's two example:
-   - Fundamentals → one agent for team, one for product, one for security, etc.
-   - Tokenomics → one for emissions, one for unlocks, one for utility, etc.
+   Data is grouped by category and fed into **five structured swarms of AI agents**, each dedicated to a specific analytical area.  
+   For example:
+   - **Fundamentals**: one agent for team, one for product, one for security, and more.
+   - **Tokenomics**: one agent for buybacks, one for emissions, one for unlocks, one for utility, and more.
 
 3. **From agents to scores**
-   - Each agent produces a **sub-score** based on its own metrics and rules.
-   - Sub-scores are combined into a **macro score** (e.g. Fundamentals Score).
-   - All macro scores are then aggregated into a **global QQ Score** for each project.
+   - Each agent produces a **sub-score** based on its own metrics and evaluation rules.
+   - Sub-scores are combined using **different weights and normalization methods** into a **category score** (for example, a Fundamentals Score).
+   - All category scores are then aggregated into a **global QQ Score** for each project.
 
 4. **Continuous updates**  
-   As new data comes in (on-chain moves, unlocks, new partnerships, social shifts),  
-   agents update their view and scores **evolve over time**.
-
-In short:  
-**Data → AI agents → Scores → Clear signals for your decisions.**
+   As new data becomes available, including on-chain movements, token unlocks, new partnerships, or changes in market sentiment,  
+   agents update their assessments and scores **evolve over time**.
