@@ -2,6 +2,8 @@
 
 ## [Unreleased] - 2025-12-20
 
+- Updated logo without padding
+
 ### Content Organization
 
 - **Backed up original Docusaurus tutorial content**
