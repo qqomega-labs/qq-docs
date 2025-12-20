@@ -1,5 +1,5 @@
 ---
-title: Oxygen Agents
+title: Oxygen Swarm
 sidebar_position: 6
 ---
 

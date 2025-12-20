@@ -7,7 +7,7 @@ sidebar_position: 1
 
 
 
-Season 1 is currently live.  
+Season 1 of QQ Airdrop is currently live.  
 Its **exact design, criteria and mechanics are intentionally not public for now**.
 
 - Don't expect a complete “how to qualify” guide will be released, but some hints can be somewhere.
