@@ -6,7 +6,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "QQ Omega Labs Docs",
-  tagline: "Official Documentation",
+  tagline: "AI-Powered Crypto Scoring Platform - Quantitative + Qualitative Analysis",
   favicon: "favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -14,8 +14,149 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  // Favicon and PWA configuration
+  // SEO and PWA configuration
   headTags: [
+    // SEO Meta Tags
+    {
+      tagName: "meta",
+      attributes: {
+        name: "keywords",
+        content:
+          "QQ Omega, crypto scoring, AI agents, cryptocurrency analysis, quantitative analysis, qualitative analysis, crypto trading, blockchain analytics, DeFi, tokenomics, on-chain analysis, crypto fundamentals",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "description",
+        content:
+          "QQ Omega combines AI-powered agents to score and rank cryptocurrency projects across fundamentals, tokenomics, on-chain metrics, technicals, and macro trends. Get clear, actionable scores for smarter crypto investments.",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "author",
+        content: "QQ Omega Labs",
+      },
+    },
+    // Twitter Card Tags
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:site",
+        content: "@qqomega",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:creator",
+        content: "@qqomega",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:title",
+        content: "QQ Omega Labs - AI-Powered Crypto Scoring Platform",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:description",
+        content:
+          "Combining quantitative and qualitative data to evaluate every aspect of crypto assets with specialized AI agents.",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:image",
+        content: "https://qq-docs.pages.dev/img/qq-og-image.svg",
+      },
+    },
+    // Open Graph Tags
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:type",
+        content: "website",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:title",
+        content: "QQ Omega Labs - AI-Powered Crypto Scoring Platform",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:description",
+        content:
+          "QQ Omega combines AI-powered agents to score and rank cryptocurrency projects. Get clear, actionable scores for smarter crypto investments.",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:url",
+        content: "https://qq-docs.pages.dev",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:image",
+        content: "https://qq-docs.pages.dev/img/qq-og-image.svg",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:image:width",
+        content: "1200",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:image:height",
+        content: "630",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:image:alt",
+        content: "QQ Omega Labs Documentation",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:site_name",
+        content: "QQ Omega Labs",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:locale",
+        content: "en_US",
+      },
+    },
+    // Favicon and Icons
     {
       tagName: "link",
       attributes: {
@@ -123,8 +264,8 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    // Social card for sharing
+    image: "img/qq-og-image.svg",
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,

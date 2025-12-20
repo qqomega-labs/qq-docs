@@ -1,6 +1,17 @@
 ---
 title: Silicon Swarm
 sidebar_position: 5
+description: The Silicon agent swarm analyzes DeFi protocols and liquidity metrics including DEX activity, liquidity pools, yield opportunities, protocol integrations, and DeFi ecosystem health.
+keywords:
+  - Silicon agent
+  - DeFi analysis
+  - liquidity analysis
+  - DEX metrics
+  - yield farming
+  - protocol analysis
+  - DeFi metrics
+  - liquidity pools
+image: /img/Ist.png
 ---
 
 ## <img src="/img/Ist.png" alt="Silicon" style={{height: '2.5em', verticalAlign: 'middle'}} /> Silicon | Technical Analysis Swarm

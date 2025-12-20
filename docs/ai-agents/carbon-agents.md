@@ -1,6 +1,17 @@
 ---
 title: Carbon Swarm
 sidebar_position: 2
+description: The Carbon agent swarm analyzes crypto project fundamentals including team credibility, product positioning, competitive landscape, partnerships, and real-world value creation.
+keywords:
+  - Carbon agent
+  - crypto fundamentals
+  - team analysis
+  - product evaluation
+  - competitive analysis
+  - crypto due diligence
+  - project fundamentals
+  - blockchain fundamentals
+image: /img/Ict.png
 ---
 
 ## <img src="/img/Ict.png" alt="Carbon" style={{height: '2.5em', verticalAlign: 'middle'}} /> Carbon | Fundamentals Swarm

@@ -1,6 +1,17 @@
 ---
 title: Oxygen Swarm
 sidebar_position: 6
+description: The Oxygen agent swarm provides technical analysis of cryptocurrency price action including chart patterns, momentum indicators, trend analysis, support/resistance levels, and trading signals.
+keywords:
+  - Oxygen agent
+  - technical analysis
+  - crypto TA
+  - price action
+  - chart patterns
+  - trading signals
+  - momentum indicators
+  - crypto trading
+image: /img/Iot.png
 ---
 
 ## <img src="/img/Iot.png" alt="Oxygen" style={{height: '2.5em', verticalAlign: 'middle'}} /> Oxygen | Macro & Market Regime Swarm

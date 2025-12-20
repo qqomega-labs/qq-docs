@@ -1,6 +1,17 @@
 ---
 title: Phosphorus Swarm
 sidebar_position: 7
+description: The Phosphorus agent swarm analyzes crypto market narratives and sentiment including social media trends, community engagement, media coverage, influencer activity, and market psychology.
+keywords:
+  - Phosphorus agent
+  - sentiment analysis
+  - crypto sentiment
+  - market narrative
+  - social media analysis
+  - community metrics
+  - crypto trends
+  - market psychology
+image: /img/Ipt.png
 ---
 
 ## <img src="/img/Ipt.png" alt="Phosphorus" style={{height: '2.5em', verticalAlign: 'middle'}} /> Phosphorus | Orchestration & Scoring Swarm

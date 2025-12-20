@@ -1,6 +1,17 @@
 ---
 title: Hydrogen Swarm
 sidebar_position: 4
+description: The Hydrogen agent swarm analyzes on-chain cryptocurrency data including wallet activity, holder distribution, whale movements, network health, and blockchain metrics.
+keywords:
+  - Hydrogen agent
+  - on-chain analysis
+  - blockchain data
+  - wallet analysis
+  - whale tracking
+  - network metrics
+  - crypto analytics
+  - on-chain metrics
+image: /img/Iht.png
 ---
 
 ## <img src="/img/Iht.png" alt="Hydrogen" style={{height: '2.5em', verticalAlign: 'middle'}} /> Hydrogen | On-chain Flows Swarm

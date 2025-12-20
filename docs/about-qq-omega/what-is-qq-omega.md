@@ -2,6 +2,17 @@
 title: What is QQ
 slug: /
 sidebar_position: 1
+description: QQ Omega is an AI-powered scoring engine that combines quantitative and qualitative data to evaluate crypto assets across fundamentals, tokenomics, on-chain metrics, technicals, and macro trends.
+keywords:
+  - QQ Omega
+  - crypto scoring
+  - AI agents
+  - cryptocurrency analysis
+  - quantitative analysis
+  - qualitative analysis
+  - crypto evaluation
+  - blockchain analytics
+image: /img/QQlogo.png
 ---
 
 ## What is QQ Omega?

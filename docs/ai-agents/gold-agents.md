@@ -1,6 +1,17 @@
 ---
 title: Gold Swarm
 sidebar_position: 3
+description: The Gold agent swarm analyzes cryptocurrency tokenomics including supply schedules, value capture mechanisms, incentive design, inflation dynamics, and token utility.
+keywords:
+  - Gold agent
+  - tokenomics analysis
+  - crypto tokenomics
+  - token supply
+  - value capture
+  - token economics
+  - crypto economics
+  - token utility
+image: /img/Igt.png
 ---
 
 ## <img src="/img/Igt.png" alt="Gold" style={{height: '2.5em', verticalAlign: 'middle'}} /> Gold | Tokenomics Swarm

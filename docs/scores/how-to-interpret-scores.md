@@ -1,6 +1,16 @@
 ---
 title: How to interpret scores
 sidebar_position: 1
+description: Understanding QQ Omega's 0-10 scoring system for cryptocurrency projects. Learn what scores mean across fundamentals, tokenomics, on-chain metrics, technical analysis, and macro trends.
+keywords:
+  - crypto scores
+  - QQ score interpretation
+  - cryptocurrency rating
+  - crypto evaluation
+  - investment scores
+  - crypto metrics
+  - blockchain scoring
+image: /img/QQlogo.png
 ---
 
 ## How to interpret scores
