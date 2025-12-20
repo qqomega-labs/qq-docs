@@ -40,6 +40,8 @@
   - Semantic HTML structure (Docusaurus default)
   - Separation of concerns: UX titles vs SEO metadata for optimal user and search engine experience
 
+- Updated logo without padding
+
 ### Content Organization
 
 - **Backed up original Docusaurus tutorial content**
