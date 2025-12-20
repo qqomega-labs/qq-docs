@@ -5,11 +5,14 @@
 ### SEO Implementation & Optimization
 
 - **Created custom Open Graph image for social sharing**
-  - New SVG-based OG image: `static/img/qq-og-image.svg`
+  - Created OG image: `static/img/qq-og-image.svg` (original SVG)
+  - Converted to PNG format: `static/img/qq-og-image.png` (48KB, 1200x630px)
+  - **Fixed WhatsApp preview**: WhatsApp doesn't support SVG, now using PNG format
   - Dimensions: 1200x630px (optimal for social media)
   - Features QQ Omega branding with pink gradient, glassmorphism effects
   - Dark purple background matching site theme
   - "DOCUMENTATION" badge and tagline for clarity
+  - Updated all OG image references to use PNG format for maximum compatibility
 
 - **Comprehensive SEO metadata in docusaurus.config.ts**
   - Updated tagline: "AI-Powered Crypto Scoring Platform - Quantitative + Qualitative Analysis"
@@ -39,6 +42,20 @@
   - Clean URLs with meaningful slugs
   - Semantic HTML structure (Docusaurus default)
   - Separation of concerns: UX titles vs SEO metadata for optimal user and search engine experience
+
+- **Replaced favicons with RealFaviconGenerator**
+  - Downloaded and installed new favicon set from RealFaviconGenerator
+  - Files installed in `static/` folder:
+    - `icon1.png` (32x32 PNG icon)
+    - `icon0.svg` (SVG icon for modern browsers)
+    - `favicon.ico` (15KB ICO file for legacy support)
+    - `apple-icon.png` (180x180 Apple touch icon)
+    - `manifest.json` (PWA manifest with app name "QQ docs")
+    - `web-app-manifest-192x192.png` (192x192 maskable icon)
+    - `web-app-manifest-512x512.png` (512x512 maskable icon)
+  - Meta tags already configured in `docusaurus.config.ts` headTags
+  - PWA-ready with proper manifest configuration
+  - Build verified and passing
 
 - Updated logo without padding
 

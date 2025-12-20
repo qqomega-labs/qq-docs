@@ -81,7 +81,7 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         name: "twitter:image",
-        content: "https://qq-docs.pages.dev/img/qq-og-image.svg",
+        content: "https://qq-docs.pages.dev/img/qq-og-image.png",
       },
     },
     // Open Graph Tags
@@ -118,7 +118,7 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         property: "og:image",
-        content: "https://qq-docs.pages.dev/img/qq-og-image.svg",
+        content: "https://qq-docs.pages.dev/img/qq-og-image.png",
       },
     },
     {
@@ -265,7 +265,7 @@ const config: Config = {
 
   themeConfig: {
     // Social card for sharing
-    image: "img/qq-og-image.svg",
+    image: "img/qq-og-image.png",
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
