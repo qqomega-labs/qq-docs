@@ -1,10 +1,10 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" style="background-color:#1a0f2e">
   <!-- Background gradient -->
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f0a1a;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#15101d;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1c1625;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#1a0f2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2d1b4e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3d2659;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="pinkGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#c0144a;stop-opacity:1" />
@@ -14,7 +14,7 @@
       <stop offset="100%" style="stop-color:#c0144a;stop-opacity:1" />
     </linearGradient>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -22,43 +22,64 @@
     </filter>
   </defs>
 
-  <!-- Background -->
+  <!-- Background with full coverage -->
   <rect width="1200" height="630" fill="url(#bgGradient)"/>
 
-  <!-- Decorative elements -->
-  <circle cx="100" cy="100" r="150" fill="#ff1d64" opacity="0.05"/>
-  <circle cx="1100" cy="530" r="200" fill="#00d4ff" opacity="0.05"/>
+  <!-- Large decorative circles -->
+  <circle cx="150" cy="150" r="250" fill="#ff1d64" opacity="0.15"/>
+  <circle cx="1050" cy="480" r="280" fill="#00d4ff" opacity="0.15"/>
 
-  <!-- Grid pattern -->
-  <line x1="0" y1="210" x2="1200" y2="210" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <line x1="0" y1="420" x2="1200" y2="420" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <line x1="300" y1="0" x2="300" y2="630" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <line x1="600" y1="0" x2="600" y2="630" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <line x1="900" y1="0" x2="900" y2="630" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-
-  <!-- Main content -->
-  <g transform="translate(600, 200)">
-    <!-- Title -->
-    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" fill="url(#pinkGradient)" text-anchor="middle" filter="url(#glow)">
-      QQ Omega
+  <!-- Main content centered -->
+  <g transform="translate(600, 250)">
+    <!-- Subtitle/Description - CLEAR AND VISIBLE -->
+    <text
+      x="0"
+      y="0"
+      font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif"
+      font-size="52"
+      font-weight="700"
+      fill="#ffffff"
+      text-anchor="middle">
+      AI-Powered Crypto Scoring
     </text>
 
-    <!-- Subtitle -->
-    <text x="0" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="600" fill="#e5e5e5" text-anchor="middle">
-      AI-Powered Crypto Scoring Platform
-    </text>
-
-    <!-- Description -->
-    <text x="0" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="400" fill="#a3a3a3" text-anchor="middle">
+    <!-- Additional description -->
+    <text
+      x="0"
+      y="65"
+      font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif"
+      font-size="36"
+      font-weight="400"
+      fill="#a3a3a3"
+      text-anchor="middle">
       Quantitative + Qualitative Analysis
     </text>
 
-    <!-- Badge -->
-    <g transform="translate(0, 200)">
-      <rect x="-120" y="-25" width="240" height="50" rx="25" fill="rgba(255, 29, 100, 0.2)" stroke="#ff1d64" stroke-width="2"/>
-      <text x="0" y="8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#ff1d64" text-anchor="middle">
+    <!-- Badge - WIDER to fit text properly -->
+    <g transform="translate(0, 235)">
+      <rect
+        x="-250"
+        y="-32"
+        width="500"
+        height="64"
+        rx="32"
+        fill="rgba(255, 29, 100, 0.2)"
+        stroke="#ff1d64"
+        stroke-width="3"/>
+      <text
+        x="0"
+        y="10"
+        font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif"
+        font-size="28"
+        font-weight="700"
+        fill="#ff1d64"
+        text-anchor="middle"
+        letter-spacing="1">
         DOCUMENTATION
       </text>
     </g>
   </g>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="610" width="1200" height="20" fill="url(#pinkGradient)" opacity="0.3"/>
 </svg>
