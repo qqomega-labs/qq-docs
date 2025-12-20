@@ -2,6 +2,16 @@
 
 ## [Unreleased] - 2025-12-20
 
+### Content Organization
+
+- **Backed up original Docusaurus tutorial content**
+  - Moved `tutorial-basics/` and `tutorial-extras/` to `docs/_backup/`
+  - Moved `blog/` to `_blog-backup/` at project root
+  - Created `docs/_backup/README.md` with restoration instructions
+  - Folders starting with `_` are automatically ignored by Docusaurus
+  - Content remains in repository for future reference
+  - Active docs now only show QQ Omega-specific content
+
 ### Custom Pink Text Emphasis Styles
 
 - **Added 5 new CSS utility classes for markdown text emphasis**
