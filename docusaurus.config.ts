@@ -87,17 +87,18 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/qqomega-labs/qq-docs/tree/main/",
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          editUrl: "https://github.com/qqomega-labs/qq-docs/tree/main/",
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
-        },
+        // BLOG DISABLED
+        // blog: {
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ["rss", "atom"],
+        //     xslt: true,
+        //   },
+        //   editUrl: "https://github.com/qqomega-labs/qq-docs/tree/main/",
+        //   onInlineTags: "warn",
+        //   onInlineAuthors: "warn",
+        //   onUntruncatedBlogPosts: "warn",
+        // },
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -114,7 +115,7 @@ const config: Config = {
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
         docsRouteBasePath: "/docs",
-        indexBlog: true,
+        // indexBlog: true,  // BLOG DISABLED
         indexPages: true,
         searchBarPosition: "right",
       },
@@ -143,11 +144,12 @@ const config: Config = {
           position: "left",
           label: "Docs",
         },
-        {
-          to: "/blog",
-          label: "Blog",
-          position: "left",
-        },
+        // BLOG DISABLED
+        // {
+        //   to: "/blog",
+        //   label: "Blog",
+        //   position: "left",
+        // },
         {
           href: "https://github.com/qqomega-labs",
           label: "GitHub",

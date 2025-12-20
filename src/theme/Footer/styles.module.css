@@ -49,26 +49,34 @@
   top: -2px;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 4px;
   background:
     linear-gradient(
       90deg,
       transparent 0%,
-      transparent 49%,
+      transparent 48%,
+      rgba(255, 60, 120, 1) 49%,
       rgba(255, 29, 100, 1) 50%,
-      transparent 51%,
+      rgba(255, 60, 120, 1) 51%,
+      transparent 52%,
       transparent 100%
     );
   background-size: 300% 100%;
   background-repeat: no-repeat;
-  filter: drop-shadow(0 0 4px rgba(255, 29, 100, 0.8));
+  filter:
+    drop-shadow(0 0 8px rgba(255, 29, 100, 1))
+    drop-shadow(0 0 16px rgba(255, 29, 100, 0.8))
+    drop-shadow(0 0 24px rgba(255, 29, 100, 0.6));
   animation: electron-pass 10s ease-in-out infinite;
   animation-play-state: running;
 }
 
 /* Light mode electron - only change filter, keep animation running */
 [data-theme="light"] .footerWrapper::before {
-  filter: drop-shadow(0 0 4px rgba(255, 29, 100, 0.8));
+  filter:
+    drop-shadow(0 0 6px rgba(255, 29, 100, 1))
+    drop-shadow(0 0 12px rgba(255, 29, 100, 0.8))
+    drop-shadow(0 0 18px rgba(255, 29, 100, 0.6));
 }
 
 /* Light mode adjustments */

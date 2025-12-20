@@ -1,5 +1,51 @@
 # Change Log
 
+## [Unreleased] - 2025-12-20
+
+### Content Organization
+
+- **Backed up original Docusaurus tutorial content**
+  - Moved `tutorial-basics/` and `tutorial-extras/` to `docs/_backup/`
+  - Moved `blog/` to `_blog-backup/` at project root
+  - Created `docs/_backup/README.md` with restoration instructions
+  - Folders starting with `_` are automatically ignored by Docusaurus
+  - Content remains in repository for future reference
+  - Active docs now only show QQ Omega-specific content
+
+### Custom Pink Text Emphasis Styles
+
+- **Added 5 new CSS utility classes for markdown text emphasis**
+  - `.pink-text` - Simple pink colored text (color: `#ff1d64`)
+  - `.pink-glow-text` - Pink text with layered glow effect (8px + 16px blur)
+  - `.pink-highlight` - Background-highlighted text with pink tint and border
+  - `.pink-badge` - Badge-style emphasis with gradient background, rounded corners, and shadow
+  - `.pink-underline` - Pink underlined text with 2px thickness and 3px offset
+
+- **Light/dark mode support**
+  - Automatic color adjustments for optimal visibility
+  - Dark mode uses `--qq-color-pink-hot` (#ff1d64)
+  - Light mode uses `--qq-color-pink-dark` (#e01858)
+  - Glow effects optimized for each theme
+
+- **Usage in markdown**
+  - Wrap any text with `<span className="class-name">text</span>`
+  - Works in both `.md` and `.mdx` files
+  ```html
+  <span className="pink-text">Your pink text here</span>
+  <span className="pink-glow-text">Glowing text</span>
+  <span className="pink-highlight">Highlighted text</span>
+  <span className="pink-badge">Badge</span>
+  <span className="pink-underline">Underlined text</span>
+  <span className="gradient-text">Animated gradient</span>
+  ```
+
+### UI Refinements
+
+- Removed footer text animation
+- Fixed breadcrumb separator: Changed from background image (showing as ">>>") to single ">" character by overriding Infima's default background-based separator with text content
+- Reduced the size of content texts and its margins
+- Patched navbar items sizes and margins on mobile
+
 ## [Unreleased] - 2025-12-18
 
 - Web icons setup
