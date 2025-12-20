@@ -35,7 +35,12 @@
   --qq-text-light-secondary: #303030;
 
   /* --- Gradients --- */
-  --qq-gradient-crypto-pink: linear-gradient(135deg, #ff1d64 0%, #ff0055 50%, #e01858 100%);
+  --qq-gradient-crypto-pink: linear-gradient(
+    135deg,
+    #ff1d64 0%,
+    #ff0055 50%,
+    #e01858 100%
+  );
   --qq-gradient-crypto-pink-animated: linear-gradient(
     90deg,
     #c0144a 0%,
@@ -210,8 +215,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  filter:
-    drop-shadow(0 0 4px rgba(255, 29, 100, 0.5))
+  filter: drop-shadow(0 0 4px rgba(255, 29, 100, 0.5))
     drop-shadow(0 0 12px rgba(255, 29, 100, 0.2))
     drop-shadow(0 0 20px rgba(255, 29, 100, 0.1));
   animation: gradient-flow 10s ease-in-out infinite;
@@ -292,7 +296,8 @@
 }
 
 @keyframes electron-glow {
-  0%, 17% {
+  0%,
+  17% {
     color: rgba(255, 255, 255, 0.7);
     text-shadow: none;
     transform: scale(1);
@@ -304,7 +309,9 @@
   }
   20% {
     color: rgba(255, 29, 100, 1);
-    text-shadow: 0 0 15px rgba(255, 29, 100, 0.6), 0 0 25px rgba(255, 29, 100, 0.3);
+    text-shadow:
+      0 0 15px rgba(255, 29, 100, 0.6),
+      0 0 25px rgba(255, 29, 100, 0.3);
     transform: scale(1.008);
   }
   21% {
@@ -317,7 +324,8 @@
     text-shadow: 0 0 5px rgba(255, 29, 100, 0.2);
     transform: scale(1.002);
   }
-  23%, 100% {
+  23%,
+  100% {
     color: rgba(255, 255, 255, 0.7);
     text-shadow: none;
     transform: scale(1);
@@ -325,7 +333,8 @@
 }
 
 @keyframes electron-glow-light {
-  0%, 17% {
+  0%,
+  17% {
     color: rgba(50, 50, 50, 0.7);
     text-shadow: none;
     transform: scale(1);
@@ -337,7 +346,9 @@
   }
   20% {
     color: rgba(255, 29, 100, 1);
-    text-shadow: 0 0 12px rgba(255, 29, 100, 0.4), 0 0 20px rgba(255, 29, 100, 0.2);
+    text-shadow:
+      0 0 12px rgba(255, 29, 100, 0.4),
+      0 0 20px rgba(255, 29, 100, 0.2);
     transform: scale(1.008);
   }
   21% {
@@ -350,7 +361,8 @@
     text-shadow: 0 0 5px rgba(255, 29, 100, 0.15);
     transform: scale(1.002);
   }
-  23%, 100% {
+  23%,
+  100% {
     color: rgba(50, 50, 50, 0.7);
     text-shadow: none;
     transform: scale(1);
@@ -435,6 +447,21 @@
   z-index: 100 !important;
 }
 
+@media (max-width: 996px) {
+  .navbar {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .navbar__items {
+    gap: 0.25rem;
+  }
+
+  .navbar__item,
+  .navbar__link {
+    margin: 0 0.15rem;
+  }
+}
+
 /* Glassy background on pseudo-element (doesn't affect children) */
 .navbar::before {
   content: "";
@@ -479,6 +506,12 @@
   font-size: 0.95rem;
 }
 
+@media (max-width: 996px) {
+  .navbar__title {
+    font-size: 0.85rem;
+  }
+}
+
 [data-theme="dark"] .navbar__title {
   color: #e5e5e5;
 }
@@ -492,6 +525,12 @@
   height: 3rem;
 }
 
+@media (max-width: 996px) {
+  .navbar__logo {
+    height: 2.5rem;
+  }
+}
+
 @media (hover: hover) {
   .navbar__logo:hover {
     transform: scale(1.05);
@@ -503,6 +542,13 @@
   font-size: 0.75rem;
   color: var(--ifm-navbar-link-color);
   transition: color 0.2s ease;
+}
+
+@media (max-width: 996px) {
+  .navbar__link {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.5rem;
+  }
 }
 
 .navbar__link--active {
@@ -519,6 +565,13 @@
 .navbar__item {
   font-size: 0.75rem;
   color: var(--ifm-navbar-link-color);
+}
+
+@media (max-width: 996px) {
+  .navbar__item {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.5rem;
+  }
 }
 
 .navbar__item--active {
@@ -574,6 +627,23 @@ button[aria-label*="Switch"] {
   background: rgba(0, 0, 0, 0.3) !important;
   border-radius: 6px !important;
   padding: 0.4rem !important;
+}
+
+@media (max-width: 996px) {
+  .clean-btn[title*="theme"],
+  .clean-btn[title*="Switch"],
+  button[aria-label*="theme"],
+  button[aria-label*="Switch"] {
+    padding: 0.35rem !important;
+  }
+
+  .clean-btn[title*="theme"] svg,
+  .clean-btn[title*="Switch"] svg,
+  button[aria-label*="theme"] svg,
+  button[aria-label*="Switch"] svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
 }
 
 .clean-btn[title*="theme"] svg,
@@ -644,11 +714,12 @@ button[aria-label*="Switch"] svg {
 @media (max-width: 996px) {
   .navbar__search-input,
   .DocSearch-Button {
-    width: 100% !important;
-    min-width: 200px !important;
-    padding: 0.5rem 0.75rem !important;
-    font-size: 0.85rem !important;
-    min-height: 38px !important;
+    width: auto !important;
+    min-width: 120px !important;
+    max-width: 180px !important;
+    padding: 0.4rem 0.5rem !important;
+    font-size: 0.75rem !important;
+    min-height: 36px !important;
   }
 
   .DocSearch-Button-Container {
@@ -656,26 +727,45 @@ button[aria-label*="Switch"] svg {
   }
 
   .DocSearch-Button-Placeholder {
-    font-size: 0.8rem !important;
+    font-size: 0.75rem !important;
   }
 
-  /* Make search more prominent in navbar on mobile */
+  /* Compact search in navbar on mobile */
   .navbar__search {
-    flex-grow: 1 !important;
-    max-width: none !important;
-    margin: 0 0.5rem !important;
+    flex-grow: 0 !important;
+    flex-shrink: 1 !important;
+    max-width: 180px !important;
+    margin: 0 0.25rem !important;
   }
 
-  /* Ensure search keys are visible */
+  /* Hide keyboard shortcuts on mobile to save space */
+  .DocSearch-Button-Keys {
+    display: none !important;
+  }
+}
+
+/* Show keyboard shortcuts only on larger tablets */
+@media (min-width: 768px) and (max-width: 996px) {
+  .navbar__search-input,
+  .DocSearch-Button {
+    min-width: 160px !important;
+    max-width: 220px !important;
+  }
+
+  .navbar__search {
+    max-width: 220px !important;
+  }
+
   .DocSearch-Button-Keys {
     display: flex !important;
     gap: 0.2rem !important;
   }
 
   .DocSearch-Button-Key {
-    min-width: 20px !important;
-    min-height: 20px !important;
-    font-size: 0.7rem !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
+    font-size: 0.65rem !important;
+    padding: 0 0.25em !important;
   }
 }
 
@@ -829,8 +919,7 @@ button[aria-label*="Switch"] svg {
   font-weight: 800;
   margin-bottom: 1.5rem;
   font-size: 2.25rem;
-  filter:
-    drop-shadow(0 0 5px rgba(255, 29, 100, 0.5))
+  filter: drop-shadow(0 0 5px rgba(255, 29, 100, 0.5))
     drop-shadow(0 0 15px rgba(255, 29, 100, 0.25))
     drop-shadow(0 0 25px rgba(255, 29, 100, 0.12));
   animation: gradient-flow 10s ease-in-out infinite;
@@ -874,7 +963,7 @@ button[aria-label*="Switch"] svg {
 }
 
 .theme-doc-markdown a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 1px;
@@ -990,7 +1079,9 @@ button[aria-label*="Switch"] svg {
 .theme-admonition-note {
   background: rgba(6, 182, 212, 0.05) !important;
   border-color: rgba(6, 182, 212, 0.3) !important;
-  box-shadow: 0 4px 16px rgba(6, 182, 212, 0.1), inset 0 0 40px rgba(6, 182, 212, 0.03) !important;
+  box-shadow:
+    0 4px 16px rgba(6, 182, 212, 0.1),
+    inset 0 0 40px rgba(6, 182, 212, 0.03) !important;
 }
 
 [data-theme="light"] .alert--info,
@@ -1006,7 +1097,9 @@ button[aria-label*="Switch"] svg {
 .theme-admonition-tip {
   background: rgba(34, 197, 94, 0.05) !important;
   border-color: rgba(34, 197, 94, 0.3) !important;
-  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.1), inset 0 0 40px rgba(34, 197, 94, 0.03) !important;
+  box-shadow:
+    0 4px 16px rgba(34, 197, 94, 0.1),
+    inset 0 0 40px rgba(34, 197, 94, 0.03) !important;
 }
 
 [data-theme="light"] .alert--success,
@@ -1021,7 +1114,9 @@ button[aria-label*="Switch"] svg {
 .theme-admonition-info {
   background: rgba(0, 166, 225, 0.05) !important;
   border-color: rgba(0, 166, 225, 0.3) !important;
-  box-shadow: 0 4px 16px rgba(0, 166, 225, 0.1), inset 0 0 40px rgba(0, 166, 225, 0.03) !important;
+  box-shadow:
+    0 4px 16px rgba(0, 166, 225, 0.1),
+    inset 0 0 40px rgba(0, 166, 225, 0.03) !important;
 }
 
 [data-theme="light"] .admonition-info,
@@ -1038,7 +1133,9 @@ button[aria-label*="Switch"] svg {
 .theme-admonition-caution {
   background: rgba(251, 146, 60, 0.05) !important;
   border-color: rgba(251, 146, 60, 0.3) !important;
-  box-shadow: 0 4px 16px rgba(251, 146, 60, 0.1), inset 0 0 40px rgba(251, 146, 60, 0.03) !important;
+  box-shadow:
+    0 4px 16px rgba(251, 146, 60, 0.1),
+    inset 0 0 40px rgba(251, 146, 60, 0.03) !important;
 }
 
 [data-theme="light"] .alert--warning,
@@ -1056,7 +1153,9 @@ button[aria-label*="Switch"] svg {
 .theme-admonition-danger {
   background: rgba(239, 68, 68, 0.05) !important;
   border-color: rgba(239, 68, 68, 0.3) !important;
-  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.1), inset 0 0 40px rgba(239, 68, 68, 0.03) !important;
+  box-shadow:
+    0 4px 16px rgba(239, 68, 68, 0.1),
+    inset 0 0 40px rgba(239, 68, 68, 0.03) !important;
 }
 
 [data-theme="light"] .alert--danger,
@@ -1130,7 +1229,45 @@ button[aria-label*="Switch"] svg {
   font-weight: 600;
 }
 
-/* Edit this page link */
+/* Mobile pagination optimization */
+@media (max-width: 768px) {
+  .pagination-nav__link {
+    padding: 0.6rem;
+    border-radius: 8px;
+  }
+
+  .pagination-nav__label {
+    font-size: 0.65rem;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .pagination-nav__sublabel {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  /* Make previous/next arrows smaller on mobile */
+  .pagination-nav__label::before,
+  .pagination-nav__label::after {
+    font-size: 0.65rem;
+  }
+
+  /* Adjust pagination container spacing */
+  .pagination-nav {
+    gap: 0.5rem;
+  }
+}
+
+/* Edit this page link - DISABLED */
+/*
 .theme-edit-this-page,
 .theme-doc-footer-edit-meta-row a {
   color: var(--ifm-color-primary) !important;
@@ -1143,6 +1280,13 @@ button[aria-label*="Switch"] svg {
     color: var(--ifm-color-primary) !important;
     opacity: 0.85;
   }
+}
+*/
+
+/* Hide "Edit this page" button */
+.theme-edit-this-page,
+.theme-doc-footer-edit-meta-row {
+  display: none !important;
 }
 
 /* Direct link icons (heading anchors) */
@@ -1557,7 +1701,9 @@ h2[class*="cardTitle"]::after {
   border-radius: 5px;
   border: 2px solid transparent;
   background-clip: padding-box;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -1670,14 +1816,10 @@ a:hover {
 .footer__copyright {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
-  transition: all 0.3s ease;
-  animation: electron-glow 10s ease-in-out infinite !important;
-  will-change: opacity, transform, text-shadow, color;
 }
 
 [data-theme="light"] .footer__copyright {
   color: rgba(50, 50, 50, 0.7);
-  animation: electron-glow-light 10s ease-in-out infinite !important;
 }
 
 .footer__copyright a {
@@ -1710,12 +1852,18 @@ a:hover {
 .breadcrumbs__item--active .breadcrumbs__link {
   color: var(--ifm-color-primary);
   font-weight: 500;
+  padding: 0.2rem 0.35rem;
 }
 
-/* Breadcrumb separators - normal color */
+/* Breadcrumb separators - override background image with text */
 .breadcrumbs__item:not(:last-child)::after {
+  content: ">" !important;
   color: var(--ifm-font-color-base);
   opacity: 0.5;
+  background: none !important;
+  width: auto !important;
+  height: auto !important;
+  filter: none !important;
 }
 
 @media (hover: hover) {
@@ -1727,6 +1875,62 @@ a:hover {
   .breadcrumbs__item--active .breadcrumbs__link:hover {
     color: var(--ifm-color-primary);
     opacity: 1;
+  }
+}
+
+/* Mobile breadcrumbs optimization */
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding: 0.4rem 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .breadcrumbs__item {
+    font-size: 0.75rem;
+  }
+
+  .breadcrumbs__link {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.25rem;
+  }
+
+  /* Make home icon smaller */
+  .breadcrumbs__link svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Truncate long breadcrumb text */
+  .breadcrumbs__item:not(:last-child):not(:first-child) .breadcrumbs__link {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Keep last item (current page) with more space */
+  .breadcrumbs__item--active .breadcrumbs__link {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Smaller separators */
+  .breadcrumbs__item:not(:last-child)::after {
+    content: ">" !important;
+    font-size: 0.7rem;
+    padding: 0;
+    margin: 0 0.2rem;
+    background: none !important;
+    width: auto !important;
+    height: auto !important;
+    filter: none !important;
   }
 }
 
@@ -2010,29 +2214,97 @@ aside.theme-doc-sidebar-container {
 
   /* Mobile typography - optimized for small screens */
   .theme-doc-markdown h1 {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
   }
 
   .theme-doc-markdown h2 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .theme-doc-markdown h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .theme-doc-markdown h4 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .theme-doc-markdown h5 {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .theme-doc-markdown h6 {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .theme-doc-markdown p,
   .theme-doc-markdown li {
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .theme-doc-markdown ul,
+  .theme-doc-markdown ol {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
   }
 
   .theme-doc-markdown blockquote {
-    font-size: 0.95rem;
+    font-size: 0.875rem;
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Code elements on mobile */
+  .theme-doc-markdown code {
+    font-size: 0.85rem;
+  }
+
+  .theme-doc-markdown pre code {
+    font-size: 0.8rem;
+  }
+
+  /* Admonition content on mobile */
+  .admonition-heading,
+  .alert__heading {
+    font-size: 0.9rem;
+  }
+
+  .admonition-content,
+  .admonition-content p,
+  .admonition-content li {
+    font-size: 0.875rem;
   }
 
   .theme-doc-markdown {
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.75rem;
+  }
+
+  /* Reduce admonition spacing on mobile */
+  .alert,
+  .admonition,
+  .theme-admonition {
+    padding: 0.75rem 1rem !important;
+    margin: 1rem 0 !important;
+  }
+
+  /* Reduce code block padding */
+  .theme-doc-markdown pre {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
   }
 }
 

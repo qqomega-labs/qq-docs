@@ -1,5 +1,12 @@
 # Change Log
 
+## [Unreleased] - 2025-12-20
+
+- Removed footer text animation
+- Fixed breadcrumb separator: Changed from background image (showing as ">>>") to single ">" character by overriding Infima's default background-based separator with text content
+- Reduced the size of content texts and its margins
+- Patched navbar items sizes and margins on mobile
+
 ## [Unreleased] - 2025-12-18
 
 - Web icons setup
