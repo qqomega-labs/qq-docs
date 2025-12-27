@@ -4,13 +4,13 @@ sidebar_position: 1
 ---
 
 
-QQ-omega is built at the intersection of **engineering** and **market architecture**.
-**qq-alpha** turns raw blockchain data into scalable systems, while **qq-sigma** designs the analytical framework and scoring logic that sit on top of it.
+QQ Omega is built at the intersection of **engineering** and **market architecture**.
+**qqAlpha** turns raw blockchain data into scalable systems, while **qqSigma** designs the analytical framework and scoring logic that sit on top of it.
 In the synthesis of code + architecture they form **QQ-omega** and its mission: turn crypto noise into structured, actionable signal.
 
 
 
-#### qq alpha – Co-Founder & Lead Developer
+#### qqAlpha – Co-Founder & Lead Developer
 
 qq alpha is responsible for the **technical backbone** of QQ Omega:
 
@@ -19,7 +19,7 @@ qq alpha is responsible for the **technical backbone** of QQ Omega:
 - Reliability, performance and security of the core system
 - Implementation of scoring logic and automation at scale
 
-#### qq sigma – Co-Founder & System Architect
+#### qqSigma – Co-Founder & System Architect
 
 qq sigma defines the **analytical and structural logic** of QQ Omega:
 

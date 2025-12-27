@@ -1,36 +1,41 @@
 ---
 title: Why QQ
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 ## Why QQ Omega Exists?
 
 Markets, especially in crypto, are noisy, fast, and emotional.  
-It’s easy to make decisions based on hype, FOMO, or KOLs that don’t always act in your best interest.
+It’s easy to make decisions based on hype, FOMO, or loud voices on social media that don’t always act in your best interest.
 
-But real fundamentals often get buried under short-lived narratives.  
-Many tokenomics models create “dump tokens” by design, with retail investors used as exit liquidity.  
-Charts and on-chain data offer valuable clues, but turning them into a clear and reliable picture is far from easy.
+Real fundamentals often get buried under **short-lived narratives**.  
+Many token designs are built to reward early insiders and turn retail into **exit liquidity**.  
+And because crypto is still lightly regulated in many places, investor protection is often **weak**: when things go wrong, there may be no clear standards and no disclosures you can trust.
 
-**QQ Omega exists to help you avoid these traps and move from opinion-driven to <span className="pink-glow-text">data-driven</span> decisions.**  
-Our swarm of AI agents examines every major dimension of a project, including fundamentals, token design, on-chain behavior, technical analysis, and market environment. Crypto projects are evaluated in the same way you would evaluate real companies, adapted to the logic of Web3.
+QQ Omega exists to help you avoid these traps and move from opinion-driven to <span className="pink-glow-text">data-driven</span> decisions.
 
-QQ Omega is built to be your <span className="pink-glow-text">compass</span> as you navigate the rough waters of decentralized finance.
+Our swarm of AI agents examines every major dimension of a project, including <span className="pink-glow-text">fundamentals</span>, <span className="pink-glow-text">token design</span>, <span className="pink-glow-text">on-chain behavior</span>, <span className="pink-glow-text">technical analysis</span>, and the <span className="pink-glow-text">broader market environment</span>. 
+Crypto projects are evaluated with the same seriousness you would apply to real companies, adapted to how Web3 actually works.
 
 ### The Problem QQ Omega Solves
 
-- **Too many things to track, keeping up is almost impossible**  
-  QQ aggregates data from multiple sources and turns it into a single, coherent view.
+- **Too much noise, not enough signal**  
+  News, memes, and hype move faster than facts. QQ gathers data from multiple sources and turns it into a single, coherent view.
 
-- **Too many coins and narratives, no clear way to judge them**  
-  QQ scores projects using a structured framework that sharpens your analysis and simplifies decision-making.
+- **Too many projects, no clear way to compare them**  
+  When everything claims to be “the next big thing,” you need a consistent method. QQ scores projects with a structured framework so you can compare them on the same basis.
 
-- **Too much “trust me, bro”**  
-  QQ focuses on what is *actually there*: on-chain data, token mechanics, hard metrics, and measurable outcomes.
+- **Trust is cheap, proof is rare**  
+  Many claims are hard to verify. QQ focuses on what can be checked: on-chain activity, token mechanics, hard metrics, and measurable outcomes.
+
+- **Weak regulation leaves investors exposed**  
+  In many markets, basic safeguards are missing. QQ helps you spot red flags early and understand risk before you commit capital.
+
+<span className="gradient-text">QQ Omega is built to be your <span className="pink-glow-text">compass</span> as you navigate the rough waters of decentralized finance.</span>
 
 ### Who QQ Omega Is For
 
-QQ is built for users who want <span className="pink-glow-text">**real financial awareness**</span>:  
+QQ is built for users who want <span className="pink-glow-text">real financial awareness</span>:  
 to understand when a project’s “good vibes” are backed by substance, and when it’s something to stay away from.
 
 :::note

@@ -1,36 +1,34 @@
 ---
 title: Oxygen Swarm
 sidebar_position: 6
-description: The Oxygen agent swarm provides technical analysis of cryptocurrency price action including chart patterns, momentum indicators, trend analysis, support/resistance levels, and trading signals.
-keywords:
-  - Oxygen agent
-  - technical analysis
-  - crypto TA
-  - price action
-  - chart patterns
-  - trading signals
-  - momentum indicators
-  - crypto trading
-image: /img/Iot.png
 ---
 
-## <img src="/img/Iot.png" alt="Oxygen" style={{height: '2.5em', verticalAlign: 'middle'}} /> Oxygen | Macro & Market Regime Swarm
+## <img src="/img/Iot.png" alt="Oxygen" style={{height: '2.5em', verticalAlign: 'middle'}} />Oxygen | Macro & Market Regime Swarm
 
 Oxygen is the element that makes breathing and combustion possible: it’s everywhere, invisible, and yet it decides whether systems can move or suffocate.  
-In QQ Omega, **Oxygen** plays a similar role in understanding the **macro regime** and **risk appetite** surrounding crypto: the background environment that doesn’t live on a single chart, but quietly pushes everything up or down.
+In QQ Omega, <span className="gradient-text">**Oxygen swarm**</span> plays a similar role in understanding the **macro regime** and **risk appetite** surrounding crypto: the background environment that doesn’t live on a single chart, but quietly pushes everything up or down.
 
 ### What Oxygen Is
 
-The Oxygen element focuses on **global macroeconomics, monetary policy and broad crypto market conditions**: the invisible air that all projects, tokens and strategies must inhale.
+The Oxygen element focuses on <span className="pink-glow-text">**global macroeconomics, monetary policy and broad crypto market conditions**</span>: the invisible air that all crypto assets must inhale.
 
 Some agents go deep on **interest rates and central banks**: policy paths, forward guidance, inflation trends, and how these shape global risk premia.  
 Others track **global and crypto-native liquidity**: balance sheet expansions, money supply, credit conditions, stablecoin supply, CEX/DEX volumes and on/off-ramp friction.  
 Another group maps **crypto-wide regime indicators**: Bitcoin and stablecoin dominance, total and sectoral market caps, “altcoin season” metrics, fear & greed oscillators, and mathematical seasonality patterns in returns.
 
-Oxygen does not look at individual tokens or protocols.  
-It answers a different question: *“In this environment, how hard is it for crypto-assets to breathe?”*
+Oxygen is a general score that answers a different question: *“In this environment, how hard is it for crypto-assets to breathe?”*
 
-### Core Dimensions Oxygen Covers
+:::note
+Oxygen is the only swarm that does **not** score crypto assets one by one.
+
+All other swarms output a **per-project score**.  
+Oxygen outputs **one global score** for the current **macro regime**, shared by all crypto assets.
+
+It is the system’s **environment signal**:
+it scales how aggressive or defensive QQ Omega should be, across every token, at the same time.
+:::
+
+### Core Dimensions
 
 Across the swarm, Oxygen continuously evaluates and updates a set of core regime dimensions, such as:
 
@@ -85,9 +83,9 @@ Across the swarm, Oxygen continuously evaluates and updates a set of core regime
 Each agent inside Oxygen contributes its own regime reading with different speeds and sensitivities.  
 Their outputs are normalized into structured regime tags, scores and qualitative notes that the rest of QQ Omega can consume, compare, and aggregate.
 
-### How Oxygen Connects to the Rest of QQ Omega
+### How it Connects to the Rest of QQ Omega
 
-Oxygen swarm forms the **environmental layer** of QQ Omega’s scoring and decision system.  
+Oxygen swarm forms the <span className="pink-glow-text">**environmental layer**</span> of QQ Omega’s scoring and decision system.  
 It does not say which token is good or bad — it defines **how forgiving or hostile the macro climate is** for taking risk at all.
 
 It ensures the system always maintains a grounded, evidence-based view of:

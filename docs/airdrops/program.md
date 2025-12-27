@@ -1,21 +1,8 @@
 ---
-title: Season 1
+title: Summary
 sidebar_position: 1
 ---
 
-### **Status:** Live ✅
-
-
-
-Season 1 of QQ Airdrop is currently live.  
-Its **exact design, criteria and mechanics are intentionally not public for now**.
-
-- Don't expect a complete “how to qualify” guide will be released, but some hints can be somewhere.
-- There is **no guarantee** that any specific action or behaviour will receive rewards.
-- Any future clarifications or checkpoints (snapshots, claims, deadlines, etc.) will be announced only through:
-  -  **[@QQagents](https://x.com/QQagents)** on X
-  - Updates to this documentation
-  
 ### About $QQ Airdrop Program
 
 The QQ Airdrop is structured in **seasons**.  
@@ -30,8 +17,6 @@ High–level only:
   - These official docs (this page)
 
 The QQ team may **modify, delay, or pause** the program at any time.
-
----
 
 ### General Principles & Disclaimers
 

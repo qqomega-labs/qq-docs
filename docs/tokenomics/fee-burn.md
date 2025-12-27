@@ -12,20 +12,20 @@ Every month, LP fees collected by the dev wallet are processed according to the 
 - These fees are used to **buy $QQ from the market** and then **burn the tokens permanently** on dead wallet.
 
 ### Monthly Burn Cap
-- The burn is **capped at a maximum of 500 $QQ per month**.
+- The burn is **capped at a maximum of 25.000.000 $QQ per month**.
 - This cap applies **regardless of how much $QQ is bought back** during that month.
 
 ### Excess Allocation
-- If, after buyback, the amount of $QQ exceeds **500 $QQ in a given month**:
-  - **Up to 500 $QQ → burned 🔥**
-  - **Any amount above 500 $QQ → sent to the airdrop wallet 🪂**
+- If, after buyback, the amount of $QQ exceeds **25.000.000 $QQ in a given month**:
+  - **Up to 25.000.000 $QQ → burned**
+  - **Any amount above 25.000.000 $QQ → sent to the airdrop wallet**
 
-### Monthly Summary
+### Summary
 Every month, the flow is:
 
 - 25% of LP fees → buy $QQ on the market  
-- First 500 $QQ → burned  
-- Anything above 500 $QQ → airdrop wallet  
+- First 25.000.000 $QQ → burned 🔥
+- Anything above 25.000.0000 $QQ → airdrop wallet 🪂
 
 ### Transparency
 For full transparency, we will publish **on-chain proofs every month**, clearly showing:

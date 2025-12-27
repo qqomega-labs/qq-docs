@@ -1,23 +1,12 @@
 ---
 title: Phosphorus Swarm
 sidebar_position: 7
-description: The Phosphorus agent swarm analyzes crypto market narratives and sentiment including social media trends, community engagement, media coverage, influencer activity, and market psychology.
-keywords:
-  - Phosphorus agent
-  - sentiment analysis
-  - crypto sentiment
-  - market narrative
-  - social media analysis
-  - community metrics
-  - crypto trends
-  - market psychology
-image: /img/Ipt.png
 ---
 
-## <img src="/img/Ipt.png" alt="Phosphorus" style={{height: '2.5em', verticalAlign: 'middle'}} /> Phosphorus | Orchestration & Scoring Swarm
+## <img src="/img/Ipt.png" alt="Phosphorus" style={{height: '2.5em', verticalAlign: 'middle'}} />Phosphorus | Orchestration & Scoring Swarm
 
 Phosphorus is the element that stores and releases energy in living systems, wiring together otherwise separate processes.  
-In QQ Omega, **Phosphorus** plays a similar role: it **orchestrates all other elements**, aggregates their signals into coherent scores, and turns raw analysis into **actionable insight**.
+In QQ Omega, <span className="gradient-text">**Phosporus swarm**</span> plays a similar role: it <span className="pink-glow-text">**orchestrates all other elements**</span>, aggregates their signals into coherent scores, and turns raw analysis into **actionable insight**.
 
 ### What Phosphorus Is
 
@@ -32,8 +21,6 @@ Instead, it:
 
 Phosphorus is the **integration and decision layer**: the place where fundamentals, tokenomics, on-chain flows, technical structure, and macro regime are forced to live in the same frame.
 
-### What Each Element Answers
-
 Each element in QQ Omega answers a different primary question:
 
 - **Carbon (Fundamentals)** → *“Who is building what, and how resilient is the underlying business and organization?”*  
@@ -44,7 +31,7 @@ Each element in QQ Omega answers a different primary question:
 
 Phosphorus takes these answers and **makes them talk to each other**.
 
-### Core Dimensions Phosphorus Covers
+### Core Dimensions
 
 Across the swarm, Phosphorus continuously coordinates and refines several key functions:
 
@@ -101,9 +88,9 @@ Across the swarm, Phosphorus continuously coordinates and refines several key fu
 
   This prevents short-term noise from erasing long-term realities — and vice versa.
 
-### How Phosphorus Connects to the Rest of QQ Omega
+### How it Connects to the Rest of QQ Omega
 
-Phosphorus swarm forms the **aggregation and decision backbone** of QQ Omega.  
+Phosphorus swarm forms the <span className="pink-glow-text">**aggregation and decision backbone**</span> of QQ Omega.  
 It is the layer that:
 
 - turns specialized, sometimes conflicting analysis into **coherent, comparable outputs**,  

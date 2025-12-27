@@ -1,32 +1,21 @@
 ---
 title: Carbon Swarm
 sidebar_position: 2
-description: The Carbon agent swarm analyzes crypto project fundamentals including team credibility, product positioning, competitive landscape, partnerships, and real-world value creation.
-keywords:
-  - Carbon agent
-  - crypto fundamentals
-  - team analysis
-  - product evaluation
-  - competitive analysis
-  - crypto due diligence
-  - project fundamentals
-  - blockchain fundamentals
-image: /img/Ict.png
 ---
 
-## <img src="/img/Ict.png" alt="Carbon" style={{height: '2.5em', verticalAlign: 'middle'}} /> Carbon | Fundamentals Swarm
+## <img src="/img/Ict.png" alt="Carbon" style={{height: '2.5em', verticalAlign: 'middle'}} />Carbon | Fundamentals Swarm
 
 Carbon is the element that makes complex life possible: it forms chains, lattices, and frameworks that remain stable under pressure.
-In QQ Omega, **Carbon** plays a similar role in understanding how structured and resilient a crypto project truly is, thanks to a coordinated swarm of highly specialized expert AI agents, each focused on a specific dimension of fundamental strength.
+In QQ Omega,  <span className="gradient-text">**Carbon swarm**</span> plays a similar role in understanding how structured and resilient a crypto project truly is, thanks to a coordinated swarm of highly specialized expert AI agents, each focused on a specific dimension of **fundamental strength**.
 
 ### What Carbon Is
 
-The Carbon element focuses on fundamentals: the part of the system that connects every verifiable fact about a protocol’s real-world resilience, from the **people** behind it to the way **value** actually moves.
+The Carbon element focuses on fundamentals: the part of the system that connects every verifiable fact about a protocol’s real-world resilience, from the <span className="pink-glow-text">**people**</span> behind it to the way <span className="pink-glow-text">**value**</span> actually moves.
 
 Some agents go deep on **who is building**: track record, execution quality, reputation, and how consistently the team has delivered in the past.  
 Others map **what is being built**: the company behind it, the product itself, its users, and how it compares to direct competitors in the same category. 
 
-### Core Dimensions Carbon Covers
+### Core Dimensions
 
 Across the swarm, Carbon continuously evaluates and updates a set of core themes, such as:
 
@@ -39,8 +28,8 @@ Across the swarm, Carbon continuously evaluates and updates a set of core themes
 - **Economic reality**  
   How (and if) the project generates revenue, the stability of that revenue over time, and its relationship with users, liquidity providers, and token holders.
 
-- **Adoption & usage**  
-  Real usage: active users, retention, and power-user behavior.
+- **Product market fit**  
+  Adoption and real usage: active users, retention, and power-user behavior.
 
 - **Lifecycle & robustness**  
   Stage of development, time in production, behavior under different market conditions, and response to historical stress events.
@@ -66,9 +55,9 @@ Across the swarm, Carbon continuously evaluates and updates a set of core themes
 Each agent inside Carbon contributes its own view on these dimensions, with different weights and time horizons.  
 Their outputs are normalized into structured scores and qualitative notes that the rest of QQ Omega can consume, compare, and aggregate.
 
-### How Carbon Connects to the Rest of QQ Omega
+### How it Connects to the Rest of QQ Omega
 
-The Carbon swarm forms the **fundamental backbone** of QQ Omega’s scoring and decision layer.  
+The Carbon swarm forms the <span className="pink-glow-text">**fundamental backbone**</span> of QQ Omega’s scoring and decision layer.  
 It provides the slow-moving, fundamentals-first signal upon which the other swarms build.
 
 It ensures the system always maintains a grounded, evidence-based view of **who is building**, **what exists today**, and **how durable it really is** over time.

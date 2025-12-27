@@ -1,5 +1,5 @@
 ---
-title: Update frequency & Quality checks
+title: Frequency & Quality checks
 sidebar_position: 6
 ---
 
