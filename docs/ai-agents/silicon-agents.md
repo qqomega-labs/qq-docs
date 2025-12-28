@@ -6,25 +6,25 @@ sidebar_position: 5
 ## <img src="/img/Ist.png" alt="Silicon" style={{height: '2.5em', verticalAlign: 'middle'}} />Silicon | Technical Analysis Swarm
 
 Silicon is the base material of modern computing: it turns raw electrical noise into precise, structured signals.  
-In QQ Omega, <span className="gradient-text">**Silicon swarm**</span> plays a similar role for **market data**: it takes noisy OHLCV and market microstructure signals and organizes them into clear, machine-readable views on **structure, liquidity, and positioning**.
+In QQ Omega, <span className="gradient-text">**Silicon swarm**</span> plays a similar role for **market data**: it takes noisy OHLCV and market signals and organizes them into clear, machine-readable views on **structure, liquidity, and positioning**.
 
 ### What Silicon Is
 
 The Silicon element focuses on <span className="pink-glow-text">**technical, order-flow, and derivatives-aware market structure**</span>:  
 how price moves, where liquidity is concentrated, and how positioning and leverage can amplify moves.
 
-Some agents specialize in benchmarks widely used for execution and anchoring, such as **VWAP and anchored VWAP**, Fibonacci mapping, volume clusters, and structural swing analysis.  
+Some agents specialize in benchmarks widely used for execution, such as VWAP, Fibonacci mapping, volume clusters, and structural swing analysis.  
 Others map **structural levels** such as market structure, support and resistance, and supply and demand zones, detecting where trends tend to pause, reverse, or accelerate.  
 Another group builds **order-flow and liquidity maps** using volume profile, footprint-style features, and spot CVD, identifying where aggression and absorption are occurring in real time.  
 A dedicated subgroup tracks **derivatives and large-actor signals** such as funding, open interest, liquidations, options positioning, and COT data, helping anticipate squeezes, cascades, and pinning dynamics.
 
-Silicon blends multiple schools of technical analysis into a unified structure that the rest of QQ Omega can consume.
+Blends multiple schools of technical analysis into a unified structure that the rest of QQ Omega can consume, Silicon wants to answer a primary question: *"What is the chart saying about trend, levels, structure, volatility and execution risk right now?”*
 
 ### Core Dimensions
 
-Across the swarm, Silicon continuously evaluates and updates a set of dimensions that combine the three major schools of analysis: **market structure**, **volume and order flow**, and **derivatives and positioning**.
+Across the swarm, Silicon continuously evaluates and updates a set of dimensions that combine the three major schools of analysis: **market structure**, **volume and order flow**, and **derivatives & positioning**.
 
-- **Market Structure – trend, levels, geometry of the move**  
+- **Market Structure | trend, levels, geometry of the move**  
   This layer organizes raw OHLC data into a clear structural map:
   - **Market structure**: higher highs and higher lows versus lower highs and lower lows, break of structure, trend versus range identification across multiple timeframes.  
   - **Support & resistance**: construction of key levels from repeated rejections, closes, and failed breaks, including classic horizontal SR and supply and demand zones.  
@@ -34,7 +34,7 @@ Across the swarm, Silicon continuously evaluates and updates a set of dimensions
 
   The output is a multi-timeframe **structure map**: trend state, critical levels, and high-interest areas where the market is most likely to react.
 
-- **Volume & Order Flow – who is actually trading where**  
+- **Volume & Order Flow | who is actually trading where**  
   This layer focuses on participation, aggression, and liquidity behavior:
   - **Volume profile & node analysis**: identification of high-volume nodes and low-volume nodes to map acceptance areas versus rejection and imbalance areas, often overlapping with structure levels.  
   - **Order-flow features**: bid and ask imbalance where available, taker buy and sell pressure, delta-style measures, and absorption versus impulse detection around key levels.  
@@ -44,13 +44,13 @@ Across the swarm, Silicon continuously evaluates and updates a set of dimensions
 
   The goal is to understand **where real commitment sits**, whether current moves are backed by meaningful participation, and whether spot flow supports the observed structure.
 
-- **Derivatives & Positioning – leverage, squeezes, and forced flows**  
+- **Derivatives & Positioning | leverage, squeezes, and forced flows**  
   This layer monitors the positioning engine that can explain violent accelerations and sudden reversals:
   - **Funding rate & basis**: funding regimes, funding spikes, and basis behavior used as signals of positioning stress.  
   - **Open interest dynamics**: open interest expansion versus contraction paired with price direction to classify moves as new leverage entering, short covering, long liquidation, or broad deleveraging.  
   - **Liquidations & cascade risk**: liquidation prints when observable, estimated liquidation clusters, and areas where forced flows can accelerate price through structural levels.  
   - **Options positioning**: implied volatility regimes, realized versus implied gaps, skew shifts, open interest by strike and expiry, and strike zones that can act as magnets or pinning regions.  
-  - **COT positioning**: institutional positioning overlays derived from futures market reports, used as a slow-moving bias filter for macro-linked assets.
+  - **COT positioning**: institutional positioning where available overlays derived from futures market reports, used as a slow-moving bias filter for macro-linked assets.
 
   The output is a **positioning map**: whether the market is balanced or crowded, where forced flows may trigger, and whether structure levels are likely to break cleanly or snap back sharply.
 
@@ -59,13 +59,13 @@ Silicon defines **where the important battles have been fought, how many players
 
 ### How it Connects to the Rest of QQ Omega
 
-Silicon swarm forms the <span className="pink-glow-text">**signal and execution layer**</span> of QQ Omega’s scoring and decision system: it decides **how tradable the environment is** and **what kind of structural and positioning risk the market is carrying**.
+Silicon swarm forms the <span className="pink-glow-text">**technical layer**</span> of QQ Omega’s scoring and decision system: it decides **how tradable the environment is** and **what kind of structural and positioning risk the market is carrying**.
 
 It ensures the system always maintains a structured view of:
 
-- whether market structure confirms or contradicts **fundamentals (Carbon)** and **tokenomics (Gold)**,  
-- where **key levels, VWAP rails, and supply and demand zones** are across multiple timeframes,  
-- whether **spot order flow** supports the move or signals divergence and absorption,  
+- whether market structure confirms or contradicts **other swarms**,  
+- where **key levels** are across multiple timeframes,  
+- whether **order flow** supports the move or signals divergence and absorption,  
 - whether **derivatives positioning** suggests crowding, fragility, or pinning dynamics.
 
 Other swarms use Silicon’s signals to:

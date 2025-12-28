@@ -20,11 +20,11 @@ Think of it like a **doctor with one job**: one only checks the heart, another o
 
 Each agent:
 
-- looks at <span className="pink-glow-text">**one hyper-specific area**</span> (eg. team, token supply, whales, macro, etc.);
+- looks at <span className="pink-glow-text">**one hyper-specific area**</span> (eg. team credibility, token unlocks, whales flows, fed interest rate, etc.);
 - reads **structured data and metrics**;
 - outputs a **score, signal or comment** that can be combined with others.
 
-An agent is not trying to understand “everything”: it is trying to be **very good at one thing**.
+A single agent is not trying to understand “everything”: it is trying to be **very good at one thing**.
 
 ## What Is a Swarm?
 

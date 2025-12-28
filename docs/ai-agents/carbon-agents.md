@@ -6,14 +6,16 @@ sidebar_position: 2
 ## <img src="/img/Ict.png" alt="Carbon" style={{height: '2.5em', verticalAlign: 'middle'}} />Carbon | Fundamentals Swarm
 
 Carbon is the element that makes complex life possible: it forms chains, lattices, and frameworks that remain stable under pressure.
-In QQ Omega,  <span className="gradient-text">**Carbon swarm**</span> plays a similar role in understanding how structured and resilient a crypto project truly is, thanks to a coordinated swarm of highly specialized expert AI agents, each focused on a specific dimension of **fundamental strength**.
+In QQ Omega,  <span className="gradient-text">**Carbon swarm**</span> plays a similar role in understanding how structured and resilient a crypto project truly is, thanks to a coordinated swarm of highly specialized AI agents, each focused on a specific dimension of **fundamental strength**.
 
 ### What Carbon Is
 
-The Carbon element focuses on fundamentals: the part of the system that connects every verifiable fact about a protocol’s real-world resilience, from the <span className="pink-glow-text">**people**</span> behind it to the way <span className="pink-glow-text">**value**</span> actually moves.
+The Carbon element focuses on fundamentals: the part of the system that connects every verifiable fact about a crypto project’s real-world resilience, from the <span className="pink-glow-text">**people**</span> behind it to the way <span className="pink-glow-text">**value**</span> actually moves.
 
 Some agents go deep on **who is building**: track record, execution quality, reputation, and how consistently the team has delivered in the past.  
-Others map **what is being built**: the company behind it, the product itself, its users, and how it compares to direct competitors in the same category. 
+Others map **what is being built**: the company behind it, the product itself, its users, and how it compares to direct competitors in the same category.
+
+Carbon wants to answer a primary question: *“Who is building what, and how resilient is the underlying business and organization?”*  
 
 ### Core Dimensions
 

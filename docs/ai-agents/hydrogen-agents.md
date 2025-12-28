@@ -17,7 +17,7 @@ Some agents track **how much capital is committed** to a protocol: TVL across ch
 Others follow **how fast value circulates**: trading volume, transfer activity, lending flows, liquidations, and more.  
 Another set of agents maps **who the key holders are**, classifying them into clear categories, such as CEXs, companies, institutions, investors, smart contracts, dead wallets, and unknown whales, and watching how their positions evolve over different timeframes.
 
-Hydrogen wants to answers a harder question: *“What are the biggest on-chain actors actually doing with real money, right now and over time?”*
+Hydrogen wants to answer a primary question: *“What are the biggest on-chain actors actually doing with real money, right now and over time?”*
 
 ### Core Dimensions
 
@@ -59,8 +59,7 @@ Across the swarm, Hydrogen continuously evaluates and updates a set of core flow
 
 - **Holder Dynamics: who is accumulating or distributing**  
   Another agent tracks **changes in balances** across the same clusters over different timeframes.
-  It looks at:
-  - Δ% supply held by each cluster (accumulation versus distribution)  
+  It looks at Δ% supply held by each cluster (accumulation versus distribution), for example:
   - Net inflows / outflows to and from CEXs  
   - Behavior of large holders and unknown whales  
   - Shifts between self-custody, smart contracts, and centralized venues  
@@ -82,9 +81,9 @@ It ensures the system always maintains a grounded, data-driven view of:
 - who actually controls the token today,  
 - how concentrated or diversified ownership really is,  
 - whether key actors are **adding risk, reducing exposure, or staying flat**,  
-- how TVL and volumes evolve across **24h / 7d / 30d** in response to market and protocol events.
+- how TVL and volumes evolve across different timeframes in response to market and protocol events.
 
-Other swarms, from fundamentals (Carbon) to tokenomics (Gold) and macro regime (Oxygen), use Hydrogen’s signals to:
+Other swarms use Hydrogen’s insights to:
 - validate whether strong narratives and “good tokenomics” are supported by real capital flows,  
 - detect early accumulation or distribution by important actors,  
 - adjust conviction when on-chain behavior diverges sharply from off-chain storylines.

@@ -23,11 +23,11 @@ Phosphorus is the **integration and decision layer**: the place where fundamenta
 
 Each element in QQ Omega answers a different primary question:
 
-- **Carbon (Fundamentals)** → *“Who is building what, and how resilient is the underlying business and organization?”*  
-- **Gold (Tokenomics)** → *“How does the token actually work as an economic instrument, and who wins or loses from its design?”*  
-- **Hydrogen (On-chain)** → *“What are real holders and DeFi actors doing on-chain with this asset over 24h / 7d / 30d?”*  
-- **Silicon (Technical)** → *“What is the chart saying about trend, levels, structure, volatility and execution risk right now?”*  
-- **Oxygen (Macro & Regime)** → *“In what macro and liquidity environment is all of this happening: risk-on, risk-off, or something in between?”*
+- <span className="gradient-text">**Carbon (Fundamentals)**</span> → *“Who is building what, and how resilient is the underlying business and organization?”*  
+- <span className="gradient-text">**Gold (Tokenomics)**</span> → *“How does the token actually work as an economic instrument, and who wins or loses from its design?”*  
+- <span className="gradient-text">**Hydrogen (On-chain)**</span> → *“What are the biggest on-chain actors actually doing with real money, right now and over time?”*  
+- <span className="gradient-text">**Silicon (Technical)**</span> → *“What is the chart saying about trend, levels, structure, volatility and execution risk right now?”*  
+- <span className="gradient-text">**Oxygen (Macro & Regime)**</span> → *“In this environment, how hard is it for crypto-assets to breathe?”*
 
 Phosphorus takes these answers and **makes them talk to each other**.
 
@@ -35,7 +35,7 @@ Phosphorus takes these answers and **makes them talk to each other**.
 
 Across the swarm, Phosphorus continuously coordinates and refines several key functions:
 
-- **Per-area scoring – clear pillars instead of a black box**  
+- **Per-area scoring | clear pillars instead of a black box**  
   Phosphorus turns the raw outputs of each element into **per-area scores**, such as:
   - Fundamentals (Carbon)  
   - Tokenomics (Gold)  
@@ -48,16 +48,16 @@ Across the swarm, Phosphorus continuously coordinates and refines several key fu
   - time-aware (short / medium / structural),  
   - and accompanied by a small set of **explanatory tags** (e.g. “strong team, weak unlock schedule, heavy whale accumulation, choppy chart, risk-on macro”).
 
-- **Global QQ Score – one number, all dimensions**  
-  On top of area scores, Phosphorus computes a **global QQ Score** for each asset or opportunity.  
-  This score is **not** a simple average. It:
+- **Global QQ Score | one number, all dimensions**  
+  On top of area scores, Phosphorus computes a **global QQ Score** for each asset or opportunity:
+
   - applies different weights depending on context (e.g. early-stage vs. mature protocol),  
   - penalizes hard red flags (e.g. catastrophic token unlocks, extreme centralization of control),  
   - and reacts differently when strong technical setups align with strong fundamentals vs. when they contradict each other.
 
   The result is a single, comparable number that reflects **all dimensions together**, while preserving the ability to drill down into the underlying pillars.
 
-- **Conflict handling – controlled disagreement, not fake consensus**  
+- **Conflict handling | controlled disagreement, not fake consensus**  
   Different agents are allowed to disagree.  
   Phosphorus explicitly tracks:
   - alignment (e.g. strong fundamentals + strong tokenomics + strong on-chain behavior),  
@@ -69,7 +69,7 @@ Across the swarm, Phosphorus continuously coordinates and refines several key fu
   - highlights where extra human due diligence is most valuable,  
   - and avoids giving a false sense of certainty when the system itself is split.
 
-- **Insight generation – from scores to narratives**  
+- **Insight generation | from scores to narratives**  
   Beyond numbers, Phosphorus composes **short, structured insights** like:
   - “Strong protocol and token design, but major unlock clusters over next 90 days.”  
   - “Macro and on-chain flows supportive, technicals currently in noisy consolidation.”  
@@ -77,7 +77,7 @@ Across the swarm, Phosphorus continuously coordinates and refines several key fu
 
   These insights serve as the **bridge between raw data and human decision-making**, making it obvious *why* a score is what it is.
 
-- **Time-horizon integration – short, medium, structural**  
+- **Time-horizon integration | short, medium, structural**  
   Each underlying swarm has its own natural time horizon. Phosphorus:
   - separates **fast-moving signals** (e.g. technicals, short-term flows) from  
     **slow-moving ones** (e.g. fundamentals, tokenomics design, macro regime),  
@@ -103,5 +103,5 @@ QQ then uses Phosphorus to:
 - compute a **global QQ Score** for each asset or strategy,  
 - and surface the core insights and tensions behind those scores.
 
-Different agents can disagree – and that’s the point.  
+Different agents can disagree, and that’s the point.  
 Phosphorus is designed to expose **where the story is strong and where it is weak**, in a single, coherent view, instead of pretending that complex systems can be reduced to a one-dimensional “good or bad” label.

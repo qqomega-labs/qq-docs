@@ -18,6 +18,8 @@ Another set of agents tracks **governance and control over the token**: admin ke
 
 Gold expresses many of its metrics as **percentages of circulating supply**, evaluated across three rolling time windows: this makes it possible to compare very different projects on a common scale and to detect changes in pressure over short and medium horizons.
 
+Gold wants to answer a primary question: *“How does the token actually work as an economic instrument, and who wins or loses from its design?”*
+
 ### Core Dimensions
 
 Across the swarm, Gold continuously evaluates and updates a set of core tokenomics themes, such as:

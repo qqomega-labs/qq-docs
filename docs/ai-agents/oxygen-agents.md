@@ -85,8 +85,7 @@ Their outputs are normalized into structured regime tags, scores and qualitative
 
 ### How it Connects to the Rest of QQ Omega
 
-Oxygen swarm forms the <span className="pink-glow-text">**environmental layer**</span> of QQ Omega’s scoring and decision system.  
-It does not say which token is good or bad — it defines **how forgiving or hostile the macro climate is** for taking risk at all.
+Oxygen swarm forms the <span className="pink-glow-text">**environmental layer**</span> of QQ Omega’s scoring and decision system. It defines **how forgiving or hostile the macro climate is** for taking risk at all.
 
 It ensures the system always maintains a grounded, evidence-based view of:
 

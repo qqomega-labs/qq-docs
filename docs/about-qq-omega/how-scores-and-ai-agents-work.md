@@ -6,12 +6,15 @@ sidebar_position: 3
 
 ## How QQ Scores & AI Agents Work?
 
+:::note
+TLDR: **Data → AI agents → Scores → Clear overview for your decisions.**
+:::
 
 1. **Data collection**  
    QQ Omega collects and organizes on-chain data such as holders, flows, liquidity, and token activity, as well as off-chain data such as products, documentation, news, and macroeconomic context.
 
 2. **AI agents per area**  
-   Data is grouped by category and fed into **five structured <span className="pink-glow-text">swarms of AI agents</span>**, each dedicated to a specific analytical area.
+   Data is grouped by category and fed into **multiples, structured <span className="pink-glow-text">swarms of AI agents</span>**, each dedicated to a specific analytical area.
    
    Here are some examples:
    - **Fundamentals swarm**: one agent for team, one for product, one for security, and more.
@@ -25,7 +28,3 @@ sidebar_position: 3
 4. **Continuous updates**  
    As new data becomes available, including on-chain movements, token unlocks, new partnerships, or changes in market sentiment,  
    agents update their assessments and scores <span className="pink-glow-text">**evolve**</span> **over time**.
-   
-:::note
-TLDR: **Data → AI agents → Scores → Clear overview for your decisions.**
-:::
