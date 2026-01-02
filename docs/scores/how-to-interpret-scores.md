@@ -15,34 +15,35 @@ image: /img/QQlogo.png
 
 ## How to interpret scores
 
-QQ uses a **0–100 score** for each area (Fundamentals, Tokenomics, On-chain, TA, Macro) and a **global QQ Score** per project.
+QQ assigns a <span className="pink-glow-text">**0–100 score**</span> to each dimension (Fundamentals, Tokenomics, On-chain, TA, Macro) and a **global QQ Score** per project.
 
 General reading:
 
-|   Range   |     Label      |                Meaning                 |
-|:---------:|:--------------:|:--------------------------------------:|
-| 🔵 80 – 100 |   very cheap   | very strong on that dimension          |
-| 🟢 60 – 80  |     cheap      | solid, with some risks or unknowns     |
-| 🟡 40 – 60  |   fair value   | neutral / mixed signals                |
-| 🟠 20 – 40  |   expensive    | weak, several red flags                |
-| 🔴 00 – 20  | very expensive | very fragile / highly risky            |
+|   Range    |      Label       | Meaning |
+|:----------:|:----------------:|:----------------------:|
+| 🔵 80 – 100 |   very cheap     | **high score vs market cap** → strongly undervalued |
+| 🟢 60 – 80  |     cheap        | **good score vs market cap** → undervalued |
+| 🟡 40 – 60  |   fair value     | **score and market cap aligned** |
+| 🟠 20 – 40  |   expensive      | **low score vs market cap** → overvalued |
+| 🔴 0 – 20   | very expensive   | **very low score vs market cap** → extremely overvalued |
 
 
-### What “cheap / expensive” means in QQ
+### What “cheap / expensive” means in QQ Omega
 
-In QQ, “undervalued / overvalued” indicate a **mismatch signal** between:
+In QQ Omega **cheap / expensive** comes from a **relative valuation check**:
 
-- the **quality scores** (Fundamentals, Tokenomics, On-chain, etc.)
-- and the **market behaviour** in the timeframe analyzed (price, volume, narrative, flows).
+- QQ takes the **market cap** of the crypto asset
+- compares it against the **scores assigned by the swarms**
+- and outputs how **undervalued (cheap)** or **overvalued (expensive)** the asset looks **relative to its scored quality**
 
 Examples:
 
-- **High quality, weak price → “cheap zone”**
-  - Strong Fundamentals, Tokenomics, On-chain, but price lagging peers.
-- **Low quality, strong price → “expensive zone”**
-  - Weak Fundamentals or bad Tokenomics, but big hype and strong price.
+- **High scores, low market cap → “cheap zone”**
+  - Strong fundamentals/on-chain/tokenomics/etc., but the market cap doesn’t reflect it yet.
+- **Low scores, high market cap → “expensive zone”**
+  - Weak quality signals, but market cap is inflated (often by hype / KOLs / narrative).
 
-QQ highlights these mismatches so you can decide to build a strategy if you want to:
+QQ highlights these mismatches so you can decide whether to:
 
-- **accumulate in cheap zones**, or
-- **take profit / reduce risk in expensive zones**.
+- **<span className="pink-glow-text">accumulate</span> in cheap zones**, or
+- **<span className="pink-glow-text">take profit / reduce risk</span> in expensive zones**.

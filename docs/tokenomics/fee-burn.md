@@ -1,37 +1,46 @@
 ---
-title: Burn Mechanism
+title: Burn and POL Mechanism
 sidebar_position: 2
 ---
 
-## How It Works
+### How It Works
 
-Every month, LP fees collected by the dev wallet are processed according to the rules below:
+Fees **received by the dev wallet** are processed according to the rules below:
 
 ### Buyback & Burn Allocation
-- **25% of the LP fees** collected by the dev wallet are allocated to a **buyback and burn** mechanism for the $QQ token.
-- These fees are used to **buy $QQ from the market** and then **burn the tokens permanently** on dead wallet.
+- <span className="pink-glow-text">**15% of the fees**</span> received by the dev wallet are allocated to a **buyback and burn** mechanism for the $QQ token.
+- These fees are used to **buy $QQ from the market** and then **burn the tokens permanently** by sending them to a dead wallet.
+
+### POL Allocation (Protocol-Owned Liquidity)
+- <span className="pink-glow-text">**15% of the fees**</span> received by the dev wallet are allocated to **POL (Protocol-Owned Liquidity)**.
+- POL means the protocol **buys $QQ and $VIRTUAL on the market** and **adds them as liquidity** to strengthen the $QQ/$VIRTUAL pool over time.
 
 ### Monthly Burn Cap
-- The burn is **capped at a maximum of 25.000.000 $QQ per month**.
-- This cap applies **regardless of how much $QQ is bought back** during that month.
-
-### Excess Allocation
-- If, after buyback, the amount of $QQ exceeds **25.000.000 $QQ in a given month**:
-  - **Up to 25.000.000 $QQ → burned**
-  - **Any amount above 25.000.000 $QQ → sent to the airdrop wallet**
+- The burn is **capped at a maximum of 25,000,000 $QQ per calendar month** (across all executions in that month).
+- If, after buyback, the amount of $QQ exceeds **25,000,000 $QQ in a given month**:
+  - **Up to 25,000,000 $QQ → burned**
+  - **Any amount above 25,000,000 $QQ → sent to the airdrop wallet**
 
 ### Summary
-Every month, the flow is:
+As fees are distributed to the dev wallet, the flow is:
 
-- 25% of LP fees → buy $QQ on the market  
-- First 25.000.000 $QQ → burned 🔥
-- Anything above 25.000.0000 $QQ → airdrop wallet 🪂
+- **15% of fees → <span className="pink-glow-text">buy</span> $QQ on the market**
+- **First 25,000,000 $QQ per month → <span className="pink-glow-text">**burned**</span>**
+- **Anything above 25,000,000 $QQ per month → <span className="pink-glow-text">**airdrop**</span> wallet**
+- **15% of fees → <span className="pink-glow-text">**buy**</span> $QQ + $VIRTUAL and add <span className="pink-glow-text">**liquidity**</span> on LP**
+
+### Processing Cadence
+- Virtuals routes taxed trades through an automated fee pipeline (tax → swap to $VIRTUAL → distribution).
+- Distributions are **periodic** and depend on **accumulated trading activity / thresholds**, so timing is not fixed.
+- **Each time** a distribution is received, we run the allocations below.
+- We publish a **monthly recap** aggregating all executions within the calendar month.
 
 ### Transparency
 For full transparency, we will publish **on-chain proofs every month**, clearly showing:
 - How much $QQ was bought back
 - How much $QQ was burned
 - How much $QQ was sent to the airdrop wallet
+- How much was allocated to POL and added as liquidity
 
 ### Burn Duration
-The burn process will continue until the total supply reaches **???.???.???** $QQ.
+The burn process will continue until the total supply reaches <span className="pink-glow-text">**???.???.???**</span> $QQ.

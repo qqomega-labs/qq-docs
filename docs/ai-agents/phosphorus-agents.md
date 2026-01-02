@@ -6,13 +6,11 @@ sidebar_position: 7
 ## <img src="/img/Ipt.png" alt="Phosphorus" style={{height: '2.5em', verticalAlign: 'middle'}} />Phosphorus | Orchestration & Scoring Swarm
 
 Phosphorus is the element that stores and releases energy in living systems, wiring together otherwise separate processes.  
-In QQ Omega, <span className="gradient-text">**Phosporus swarm**</span> plays a similar role: it <span className="pink-glow-text">**orchestrates all other elements**</span>, aggregates their signals into coherent scores, and turns raw analysis into **actionable insight**.
+In QQ Omega, <span className="gradient-text">**Phosporus swarm**</span> plays a similar role: it <span className="pink-glow-text">**orchestrates all other elements**</span>, aggregates their signals into one coherent score, and turns analysis into **general, actionable insight**.
 
 ### What Phosphorus Is
 
-The Phosphorus element does not analyze markets directly. 
-
-Instead, it:
+The Phosphorus element does not analyze markets directly. Instead, it:
 
 - ingests the structured outputs from all specialist swarms (Carbon, Gold, Hydrogen, Silicon, Oxygen),  
 - normalizes and weights their views across different time horizons,  
@@ -35,29 +33,18 @@ Phosphorus takes these answers and **makes them talk to each other**.
 
 Across the swarm, Phosphorus continuously coordinates and refines several key functions:
 
-- **Per-area scoring | clear pillars instead of a black box**  
-  Phosphorus turns the raw outputs of each element into **per-area scores**, such as:
-  - Fundamentals (Carbon)  
-  - Tokenomics (Gold)  
-  - On-chain behavior (Hydrogen)  
-  - Technical & quant structure (Silicon)  
-  - Macro & regime context (Oxygen)  
-
-  Each area score is:
-  - built from multiple underlying agents,  
-  - time-aware (short / medium / structural),  
-  - and accompanied by a small set of **explanatory tags** (e.g. “strong team, weak unlock schedule, heavy whale accumulation, choppy chart, risk-on macro”).
-
-- **Global QQ Score | one number, all dimensions**  
+- <span className="gradient-text">**Global QQ Score**</span> | **one number, all dimensions**  
   On top of area scores, Phosphorus computes a **global QQ Score** for each asset or opportunity:
 
+
+  - incorporates market cap as a weighting factor, so the final score reflects “quality vs valuation” (cheap ↔ expensive);
   - applies different weights depending on context (e.g. early-stage vs. mature protocol),  
   - penalizes hard red flags (e.g. catastrophic token unlocks, extreme centralization of control),  
-  - and reacts differently when strong technical setups align with strong fundamentals vs. when they contradict each other.
+  - reacts differently when strong technical setups align with strong fundamentals vs. when they contradict each other.
 
   The result is a single, comparable number that reflects **all dimensions together**, while preserving the ability to drill down into the underlying pillars.
 
-- **Conflict handling | controlled disagreement, not fake consensus**  
+- **<span className="gradient-text">Conflict handling</span> | controlled disagreement, not fake consensus**  
   Different agents are allowed to disagree.  
   Phosphorus explicitly tracks:
   - alignment (e.g. strong fundamentals + strong tokenomics + strong on-chain behavior),  
@@ -68,25 +55,34 @@ Across the swarm, Phosphorus continuously coordinates and refines several key fu
   - flags when conviction should be lowered or timelines extended,  
   - highlights where extra human due diligence is most valuable,  
   - and avoids giving a false sense of certainty when the system itself is split.
+  
+- **<span className="gradient-text">Time-horizon integration</span> | 24h / 7d / 30d / 365d**  
+  Phosphorus aggregates signals from all swarms into 4 timeframes, using different **data windows** and **weighting** for each horizon.
 
-- **Insight generation | from scores to narratives**  
+- **Daily – Scalper (24h)**  
+  Intraday data; **Silicon + short-term Hydrogen** dominate.
+
+- **Weekly – Tactical (7d)**  
+  7d momentum and flows; **Silicon + 7d Hydrogen**, with Oxygen starting to matter.
+
+- **Monthly – Swing (30d)**  
+  30d trends, unlocks, usage; **Hydrogen + Gold** gain weight, **Silicon** mostly timing.
+
+- **Yearly – Hodler (365d)**  
+  Structural layer; **Carbon + Gold + Oxygen** dominate, **Hydrogen** on 365d trends, **Silicon** only higher-timeframe check.
+
+Phosphorus merges these layers into profiles like “structurally strong, tactically weak” or “structurally fragile, currently euphoric”.
+
+
+
+
+- **<span className="gradient-text">Insight generation</span> | from scores to narratives**  
   Beyond numbers, Phosphorus composes **short, structured insights** like:
   - “Strong protocol and token design, but major unlock clusters over next 90 days.”  
   - “Macro and on-chain flows supportive, technicals currently in noisy consolidation.”  
   - “High-quality fundamentals undermined by centralised control and bailout risk.”  
 
   These insights serve as the **bridge between raw data and human decision-making**, making it obvious *why* a score is what it is.
-
-- **Time-horizon integration | short, medium, structural**  
-  Each underlying swarm has its own natural time horizon. Phosphorus:
-  - separates **fast-moving signals** (e.g. technicals, short-term flows) from  
-    **slow-moving ones** (e.g. fundamentals, tokenomics design, macro regime),  
-  - and then recombines them into profiles like:  
-    - “structurally strong, tactically weak,”  
-    - “structurally fragile, currently euphoric,”  
-    - “improving structurally, neutral tactically,” etc.
-
-  This prevents short-term noise from erasing long-term realities — and vice versa.
 
 ### How it Connects to the Rest of QQ Omega
 
@@ -99,8 +95,8 @@ It is the layer that:
 
 QQ then uses Phosphorus to:
 
-- generate **per-area scores** (Fundamentals, Tokenomics, On-chain, TA, Macro),  
-- compute a **global QQ Score** for each asset or strategy,  
+- generate **per-area scores** (Fundamentals, Tokenomics, On-chain, TA, Macro);  
+- compute a **global QQ Score** for each asset or strategy **incorporating market cap weighting**;  
 - and surface the core insights and tensions behind those scores.
 
 Different agents can disagree, and that’s the point.  

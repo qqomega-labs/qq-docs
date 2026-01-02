@@ -12,7 +12,7 @@ But even solid fundamentals often turn into **short-lived narratives**.
 Many token designs are built to reward early insiders and turn retail into **exit liquidity**.  
 Cryptocurrencies are weakly regulated, with little investor protection, allowing bad actors to **exploit** loopholes and **scam** people.
 
-<span className="pink-glow-text">QQ Omega</span> exists to help you avoid these traps and move from opinion-driven decisions to <span className="pink-glow-text">data-driven decisions</span>.
+<span className="gradient-text">**QQ Omega** exists to help you avoid these traps and move from opinion-driven decisions to **data-driven decisions**</span>.
 
 Our swarm of AI agents examines every major dimension of a project, including <span className="pink-glow-text">fundamentals</span>, <span className="pink-glow-text">token design</span>, <span className="pink-glow-text">on-chain behavior</span>, <span className="pink-glow-text">technical analysis</span>, and the <span className="pink-glow-text">broader market environment</span>. 
 Crypto projects are evaluated with the same seriousness you would apply to real companies, adapted to how Web3 actually works.
@@ -40,5 +40,5 @@ to understand when a project’s “good vibes” are backed by substance, and w
 
 :::note
 Think of QQ Omega as a filter between you and the noise.  
-It does not tell you what to believe; it shows you <span className="pink-glow-text">**why**</span> a project looks strong or fragile, so you can decide for yourself.
+It does not tell you what to believe: it shows you <span className="pink-glow-text">**why**</span> a project looks strong or fragile, so you can decide for yourself.
 :::
