@@ -8,11 +8,11 @@ sidebar_position: 2
 Fees **received by the dev wallet** are processed according to the rules below:
 
 ### Buyback & Burn Allocation
-- <span className="pink-glow-text">**15% of the fees**</span> received by the dev wallet are allocated to a **buyback and burn** mechanism for the $QQ token.
+- <span className="pink-glow-text">**15% of the fees**</span> received by the dev wallet are allocated to a <span className="pink-glow-text">**buyback and burn**</span> mechanism for the $QQ token.
 - These fees are used to **buy $QQ from the market** and then **burn the tokens permanently** by sending them to a dead wallet.
 
 ### POL Allocation (Protocol-Owned Liquidity)
-- <span className="pink-glow-text">**15% of the fees**</span> received by the dev wallet are allocated to **POL (Protocol-Owned Liquidity)**.
+- <span className="pink-glow-text">**15% of the fees**</span> received by the dev wallet are allocated to <span className="pink-glow-text">**POL (Protocol-Owned Liquidity)**</span>.
 - POL means the protocol **buys $QQ and $VIRTUAL on the market** and **adds them as liquidity** to strengthen the $QQ/$VIRTUAL pool over time.
 
 ### Monthly Burn Cap

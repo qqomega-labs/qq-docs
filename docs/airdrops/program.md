@@ -8,7 +8,7 @@ sidebar_position: 1
 The QQ Airdrop is structured in **seasons**.  
 Each season has its own internal rules, parameters, and reward logic.
 
-High–level only:
+Summary:
 
 - There will be **multiple seasons** over time.
 - **Rules and eligibility are not fully disclosed** and may change between seasons.
