@@ -33,8 +33,8 @@ General reading:
 In QQ Omega **cheap / expensive** comes from a **relative valuation check**:
 
 - QQ takes the **market cap** of the crypto asset
-- compares it against the **scores assigned by the swarms**
-- and outputs how **undervalued (cheap)** or **overvalued (expensive)** the asset looks **relative to its scored quality**
+- compares it against the **scores assigned by each swarms**
+- and outputs a <span className="pink-glow-text">**QQ score**</span> representing how <span className="pink-glow-text">**undervalued**</span> **(cheap)** or <span className="pink-glow-text">**overvalued**</span> **(expensive)** the asset looks **relative to its scored quality**
 
 Examples:
 

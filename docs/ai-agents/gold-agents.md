@@ -6,7 +6,7 @@ sidebar_position: 3
 ## <img src="/img/Igt.png" alt="Gold" style={{height: '2.5em', verticalAlign: 'middle'}} />Gold | Tokenomics Swarm
 
 Gold is the element humans have historically trusted to store value: scarce, hard to debase, and difficult to fake.  
-In QQ Omega, <span className="gradient-text">**Gold swarm**</span> plays a similar role in understanding how hard or fragile a token really is as a store of value asset, by dissecting its supply schedule, value capture mechanisms, and incentive design.
+In QQ Omega, <span className="gradient-text">**Gold swarm**</span> plays a similar role in understanding how hard or fragile a token really is as a **store-of-value asset**, by dissecting its supply schedule, value capture mechanisms, and incentive design.
 
 ### What Gold Is
 
@@ -16,9 +16,9 @@ Some agents go deep on **how supply evolves**: emission curves, unlock schedules
 Others map **how value flows back to holders**: buybacks, protocol revenue sharing, DeFi yields, and any mechanism that creates structural demand for the token.  
 Another set of agents tracks **governance and control over the token**: admin keys, bailout mechanics, and whether the token can be weaponized against holders in times of stress.
 
-Gold expresses many of its metrics as **percentages of circulating supply**, evaluated across three rolling time windows: this makes it possible to compare very different projects on a common scale and to detect changes in pressure over short and medium horizons.
+Gold expresses many of its metrics as **percentages of circulating supply**, evaluated across three rolling time windows. This makes it possible to compare very different projects on a common scale and to detect changes in pressure over short and medium horizons.
 
-Gold wants to answer a primary question: *“How does the token actually work as an economic instrument, and who wins or loses from its design?”*
+Gold aims to answer a primary question: *“How does the token actually work as an economic instrument, and who wins or loses from its design?”*
 
 ### Core Dimensions
 
@@ -29,23 +29,23 @@ Across the swarm, Gold continuously evaluates and updates a set of core tokenomi
   Gold scores how much of the demand for the token is **structural** (needed to use the system) versus purely **speculative**.
 
 - **% Buyback**  
-  How much of protocol earnings or treasury resources are used to **buy back** tokens on the market, expressed as a % of circulating supply over 24h / 7d / 30d.  
+  How much of protocol earnings or treasury resources are used to **buy back** tokens on the market, expressed as a percentage of circulating supply over different timeframes.  
   Strong and consistent buybacks create **strong support**; weak or irregular ones are often just narrative.
 
 - **% Inflation / Staking**  
   Net token issuance after accounting for staking rewards, emissions, and any offsetting burns, normalized by circulating supply and time window.  
-  High inflation with weak offsetting demand is scored negatively; inflation that is **earned** via staking or productive activity can be partially compensated if it reinforces network security and usage.
+  High inflation with weak offsetting demand is scored negatively; inflation that is **earned** through staking or productive activity can be partially compensated if it reinforces network security and usage.
 
 - **% Burn**  
-  Share of tokens permanently destroyed (burned) over different timeframes, as a % of circulating supply.  
+  Share of tokens permanently destroyed (burned) over different timeframes, expressed as a percentage of circulating supply.  
   Gold distinguishes between **one-off marketing burns** and **mechanical, recurring burns** tied to core protocol usage.
 
 - **% Unlock**  
-  Scheduled unlocks for investors, team, ecosystem funds, and other allocations, expressed as a % of current circulating supply over defined future windows.  
+  Scheduled unlocks for investors, team, ecosystem funds, and other allocations, expressed as a percentage of current circulating supply over defined future windows.  
   Large, clustered unlocks without lockups, vesting safeguards, or matching demand are treated as **latent sell walls**.
   
 - **% Treasury & Control**  
-  Level of control that privileged actors (team, multisig, foundation) retain over the token contract, emissions, treasury, and upgrade paths.  
+  Level of control that privileged actors, such as the team, multisig, or foundation, retain over the token contract, emissions, treasury, and upgrade paths.  
   Gold scores both **technical control** (upgradeable contracts, pausability, blacklisting) and **practical control** (small multisigs, informal governance, off-chain veto power).
   
 - **Bailout**  
@@ -56,7 +56,7 @@ Across the swarm, Gold continuously evaluates and updates a set of core tokenomi
   Yields offered on the token across DeFi venues considered **AAA-grade** by QQ Omega: lending markets, liquidity pools, structured products, and staking derivatives.  
   Gold measures how much additional demand is created by these yields, and whether they are **organic** (backed by real fees or demand) or **subsidized** (short-lived incentive programs).
 
-Each agent inside Gold contributes its own view on these dimensions, with different weights and time horizons.  
+Each agent inside Gold contributes its own view on these dimensions, using different weights and time horizons.  
 Their outputs are normalized into structured scores and qualitative notes that the rest of QQ Omega can consume, compare, and aggregate.
 
 ### How it Connects to the Rest of QQ Omega

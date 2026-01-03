@@ -8,13 +8,13 @@ sidebar_position: 1
 Markets, especially in crypto, are noisy, fast, and emotional.  
 It’s easy to make decisions based on hype, FOMO, or loud voices on social media that don’t always act in your best interest.
 
-But even solid fundamentals often turn into **short-lived narratives**.         
+But even solid fundamentals often turn into **short-lived narratives**.  
 Many token designs are built to reward early insiders and turn retail into **exit liquidity**.  
 Cryptocurrencies are weakly regulated, with little investor protection, allowing bad actors to **exploit** loopholes and **scam** people.
 
 <span className="gradient-text">**QQ Omega**</span> exists to help you avoid these traps and move from opinion-driven decisions to <span className="gradient-text">**data-driven decisions**</span>.
 
-Our swarm of AI agents examines every major dimension of a project, including <span className="pink-glow-text">fundamentals</span>, <span className="pink-glow-text">token design</span>, <span className="pink-glow-text">on-chain behavior</span>, <span className="pink-glow-text">technical analysis</span>, and the <span className="pink-glow-text">broader market environment</span>. 
+Our swarm of AI agents examines every major dimension of a project, including <span className="pink-glow-text">fundamentals</span>, <span className="pink-glow-text">tokenomics</span>, <span className="pink-glow-text">on-chain behavior</span>, <span className="pink-glow-text">technical analysis</span>, and the <span className="pink-glow-text">broader market environment</span>.  
 Crypto projects are evaluated with the same seriousness you would apply to real companies, adapted to how Web3 actually works.
 
 ### The Problem QQ Omega Solves
