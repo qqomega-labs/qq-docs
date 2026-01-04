@@ -12,26 +12,26 @@ But even solid fundamentals often turn into **short-lived narratives**.
 Many token designs are built to reward early insiders and turn retail into **exit liquidity**.  
 Cryptocurrencies are weakly regulated, with little investor protection, allowing bad actors to **exploit** loopholes and **scam** people.
 
-<span className="gradient-text">**QQ Omega**</span> exists to help you avoid these traps and move from opinion-driven decisions to <span className="gradient-text">**data-driven decisions**</span>.
+<span className="gradient-text">**QQ Omega**</span> exists to help you avoid these traps and move from opinion-driven decisions to **data-driven decisions**.
 
 Our swarm of AI agents examines every major dimension of a project, including <span className="pink-glow-text">fundamentals</span>, <span className="pink-glow-text">tokenomics</span>, <span className="pink-glow-text">on-chain behavior</span>, <span className="pink-glow-text">technical analysis</span>, and the <span className="pink-glow-text">broader market environment</span>.  
 Crypto projects are evaluated with the same seriousness you would apply to real companies, adapted to how Web3 actually works.
 
 ### The Problem QQ Omega Solves
 
-- **Too much noise, not enough signal**  
-  News, memes, and hype move faster than facts. QQ gathers data from multiple sources and turns it into a single, coherent view.
+- **Too much noise. Time for a <span className="pink-glow-text">reality check</span>**  
+  News and hype move faster than facts. QQ gathers data from multiple sources and turns it into a single, coherent view.
 
-- **Too many projects, no clear way to compare them**  
-  When everything claims to be “the next big thing,” you need a consistent method. QQ scores projects with a structured framework so you can compare them on the same basis.
+- **Too many crypto-asset, too many <span className="pink-glow-text">traps</span>**  
+  When everything claims to be “the next big thing,” you need a consistent method. QQ scores projects with a structured framework so you can compare them on the same basis and understand risk and potential.
 
-- **Trust is cheap, proof is rare**  
+- **Trust is cheap, <span className="pink-glow-text">proof</span> is rare**  
   Many claims are hard to verify. QQ focuses on what can be checked: on-chain activity, token mechanics, hard metrics, and measurable outcomes.
 
-- **Weak regulation leaves investors exposed**  
+- **Weak regulation leaves investors <span className="pink-glow-text">exposed</span>**  
   In many markets, basic safeguards are missing. QQ helps you spot red flags early and understand risk before you commit capital.
 
-<span className="gradient-text">QQ Omega is built to be your <span className="pink-glow-text">compass</span> as you navigate the rough waters of decentralized finance.</span>
+**QQ Omega is built to be your <span className="gradient-text">compass</span> as you navigate the rough waters of decentralized finance.**
 
 ### Who QQ Omega Is For
 

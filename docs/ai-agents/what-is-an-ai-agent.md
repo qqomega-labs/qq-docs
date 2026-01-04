@@ -42,22 +42,22 @@ In QQ Omega, each category (Fundamentals, Tokenomics, and others) is **a full sw
 
 Each category has one <span className="pink-glow-text">**Element**</span> associated with it:
 
-- <span className="gradient-text">**Carbon swarm**</span> → **fundamentals** experts  
+- [**Carbon swarm**](Carbon.md) → **fundamentals** experts  
   Agents focused on people, product, business model, governance, security, and related factors.
 
-- <span className="gradient-text">**Gold swarm**</span> → **tokenomics** experts  
+- [**Gold swarm**](gold.md) → **tokenomics** experts  
   Agents focused on supply, inflation, burns, unlocks, buybacks, utility, yield, and similar mechanisms.
 
-- <span className="gradient-text">**Hydrogen swarm**</span> → **on-chain flow** experts  
+- [**Hydrogen swarm**](Hydrogen.md) → **on-chain flow** experts  
   Agents focused on TVL, volumes, holder clusters, accumulation versus distribution, and related behavior.
 
-- <span className="gradient-text">**Silicon swarm**</span> → **technical and quantitative** experts  
+- [**Silicon swarm**](Silicon.md) → **technical and quantitative** experts  
   Agents focused on price action, relevant indicators, liquidations, and trend and volatility regimes.
 
-- <span className="gradient-text">**Oxygen swarm**</span> → **macro and regime** experts  
+- [**Oxygen swarm**](Oxygen.md) → **macro and regime** experts  
   Agents focused on interest rates, global liquidity, dominance, total market capitalization, fear and greed, and seasonality.
 
-- <span className="gradient-text">**Phosphorus swarm**</span> → **orchestration and scoring** experts  
+- [**Phosphorus swarm**](Phosphorus.md) → **orchestration and scoring** experts  
   Agents focused on combining all other swarms into area scores, a global QQ Score, and clear insights.
 
 So:

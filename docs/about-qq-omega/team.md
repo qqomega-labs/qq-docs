@@ -1,14 +1,14 @@
 ---
 title: Core Team
-sidebar_position: 1
+sidebar_position: 4
 ---
 
 
 QQ Omega is built at the intersection of **engineering** and **market architecture**.  
 Two complementary minds drive it.
 
-<span className="pink-glow-text">**qqAlpha**</span> takes messy, fragmented blockchain reality and turns it into **systems that run**: pipelines, infrastructure, automation, and scale.  
-<span className="pink-glow-text">**qqSigma**</span> takes the same reality and turns it into **structure that explains**: metrics, scoring logic, frameworks, and decision architecture.
+**qqAlpha** takes messy, fragmented blockchain reality and turns it into **systems that run**: pipelines, infrastructure, automation, and scale.  
+**qqSigma** takes the same reality and turns it into **structure that explains**: metrics, scoring logic, frameworks, and decision architecture.
 
 The core idea is the progression:
 
