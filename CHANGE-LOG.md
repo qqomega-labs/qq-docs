@@ -2,6 +2,13 @@
 
 ## [Unreleased] - 2026-01-05
 
+### Changed
+
+- **Markdown references**
+  - Update Markdown references with exact case to avoid docusaurus warnings.
+
+## [Unreleased] - 2026-01-05
+
 ### Added
 
 - **TokenomicsPieChart Component** (`src/components/TokenomicsPieChart/`)
