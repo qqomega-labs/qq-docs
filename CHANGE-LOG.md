@@ -4,6 +4,83 @@
 
 ### Added
 
+- **TokenomicsPieChart Component** (`src/components/TokenomicsPieChart/`)
+  - Interactive donut chart using Recharts (v3.6.0) library
+  - Glassmorphism styling with crypto-themed colors matching QQ Omega palette
+  - Donut configuration: innerRadius={110}, outerRadius={180}, paddingAngle={3}
+  - Rounded corners on segments (cornerRadius={8})
+  - Custom legend with glassmorphism cards showing token amounts
+  - Interactive hover states with segment highlighting
+  - Dynamic tooltip colors matching slice colors
+  - Smooth fade-in entrance animation (0.8s) for landing page visibility
+  - Label positioning: shows name + percentage for segments ≥5%, percentage only for smaller segments
+  - Mobile-first responsive design with optimized spacing
+  - Height: 550px for prominent display
+  - Color-coded by allocation category:
+    - LP: Pink Hot (#f472b6)
+    - Airdrops (3): Cyan variations (Bright, Teal, Dark)
+    - Core Contributors (3): Purple variations + Pink Soft for Strategic Partnerships
+
+- **TokenomicsInfoCard Component** (`src/components/TokenomicsInfoCard/`)
+  - Reusable glassmorphism card for displaying token information
+  - Three color variants: pink, cyan, purple
+  - Optional icon, label, value, and subtext fields
+  - Hover effects with lift animation and glow
+  - Mobile-first responsive layout
+  - Grid container component (TokenomicsInfoGrid) for 1/2/3 column layouts
+  - Compact padding and spacing optimized for tablet/desktop viewing
+
+### Changed
+
+- **Tokenomics Documentation** (`docs/tokenomics/qq-tokenomics.mdx`)
+  - Converted from .md to .mdx for component integration
+  - Integrated TokenomicsPieChart with distribution data
+  - Added TokenomicsInfoCard grid with two rows
+  - Removed chart title for cleaner presentation
+
+### Technical Details
+
+**TokenomicsPieChart Implementation:**
+
+- **Location**: `src/components/TokenomicsPieChart/`
+- **Dependencies**: recharts@3.6.0
+- **Key Features**:
+  - TypeScript with proper type definitions (TokenomicsData interface with index signature)
+  - Custom label renderer showing names for larger segments
+  - Custom tooltip with fade-in animation (0.2s)
+  - Enhanced glassmorphism with blur(32px) saturate(180%)
+  - Custom legend grid with glassmorphism cards
+  - Interactive state management using React useState hook
+  - onMouseEnter/onMouseLeave handlers for hover effects
+  - Responsive legend grid: 1 column (mobile), 2 columns (tablet), 3 columns (desktop)
+
+**Animations:**
+
+- `@keyframes chartFadeIn`: Fade-in entrance (opacity + translateY + scale)
+- `@keyframes tooltipFadeIn`: Smooth tooltip appearance
+- `@keyframes centerPulse`: Pulsing effect for legend icons on hover
+- Respects `prefers-reduced-motion` for accessibility
+
+**TokenomicsInfoCard Implementation:**
+
+- **Location**: `src/components/TokenomicsInfoCard/`
+- **Grid System**: CSS Grid with responsive columns
+- **Variant System**: Dynamic className mapping for color variants
+- **Layout**: Flexbox with icon container + content column
+- **Hover Effects**: translateY(-2px) lift with enhanced shadows
+- **Light/Dark Mode**: Full support with adjusted colors and backgrounds
+
+**Color Palette Organization:**
+
+- LP allocation: `var(--qq-color-pink-hot)` - Hot pink for main liquidity
+- Airdrop allocations: Cyan family (`--qq-color-cyan-bright`, `--qq-color-cyan-teal`, `--qq-color-cyan-dark`)
+- Core contributors: Purple family (`--qq-color-purple-light`, `--qq-color-purple-dark`)
+- Strategic partnerships: `var(--qq-color-pink-soft)` - Part of core/purple color family
+
+## [Unreleased] - 2026-01-05
+
+### Added
+
 - **Automatic MDX Image Wrapping System**
   - Created `src/theme/MDXComponents.tsx` to override default MDX components
   - All `<img>` elements in MDX files now automatically wrapped with `MdxImageContainer`
@@ -38,6 +115,7 @@
 ### Technical Details
 
 **Automatic Image Wrapping Implementation:**
+
 - Location: `src/theme/MDXComponents.tsx`
 - Extends `@theme-original/MDXComponents`
 - Overrides `img` component with custom wrapper
@@ -50,6 +128,7 @@
   - Bottom margin: 2rem for vertical spacing
 
 **Developer Experience Improvements:**
+
 - No manual imports needed for image styling
 - Standard markdown syntax `![Alt](path)` works automatically
 - Consistent image presentation across all MDX documentation

@@ -1,0 +1,95 @@
+---
+title: Tokenomics
+sidebar_position: 1
+---
+
+import TokenomicsPieChart from "@site/src/components/TokenomicsPieChart";
+import TokenomicsInfoCard, {
+  TokenomicsInfoGrid,
+} from "@site/src/components/TokenomicsInfoCard";
+
+### 50,000 $QQ = 1 Ticket Access
+
+You only need to hold <span className="pink-glow-text">**50,000 $QQ**</span> **or more in your wallet** to unlock and use the **live QQ dashboard**, including real-time scores, rankings, and all features added over time.
+
+<TokenomicsInfoGrid columns={2}>
+  <TokenomicsInfoCard icon="⛓️" label="Chain" value="Base" variant="cyan" />
+  <TokenomicsInfoCard
+    icon="🔒"
+    label="Max Supply"
+    value="1,000,000,000"
+    subtext="Fixed and hard-capped"
+    variant="pink"
+  />
+</TokenomicsInfoGrid>
+
+<TokenomicsInfoGrid columns={1}>
+  <TokenomicsInfoCard
+    icon="📟"
+    label="Token Address"
+    value="TBD0x07150e919B4De5fD6a63DE1F9384828396f25fDC"
+    variant="purple"
+  />
+</TokenomicsInfoGrid>
+
+### $QQ Token Distribution
+
+<TokenomicsPieChart
+  data={[
+    {
+      name: "LP on Virtuals (Base)",
+      value: 75,
+      color: "var(--qq-color-pink-hot)",
+      amount: "750,000,000",
+    },
+    {
+      name: "QQ Community Airdrop",
+      value: 15,
+      color: "var(--qq-color-cyan-bright)",
+      amount: "150,000,000",
+    },
+    {
+      name: "Virtuals Ecosystem Airdrop",
+      value: 3,
+      color: "var(--qq-color-cyan-teal)",
+      amount: "30,000,000",
+    },
+    {
+      name: "veVIRTUAL Airdrop",
+      value: 2,
+      color: "var(--qq-color-cyan-dark)",
+      amount: "20,000,000",
+    },
+    {
+      name: "Core Contributors: qqAlpha",
+      value: 2,
+      color: "var(--qq-color-purple-light)",
+      amount: "20,000,000",
+    },
+    {
+      name: "Core Contributors: qqSigma",
+      value: 2,
+      color: "var(--qq-color-purple-dark)",
+      amount: "20,000,000",
+    },
+    {
+      name: "Strategic Partnerships",
+      value: 1,
+      color: "var(--qq-color-pink-soft)",
+      amount: "10,000,000",
+    },
+  ]}
+  height={550}
+/>
+
+### Launchpad: Virtuals Protocol
+
+<TokenomicsInfoGrid columns={1}>
+  <TokenomicsInfoCard
+    icon="🚀"
+    label="Virtuals Pegasus Launchpad"
+    value="Fair Launch Model"
+    subtext="No private sale, no preferential allocations. Auto-graduates to Uniswap v2 (Base) after 42,000 $VIRTUAL accumulated."
+    variant="pink"
+  />
+</TokenomicsInfoGrid>
