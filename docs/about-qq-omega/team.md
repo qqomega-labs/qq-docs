@@ -49,4 +49,5 @@ qqSigma defines the **analytical and structural logic** of QQ Omega: the part th
 - Methodologies for project evaluation and signal generation
 - Long-term roadmap for QQ Omega as an “alpha intelligence layer” for crypto
 
-In short: qqSigma turns complexity into a system that can be **measured, ranked, and acted on**.
+In short: qqSigma turns complexity into a system that can be **measured, ranked, and acted on**
+<img src="/img/Core_img.png" alt="Oxygen" style={{height: '35.5em', verticalAlign: 'middle'}} />
