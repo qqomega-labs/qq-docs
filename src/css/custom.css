@@ -280,6 +280,19 @@
   box-shadow: 0 2px 8px rgba(255, 29, 100, 0.3);
 }
 
+/* Links inside pink badges - white without underline */
+.pink-badge a {
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+
+@media (hover: hover) {
+  .pink-badge a:hover {
+    opacity: 0.9;
+  }
+}
+
 /* Pink underline emphasis */
 .pink-underline {
   color: var(--qq-color-pink-hot);
@@ -1026,32 +1039,20 @@ button[aria-label*="Switch"] svg {
   font-size: 0.9rem;
 }
 
-/* Links - elegant techy style with animated underline */
+/* Links - elegant techy style with visible underline */
 .theme-doc-markdown a {
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-  position: relative;
+  color: var(--ifm-link-color);
+  text-decoration: underline;
+  text-decoration-color: var(--ifm-link-color);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
   transition: all 0.2s ease;
 }
 
-.theme-doc-markdown a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: -2px;
-  left: 0;
-  background: var(--ifm-color-primary);
-  transition: width 0.3s ease;
-}
-
 @media (hover: hover) {
-  .theme-doc-markdown a:hover::after {
-    width: 100%;
-  }
-
   .theme-doc-markdown a:hover {
     opacity: 0.85;
+    text-decoration-thickness: 2px;
   }
 }
 
@@ -1276,9 +1277,11 @@ button[aria-label*="Switch"] svg {
 .alert a,
 .theme-admonition a {
   color: var(--ifm-link-color) !important;
-  text-decoration: none;
+  text-decoration: underline !important;
+  text-decoration-color: var(--ifm-link-color) !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 2px !important;
   font-weight: 500;
-  border-bottom: 1px solid transparent;
   transition: all 0.2s ease;
 }
 
@@ -1286,8 +1289,8 @@ button[aria-label*="Switch"] svg {
   .admonition-content a:hover,
   .alert a:hover,
   .theme-admonition a:hover {
-    border-bottom-color: var(--ifm-link-color);
     opacity: 0.85;
+    text-decoration-thickness: 2px !important;
   }
 }
 
@@ -1724,9 +1727,11 @@ pre code {
 .card__body a,
 .card li a {
   color: var(--ifm-link-color) !important;
-  text-decoration: none;
+  text-decoration: underline !important;
+  text-decoration-color: var(--ifm-link-color) !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 2px !important;
   font-weight: 500;
-  border-bottom: 1px solid transparent;
   transition: all 0.2s ease;
 }
 
@@ -1734,8 +1739,8 @@ pre code {
   .card p a:hover,
   .card__body a:hover,
   .card li a:hover {
-    border-bottom-color: var(--ifm-link-color);
     opacity: 0.85;
+    text-decoration-thickness: 2px !important;
   }
 }
 

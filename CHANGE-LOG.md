@@ -2,13 +2,58 @@
 
 ## [Unreleased] - 2026-01-05
 
-### Problem
+### Added
 
-- Image in Team article not centered.
+- **Automatic MDX Image Wrapping System**
+  - Created `src/theme/MDXComponents.tsx` to override default MDX components
+  - All `<img>` elements in MDX files now automatically wrapped with `MdxImageContainer`
+  - Provides consistent styling without manual imports or wrapping
+  - Glassmorphism effects (rounded corners, shadow) applied automatically
+  - Responsive layout (centered, max-width 800px, mobile-optimized padding)
 
-### Solution
+- **Comprehensive MDX Documentation in CLAUDE.md**
+  - Added "MDX Support" section (lines 123-190) with:
+    - When to use MDX vs regular Markdown
+    - Automatic image wrapping explanation
+    - Conversion guide for .md to .mdx files
+    - Example usage with standard markdown syntax
+    - Custom component usage examples
+  - Updated "MdxImageContainer Component" section (lines 320-358) with automatic usage documentation
+  - Updated "Swizzled Components" section (lines 379-401) to include MDXComponents.tsx
 
-- Wrapped `img` tag in styled div.
+### Changed
+
+- **Converted Markdown to MDX for Enhanced Functionality**
+  - Renamed `docs/about-qq-omega/team.md` → `team.mdx`
+  - Renamed `docs/about-qq-omega/what-is-qq-omega.md` → `what-is-qq-omega.mdx`
+  - Simplified image syntax from manual JSX wrapping to standard markdown: `![Alt](path)`
+  - Removed manual component imports (no longer needed with automatic wrapping)
+
+### Fixed
+
+- **Component naming typo**
+  - Fixed typo in `src/components/MdxImageContainer.tsx:6`
+  - Changed function name from `MdxImagContainer` to `MdxImageContainer`
+
+### Technical Details
+
+**Automatic Image Wrapping Implementation:**
+- Location: `src/theme/MDXComponents.tsx`
+- Extends `@theme-original/MDXComponents`
+- Overrides `img` component with custom wrapper
+- Preserves all image props and allows style overrides
+- Default styling applied:
+  - Width: 100%, Height: auto
+  - Border-radius: 12px
+  - Box-shadow: `0 4px 24px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.05)`
+  - Container max-width: 800px with centered alignment
+  - Bottom margin: 2rem for vertical spacing
+
+**Developer Experience Improvements:**
+- No manual imports needed for image styling
+- Standard markdown syntax `![Alt](path)` works automatically
+- Consistent image presentation across all MDX documentation
+- Backward compatible with existing markdown files (.md)
 
 ## Style Changes
 
