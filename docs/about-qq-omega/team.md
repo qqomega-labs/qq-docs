@@ -3,7 +3,6 @@ title: Core Team
 sidebar_position: 4
 ---
 
-
 QQ Omega is built at the intersection of **engineering** and **market architecture**.  
 Two complementary minds drive it.
 
@@ -14,15 +13,15 @@ The core idea is the progression:
 
 ### **Alpha → Sigma → Omega**
 
-- <span className="pink-glow-text">**Alpha**</span> is the raw edge: *data, events, signals, chaos.*  
+- <span className="pink-glow-text">**Alpha**</span> is the raw edge: _data, events, signals, chaos._  
   Wallet moves, liquidity shifts, protocol changes, incentives, governance votes, social catalysts.  
   It is the “what’s happening” layer: noisy, fast, and mostly unusable as-is.
 
-- <span className="pink-glow-text">**Sigma**</span> is the compression: *logic, measurement, scoring, interpretation.*  
+- <span className="pink-glow-text">**Sigma**</span> is the compression: _logic, measurement, scoring, interpretation._  
   It takes Alpha and forces it into a coherent system: categories, metrics, weights, thresholds, rankings.  
   It is the “what does it mean” layer: the step where signal is separated from hype.
 
-- <span className="gradient-text">**Omega**</span> is the synthesis: *decision output.*  
+- <span className="gradient-text">**Omega**</span> is the synthesis: _decision output._  
   **Actions and alerts**: what to watch, what to ignore, what is changing, and why it matters.  
   It is the “what do we do now” layer: structured, repeatable, and scalable.
 
@@ -38,7 +37,7 @@ qqAlpha builds and maintains the **technical backbone** of QQ Omega: the part th
 - System reliability, performance, and security
 - Implementation of scoring logic and automation at scale
 
-In short: if it needs to *work continuously*, *handle volume*, and *not break*, it is under qqAlpha’s responsibility.
+In short: if it needs to _work continuously_, _handle volume_, and _not break_, it is under qqAlpha’s responsibility.
 
 ### **[@qqSigma](https://github.com/qqsigma)** | Co-Founder & System Architect
 
@@ -50,4 +49,7 @@ qqSigma defines the **analytical and structural logic** of QQ Omega: the part th
 - Long-term roadmap for QQ Omega as an “alpha intelligence layer” for crypto
 
 In short: qqSigma turns complexity into a system that can be **measured, ranked, and acted on**
-<img src="/img/Core_img.png" alt="Oxygen" style={{height: '35.5em', verticalAlign: 'middle'}} />
+
+<div style={{display: "flex", justifyContent: "center"}}>
+  <img src="/img/Core_img.png" alt="Oxygen" style={{height: '35.5em', verticalAlign: 'middle'}} />
+</div>

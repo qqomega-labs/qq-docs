@@ -1,12 +1,12 @@
-import React, { ReactNode } from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React, { ReactNode } from "react";
+import clsx from "clsx";
+import styles from "./styles.module.css";
 
 export interface CryptoCardProps {
   title?: string;
   description?: string | ReactNode;
   icon?: ReactNode;
-  variant?: 'default' | 'pink' | 'cyan' | 'purple';
+  variant?: "default" | "pink" | "cyan" | "purple";
   glow?: boolean;
   animated?: boolean;
   className?: string;
@@ -29,23 +29,23 @@ export default function CryptoCard({
   title,
   description,
   icon,
-  variant = 'default',
+  variant = "default",
   glow = false,
   animated = false,
   className,
   children,
-}: CryptoCardProps): JSX.Element {
+}: CryptoCardProps): React.JSX.Element {
   // If children are provided, use custom content layout
   if (children) {
     return (
       <div
         className={clsx(
           styles.cryptoCard,
-          variant === 'pink' && styles.variantPink,
-          variant === 'cyan' && styles.variantCyan,
-          variant === 'purple' && styles.variantPurple,
+          variant === "pink" && styles.variantPink,
+          variant === "cyan" && styles.variantCyan,
+          variant === "purple" && styles.variantPurple,
           glow && styles.cryptoGlow,
-          className
+          className,
         )}
       >
         {children}
@@ -58,28 +58,29 @@ export default function CryptoCard({
     <div
       className={clsx(
         styles.cryptoCard,
-        variant === 'pink' && styles.variantPink,
-        variant === 'cyan' && styles.variantCyan,
-        variant === 'purple' && styles.variantPurple,
+        variant === "pink" && styles.variantPink,
+        variant === "cyan" && styles.variantCyan,
+        variant === "purple" && styles.variantPurple,
         glow && styles.cryptoGlow,
-        className
+        className,
       )}
     >
       {icon && (
-        <div className={clsx(styles.iconContainer, animated && styles.iconAnimated)}>
+        <div
+          className={clsx(
+            styles.iconContainer,
+            animated && styles.iconAnimated,
+          )}
+        >
           {icon}
         </div>
       )}
 
-      {title && (
-        <h3 className={styles.title}>
-          {title}
-        </h3>
-      )}
+      {title && <h3 className={styles.title}>{title}</h3>}
 
       {description && (
         <div className={styles.description}>
-          {typeof description === 'string' ? <p>{description}</p> : description}
+          {typeof description === "string" ? <p>{description}</p> : description}
         </div>
       )}
     </div>

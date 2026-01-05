@@ -1,5 +1,39 @@
 # Change Log
 
+## [Unreleased] - 2026-01-05
+
+### Problem
+
+- Image in Team article not centered.
+
+### Solution
+
+- Wrapped `img` tag in styled div.
+
+## Style Changes
+
+Links inside cards (lines 1702-1720):
+
+- Dark mode: Links use cyan (#00a6e1) for better contrast against dark backgrounds
+- Light mode: Links use pink (#ff1d64) for better contrast against light backgrounds
+- Hover effect: Subtle underline appears on hover
+- Font weight: 500 to make links more prominent
+
+Links inside admonitions/alerts (lines 1274-1292):
+
+- Same color scheme as cards for consistency
+- Applied to .admonition-content a, .alert a, and .theme-admonition a
+- Same hover and visual treatment
+
+How It Works
+
+The CSS now uses var(--ifm-link-color) which automatically adapts:
+
+- Dark theme: #00a6e1 (cyan) - great contrast on dark backgrounds
+- Light theme: #ff1d64 (pink) - great contrast on light backgrounds
+
+This ensures links inside cards and admonitions are clearly visible and accessible in both themes, matching the "What is QQ" article style.
+
 ## [Unreleased] - 2025-12-20
 
 ### SEO Implementation & Optimization

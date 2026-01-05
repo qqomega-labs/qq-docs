@@ -1271,6 +1271,26 @@ button[aria-label*="Switch"] svg {
   font-size: 0.95rem;
 }
 
+/* Links inside admonitions - ensure visibility */
+.admonition-content a,
+.alert a,
+.theme-admonition a {
+  color: var(--ifm-link-color) !important;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+@media (hover: hover) {
+  .admonition-content a:hover,
+  .alert a:hover,
+  .theme-admonition a:hover {
+    border-bottom-color: var(--ifm-link-color);
+    opacity: 0.85;
+  }
+}
+
 /* Pagination with glow */
 .pagination-nav__link {
   background: rgba(255, 29, 100, 0.05);
@@ -1697,6 +1717,26 @@ pre code {
 .card p,
 .card__body {
   color: var(--ifm-font-color-base) !important;
+}
+
+/* Links inside card body paragraphs - ensure visibility */
+.card p a,
+.card__body a,
+.card li a {
+  color: var(--ifm-link-color) !important;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+@media (hover: hover) {
+  .card p a:hover,
+  .card__body a:hover,
+  .card li a:hover {
+    border-bottom-color: var(--ifm-link-color);
+    opacity: 0.85;
+  }
 }
 
 /* Hide default Docusaurus document emoji icons in category cards */

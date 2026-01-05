@@ -1,14 +1,14 @@
-import React, { ReactNode } from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import styles from './styles.module.css';
+import React, { ReactNode } from "react";
+import clsx from "clsx";
+import Link from "@docusaurus/Link";
+import styles from "./styles.module.css";
 
 export interface GlassButtonProps {
   children: ReactNode;
   href?: string;
   to?: string;
-  variant?: 'primary' | 'secondary' | 'outline';
-  size?: 'small' | 'medium' | 'large';
+  variant?: "primary" | "secondary" | "outline";
+  size?: "small" | "medium" | "large";
   glow?: boolean;
   className?: string;
   onClick?: () => void;
@@ -30,22 +30,22 @@ export default function GlassButton({
   children,
   href,
   to,
-  variant = 'primary',
-  size = 'medium',
+  variant = "primary",
+  size = "medium",
   glow = false,
   className,
   onClick,
-}: GlassButtonProps): JSX.Element {
+}: GlassButtonProps): React.JSX.Element {
   const buttonClasses = clsx(
     styles.glassButton,
-    variant === 'primary' && styles.variantPrimary,
-    variant === 'secondary' && styles.variantSecondary,
-    variant === 'outline' && styles.variantOutline,
-    size === 'small' && styles.sizeSmall,
-    size === 'medium' && styles.sizeMedium,
-    size === 'large' && styles.sizeLarge,
+    variant === "primary" && styles.variantPrimary,
+    variant === "secondary" && styles.variantSecondary,
+    variant === "outline" && styles.variantOutline,
+    size === "small" && styles.sizeSmall,
+    size === "medium" && styles.sizeMedium,
+    size === "large" && styles.sizeLarge,
     glow && styles.glowEffect,
-    className
+    className,
   );
 
   // External link
