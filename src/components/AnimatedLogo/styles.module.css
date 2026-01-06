@@ -1,0 +1,42 @@
+/* Rotation animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Base animated logo container */
+.animatedLogo {
+  display: inline-block;
+  animation: rotate linear infinite;
+}
+
+/* Speed variants */
+.slow {
+  animation-duration: 20s;
+}
+
+.normal {
+  animation-duration: 10s;
+}
+
+.fast {
+  animation-duration: 5s;
+}
+
+/* Pause animation on hover (optional) */
+@media (hover: hover) {
+  .animatedLogo:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animatedLogo {
+    animation: none;
+  }
+}

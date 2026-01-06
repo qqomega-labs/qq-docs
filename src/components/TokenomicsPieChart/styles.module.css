@@ -18,8 +18,8 @@
     opacity: 1;
   }
   50% {
-    transform: scale(1.05);
-    opacity: 0.9;
+    transform: scale(1.02);
+    opacity: 0.95;
   }
 }
 
@@ -54,7 +54,7 @@
 .chartContainer {
   width: 100%;
   max-width: 900px;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   padding: 0;
   transition: all 0.3s ease;
   animation: chartFadeIn 0.8s ease-out;
@@ -83,7 +83,7 @@
 .centerLabel {
   text-align: center;
   padding: 1rem;
-  animation: centerPulse 2s ease-in-out infinite;
+  animation: centerPulse 3s ease-in-out infinite;
 }
 
 .centerValue {
@@ -110,27 +110,32 @@
 
 /* Custom tooltip styles */
 .tooltip {
-  background: rgba(20, 21, 26, 0.5);
-  backdrop-filter: blur(32px) saturate(180%);
-  -webkit-backdrop-filter: blur(32px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 16px;
-  padding: 1rem 1.25rem;
+  background: rgba(20, 21, 26, 0.6);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 0.875rem 1rem;
   box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(244, 114, 182, 0.4),
-    0 0 20px rgba(244, 114, 182, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
-  animation: tooltipFadeIn 0.2s ease-out;
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(244, 114, 182, 0.3),
+    0 0 20px rgba(244, 114, 182, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+  opacity: 1;
+  will-change: opacity, transform;
 }
 
 @keyframes tooltipFadeIn {
   from {
     opacity: 0;
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -150,13 +155,13 @@
 /* Pie cell animation */
 .pieCell {
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 
-/* Hover effects (desktop only) */
+/* Hover effects (desktop only) - subtle opacity change only */
 @media (hover: hover) {
   .pieCell:hover {
-    filter: brightness(1.2) drop-shadow(0 0 16px currentColor);
+    opacity: 0.9;
   }
 }
 
@@ -208,16 +213,16 @@
 
 /* Light mode adjustments */
 [data-theme="light"] .tooltip {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(32px) saturate(180%);
-  -webkit-backdrop-filter: blur(32px) saturate(180%);
-  border-color: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-color: rgba(0, 0, 0, 0.2);
   box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.25),
-    0 0 0 1px rgba(244, 114, 182, 0.4),
-    0 0 20px rgba(244, 114, 182, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(244, 114, 182, 0.3),
+    0 0 20px rgba(244, 114, 182, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 }
 
 [data-theme="light"] .centerName {
@@ -227,19 +232,21 @@
 /* Custom Legend Styles */
 .customLegend {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
   margin-top: 1.5rem;
   padding: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .legendItem {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 0.75rem;
   background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -254,30 +261,31 @@
 }
 
 .legendIcon {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   flex-shrink: 0;
+  margin-top: 0.1875rem;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .legendItemActive .legendIcon {
-  width: 20px;
-  height: 20px;
-  animation: centerPulse 1.5s ease-in-out infinite;
+  width: 16px;
+  height: 16px;
+  animation: centerPulse 2.5s ease-in-out infinite;
 }
 
 .legendText {
   display: flex;
   flex-direction: column;
-  gap: 0.125rem;
+  gap: 0.0625rem;
   flex: 1;
   min-width: 0;
 }
 
 .legendName {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--ifm-font-color-base);
   white-space: nowrap;
@@ -286,7 +294,7 @@
 }
 
 .legendValue {
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   background: var(--qq-gradient-crypto-pink);
   -webkit-background-clip: text;
@@ -295,63 +303,68 @@
 }
 
 .legendAmount {
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   font-weight: 500;
   color: var(--ifm-font-color-base);
   opacity: 0.7;
-  margin-top: 0.125rem;
+  margin-top: 0.0625rem;
 }
 
 /* Legend responsive adjustments */
 @media (max-width: 767px) {
   .customLegend {
     grid-template-columns: 1fr;
+    gap: 0.625rem;
+  }
+
+  .legendItem {
+    padding: 0.625rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .customLegend {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 0.75rem;
   }
 
   .legendItem {
     padding: 0.75rem;
   }
-}
-
-@media (min-width: 768px) {
-  .customLegend {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   .legendName {
-    font-size: 0.9375rem;
-  }
-
-  .legendValue {
     font-size: 0.8125rem;
   }
 
+  .legendValue {
+    font-size: 0.6875rem;
+  }
+
   .legendAmount {
-    font-size: 0.75rem;
+    font-size: 0.625rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .customLegend {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+    gap: 0.875rem;
   }
 
   .legendItem {
-    padding: 1.25rem;
+    padding: 0.875rem;
   }
 
   .legendName {
-    font-size: 1rem;
-  }
-
-  .legendValue {
     font-size: 0.875rem;
   }
 
+  .legendValue {
+    font-size: 0.75rem;
+  }
+
   .legendAmount {
-    font-size: 0.8125rem;
+    font-size: 0.6875rem;
   }
 }
 

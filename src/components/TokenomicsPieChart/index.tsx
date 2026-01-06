@@ -41,15 +41,103 @@ export default function TokenomicsPieChart({
   height = 400,
 }: TokenomicsPieChartProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(
+    typeof document !== 'undefined'
+      ? document.documentElement.getAttribute('data-theme') !== 'light'
+      : true
+  );
+
+  // Detect mobile screen size and theme
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    const checkTheme = () => {
+      setIsDarkTheme(document.documentElement.getAttribute('data-theme') === 'dark');
+    };
+
+    checkMobile();
+    checkTheme();
+
+    window.addEventListener('resize', checkMobile);
+
+    // Watch for theme changes
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    });
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      observer.disconnect();
+    };
+  }, []);
+
+  // Responsive radii - optimized for mobile readability
+  const innerRadius = isMobile ? 65 : 95;
+  const outerRadius = isMobile ? 110 : 160;
 
   // Custom label renderer for donut slices - positioned outside
-  const renderLabel = (entry: any) => {
-    const percent = (entry.percent * 100).toFixed(1);
-    // Show name and percentage for larger segments, just percentage for small ones
-    if (entry.value >= 5) {
-      return `${entry.name}\n${percent}%`;
+  const renderLabel = (props: any) => {
+    const { cx, cy, midAngle, outerRadius, fill, percent, name, value } = props;
+    const RADIAN = Math.PI / 180;
+    const radius = outerRadius + 25;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+    const percentText = (percent * 100).toFixed(1) + '%';
+    const fontSize = isMobile ? 10 : 14;
+
+    // On mobile, show only percentage. On desktop, show name for larger segments
+    if (isMobile) {
+      return (
+        <text
+          x={x}
+          y={y}
+          fill={fill}
+          textAnchor={x > cx ? 'start' : 'end'}
+          dominantBaseline="central"
+          fontSize={fontSize}
+          fontWeight={600}
+        >
+          {percentText}
+        </text>
+      );
     }
-    return `${percent}%`;
+
+    if (value >= 5) {
+      return (
+        <text
+          x={x}
+          y={y}
+          fill={fill}
+          textAnchor={x > cx ? 'start' : 'end'}
+          dominantBaseline="central"
+          fontSize={fontSize}
+          fontWeight={600}
+        >
+          <tspan x={x} dy={0}>{name}</tspan>
+          <tspan x={x} dy={16}>{percentText}</tspan>
+        </text>
+      );
+    }
+
+    return (
+      <text
+        x={x}
+        y={y}
+        fill={fill}
+        textAnchor={x > cx ? 'start' : 'end'}
+        dominantBaseline="central"
+        fontSize={fontSize}
+        fontWeight={600}
+      >
+        {percentText}
+      </text>
+    );
   };
 
   // Handle segment hover
@@ -119,12 +207,12 @@ export default function TokenomicsPieChart({
               data={data}
               cx="50%"
               cy="50%"
-              innerRadius={110}
-              outerRadius={180}
-              paddingAngle={3}
-              cornerRadius={8}
+              innerRadius={innerRadius}
+              outerRadius={outerRadius}
+              paddingAngle={2}
+              cornerRadius={3}
               labelLine={{
-                stroke: "rgba(255, 255, 255, 0.4)",
+                stroke: isDarkTheme ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)",
                 strokeWidth: 2,
               }}
               label={renderLabel}
@@ -140,7 +228,7 @@ export default function TokenomicsPieChart({
                 <Cell
                   key={`cell-${index}`}
                   fill={entry.color}
-                  stroke="rgba(255, 255, 255, 0.15)"
+                  stroke={isDarkTheme ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)"}
                   strokeWidth={activeIndex === index ? 4 : 2}
                   opacity={
                     activeIndex === null || activeIndex === index ? 1 : 0.6

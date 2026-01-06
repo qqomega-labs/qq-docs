@@ -1,5 +1,225 @@
 # Change Log
 
+## [Unreleased] - 2026-01-06
+
+### Added
+
+- **Animated logo with rotating electrons** (`src/components/AnimatedAtomLogo/`, `src/theme/Logo/index.tsx`)
+  - Interactive logo animation on hover
+  - 2 electron dots rotate around the O ring when hovering over the logo
+  - SVG-based animation using `animateTransform` with rotation around center point (512, 512)
+  - Electron dots positioned at (315, 315) and (715, 715) to overlay original static dots
+  - Animation speed: 3000ms (normal), configurable with slow/fast options
+  - Conditionally renders animated SVG on hover for reliable animation start
+  - Preserves original QQ logo appearance with perfect overlay technique
+  - Swizzled Logo component to integrate AnimatedAtomLogo into navbar
+  - Logo size: 40px in navbar for optimal visibility
+
+### Fixed
+
+- **TokenomicsPieChart labels and theming**
+  - Responsive label sizing: 10px mobile, 14px desktop
+  - Labels match segment colors with `fill={fill}`
+  - Theme-aware borders: `rgba(255,255,255,0.1)` dark, `rgba(0,0,0,0.1)` light
+  - MutationObserver for dynamic theme detection
+  - Labels no longer cut off on mobile
+
+- **GitHub button in mobile sidebar header**
+  - Repositioned next to theme toggle and close button
+  - Matches theme toggle style: same background, padding, border-radius
+  - Inline SVG with `fill="currentColor"` for theme adaptation
+  - Pink hover: background `rgba(255,29,100,0.2)`, icon turns #ff1d64
+  - Improved spacing: `gap: 1rem`, logo `margin-right: auto`
+  - Ejected `Navbar/MobileSidebar/Header` for full control
+
+- **Desktop GitHub button hover effect**
+  - Consistent pink hover matching mobile
+  - CSS filter converts icon to #ff1d64 on hover
+  - Background changes to pink tint (`rgba(255,29,100,0.2/0.15)`)
+
+## [Unreleased] - 2026-01-05
+
+### Fixed
+
+- **Mobile navbar layout and alignment** (`src/css/custom.css`, `docusaurus.config.ts`, `src/theme/Navbar/MobileSidebar/PrimaryMenu/index.tsx`)
+  - Fixed overlapping header elements on mobile viewport (< 996px)
+  - Completely resolved search bar and "Docs" link collision issues
+  - **GitHub button**:
+    - Visible on desktop navbar (icon only)
+    - Hidden from mobile top navbar to save space
+    - Appears in mobile sidebar menu next to theme toggle button
+    - **Fixed external link arrow icon** (complete solution):
+      - Removed `label` property from GitHub navbar item in `docusaurus.config.ts`
+      - Replaced `<a>` tag with `<div role="button">` element to bypass Docusaurus's link processing
+      - Added filter in component to exclude GitHub link from navbar items list (checks both `className` and `href`)
+      - Completely hides original navbar GitHub link in mobile sidebar with CSS
+      - Now renders cleanly with GitHub icon + text only, no external link icons
+    - **Pink hover effect**:
+      - Background changes to `rgba(255, 29, 100, 0.25)` on hover
+      - Border color changes to hot pink `#f472b6`
+      - Adds pink glow with `box-shadow: 0 0 12px rgba(244, 114, 182, 0.4)`
+      - Uses `@media (hover: hover)` to prevent sticky states on touch devices
+  - Aggressive size reductions for mobile navbar:
+    - Logo: Reduced from 2.5rem to 2rem height
+    - Logo title: Reduced from 0.85rem to 0.75rem font size
+    - Search bar: Very compact (60px-80px width) with smaller font (0.65rem)
+    - Search bar padding: 0.3rem 0.4rem (ultra compact)
+    - Navbar item padding: Reduced to 0.35rem 0.5rem
+    - Navbar gaps: Minimized to 0.25rem between items
+  - "Docs" link: Hidden completely on all mobile viewports (< 996px)
+    - Accessible via hamburger menu instead
+    - Prevents all overlap issues with search box
+  - Search bar optimizations:
+    - Set to `flex: 0 1 auto` to prevent expansion
+    - Input padding reduced to 0.35rem 0.5rem
+    - Font size reduced to 0.7rem for compact display
+  - Enhanced mobile sidebar (hamburger menu):
+    - GitHub button with icon + "GitHub" text label (added `label: "GitHub"` to config)
+    - Desktop navbar: Icon only (text hidden with `font-size: 0`)
+    - Mobile sidebar: Icon + visible "GitHub" text with proper font-size
+    - Full SVG icon inline (white in dark mode, dark in light mode)
+    - Glassmorphism styling with pink accent and rounded corners
+    - Proper visibility with `opacity: 1` and `visibility: visible` forced
+    - Icon size: 20px with 0.625rem margin
+    - Min-height: 40px for proper touch target
+    - Hover effects matching theme (pink glow)
+    - Full light/dark mode support
+
+- **TokenomicsPieChart tooltip animations** (`src/components/TokenomicsPieChart/styles.module.css`)
+  - **Fixed "swarm" animation issue**:
+    - Replaced animation-based tooltip with CSS transitions for smooth, stable behavior
+    - Changed from re-triggering animations to smooth opacity/transform transitions (0.15s)
+    - Added `will-change: opacity, transform` for better rendering performance
+  - **Enhanced glassmorphism effect**:
+    - Reduced background opacity from 0.95 to 0.6 for true glass transparency
+    - Increased backdrop-filter blur from 16px to 24px for better frosted glass effect
+    - Added inset shadows for depth: `inset 0 1px 0 rgba(255, 255, 255, 0.15)`
+    - Maintained pink accent glow and border
+  - **Subtler animations**:
+    - Center label pulse: Reduced scale from 1.05 to 1.02, slowed from 2s to 3s
+    - Legend icon pulse: Slowed from 1.5s to 2.5s
+    - Opacity changes: From 0.9 to 0.95 for gentler effect
+  - **Natural chart appearance**:
+    - Removed `brightness(1.2)` and `drop-shadow` filters from pie slices on hover
+    - Now uses subtle opacity change (0.9) for minimal visual feedback
+    - Chart colors remain natural and undistorted
+    - Glassy tooltip provides all necessary information without altering chart
+
+### Technical Details
+
+**Navbar Fixes:**
+
+- **Desktop**: `.header-github-link` - Visible with icon only (`font-size: 0` to hide text label)
+- **Mobile** (< 996px):
+  - `.navbar` - Padding reduced to 0.5rem for compact layout
+  - `.navbar .header-github-link` - Hidden with `display: none !important` (appears in mobile sidebar)
+  - `.navbar__inner` - Gap minimized to 0.25rem
+  - `.navbar__items` - Gap set to 0.25rem for tight spacing
+  - `.navbar__items--left` - Gap 0.25rem, `flex: 0 1 auto`, max-width 50%
+  - `.navbar__items--left .navbar__link` - Hidden with `display: none !important` (Docs link)
+  - `.navbar__items--right` - Gap 0.35rem, auto margin-left, `flex-shrink: 0`
+  - `.navbar__brand` - Fixed width (`flex: 0 0 auto`) with no margin
+  - `.navbar__logo` - Height reduced to 2rem (from 2.5rem)
+  - `.navbar__title` - Font size reduced to 0.75rem (from 0.85rem)
+  - `.navbar__search` - Ultra compact: 60px-80px width, `flex: 0 1 auto`
+  - `.navbar__search-input` - Font 0.65rem, padding 0.3rem 0.4rem
+
+**GitHub Button Configuration:**
+
+- `docusaurus.config.ts` - Removed `label` property from navbar item
+  - Prevents automatic rendering in mobile sidebar menu
+  - Desktop navbar renders icon-only button
+  - Mobile sidebar uses custom button component instead
+
+**Mobile Sidebar GitHub Button:**
+
+- Custom component in `src/theme/Navbar/MobileSidebar/PrimaryMenu/index.tsx`
+  - Uses `<div role="button">` element instead of `<a>` tag
+  - Filters out original GitHub link from navbar items (checks `className` and `href`)
+  - Inline GitHub icon as background SVG (data URI)
+  - Custom styling:
+    - Background: `rgba(255, 29, 100, 0.08)` with glassmorphism
+    - Border: `1px solid rgba(255, 29, 100, 0.2)` with 6px border-radius
+    - Icon (20px) + "GitHub" text label
+    - Font size: 0.8rem, min-height: 40px for touch targets
+    - Padding: 0.5rem 0.875rem
+- CSS hover effects (`.mobile-github-button:hover`):
+  - Background: `rgba(255, 29, 100, 0.25)`
+  - Border: `#f472b6` (hot pink)
+  - Glow: `box-shadow: 0 0 12px rgba(244, 114, 182, 0.4)`
+- Original navbar GitHub link completely hidden in sidebar with CSS
+
+**TokenomicsPieChart Improvements:**
+
+- Tooltip styling (`.tooltip`):
+  - Background: `rgba(20, 21, 26, 0.6)` for transparency
+  - Backdrop filter: `blur(24px) saturate(180%)` for glassmorphism
+  - Border: `1px solid rgba(255, 255, 255, 0.2)`
+  - Inset shadows for depth and glass effect
+  - Transitions: `opacity 0.15s, transform 0.15s` (smooth, no re-triggering animations)
+  - Performance optimization: `will-change: opacity, transform`
+- Animation adjustments:
+  - `.centerLabel`: `animation: centerPulse 3s` (was 2s)
+  - `@keyframes centerPulse`: scale(1.02) (was 1.05), opacity 0.95 (was 0.9)
+  - `.legendItemActive .legendIcon`: `animation: centerPulse 2.5s` (was 1.5s)
+- Chart slice hover (`.pieCell:hover`):
+  - Removed: `filter: brightness(1.2) drop-shadow(...)`
+  - Added: `opacity: 0.9` (subtle feedback only)
+  - Preserves natural colors
+
+## [Unreleased] - 2026-01-05
+
+### Added
+
+- **GitHub icon in navbar** (`docusaurus.config.ts`, `src/css/custom.css`)
+  - Replaced "GitHub" text label with GitHub logo SVG icon
+  - Icon matches theme toggle button styling (same size, padding, background, hover effects)
+  - Button background: `rgba(0, 0, 0, 0.3)` in dark mode, `rgba(255, 255, 255, 0.5)` in light mode
+  - Icon size: 20px on desktop, 18px on mobile
+  - Pink hover effect: Background changes to `rgba(255, 29, 100, 0.2)` on hover
+  - Accessible: Added `aria-label="GitHub repository"` for screen readers
+  - Responsive: Matches mobile navbar sizing (0.35rem padding, 18px icon)
+
+- **Environment configuration** (`.env`)
+  - Added `.env` file with `BROWSER=none` to prevent browser auto-opening
+  - Added `.env` to `.gitignore` for proper version control exclusion
+
+### Changed
+
+- **Development server configuration** (`package.json`)
+  - Updated `start` script with `--no-open` flag to prevent automatic browser opening
+  - Fixes AppleScript error when using "Google Chrome Dev" as system browser
+  - Users now manually open browser to `http://localhost:3000/`
+
+- **Markdown references** (`docs/ai-agents/what-is-an-ai-agent.md`)
+  - Fixed broken Markdown links to agent files (case sensitivity issue)
+  - Updated file references to use lowercase filenames:
+    - `Carbon.md` in `carbon.md`
+    - `Hydrogen.md` in `hydrogen.md`
+    - `Silicon.md` in `silicon.md`
+    - `Oxygen.md` in `oxygen.md`
+    - `Phosphorus.md` in `phosphorus.md`
+  - Resolves Docusaurus build warnings about unresolved Markdown links
+
+### Fixed
+
+- **Browser opening error**
+  - Fixed AppleScript error when Docusaurus tries to open "Google Chrome Dev"
+  - Error was: `openChrome.applescript:848:858: script error: Un proprietà non può andare dopo questo identificativo. (-2740)`
+  - Solution: Used Docusaurus built-in `--no-open` CLI flag instead of environment variable workarounds
+
+### Technical Details
+
+**GitHub Icon Implementation:**
+
+- CSS class: `.header-github-link`
+- Icon technique: SVG embedded as data URL in CSS `::before` pseudo-element
+- Two SVG variants:
+  - Dark mode: White fill (`fill='white'`)
+  - Light mode: Dark gray fill (`fill='%231a1a1a'`)
+- Hover behavior: Entire button background changes to pink (not just icon)
+- Positioning: Flexbox centering with `align-items: center` and `justify-content: center`
+
 ## [Unreleased] - 2026-01-05
 
 ### Changed

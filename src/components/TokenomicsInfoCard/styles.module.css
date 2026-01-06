@@ -197,19 +197,28 @@
 /* Tablet: 2 columns for 2-col and 3-col grids */
 @media (min-width: 768px) {
   .card {
-    padding: 1.25rem;
+    padding: 0.875rem;
+  }
+
+  .iconContainer {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon {
+    font-size: 1.125rem;
   }
 
   .label {
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
   }
 
   .value {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .subtext {
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
   }
 
   .grid2Cols {
@@ -224,32 +233,32 @@
 /* Desktop: 3 columns for 3-col grid */
 @media (min-width: 1024px) {
   .card {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .iconContainer {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
   }
 
   .icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .label {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
 
   .value {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
   }
 
   .subtext {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
 
   .grid {
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .grid3Cols {

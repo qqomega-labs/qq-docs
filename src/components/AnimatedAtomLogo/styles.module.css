@@ -1,0 +1,27 @@
+/* Rotation animation - use :global to make it accessible */
+@keyframes :global(logoRotate) {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Container */
+.atomLogo {
+  display: inline-block;
+  position: relative;
+}
+
+/* Electron group */
+.electronGroup {
+  transform-origin: center;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .electronGroup {
+    animation: none !important;
+  }
+}

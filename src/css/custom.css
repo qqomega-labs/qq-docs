@@ -24,6 +24,7 @@
 
   /* Purple accents */
   --qq-color-purple-light: #b366ff;
+  --qq-color-purple-medium: #a855f7;
   --qq-color-purple-dark: #8f3de6;
 
   /* Light mode backgrounds - neutral darker grays */
@@ -530,20 +531,77 @@
     0 4px 24px rgba(0, 0, 0, 0.15),
     0 0 0 1px rgba(255, 255, 255, 0.05) inset;
   z-index: 100 !important;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__items {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 @media (max-width: 996px) {
   .navbar {
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .navbar__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.25rem;
   }
 
   .navbar__items {
     gap: 0.25rem;
   }
 
+  .navbar__items--left {
+    gap: 0.25rem;
+    flex: 0 1 auto;
+    max-width: 50%;
+  }
+
+  .navbar__items--right {
+    gap: 0.35rem;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  /* Hide Docs link on mobile - accessible via hamburger menu */
+  .navbar__items--left .navbar__link {
+    display: none !important;
+  }
+
   .navbar__item,
   .navbar__link {
-    margin: 0 0.15rem;
+    margin: 0;
+    padding: 0.35rem 0.5rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 0.7rem;
+  }
+
+  /* Ensure logo and title are compact */
+  .navbar__brand {
+    flex: 0 0 auto;
+    margin-right: 0;
+  }
+
+  /* Search bar responsive sizing - very compact on mobile */
+  .navbar__search {
+    flex: 0 1 auto;
+    max-width: 80px;
+    min-width: 60px;
+  }
+
+  .navbar__search-input {
+    width: 100% !important;
+    min-width: 60px !important;
+    font-size: 0.65rem !important;
+    padding: 0.3rem 0.4rem !important;
   }
 }
 
@@ -578,7 +636,7 @@
 }
 
 [data-theme="light"] .navbar__link--active {
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
 }
 
 [data-theme="light"] .navbar__item {
@@ -593,7 +651,7 @@
 
 @media (max-width: 996px) {
   .navbar__title {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -608,17 +666,21 @@
 .navbar__logo {
   transition: transform 0.3s ease;
   height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 996px) {
   .navbar__logo {
-    height: 2.5rem;
+    height: 2rem;
   }
 }
 
+/* Remove hover scale since logo is already animated */
 @media (hover: hover) {
   .navbar__logo:hover {
-    transform: scale(1.05);
+    /* Animated logo doesn't need additional hover effects */
   }
 }
 
@@ -637,7 +699,7 @@
 }
 
 .navbar__link--active {
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
   font-weight: 600;
 }
 
@@ -660,14 +722,149 @@
 }
 
 .navbar__item--active {
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
 }
 
-/* Mobile menu toggle */
+/* GitHub icon link - match theme toggle button style */
+.header-github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  background: rgba(0, 0, 0, 0.3) !important;
+  border-radius: 6px !important;
+  padding: 0.4rem !important;
+  font-size: 0; /* Hide text label on desktop */
+  line-height: 0;
+}
+
+.header-github-link::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat center center;
+  background-size: contain;
+}
+
+@media (hover: hover) {
+  .header-github-link:hover {
+    background: rgba(255, 29, 100, 0.2) !important;
+  }
+
+  .header-github-link:hover::before {
+    filter: brightness(0) saturate(100%) invert(35%) sepia(88%) saturate(2456%)
+      hue-rotate(316deg) brightness(103%) contrast(101%);
+  }
+}
+
+/* Light mode GitHub link */
+[data-theme="light"] .header-github-link {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-theme="light"] .header-github-link::before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%231a1a1a' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat center center;
+  background-size: contain;
+}
+
+@media (hover: hover) {
+  [data-theme="light"] .header-github-link:hover {
+    background: rgba(255, 29, 100, 0.15) !important;
+  }
+
+  [data-theme="light"] .header-github-link:hover::before {
+    filter: brightness(0) saturate(100%) invert(35%) sepia(88%) saturate(2456%)
+      hue-rotate(316deg) brightness(103%) contrast(101%);
+  }
+}
+
+/* Mobile sidebar header - spacing between logo and buttons */
+.navbar-sidebar__brand {
+  gap: 0.4rem !important;
+}
+
+.navbar-sidebar__brand .navbar__brand {
+  margin-right: 0.5rem !important;
+}
+
+/* Mobile sidebar header - theme toggle and GitHub button spacing */
+.navbar-sidebar__brand button[class*="colorModeToggle"] {
+  margin-right: 0.5rem !important;
+}
+
+/* Mobile sidebar header GitHub button - matches theme toggle style */
+.navbar-sidebar__github {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border-radius: 6px !important;
+  padding: 0.4rem !important;
+  margin-right: 0.1rem !important;
+  margin-left: 0.1rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.navbar-sidebar__github svg {
+  width: 20px;
+  height: 20px;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect - pink background */
+@media (hover: hover) {
+  .navbar-sidebar__github:hover {
+    background: rgba(255, 29, 100, 0.2) !important;
+  }
+
+  .navbar-sidebar__github:hover svg {
+    color: var(--qq-color-pink-hot) !important;
+  }
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .navbar-sidebar__github {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-theme="light"] .navbar-sidebar__github:hover {
+  background: rgba(255, 29, 100, 0.15) !important;
+}
+
+/* Hide GitHub button only from mobile top navbar, but keep in sidebar */
+@media (max-width: 996px) {
+  /* Hide from the top navbar container only, not from sidebar */
+  .navbar:not(.navbar-sidebar) .header-github-link {
+    display: none !important;
+  }
+
+  /* Ensure it shows in mobile sidebar items */
+  .navbar-sidebar__items .header-github-link,
+  .navbar-sidebar .navbar__items .header-github-link,
+  .navbar-sidebar__item .header-github-link {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Mobile menu toggle - only visible on mobile */
 .navbar__toggle {
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(255, 29, 100, 0.1);
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide hamburger menu on desktop */
+@media (min-width: 997px) {
+  .navbar__toggle {
+    display: none !important;
+  }
 }
 
 .navbar__toggle svg {
@@ -680,7 +877,7 @@
 }
 
 .navbar__toggle:hover svg {
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
   fill: var(--ifm-color-primary) !important;
 }
 
@@ -699,7 +896,7 @@
 }
 
 [data-theme="light"] .navbar__toggle:hover svg {
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
   fill: var(--ifm-color-primary) !important;
 }
 
@@ -720,6 +917,9 @@ button[aria-label*="Switch"] {
   button[aria-label*="theme"],
   button[aria-label*="Switch"] {
     padding: 0.35rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .clean-btn[title*="theme"] svg,
@@ -750,7 +950,7 @@ button[aria-label*="Switch"] svg {
   .clean-btn[title*="Switch"]:hover svg,
   button[aria-label*="theme"]:hover svg,
   button[aria-label*="Switch"]:hover svg {
-    color: var(--ifm-color-primary) !important;
+    color: var(--qq-color-pink-hot) !important;
   }
 }
 
@@ -782,7 +982,7 @@ button[aria-label*="Switch"] svg {
   [data-theme="light"] .clean-btn[title*="Switch"]:hover svg,
   [data-theme="light"] button[aria-label*="theme"]:hover svg,
   [data-theme="light"] button[aria-label*="Switch"]:hover svg {
-    color: var(--ifm-color-primary) !important;
+    color: var(--qq-color-pink-hot) !important;
   }
 }
 
@@ -805,10 +1005,14 @@ button[aria-label*="Switch"] svg {
     padding: 0.4rem 0.5rem !important;
     font-size: 0.75rem !important;
     min-height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
   .DocSearch-Button-Container {
     width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
   .DocSearch-Button-Placeholder {
@@ -821,6 +1025,8 @@ button[aria-label*="Switch"] svg {
     flex-shrink: 1 !important;
     max-width: 180px !important;
     margin: 0 0.25rem !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
   /* Hide keyboard shortcuts on mobile to save space */
@@ -887,6 +1093,8 @@ button[aria-label*="Switch"] svg {
 /* Search icon */
 .DocSearch-Search-Icon {
   color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
 }
 
 [data-theme="light"] .DocSearch-Search-Icon {
@@ -1316,7 +1524,7 @@ button[aria-label*="Switch"] svg {
 /* Pagination arrows and labels */
 .pagination-nav__label::before,
 .pagination-nav__label::after {
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
 }
 
 .pagination-nav__sublabel {
@@ -1365,14 +1573,14 @@ button[aria-label*="Switch"] svg {
 /*
 .theme-edit-this-page,
 .theme-doc-footer-edit-meta-row a {
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
   transition: all 0.3s ease;
 }
 
 @media (hover: hover) {
   .theme-edit-this-page:hover,
   .theme-doc-footer-edit-meta-row a:hover {
-    color: var(--ifm-color-primary) !important;
+    color: var(--qq-color-pink-hot) !important;
     opacity: 0.85;
   }
 }
@@ -1386,7 +1594,7 @@ button[aria-label*="Switch"] svg {
 
 /* Direct link icons (heading anchors) */
 .hash-link {
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
   opacity: 0.6;
   transition: all 0.3s ease;
 }
@@ -1394,7 +1602,7 @@ button[aria-label*="Switch"] svg {
 @media (hover: hover) {
   .hash-link:hover {
     opacity: 1;
-    color: var(--ifm-color-primary) !important;
+    color: var(--qq-color-pink-hot) !important;
   }
 }
 
@@ -1404,7 +1612,7 @@ button[aria-label*="Switch"] svg {
 .theme-doc-markdown h4 .hash-link,
 .theme-doc-markdown h5 .hash-link,
 .theme-doc-markdown h6 .hash-link {
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
 }
 
 /* ============================================
@@ -1552,7 +1760,7 @@ aside.theme-doc-sidebar-container {
 /* Active state - pink color and background */
 .menu__link--active {
   font-weight: 600;
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
   background: rgba(255, 29, 100, 0.15) !important;
 }
 
@@ -1626,7 +1834,7 @@ pre code {
 @media (hover: hover) {
   .theme-back-to-top-button:hover {
     background: rgba(255, 29, 100, 0.2) !important;
-    border-color: var(--ifm-color-primary) !important;
+    border-color: var(--qq-color-pink-hot) !important;
     box-shadow:
       0 4px 20px rgba(255, 29, 100, 0.4),
       0 0 0 1px var(--ifm-color-primary) inset !important;
@@ -1713,7 +1921,7 @@ pre code {
 .card a,
 .card__title,
 .card h2 {
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
   transition: opacity 0.2s ease;
 }
 
@@ -1756,7 +1964,7 @@ h2[class*="cardTitle"] {
 h2[class*="cardTitle"]::after {
   content: attr(title) !important;
   font-size: 1.35rem !important;
-  color: var(--ifm-color-primary) !important;
+  color: var(--qq-color-pink-hot) !important;
   font-weight: 600 !important;
 }
 
@@ -2133,7 +2341,7 @@ aside.theme-doc-sidebar-container {
   }
 
   [data-theme="light"] .navbar-sidebar .menu__link--active {
-    color: var(--ifm-color-primary) !important;
+    color: var(--qq-color-pink-hot) !important;
     background: rgba(255, 29, 100, 0.15) !important;
   }
 
@@ -2217,6 +2425,74 @@ aside.theme-doc-sidebar-container {
     padding: 0.375rem 0.875rem !important;
   }
 
+  /* Hide the GitHub link from menu items only, not from the header */
+  .navbar-sidebar__items .header-github-link,
+  .navbar-sidebar .navbar__item .header-github-link {
+    display: none !important;
+  }
+
+  .navbar-sidebar .navbar__item:has(.header-github-link) {
+    display: none !important;
+  }
+
+  /* Ensure GitHub button shows in sidebar header */
+  .navbar-sidebar__brand .header-github-link {
+    display: flex !important;
+  }
+
+  /* Hide external link icon for mobile-github-button */
+  .mobile-github-button::after,
+  .mobile-github-button::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  .mobile-github-button svg,
+  .mobile-github-button img,
+  .mobile-github-button [class*="icon"]:not([style*="background"]) {
+    display: none !important;
+  }
+
+  /* Force hide any icon that might be added by Docusaurus */
+  .mobile-github-button .iconExternalLink,
+  .mobile-github-button [aria-label*="External"],
+  .mobile-github-button > svg {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Only show the content we want */
+  .mobile-github-button > span {
+    display: inline-block !important;
+  }
+
+  /* Hide any external link icons that might be siblings of the button */
+  .mobile-github-button ~ svg,
+  .mobile-github-button ~ .iconExternalLink,
+  .mobile-github-button ~ [class*="ExternalLink"] {
+    display: none !important;
+  }
+
+  /* Hover effect for mobile GitHub button */
+  @media (hover: hover) {
+    .mobile-github-button:hover {
+      background: rgba(255, 29, 100, 0.25) !important;
+      border-color: #f472b6 !important;
+      box-shadow: 0 0 12px rgba(244, 114, 182, 0.4) !important;
+    }
+  }
+
+  /* Light mode hover */
+  @media (hover: hover) {
+    [data-theme="light"] .mobile-github-button:hover {
+      background: rgba(255, 29, 100, 0.3) !important;
+      border-color: #f472b6 !important;
+      box-shadow: 0 0 12px rgba(244, 114, 182, 0.4) !important;
+    }
+  }
+
   /* Brand section spacing - compact */
   .navbar-sidebar .navbar-sidebar__brand {
     padding: 0.75rem 0.875rem !important;
@@ -2255,13 +2531,13 @@ aside.theme-doc-sidebar-container {
     border-radius: 6px !important;
     background: rgba(255, 29, 100, 0.08) !important;
     border: 1px solid rgba(255, 29, 100, 0.2) !important;
-    color: var(--ifm-color-primary) !important;
+    color: var(--qq-color-pink-hot) !important;
     font-weight: 500 !important;
   }
 
   .navbar-sidebar .menu__link--back:hover {
     background: rgba(255, 29, 100, 0.15) !important;
-    border-color: var(--ifm-color-primary) !important;
+    border-color: var(--qq-color-pink-hot) !important;
   }
 
   [data-theme="light"] .navbar-sidebar .menu__link--back,
