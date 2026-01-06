@@ -48,6 +48,19 @@
   - Clean appearance on all backgrounds
   - Note: Overridden by AnimatedAtomLogo in `src/theme/Logo/index.tsx`
 
+- **Unified TokenAddressCard styling with TokenomicsInfoCard** (`src/components/TokenAddressCard/styles.module.css`)
+  - Updated card styles to match TokenomicsInfoCard design system
+  - Changed background to more subtle `rgba(255, 255, 255, 0.03)` for better glassmorphism
+  - Added gradient border hover effect using `::before` pseudo-element
+  - Updated variant styling: Pink, Cyan, Purple now use consistent solid rgba colors instead of gradients
+  - Implemented mobile-first responsive design with breakpoints at 768px (tablet) and 1024px (desktop)
+  - Enhanced hover effects: `translateY(-2px)` transform with multi-layered box-shadows
+  - Improved icon container sizing: 40px (desktop), 36px (tablet), with consistent variant-specific backgrounds
+  - Updated typography: Uses `var(--ifm-font-color-base)` for better theme integration
+  - Added comprehensive light mode support with proper contrast adjustments for all variants
+  - Implemented `prefers-reduced-motion` support for accessibility
+  - Copy button and address display now fully integrated with theme system
+
 ### Fixed
 
 - **Cloudflare Pages build failure**
