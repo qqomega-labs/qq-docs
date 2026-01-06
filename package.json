@@ -6,7 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start --no-open",
     "build": "docusaurus build",
-    "build:cf": "docusaurus clear && docusaurus build",
+    "build:cf": "npm install && docusaurus clear && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

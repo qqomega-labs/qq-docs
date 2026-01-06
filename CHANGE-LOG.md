@@ -2,6 +2,12 @@
 
 ## [Unreleased] - 2026-01-06
 
+### Changed
+
+- Updated `build:cf` script in `package.json`.
+
+## [Unreleased] - 2026-01-06
+
 ### Added
 
 - **Animated logo with rotating electrons** (`src/components/AnimatedAtomLogo/`, `src/theme/Logo/index.tsx`)
