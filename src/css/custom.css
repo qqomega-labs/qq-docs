@@ -669,6 +669,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent !important;
+}
+
+.navbar__logo img {
+  background: transparent !important;
 }
 
 @media (max-width: 996px) {
@@ -833,14 +838,21 @@
   background: rgba(255, 29, 100, 0.15) !important;
 }
 
-/* Hide GitHub button only from mobile top navbar, but keep in sidebar */
+/* Hide GitHub button and Docs link from mobile top navbar */
 @media (max-width: 996px) {
-  /* Hide from the top navbar container only, not from sidebar */
+  /* Hide GitHub link from the top navbar container only, not from sidebar */
   .navbar:not(.navbar-sidebar) .header-github-link {
     display: none !important;
   }
 
-  /* Ensure it shows in mobile sidebar items */
+  /* Hide Docs link from mobile navbar - multiple selector approach */
+  .navbar:not(.navbar-sidebar) .navbar__link[href^="/docs"],
+  .navbar:not(.navbar-sidebar) .navbar__item[class*="docSidebar"],
+  .navbar:not(.navbar-sidebar) .navbar__items--left > *:not(.navbar__brand) {
+    display: none !important;
+  }
+
+  /* Ensure GitHub shows in mobile sidebar items */
   .navbar-sidebar__items .header-github-link,
   .navbar-sidebar .navbar__items .header-github-link,
   .navbar-sidebar__item .header-github-link {
@@ -1231,7 +1243,8 @@ button[aria-label*="Switch"] svg {
 .theme-doc-markdown h3 {
   color: var(--ifm-heading-color);
   font-weight: 600;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
   font-size: 1.15rem;
 }
 
@@ -2619,8 +2632,8 @@ aside.theme-doc-sidebar-container {
 
   .theme-doc-markdown h3 {
     font-size: 1.1rem;
-    margin-top: 1.25rem;
-    margin-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   .theme-doc-markdown h4 {

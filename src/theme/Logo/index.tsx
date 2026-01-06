@@ -6,6 +6,22 @@ import {useThemeConfig} from '@docusaurus/theme-common';
 import type {Props} from '@theme/Logo';
 import AnimatedAtomLogo from '@site/src/components/AnimatedAtomLogo';
 
+/**
+ * Custom navbar logo component with animated atom logo.
+ *
+ * @swizzled Docusaurus theme component (full ejection)
+ * @component Logo
+ * @pattern Replaces default Docusaurus logo with custom AnimatedAtomLogo
+ *
+ * @customizations
+ * - Uses AnimatedAtomLogo component instead of static image
+ * - Maintains Docusaurus logo configuration and accessibility
+ * - Preserves navbar title and link functionality
+ * - Logo animates on hover (rotating electrons)
+ *
+ * @note The logo in docusaurus.config.ts is overridden by this component
+ * @see AnimatedAtomLogo for the animated logo implementation
+ */
 export default function Logo(props: Props): ReactNode {
   const {
     siteConfig: {title},

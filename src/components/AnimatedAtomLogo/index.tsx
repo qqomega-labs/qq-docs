@@ -1,12 +1,30 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 
+/**
+ * Props for the AnimatedAtomLogo component.
+ */
 interface AnimatedAtomLogoProps {
+  /** Logo size in pixels (default: 200) */
   size?: number;
+  /** Animation speed (default: "normal") */
   speed?: "slow" | "normal" | "fast";
+  /** Additional CSS classes */
   className?: string;
 }
 
+/**
+ * Animated atom logo component for QQ Omega branding.
+ * Displays the QQ logo with rotating electron animation on hover.
+ *
+ * @component Custom component (not swizzled)
+ * @usage Used in: src/theme/Logo/index.tsx (navbar logo)
+ *
+ * @example
+ * ```tsx
+ * <AnimatedAtomLogo size={40} speed="normal" />
+ * ```
+ */
 export default function AnimatedAtomLogo({
   size = 200,
   speed = "normal",
@@ -32,7 +50,7 @@ export default function AnimatedAtomLogo({
     >
       {/* Original static logo */}
       <img
-        src="/img/QQlogo.svg"
+        src="/img/QQlogo.png"
         alt="QQ Omega Logo"
         style={{
           width: "100%",
@@ -59,20 +77,10 @@ export default function AnimatedAtomLogo({
         >
           <g>
             {/* Animated electron dot 1 */}
-            <circle
-              cx="315"
-              cy="315"
-              r="52"
-              fill={primaryColor}
-            />
+            <circle cx="315" cy="315" r="52" fill={primaryColor} />
 
             {/* Animated electron dot 2 */}
-            <circle
-              cx="715"
-              cy="715"
-              r="52"
-              fill={primaryColor}
-            />
+            <circle cx="715" cy="715" r="52" fill={primaryColor} />
 
             <animateTransform
               attributeName="transform"

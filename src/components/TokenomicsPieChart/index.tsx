@@ -9,20 +9,37 @@ import {
 } from "recharts";
 import styles from "./styles.module.css";
 
+/**
+ * Data structure for tokenomics pie chart segments.
+ */
 interface TokenomicsData {
+  /** Segment name/label */
   name: string;
+  /** Percentage value (0-100) */
   value: number;
+  /** Segment color (CSS color or variable) */
   color: string;
+  /** Optional amount in tokens */
   amount?: string;
+  /** Additional custom properties */
   [key: string]: string | number | undefined;
 }
 
+/**
+ * Props for the TokenomicsPieChart component.
+ */
 interface TokenomicsPieChartProps {
+  /** Array of tokenomics data (default: example data) */
   data?: TokenomicsData[];
+  /** Chart title (optional) */
   title?: string;
+  /** Chart height in pixels (default: 400) */
   height?: number;
 }
 
+/**
+ * Default tokenomics data for demonstration purposes.
+ */
 const defaultData: TokenomicsData[] = [
   { name: "Liquidity Pool", value: 30, color: "var(--qq-color-pink-hot)" },
   { name: "Staking Rewards", value: 25, color: "var(--qq-color-cyan-bright)" },
@@ -35,6 +52,26 @@ const defaultData: TokenomicsData[] = [
   { name: "Treasury Reserve", value: 10, color: "var(--qq-color-cyan-teal)" },
 ];
 
+/**
+ * Interactive tokenomics pie chart with custom styling and hover effects.
+ * Uses recharts library for rendering, with mobile-first responsive design.
+ *
+ * @component Custom component (not swizzled)
+ * @usage Used in: docs/tokenomics/qq-tokenomics.mdx
+ * @dependencies recharts (external library)
+ *
+ * @example
+ * ```tsx
+ * <TokenomicsPieChart
+ *   title="Token Distribution"
+ *   data={[
+ *     { name: "Liquidity", value: 30, color: "#ff1d64", amount: "300M" },
+ *     { name: "Staking", value: 25, color: "#00d4ff", amount: "250M" }
+ *   ]}
+ *   height={500}
+ * />
+ * ```
+ */
 export default function TokenomicsPieChart({
   data = defaultData,
   title = "", // default no title

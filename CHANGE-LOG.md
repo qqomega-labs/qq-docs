@@ -2,10 +2,89 @@
 
 ## [Unreleased] - 2026-01-06
 
+### Added
+
+- **TokenAddressCard Component** (`src/components/TokenAddressCard/`)
+  - Click-to-copy token address with visual feedback (checkmark animation)
+  - Truncated address display on mobile (`0x0715...5fDC`), full address on desktop
+  - Glassmorphism styling matching TokenomicsInfoCard design
+  - Three color variants: pink, cyan, purple
+  - Light/dark mode support with proper variant backgrounds
+  - Copy button with hover states and success indication
+  - Used in: `docs/tokenomics/qq-tokenomics.mdx`
+
+- **Comprehensive JSDoc documentation for all components**
+  - Added JSDoc to custom components: AnimatedAtomLogo, TokenomicsInfoCard, TokenomicsPieChart, MdxImageContainer, TokenAddressCard
+  - Added JSDoc to swizzled theme components: MDXComponents, Logo, Navbar, NavbarMobilePrimaryMenu
+  - Documentation includes: @component, @usage, @customizations, @example tags
+  - Props interfaces fully documented with descriptions
+  - Clear indication whether components are swizzled or custom
+  - Usage examples with code snippets
+
+- **Cloudflare Pages build documentation** (`README.md`)
+  - Added "Cloudflare Pages Build" section explaining dual package manager setup
+  - Step-by-step guide for adding dependencies with both Bun and npm
+  - Explanation of why `package-lock.json` sync is required
+  - Cloudflare Pages configuration details (build command, output directory, Node version)
+
 ### Changed
 
-- Updated `build:cf` script in `package.json`.
-- Synced `package-lock.json` with current dependencies installed with bun.
+- **Removed unused components**
+  - Deleted AnimatedLogo component (unused, replaced by AnimatedAtomLogo)
+  - Deleted CryptoCard component (unused in current implementation)
+  - Deleted GlassButton component (unused in current implementation)
+  - Deleted HomepageFeatures component (commented out, not used)
+  - Cleaned up component directory to only active components
+
+- **Improved h3 heading spacing** (`src/css/custom.css`)
+  - Desktop: `margin-top: 3rem` (was 2rem), `margin-bottom: 1.5rem` (new)
+  - Mobile (<768px): `margin-top: 2.5rem` (was 1.25rem), `margin-bottom: 1rem` (was 0.5rem)
+  - Better visual separation between major sections
+  - Responsive spacing that scales appropriately
+
+- **Updated navbar logo to transparent version** (`docusaurus.config.ts`)
+  - Changed logo from `img/QQlogo_nopadding.png` to `icon1.png`
+  - Uses proper transparent PNG (72x72px) with QQ logo
+  - Clean appearance on all backgrounds
+  - Note: Overridden by AnimatedAtomLogo in `src/theme/Logo/index.tsx`
+
+### Fixed
+
+- **Cloudflare Pages build failure**
+  - Updated `build:cf` script in `package.json`.
+  - Synced `package-lock.json` with current dependencies installed with bun.
+  - Regenerated `package-lock.json` to sync with `package.json`
+  - Fixed npm ci error for missing dependencies (recharts, @reduxjs/toolkit, decimal.js-light, es-toolkit)
+  - Maintained Bun for local development, npm for deployment
+
+- **Mobile navbar "Docs" link visibility**
+  - Hidden "Docs" link from mobile navbar (<996px) using CSS
+  - Added `.navbar__items--left > *:not(.navbar__brand) { display: none !important }`
+  - Prevents overlap with search and other navbar elements
+  - Link still accessible via mobile hamburger menu
+
+- **TokenAddressCard light/dark mode support**
+  - Added proper light mode styles for all variants (pink, cyan, purple)
+  - Variant backgrounds use subtle gradients (0.08-0.03 opacity) in light mode
+  - Border colors adjusted for visibility (0.3 opacity)
+  - Icon container background matches theme
+  - Hover states work correctly in both modes
+
+### Technical Details
+
+**Component Cleanup:**
+
+- Remaining active components: 4 custom + 4 swizzled theme components
+- Active custom components: AnimatedAtomLogo, TokenomicsInfoCard, TokenomicsPieChart, TokenAddressCard, MdxImageContainer
+- Active swizzled components: Logo, MDXComponents, Navbar, NavbarMobilePrimaryMenu
+
+**TokenAddressCard Implementation:**
+
+- Location: `src/components/TokenAddressCard/`
+- Features: Clipboard API, responsive truncation, glassmorphism styling
+- Mobile breakpoint: 768px for address display switch
+- Copy feedback duration: 2000ms timeout
+- Success color: `rgba(34, 197, 94, ...)` (green)
 
 ## [Unreleased] - 2026-01-06
 

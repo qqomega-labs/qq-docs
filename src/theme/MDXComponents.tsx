@@ -3,8 +3,19 @@ import MDXComponents from '@theme-original/MDXComponents';
 import MdxImageContainer from '@site/src/components/MdxImageContainer';
 
 /**
- * Custom MDX component overrides.
- * This wraps all <img> elements with MdxImageContainer for consistent styling.
+ * Custom MDX component overrides for Docusaurus.
+ *
+ * @swizzled Docusaurus theme component (safe wrapper pattern)
+ * @component MDXComponents
+ * @pattern Extends default MDX components with custom overrides
+ *
+ * @customizations
+ * - All `<img>` elements are automatically wrapped with MdxImageContainer
+ * - Provides consistent glassmorphism styling for images
+ * - Responsive sizing and centered layout
+ *
+ * @see MdxImageContainer for image wrapper implementation
+ * @see https://docusaurus.io/docs/markdown-features/react#mdx-component-scope
  */
 export default {
   ...MDXComponents,
