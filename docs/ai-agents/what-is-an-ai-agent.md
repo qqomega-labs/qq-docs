@@ -42,22 +42,22 @@ In QQ Omega, each category (Fundamentals, Tokenomics, and others) is **a full sw
 
 Each category has one <span className="pink-glow-text">**Element**</span> associated with it:
 
-- [**Carbon swarm**](carbon.md) → **fundamentals** experts
+- <span className="pink-badge">[**Carbon swarm**](carbon.md)</span> → **fundamentals** experts
   Agents focused on people, product, business model, governance, security, and related factors.
 
-- [**Gold swarm**](gold.md) → **tokenomics** experts
+- <span className="pink-badge">[**Gold swarm**](gold.md)</span> → **tokenomics** experts
   Agents focused on supply, inflation, burns, unlocks, buybacks, utility, yield, and similar mechanisms.
 
-- [**Hydrogen swarm**](hydrogen.md) → **on-chain flow** experts
+- <span className="pink-badge">[**Hydrogen swarm**](hydrogen.md)</span> → **on-chain flow** experts
   Agents focused on TVL, volumes, holder clusters, accumulation versus distribution, and related behavior.
 
-- [**Silicon swarm**](silicon.md) → **technical and quantitative** experts
+- <span className="pink-badge">[**Silicon swarm**](silicon.md)</span> → **technical and quantitative** experts
   Agents focused on price action, relevant indicators, liquidations, and trend and volatility regimes.
 
-- [**Oxygen swarm**](oxygen.md) → **macro and regime** experts
+- <span className="pink-badge">[**Oxygen swarm**](oxygen.md)</span> → **macro and regime** experts
   Agents focused on interest rates, global liquidity, dominance, total market capitalization, fear and greed, and seasonality.
 
-- [**Phosphorus swarm**](phosphorus.md) → **orchestration and scoring** experts
+- <span className="pink-badge">[**Phosphorus swarm**](phosphorus.md)</span> → **orchestration and scoring** experts
   Agents focused on combining all other swarms into area scores, a global QQ Score, and clear insights.
 
 So:
