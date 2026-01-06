@@ -13,7 +13,7 @@ Summary:
 - There are <span className="pink-glow-text">**5**</span> **possible ways** to receive $QQ airdrop allocations.
 - **Rules and eligibility are intentionally not fully disclosed** .
 - All official information will be communicated only via:
-  - X: **[@QQagents](https://x.com/QQagents)**
+  - X: <span className="pink-badge">**[@QQagents](https://x.com/QQagents)**</span>
   - These official docs (this page)
   
 The QQ team may **modify, delay, pause, or discontinue** the program at any time.
