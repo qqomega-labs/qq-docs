@@ -5,6 +5,7 @@
 ### Changed
 
 - Updated `build:cf` script in `package.json`.
+- Synced `package-lock.json` with current dependencies installed with bun.
 
 ## [Unreleased] - 2026-01-06
 
