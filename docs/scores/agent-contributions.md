@@ -5,36 +5,22 @@ sidebar_position: 4
 
 ## How Agents Contribute to the Final Score Over Time
 
-Each agent:
+Each agent follows a structured lifecycle:
 
-1. **Starts with an initial rule set**
-   - Based on research, backtests, and expert assumptions.
-2. **Observes reality over time**
-   - How do the signals correlate with real performance?
-   - Which red flags really matter? Which do not?
-3. **Is iteratively improved**
-   - Thresholds and weights can be adjusted.
-   - New features can be added, and ineffective ones removed.
+1. **Starts with an initial rule set**  
+   Based on research, backtests, and expert assumptions.
 
-As a result:
+2. **Observes reality over time**  
+   Signals are continuously evaluated against real market behavior to understand how they correlate with performance and which indicators consistently matter versus those that prove irrelevant.
 
-- The **contribution of each agent** to the final score becomes **more calibrated**.
-- The system <span className="pink-glow-text">**learns**</span> which signals are **truly predictive** versus **pure noise**.
+3. **Is iteratively improved**  
+   Thresholds and weights are adjusted over time, new features can be introduced, and ineffective components are removed as evidence accumulates.
 
-QQ Omega is designed as a **living system** that evolves with new data through a continuously adapting model.
+As this process unfolds, the contribution of each agent to the final score becomes progressively more calibrated, and the system <span className="pink-glow-text">learns</span> which signals are truly predictive and which are primarily noise. QQ Omega is designed as a <span className="pink-glow-text">living system</span> that evolves continuously as new data is absorbed and models adapt.
 
 
 ## Known Limitations of the System
 
-QQ Omega is powerful, but <span className="pink-glow-text">**not magic**</span>. Be aware of the following:
+QQ Omega is powerful, but <span className="pink-glow-text">not magic</span>. Its outputs depend on data quality, model assumptions, and the broader market environment. Accuracy can be constrained by limited or immature data, particularly for new or opaque projects, and by assumptions that reflect current market structure and may require revision as conditions change. In addition, extreme events such as regulatory interventions, exploits, bans, or macroeconomic shocks can temporarily push markets outside the scope of any systematic model.
 
-- **Data availability**
-  - Accuracy depends on source quality and transparency. Some projects may have incomplete, opaque, or very recent data that requires time to mature.
-
-- **Model assumptions**
-  - Scoring rules reflect the current market structure. If market dynamics change, models must be updated accordingly.
-
-- **Black swan events**
-  - Extreme events, such as regulation, exploits, bans, or macro shocks, can temporarily move markets outside the scope of any model.
-
-QQ Omega is a **decision-support system**, not an oracle and not a substitute for risk management or capital discipline.
+QQ Omega is a <span className="pink-glow-text">decision-support system</span>, not an oracle, and it is not a substitute for sound risk management or capital discipline.

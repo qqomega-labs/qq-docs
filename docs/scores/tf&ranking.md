@@ -31,18 +31,11 @@ Phosphorus reads these horizon-specific views together and surfaces profiles suc
 
 ## Ranking Views
 
-For each timeframe, QQ Omega can rank crypto assets in several ways:
+For each timeframe, QQ Omega generates multiple ranking views that allow crypto assets to be evaluated from different analytical perspectives. Assets can be ordered by a <span className="pink-glow-text">global ranking</span> based on the overall QQ Score, highlighting the strongest opportunities for a given timeframe, or by <span className="pink-glow-text">per area rankings</span>* derived from individual swarm scores, enabling specialist leaderboards focused on fundamentals through Carbon, tokenomics through Gold, on-chain behavior through Hydrogen, and technical analysis through Silicon.
 
-- <span className="pink-glow-text">**Global Ranking**</span> → sorted by the **global QQ Score**, showing the best overall opportunities for that timeframe  
-- <span className="pink-glow-text">**Per-area Rankings**</span>* → sorted by a **single swarm score**, allowing specialist leaderboards such as:
-  - **Carbon Ranking** → Best Fundamentals  
-  - **Gold Ranking** → Best Tokenomics  
-  - **Hydrogen Ranking** → Best On-chain  
-  - **Silicon Ranking** → Best Technical Analysis  
-
-This lets you answer quickly: *“Who is best overall right now?”* and *“Who is strongest on a specific pillar for this timeframe?”*
+This structure allows you to quickly determine which assets are strongest overall at a given moment and which assets dominate a specific analytical pillar within the same timeframe.
  
 :::note
-**Oxygen Swarm is not included in per-project rankings.**  
+***Oxygen Swarm is not included in per-area rankings.**  
 Oxygen describes the macro regime and risk appetite of the current timeframe, which are shared across all crypto assets. Since it is a single contextual score, ranking projects by Oxygen **would be meaningless**.
 :::

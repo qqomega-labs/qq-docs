@@ -7,30 +7,14 @@ sidebar_position: 3
 
 Timing matters.
 
-Initially, for simplicity, we may rely on tools that aggregate data. The final objective is to stay as **close as possible to <span className="pink-glow-text">real-time data sources</span>**.
+QQ Omega operates with multiple update frequencies calibrated to the nature of each data stream. On-chain inputs are processed as close to real time as possible, while market data such as price action, volume, and order book dynamics are refreshed at intraday or minute level intervals. Off-chain inputs and fundamental information including team updates, documentation changes, and legal or regulatory disclosures are incorporated as new information is published through official channels.
 
-QQ Omega works with different update frequencies depending on the type of data:
-
-- **On-chain data** → near real-time updates  
-- **Market data (price, volume, order books)** → intraday or minute-level updates  
-- **Social and narrative signals** → frequent pulls, every few minutes or hours  
-- **Off-chain and fundamentals (team, docs, legal)** → daily or weekly updates  
-
-Keeping the pipeline **fresh, robust, and close to the source** is a <span className="pink-glow-text">**core priority**</span>.  
-If a data source degrades in quality or latency, it is reviewed or replaced.
+While early implementations may rely on aggregated data providers for simplicity, the long term objective is to remain as close as possible to <span className="pink-glow-text">real-time data sources</span>. Maintaining a data pipeline that is fresh, robust, and close to the source is a <span className="pink-glow-text">core priority</span>, and any data source that degrades in quality or latency is continuously reviewed and replaced when necessary.
 
 ## Quality Checks and Anti-Spam Filters
 
-To keep scores clean and trustworthy, QQ applies multiple safeguards:
+To keep scores clean and trustworthy, QQ applies a layered validation process before any data is allowed to influence agent outputs or final scores. Incoming data is continuously inspected for missing values, impossible figures, and duplicated entries, while statistical methods are used to identify abnormal patterns such as artificial volume spikes, wash trading, or bot driven activity. Whenever possible, information is cross checked across multiple independent data providers to reduce source specific bias.
 
-- **Data validation**
-  - Check for missing values, impossible numbers, and duplicated entries.
-- **Outlier detection**
-  - Flag suspicious spikes, such as fake volume, wash trading, or bot-driven social spam.
-- **Source cross-checking**
-  - Compare information across multiple providers when possible.
-- **Anti-gaming heuristics**
-  - Detect patterns of behavior aimed only at farming a better score, such as short-term liquidity injections or wash activity designed to look active.
+In parallel, QQ applies anti gaming heuristics designed to detect behaviors aimed solely at inflating scores rather than reflecting genuine activity, including short term liquidity injections or wash activity engineered to appear organic.
 
-Only after passing these <span className="pink-glow-text">checks</span> does data flow into the agents and affect scores.  
-If something looks wrong, data can be **flagged, downweighted, or excluded**.
+Only after passing these <span className="pink-glow-text">quality checks</span> does data propagate through the AI agents and affect scores. When anomalies are detected, inputs can be <span className="pink-glow-text">flagged</span>, <span className="pink-glow-text">downweighted</span>, or <span className="pink-glow-text">excluded</span> to preserve the integrity of the system.

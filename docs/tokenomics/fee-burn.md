@@ -13,15 +13,16 @@ Fees **received by the dev wallet** are processed according to the rules below.
 
 ### POL Allocation (Protocol-Owned Liquidity)
 - <span className="pink-glow-text">**17% of the fees**</span> received by the dev wallet are allocated to <span className="pink-glow-text">**POL (Protocol-Owned Liquidity)**</span>.
-- POL means the protocol **buys $QQ and $VIRTUAL on the market** and **adds them as liquidity** to strengthen the $QQ/$VIRTUAL pool over time.
+- POL means the protocol **allocates protocol fees to market-buy $QQ and $ETH and add them as liquidity**, creating and supporting the $QQ/$ETH pool long term.
+
+
 
 ### Burn Rules
-- The burn is **capped at a maximum of 25,000,000 $QQ per calendar month** across all executions in that month.
-- If, after buybacks, the amount of $QQ exceeds **25,000,000 $QQ in a given month**:
-  - **Up to 25,000,000 $QQ → burned**
-  - **Any amount above 25,000,000 $QQ → sent to the airdrop wallet**
-- The burn process will continue until the total supply reaches <span className="pink-glow-text">**???.???.???**</span> $QQ.  
-  The exact final supply is **not predetermined** and depends on protocol activity, but the burn will account for **at least 50% of the initial total supply**.
+
+The burn mechanism is capped at a maximum of **25,000,000 $QQ per calendar month** across all executions within that month. If, following buybacks, the total amount of $QQ acquired in a given month exceeds **25,000,000 $QQ**, up to **25,000,000 $QQ** is burned, while any excess amount is automatically redirected to the airdrop wallet.
+
+The burn process continues until the total supply reaches <span className="pink-glow-text">**???.???.???**</span> $QQ. The exact final supply is not predetermined and depends on protocol activity over time, however the burn mechanism is designed to remove <span className="pink-glow-text">**at least 50% of the initial total supply**</span>.
+
 
 ### Summary
 As fees are distributed to the dev wallet, the flow is:
@@ -29,22 +30,26 @@ As fees are distributed to the dev wallet, the flow is:
 - **15% of fees → <span className="pink-glow-text">buy</span> $QQ on the market**
 - **First 25,000,000 $QQ per month → <span className="pink-glow-text">**burned**</span>**
 - **Anything above 25,000,000 $QQ per month → <span className="pink-glow-text">**airdrop**</span> wallet**
-- **15% of fees → <span className="pink-glow-text">**buy**</span> $QQ and $VIRTUAL and add <span className="pink-glow-text">**liquidity**</span> to the LP**
-- **The total burn has no fixed upper limit, but will be at least 50% of the initial total supply**
+- **15% of fees → <span className="pink-glow-text">**buy**</span> $QQ and $ETH and add <span className="pink-glow-text">**liquidity**</span> to LP on Uniswap**
+- **The total burn has no fixed upper limit, but will be at least <span className="pink-glow-text">50%</span> of the initial total supply**
 
 
 ### Processing Cadence
-- Virtuals routes taxed trades through an automated fee pipeline (tax → swap to $VIRTUAL → distribution).
-- Distributions are **periodic** and depend on **accumulated trading activity and thresholds**, so timing is not fixed.
-- **Each time** a distribution is received, the allocations above are executed.
-- We publish a **monthly recap** aggregating all executions within the calendar month.
+
+Virtuals routes taxed trades through an automated fee pipeline that applies the tax, swaps proceeds into $VIRTUAL, and distributes the resulting amounts according to the defined allocation logic. Distributions occur on a periodic basis and are triggered by accumulated trading activity and predefined thresholds rather than by a fixed schedule. Each time a distribution is executed, the full allocation process is applied in accordance with the rules above. All executions within a calendar month are aggregated and reported in a publicly available <span className="pink-glow-text">monthly recap</span>.
+
 
 ### Transparency
-For full transparency, we will publish **on-chain proofs every month**, clearly showing:
 
-| Category        | Amount           | Transaction Hash | Wallet / Contract | Notes                |
-|-----------------|------------------|------------------|-------------------|----------------------|
-| Buyback         | 1,250,000 QQ     | 0x8b.......................aaaa    | Buyback Treasury  | Market buy           |
-| Burn            | 800,000 QQ       | 0x3e.......................fedc      | Burn Address      | Permanent removal    |
-| Airdrop         | 300,000 QQ       | 0xf6.......................420f      | Airdrop Wallet    | Community rewards    |
-| POL / Liquidity | 150,000 USDC     | 0xff.......................9631      | LP Contract       | QQ+VIRTUAL bought and added to pool        | 0x87.......................026a
+To ensure full transparency, QQ Omega publishes **monthly on-chain proofs** that document all protocol-level financial actions. Each entry is traceable on-chain and allows anyone to independently verify how funds are used, moved, or removed from circulation.
+
+The table below provides an example of how these disclosures are presented, using representative entries for each operation type.
+
+| Time     | Type        | Amount           | Transaction Hash              |
+|----------|-------------|------------------|-------------------------------|
+| 15 feb 2026 | Buyback     | 1,250,000 QQ     | 0x8b..........................................aaaa      |
+| 15 feb 2026 | Burn        | 800,000 QQ       | 0x3e..........................................fedc      |
+| 15 feb 2026 | Airdrop     | 300,000 QQ       | 0xf6..........................................420f      |
+| 15 feb 2026 | POL         | 20,000 USDC     | 0x87..........................................026a      |
+
+These disclosures are published on a recurring basis and serve as a verifiable record of protocol activity, reinforcing accountability and trust through direct on-chain evidence.
