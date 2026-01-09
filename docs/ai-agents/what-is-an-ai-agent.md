@@ -42,23 +42,17 @@ In QQ Omega, each category (Fundamentals, Tokenomics, and others) is **a full sw
 
 Each category has one <span className="pink-glow-text">**Element**</span> associated with it:
 
-- <span className="pink-badge">[**Carbon swarm**](carbon.md)</span> → **fundamentals** experts
-  Agents focused on people, product, business model, governance, security, and related factors.
 
-- <span className="pink-badge">[**Gold swarm**](gold.md)</span> → **tokenomics** experts
-  Agents focused on supply, inflation, burns, unlocks, buybacks, utility, yield, and similar mechanisms.
+| Swarm | Area |
+|:------:|-------------|
+| <span className="pink-badge">[**Carbon swarm**](carbon.md)</span> | **Fundamentals** – Team, product, business model, governance, security. |
+| <span className="pink-badge">[**Gold swarm**](gold.md)</span> | **Tokenomics** – Supply, inflation, burns, unlocks, buybacks, yield. |
+| <span className="pink-badge">[**Hydrogen swarm**](hydrogen.md)</span> | **On-chain flow** – TVL, volumes, holders, accumulation vs distribution. |
+| <span className="pink-badge">[**Silicon swarm**](silicon.md)</span> | **Technical & quant** – Price action, indicators, liquidations, regimes. |
+| <span className="pink-badge">[**Oxygen swarm**](oxygen.md)</span> | **Macro & regime** – Rates, liquidity, dominance, market cap, sentiment. |
+| <span className="pink-badge">[**Phosphorus swarm**](phosphorus.md)</span> | **Orchestration** – Area scores, global QQ Score, final insights. |
 
-- <span className="pink-badge">[**Hydrogen swarm**](hydrogen.md)</span> → **on-chain flow** experts
-  Agents focused on TVL, volumes, holder clusters, accumulation versus distribution, and related behavior.
 
-- <span className="pink-badge">[**Silicon swarm**](silicon.md)</span> → **technical and quantitative** experts
-  Agents focused on price action, relevant indicators, liquidations, and trend and volatility regimes.
-
-- <span className="pink-badge">[**Oxygen swarm**](oxygen.md)</span> → **macro and regime** experts
-  Agents focused on interest rates, global liquidity, dominance, total market capitalization, fear and greed, and seasonality.
-
-- <span className="pink-badge">[**Phosphorus swarm**](phosphorus.md)</span> → **orchestration and scoring** experts
-  Agents focused on combining all other swarms into area scores, a global QQ Score, and clear insights.
 
 So:
 - **Agent** = one small specialist with one job.  

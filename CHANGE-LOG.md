@@ -1,5 +1,11 @@
 # Change Log
 
+## [Unreleased] - 2026-01-09
+
+### Changed
+
+- Fix Token address copy action doesn't work adding `z-index:1` css rule in `TokenAddressCard` style module.
+
 ## [Unreleased] - 2026-01-06
 
 ### Added

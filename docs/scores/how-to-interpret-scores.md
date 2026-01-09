@@ -13,37 +13,24 @@ keywords:
 image: /img/QQlogo.png
 ---
 
-## How to interpret scores
+## How to Interpret Scores
 
-QQ assigns a <span className="pink-glow-text">**0–100 score**</span> to each dimension (Fundamentals, Tokenomics, On-chain, TA, Macro) and a **global QQ Score** per project.
+QQ assigns a <span className="pink-glow-text">**0–100 score**</span> to each dimension (Fundamentals, Tokenomics, On-chain, TA, Macro) and a **global QQ Score** per project. These scores are designed to be read as a relative measure of quality versus valuation, not as absolute signals.
 
 General reading:
 
 |   Range    |      Label       | Meaning |
 |:----------:|:----------------:|:----------------------:|
-| 🔵 80 – 100 |   very cheap     | **high score vs market cap** → strongly undervalued |
-| 🟢 60 – 80  |     cheap        | **good score vs market cap** → undervalued |
-| 🟡 40 – 60  |   fair value     | **score and market cap aligned** |
-| 🟠 20 – 40  |   expensive      | **low score vs market cap** → overvalued |
-| 🔴 0 – 20   | very expensive   | **very low score vs market cap** → extremely overvalued |
+| 🔵 80 – 100 |   very cheap     | **high score vs valuation** → strongly undervalued |
+| 🟢 60 – 80  |     cheap        | **good score vs valuation** → undervalued |
+| 🟡 40 – 60  |   fair value     | **score and valuation aligned** |
+| 🟠 20 – 40  |   expensive      | **low score vs valuation** → overvalued |
+| 🔴 0 – 20   | very expensive   | **very low score vs valuation** → extremely overvalued |
 
+### What “Cheap / Expensive” Means in QQ Omega
 
-### What “cheap / expensive” means in QQ Omega
+In QQ Omega, “cheap” and “expensive” emerge from a relative valuation process that compares an asset’s **current valuation** against the quality implied by the scores produced by each swarm, then aggregates those views into a single <span className="pink-glow-text">**QQ score**</span> that reflects how <span className="pink-glow-text">**undervalued**</span> or <span className="pink-glow-text">**overvalued**</span> the asset appears relative to its scored quality.
 
-In QQ Omega **cheap / expensive** comes from a **relative valuation check**:
+For example, an asset may fall into the “cheap zone” when it exhibits strong fundamentals, on-chain signals, tokenomics, and structural indicators while its valuation does not yet reflect that quality. Conversely, an asset may fall into the “expensive zone” when quality signals are weak but valuation remains elevated, often driven by narratives, hype, or short-term speculation.
 
-- QQ takes the **market cap** of the crypto asset
-- compares it against the **scores assigned by each swarms**
-- and outputs a <span className="pink-glow-text">**QQ score**</span> representing how <span className="pink-glow-text">**undervalued**</span> **(cheap)** or <span className="pink-glow-text">**overvalued**</span> **(expensive)** the asset looks **relative to its scored quality**
-
-Examples:
-
-- **High scores, low market cap → “cheap zone”**
-  - Strong fundamentals/on-chain/tokenomics/etc., but the market cap doesn’t reflect it yet.
-- **Low scores, high market cap → “expensive zone”**
-  - Weak quality signals, but market cap is inflated (often by hype / KOLs / narrative).
-
-QQ highlights these mismatches so you can decide whether to:
-
-- **<span className="pink-glow-text">accumulate</span> in cheap zones**, or
-- **<span className="pink-glow-text">take profit / reduce risk</span> in expensive zones**.
+QQ highlights these mismatches so you can decide whether to <span className="pink-glow-text">**accumulate**</span> in favorable conditions or <span className="pink-glow-text">**take profit / reduce risk**</span> when conditions appear stretched.
