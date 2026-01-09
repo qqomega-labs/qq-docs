@@ -228,6 +228,7 @@ const config: Config = {
           routeBasePath: "/docs",
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/qqomega-labs/qq-docs/tree/main/",
+          sidebarCollapsed: false,
         },
         // BLOG DISABLED
         // blog: {
