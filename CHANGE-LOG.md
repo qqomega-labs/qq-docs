@@ -1,6 +1,11 @@
 # Change Log
 
-## [Unreleased] - 2026-01-09
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [v0.1.0] - 2026-01-09
 
 ### Added
 
@@ -13,6 +18,12 @@
   - Added SEO metadata in all articles.
 
 ### Changed
+
+- **SEO Metadata Optimization** (17 documentation pages)
+  - Updated descriptions to 150-160 characters with compelling, page-specific copy
+  - Expanded keywords with targeted search terms matching page content
+  - Standardized OG image to `/img/qq-og-image.png` across all pages
+  - Sections updated: AI Agents (7), Scores (4), Tokenomics (3), Roadmap (3)
 
 - Improved homepage meta description in `src/pages/index.tsx` (was placeholder text)
 - Fixed typo in tokenomics category.json ("trasparent" -> "transparent")
@@ -1074,10 +1085,13 @@ This ensures links inside cards and admonitions are clearly visible and accessib
 
 ---
 
-## Version History
-
-### [0.0.0] - Initial Setup
+## [v0.0.0] - 2025-12-11
 
 - Docusaurus 3.9.2 with classic theme
 - Basic green/teal color scheme (Infima defaults)
 - Standard documentation structure
+
+---
+
+[Unreleased]: https://github.com/qqomega-labs/qq-docs/compare/v0.0.0...HEAD
+[v0.0.0]: https://github.com/qqomega-labs/qq-docs/releases/tag/v0.0.0
