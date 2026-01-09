@@ -27,17 +27,36 @@
 }
 
 /* Electron animation - synchronized with text glow at 20% */
+/* Smooth acceleration and deceleration with multiple intermediate keyframes */
 @keyframes electron-pass {
-  0%, 15% {
+  0%, 13% {
     background-position: -30% 0;
+  }
+  15% {
+    background-position: -10% 0;
+  }
+  17% {
+    background-position: 15% 0;
+  }
+  19% {
+    background-position: 35% 0;
   }
   20% {
     background-position: 50% 0;
   }
+  21% {
+    background-position: 65% 0;
+  }
+  23% {
+    background-position: 85% 0;
+  }
   25% {
+    background-position: 110% 0;
+  }
+  27% {
     background-position: 130% 0;
   }
-  25.01%, 100% {
+  27.01%, 100% {
     background-position: -30% 0;
   }
 }
@@ -67,7 +86,7 @@
     drop-shadow(0 0 8px rgba(255, 29, 100, 1))
     drop-shadow(0 0 16px rgba(255, 29, 100, 0.8))
     drop-shadow(0 0 24px rgba(255, 29, 100, 0.6));
-  animation: electron-pass 10s ease-in-out infinite;
+  animation: electron-pass 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   animation-play-state: running;
 }
 

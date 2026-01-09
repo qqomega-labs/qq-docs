@@ -1,5 +1,508 @@
 # Change Log
 
+## [Unreleased] - 2026-01-09
+
+### Added
+
+- **SEO Infrastructure**
+  - Created `robots.txt` in `/static/` with sitemap reference and crawl directives
+  - Sitemap auto-generated via Docusaurus classic preset at `/sitemap.xml`
+
+- **SEO Frontmatter for Documentation**
+  - Added `description`, `keywords`, and `image` to all AI agent docs (Carbon, Gold, Hydrogen, Silicon, Oxygen, Phosphorus)
+  - Added SEO metadata in all articles.
+
+### Changed
+
+- Improved homepage meta description in `src/pages/index.tsx` (was placeholder text)
+- Fixed typo in tokenomics category.json ("trasparent" -> "transparent")
+- Fix Token address copy action doesn't work adding `z-index:1` css rule in `TokenAddressCard` style module
+- Sidebar menu starts with default open sections, adding `sidebarCollapsed: false` in `docusaurus.config.ts` module
+
+## [Unreleased] - 2026-01-06
+
+### Added
+
+- **TokenAddressCard Component** (`src/components/TokenAddressCard/`)
+  - Click-to-copy token address with visual feedback (checkmark animation)
+  - Truncated address display on mobile (`0x0715...5fDC`), full address on desktop
+  - Glassmorphism styling matching TokenomicsInfoCard design
+  - Three color variants: pink, cyan, purple
+  - Light/dark mode support with proper variant backgrounds
+  - Copy button with hover states and success indication
+  - Used in: `docs/tokenomics/qq-tokenomics.mdx`
+
+- **Comprehensive JSDoc documentation for all components**
+  - Added JSDoc to custom components: AnimatedAtomLogo, TokenomicsInfoCard, TokenomicsPieChart, MdxImageContainer, TokenAddressCard
+  - Added JSDoc to swizzled theme components: MDXComponents, Logo, Navbar, NavbarMobilePrimaryMenu
+  - Documentation includes: @component, @usage, @customizations, @example tags
+  - Props interfaces fully documented with descriptions
+  - Clear indication whether components are swizzled or custom
+  - Usage examples with code snippets
+
+- **Cloudflare Pages build documentation** (`README.md`)
+  - Added "Cloudflare Pages Build" section explaining dual package manager setup
+  - Step-by-step guide for adding dependencies with both Bun and npm
+  - Explanation of why `package-lock.json` sync is required
+  - Cloudflare Pages configuration details (build command, output directory, Node version)
+
+### Changed
+
+- **Removed unused components**
+  - Deleted AnimatedLogo component (unused, replaced by AnimatedAtomLogo)
+  - Deleted CryptoCard component (unused in current implementation)
+  - Deleted GlassButton component (unused in current implementation)
+  - Deleted HomepageFeatures component (commented out, not used)
+  - Cleaned up component directory to only active components
+
+- **Improved h3 heading spacing** (`src/css/custom.css`)
+  - Desktop: `margin-top: 3rem` (was 2rem), `margin-bottom: 1.5rem` (new)
+  - Mobile (<768px): `margin-top: 2.5rem` (was 1.25rem), `margin-bottom: 1rem` (was 0.5rem)
+  - Better visual separation between major sections
+  - Responsive spacing that scales appropriately
+
+- **Updated navbar logo to transparent version** (`docusaurus.config.ts`)
+  - Changed logo from `img/QQlogo_nopadding.png` to `icon1.png`
+  - Uses proper transparent PNG (72x72px) with QQ logo
+  - Clean appearance on all backgrounds
+  - Note: Overridden by AnimatedAtomLogo in `src/theme/Logo/index.tsx`
+
+- **Unified TokenAddressCard styling with TokenomicsInfoCard** (`src/components/TokenAddressCard/styles.module.css`)
+  - Updated card styles to match TokenomicsInfoCard design system
+  - Changed background to more subtle `rgba(255, 255, 255, 0.03)` for better glassmorphism
+  - Added gradient border hover effect using `::before` pseudo-element
+  - Updated variant styling: Pink, Cyan, Purple now use consistent solid rgba colors instead of gradients
+  - Implemented mobile-first responsive design with breakpoints at 768px (tablet) and 1024px (desktop)
+  - Enhanced hover effects: `translateY(-2px)` transform with multi-layered box-shadows
+  - Improved icon container sizing: 40px (desktop), 36px (tablet), with consistent variant-specific backgrounds
+  - Updated typography: Uses `var(--ifm-font-color-base)` for better theme integration
+  - Added comprehensive light mode support with proper contrast adjustments for all variants
+  - Implemented `prefers-reduced-motion` support for accessibility
+  - Copy button and address display now fully integrated with theme system
+
+### Fixed
+
+- **Cloudflare Pages build failure**
+  - Updated `build:cf` script in `package.json`.
+  - Synced `package-lock.json` with current dependencies installed with bun.
+  - Regenerated `package-lock.json` to sync with `package.json`
+  - Fixed npm ci error for missing dependencies (recharts, @reduxjs/toolkit, decimal.js-light, es-toolkit)
+  - Maintained Bun for local development, npm for deployment
+
+- **Mobile navbar "Docs" link visibility**
+  - Hidden "Docs" link from mobile navbar (<996px) using CSS
+  - Added `.navbar__items--left > *:not(.navbar__brand) { display: none !important }`
+  - Prevents overlap with search and other navbar elements
+  - Link still accessible via mobile hamburger menu
+
+- **TokenAddressCard light/dark mode support**
+  - Added proper light mode styles for all variants (pink, cyan, purple)
+  - Variant backgrounds use subtle gradients (0.08-0.03 opacity) in light mode
+  - Border colors adjusted for visibility (0.3 opacity)
+  - Icon container background matches theme
+  - Hover states work correctly in both modes
+
+### Technical Details
+
+**Component Cleanup:**
+
+- Remaining active components: 4 custom + 4 swizzled theme components
+- Active custom components: AnimatedAtomLogo, TokenomicsInfoCard, TokenomicsPieChart, TokenAddressCard, MdxImageContainer
+- Active swizzled components: Logo, MDXComponents, Navbar, NavbarMobilePrimaryMenu
+
+**TokenAddressCard Implementation:**
+
+- Location: `src/components/TokenAddressCard/`
+- Features: Clipboard API, responsive truncation, glassmorphism styling
+- Mobile breakpoint: 768px for address display switch
+- Copy feedback duration: 2000ms timeout
+- Success color: `rgba(34, 197, 94, ...)` (green)
+
+## [Unreleased] - 2026-01-06
+
+### Added
+
+- **Animated logo with rotating electrons** (`src/components/AnimatedAtomLogo/`, `src/theme/Logo/index.tsx`)
+  - Interactive logo animation on hover
+  - 2 electron dots rotate around the O ring when hovering over the logo
+  - SVG-based animation using `animateTransform` with rotation around center point (512, 512)
+  - Electron dots positioned at (315, 315) and (715, 715) to overlay original static dots
+  - Animation speed: 3000ms (normal), configurable with slow/fast options
+  - Conditionally renders animated SVG on hover for reliable animation start
+  - Preserves original QQ logo appearance with perfect overlay technique
+  - Swizzled Logo component to integrate AnimatedAtomLogo into navbar
+  - Logo size: 40px in navbar for optimal visibility
+
+### Fixed
+
+- **TokenomicsPieChart labels and theming**
+  - Responsive label sizing: 10px mobile, 14px desktop
+  - Labels match segment colors with `fill={fill}`
+  - Theme-aware borders: `rgba(255,255,255,0.1)` dark, `rgba(0,0,0,0.1)` light
+  - MutationObserver for dynamic theme detection
+  - Labels no longer cut off on mobile
+
+- **GitHub button in mobile sidebar header**
+  - Repositioned next to theme toggle and close button
+  - Matches theme toggle style: same background, padding, border-radius
+  - Inline SVG with `fill="currentColor"` for theme adaptation
+  - Pink hover: background `rgba(255,29,100,0.2)`, icon turns #ff1d64
+  - Improved spacing: `gap: 1rem`, logo `margin-right: auto`
+  - Ejected `Navbar/MobileSidebar/Header` for full control
+
+- **Desktop GitHub button hover effect**
+  - Consistent pink hover matching mobile
+  - CSS filter converts icon to #ff1d64 on hover
+  - Background changes to pink tint (`rgba(255,29,100,0.2/0.15)`)
+
+## [Unreleased] - 2026-01-05
+
+### Fixed
+
+- **Mobile navbar layout and alignment** (`src/css/custom.css`, `docusaurus.config.ts`, `src/theme/Navbar/MobileSidebar/PrimaryMenu/index.tsx`)
+  - Fixed overlapping header elements on mobile viewport (< 996px)
+  - Completely resolved search bar and "Docs" link collision issues
+  - **GitHub button**:
+    - Visible on desktop navbar (icon only)
+    - Hidden from mobile top navbar to save space
+    - Appears in mobile sidebar menu next to theme toggle button
+    - **Fixed external link arrow icon** (complete solution):
+      - Removed `label` property from GitHub navbar item in `docusaurus.config.ts`
+      - Replaced `<a>` tag with `<div role="button">` element to bypass Docusaurus's link processing
+      - Added filter in component to exclude GitHub link from navbar items list (checks both `className` and `href`)
+      - Completely hides original navbar GitHub link in mobile sidebar with CSS
+      - Now renders cleanly with GitHub icon + text only, no external link icons
+    - **Pink hover effect**:
+      - Background changes to `rgba(255, 29, 100, 0.25)` on hover
+      - Border color changes to hot pink `#f472b6`
+      - Adds pink glow with `box-shadow: 0 0 12px rgba(244, 114, 182, 0.4)`
+      - Uses `@media (hover: hover)` to prevent sticky states on touch devices
+  - Aggressive size reductions for mobile navbar:
+    - Logo: Reduced from 2.5rem to 2rem height
+    - Logo title: Reduced from 0.85rem to 0.75rem font size
+    - Search bar: Very compact (60px-80px width) with smaller font (0.65rem)
+    - Search bar padding: 0.3rem 0.4rem (ultra compact)
+    - Navbar item padding: Reduced to 0.35rem 0.5rem
+    - Navbar gaps: Minimized to 0.25rem between items
+  - "Docs" link: Hidden completely on all mobile viewports (< 996px)
+    - Accessible via hamburger menu instead
+    - Prevents all overlap issues with search box
+  - Search bar optimizations:
+    - Set to `flex: 0 1 auto` to prevent expansion
+    - Input padding reduced to 0.35rem 0.5rem
+    - Font size reduced to 0.7rem for compact display
+  - Enhanced mobile sidebar (hamburger menu):
+    - GitHub button with icon + "GitHub" text label (added `label: "GitHub"` to config)
+    - Desktop navbar: Icon only (text hidden with `font-size: 0`)
+    - Mobile sidebar: Icon + visible "GitHub" text with proper font-size
+    - Full SVG icon inline (white in dark mode, dark in light mode)
+    - Glassmorphism styling with pink accent and rounded corners
+    - Proper visibility with `opacity: 1` and `visibility: visible` forced
+    - Icon size: 20px with 0.625rem margin
+    - Min-height: 40px for proper touch target
+    - Hover effects matching theme (pink glow)
+    - Full light/dark mode support
+
+- **TokenomicsPieChart tooltip animations** (`src/components/TokenomicsPieChart/styles.module.css`)
+  - **Fixed "swarm" animation issue**:
+    - Replaced animation-based tooltip with CSS transitions for smooth, stable behavior
+    - Changed from re-triggering animations to smooth opacity/transform transitions (0.15s)
+    - Added `will-change: opacity, transform` for better rendering performance
+  - **Enhanced glassmorphism effect**:
+    - Reduced background opacity from 0.95 to 0.6 for true glass transparency
+    - Increased backdrop-filter blur from 16px to 24px for better frosted glass effect
+    - Added inset shadows for depth: `inset 0 1px 0 rgba(255, 255, 255, 0.15)`
+    - Maintained pink accent glow and border
+  - **Subtler animations**:
+    - Center label pulse: Reduced scale from 1.05 to 1.02, slowed from 2s to 3s
+    - Legend icon pulse: Slowed from 1.5s to 2.5s
+    - Opacity changes: From 0.9 to 0.95 for gentler effect
+  - **Natural chart appearance**:
+    - Removed `brightness(1.2)` and `drop-shadow` filters from pie slices on hover
+    - Now uses subtle opacity change (0.9) for minimal visual feedback
+    - Chart colors remain natural and undistorted
+    - Glassy tooltip provides all necessary information without altering chart
+
+### Technical Details
+
+**Navbar Fixes:**
+
+- **Desktop**: `.header-github-link` - Visible with icon only (`font-size: 0` to hide text label)
+- **Mobile** (< 996px):
+  - `.navbar` - Padding reduced to 0.5rem for compact layout
+  - `.navbar .header-github-link` - Hidden with `display: none !important` (appears in mobile sidebar)
+  - `.navbar__inner` - Gap minimized to 0.25rem
+  - `.navbar__items` - Gap set to 0.25rem for tight spacing
+  - `.navbar__items--left` - Gap 0.25rem, `flex: 0 1 auto`, max-width 50%
+  - `.navbar__items--left .navbar__link` - Hidden with `display: none !important` (Docs link)
+  - `.navbar__items--right` - Gap 0.35rem, auto margin-left, `flex-shrink: 0`
+  - `.navbar__brand` - Fixed width (`flex: 0 0 auto`) with no margin
+  - `.navbar__logo` - Height reduced to 2rem (from 2.5rem)
+  - `.navbar__title` - Font size reduced to 0.75rem (from 0.85rem)
+  - `.navbar__search` - Ultra compact: 60px-80px width, `flex: 0 1 auto`
+  - `.navbar__search-input` - Font 0.65rem, padding 0.3rem 0.4rem
+
+**GitHub Button Configuration:**
+
+- `docusaurus.config.ts` - Removed `label` property from navbar item
+  - Prevents automatic rendering in mobile sidebar menu
+  - Desktop navbar renders icon-only button
+  - Mobile sidebar uses custom button component instead
+
+**Mobile Sidebar GitHub Button:**
+
+- Custom component in `src/theme/Navbar/MobileSidebar/PrimaryMenu/index.tsx`
+  - Uses `<div role="button">` element instead of `<a>` tag
+  - Filters out original GitHub link from navbar items (checks `className` and `href`)
+  - Inline GitHub icon as background SVG (data URI)
+  - Custom styling:
+    - Background: `rgba(255, 29, 100, 0.08)` with glassmorphism
+    - Border: `1px solid rgba(255, 29, 100, 0.2)` with 6px border-radius
+    - Icon (20px) + "GitHub" text label
+    - Font size: 0.8rem, min-height: 40px for touch targets
+    - Padding: 0.5rem 0.875rem
+- CSS hover effects (`.mobile-github-button:hover`):
+  - Background: `rgba(255, 29, 100, 0.25)`
+  - Border: `#f472b6` (hot pink)
+  - Glow: `box-shadow: 0 0 12px rgba(244, 114, 182, 0.4)`
+- Original navbar GitHub link completely hidden in sidebar with CSS
+
+**TokenomicsPieChart Improvements:**
+
+- Tooltip styling (`.tooltip`):
+  - Background: `rgba(20, 21, 26, 0.6)` for transparency
+  - Backdrop filter: `blur(24px) saturate(180%)` for glassmorphism
+  - Border: `1px solid rgba(255, 255, 255, 0.2)`
+  - Inset shadows for depth and glass effect
+  - Transitions: `opacity 0.15s, transform 0.15s` (smooth, no re-triggering animations)
+  - Performance optimization: `will-change: opacity, transform`
+- Animation adjustments:
+  - `.centerLabel`: `animation: centerPulse 3s` (was 2s)
+  - `@keyframes centerPulse`: scale(1.02) (was 1.05), opacity 0.95 (was 0.9)
+  - `.legendItemActive .legendIcon`: `animation: centerPulse 2.5s` (was 1.5s)
+- Chart slice hover (`.pieCell:hover`):
+  - Removed: `filter: brightness(1.2) drop-shadow(...)`
+  - Added: `opacity: 0.9` (subtle feedback only)
+  - Preserves natural colors
+
+## [Unreleased] - 2026-01-05
+
+### Added
+
+- **GitHub icon in navbar** (`docusaurus.config.ts`, `src/css/custom.css`)
+  - Replaced "GitHub" text label with GitHub logo SVG icon
+  - Icon matches theme toggle button styling (same size, padding, background, hover effects)
+  - Button background: `rgba(0, 0, 0, 0.3)` in dark mode, `rgba(255, 255, 255, 0.5)` in light mode
+  - Icon size: 20px on desktop, 18px on mobile
+  - Pink hover effect: Background changes to `rgba(255, 29, 100, 0.2)` on hover
+  - Accessible: Added `aria-label="GitHub repository"` for screen readers
+  - Responsive: Matches mobile navbar sizing (0.35rem padding, 18px icon)
+
+- **Environment configuration** (`.env`)
+  - Added `.env` file with `BROWSER=none` to prevent browser auto-opening
+  - Added `.env` to `.gitignore` for proper version control exclusion
+
+### Changed
+
+- **Development server configuration** (`package.json`)
+  - Updated `start` script with `--no-open` flag to prevent automatic browser opening
+  - Fixes AppleScript error when using "Google Chrome Dev" as system browser
+  - Users now manually open browser to `http://localhost:3000/`
+
+- **Markdown references** (`docs/ai-agents/what-is-an-ai-agent.md`)
+  - Fixed broken Markdown links to agent files (case sensitivity issue)
+  - Updated file references to use lowercase filenames:
+    - `Carbon.md` in `carbon.md`
+    - `Hydrogen.md` in `hydrogen.md`
+    - `Silicon.md` in `silicon.md`
+    - `Oxygen.md` in `oxygen.md`
+    - `Phosphorus.md` in `phosphorus.md`
+  - Resolves Docusaurus build warnings about unresolved Markdown links
+
+### Fixed
+
+- **Browser opening error**
+  - Fixed AppleScript error when Docusaurus tries to open "Google Chrome Dev"
+  - Error was: `openChrome.applescript:848:858: script error: Un proprietà non può andare dopo questo identificativo. (-2740)`
+  - Solution: Used Docusaurus built-in `--no-open` CLI flag instead of environment variable workarounds
+
+### Technical Details
+
+**GitHub Icon Implementation:**
+
+- CSS class: `.header-github-link`
+- Icon technique: SVG embedded as data URL in CSS `::before` pseudo-element
+- Two SVG variants:
+  - Dark mode: White fill (`fill='white'`)
+  - Light mode: Dark gray fill (`fill='%231a1a1a'`)
+- Hover behavior: Entire button background changes to pink (not just icon)
+- Positioning: Flexbox centering with `align-items: center` and `justify-content: center`
+
+## [Unreleased] - 2026-01-05
+
+### Changed
+
+- **Markdown references**
+  - Update Markdown references with exact case to avoid docusaurus warnings.
+
+## [Unreleased] - 2026-01-05
+
+### Added
+
+- **TokenomicsPieChart Component** (`src/components/TokenomicsPieChart/`)
+  - Interactive donut chart using Recharts (v3.6.0) library
+  - Glassmorphism styling with crypto-themed colors matching QQ Omega palette
+  - Donut configuration: innerRadius={110}, outerRadius={180}, paddingAngle={3}
+  - Rounded corners on segments (cornerRadius={8})
+  - Custom legend with glassmorphism cards showing token amounts
+  - Interactive hover states with segment highlighting
+  - Dynamic tooltip colors matching slice colors
+  - Smooth fade-in entrance animation (0.8s) for landing page visibility
+  - Label positioning: shows name + percentage for segments ≥5%, percentage only for smaller segments
+  - Mobile-first responsive design with optimized spacing
+  - Height: 550px for prominent display
+  - Color-coded by allocation category:
+    - LP: Pink Hot (#f472b6)
+    - Airdrops (3): Cyan variations (Bright, Teal, Dark)
+    - Core Contributors (3): Purple variations + Pink Soft for Strategic Partnerships
+
+- **TokenomicsInfoCard Component** (`src/components/TokenomicsInfoCard/`)
+  - Reusable glassmorphism card for displaying token information
+  - Three color variants: pink, cyan, purple
+  - Optional icon, label, value, and subtext fields
+  - Hover effects with lift animation and glow
+  - Mobile-first responsive layout
+  - Grid container component (TokenomicsInfoGrid) for 1/2/3 column layouts
+  - Compact padding and spacing optimized for tablet/desktop viewing
+
+### Changed
+
+- **Tokenomics Documentation** (`docs/tokenomics/qq-tokenomics.mdx`)
+  - Converted from .md to .mdx for component integration
+  - Integrated TokenomicsPieChart with distribution data
+  - Added TokenomicsInfoCard grid with two rows
+  - Removed chart title for cleaner presentation
+
+### Technical Details
+
+**TokenomicsPieChart Implementation:**
+
+- **Location**: `src/components/TokenomicsPieChart/`
+- **Dependencies**: recharts@3.6.0
+- **Key Features**:
+  - TypeScript with proper type definitions (TokenomicsData interface with index signature)
+  - Custom label renderer showing names for larger segments
+  - Custom tooltip with fade-in animation (0.2s)
+  - Enhanced glassmorphism with blur(32px) saturate(180%)
+  - Custom legend grid with glassmorphism cards
+  - Interactive state management using React useState hook
+  - onMouseEnter/onMouseLeave handlers for hover effects
+  - Responsive legend grid: 1 column (mobile), 2 columns (tablet), 3 columns (desktop)
+
+**Animations:**
+
+- `@keyframes chartFadeIn`: Fade-in entrance (opacity + translateY + scale)
+- `@keyframes tooltipFadeIn`: Smooth tooltip appearance
+- `@keyframes centerPulse`: Pulsing effect for legend icons on hover
+- Respects `prefers-reduced-motion` for accessibility
+
+**TokenomicsInfoCard Implementation:**
+
+- **Location**: `src/components/TokenomicsInfoCard/`
+- **Grid System**: CSS Grid with responsive columns
+- **Variant System**: Dynamic className mapping for color variants
+- **Layout**: Flexbox with icon container + content column
+- **Hover Effects**: translateY(-2px) lift with enhanced shadows
+- **Light/Dark Mode**: Full support with adjusted colors and backgrounds
+
+**Color Palette Organization:**
+
+- LP allocation: `var(--qq-color-pink-hot)` - Hot pink for main liquidity
+- Airdrop allocations: Cyan family (`--qq-color-cyan-bright`, `--qq-color-cyan-teal`, `--qq-color-cyan-dark`)
+- Core contributors: Purple family (`--qq-color-purple-light`, `--qq-color-purple-dark`)
+- Strategic partnerships: `var(--qq-color-pink-soft)` - Part of core/purple color family
+
+## [Unreleased] - 2026-01-05
+
+### Added
+
+- **Automatic MDX Image Wrapping System**
+  - Created `src/theme/MDXComponents.tsx` to override default MDX components
+  - All `<img>` elements in MDX files now automatically wrapped with `MdxImageContainer`
+  - Provides consistent styling without manual imports or wrapping
+  - Glassmorphism effects (rounded corners, shadow) applied automatically
+  - Responsive layout (centered, max-width 800px, mobile-optimized padding)
+
+- **Comprehensive MDX Documentation in CLAUDE.md**
+  - Added "MDX Support" section (lines 123-190) with:
+    - When to use MDX vs regular Markdown
+    - Automatic image wrapping explanation
+    - Conversion guide for .md to .mdx files
+    - Example usage with standard markdown syntax
+    - Custom component usage examples
+  - Updated "MdxImageContainer Component" section (lines 320-358) with automatic usage documentation
+  - Updated "Swizzled Components" section (lines 379-401) to include MDXComponents.tsx
+
+### Changed
+
+- **Converted Markdown to MDX for Enhanced Functionality**
+  - Renamed `docs/about-qq-omega/team.md` → `team.mdx`
+  - Renamed `docs/about-qq-omega/what-is-qq-omega.md` → `what-is-qq-omega.mdx`
+  - Simplified image syntax from manual JSX wrapping to standard markdown: `![Alt](path)`
+  - Removed manual component imports (no longer needed with automatic wrapping)
+
+### Fixed
+
+- **Component naming typo**
+  - Fixed typo in `src/components/MdxImageContainer.tsx:6`
+  - Changed function name from `MdxImagContainer` to `MdxImageContainer`
+
+### Technical Details
+
+**Automatic Image Wrapping Implementation:**
+
+- Location: `src/theme/MDXComponents.tsx`
+- Extends `@theme-original/MDXComponents`
+- Overrides `img` component with custom wrapper
+- Preserves all image props and allows style overrides
+- Default styling applied:
+  - Width: 100%, Height: auto
+  - Border-radius: 12px
+  - Box-shadow: `0 4px 24px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.05)`
+  - Container max-width: 800px with centered alignment
+  - Bottom margin: 2rem for vertical spacing
+
+**Developer Experience Improvements:**
+
+- No manual imports needed for image styling
+- Standard markdown syntax `![Alt](path)` works automatically
+- Consistent image presentation across all MDX documentation
+- Backward compatible with existing markdown files (.md)
+
+## Style Changes
+
+Links inside cards (lines 1702-1720):
+
+- Dark mode: Links use cyan (#00a6e1) for better contrast against dark backgrounds
+- Light mode: Links use pink (#ff1d64) for better contrast against light backgrounds
+- Hover effect: Subtle underline appears on hover
+- Font weight: 500 to make links more prominent
+
+Links inside admonitions/alerts (lines 1274-1292):
+
+- Same color scheme as cards for consistency
+- Applied to .admonition-content a, .alert a, and .theme-admonition a
+- Same hover and visual treatment
+
+How It Works
+
+The CSS now uses var(--ifm-link-color) which automatically adapts:
+
+- Dark theme: #00a6e1 (cyan) - great contrast on dark backgrounds
+- Light theme: #ff1d64 (pink) - great contrast on light backgrounds
+
+This ensures links inside cards and admonitions are clearly visible and accessible in both themes, matching the "What is QQ" article style.
+
 ## [Unreleased] - 2025-12-20
 
 ### SEO Implementation & Optimization

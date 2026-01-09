@@ -1,12 +1,12 @@
 import type { ReactNode } from "react";
-import clsx from "clsx"; // NOTE: backup
-import Link from "@docusaurus/Link"; // NOTE: backup
+// import clsx from "clsx"; // NOTE: backup
+// import Link from "@docusaurus/Link"; // NOTE: backup
 import { Redirect } from "@docusaurus/router";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 // import HomepageFeatures from "@site/src/components/HomepageFeatures"; // NOTE: backup
-import Heading from "@theme/Heading"; // NOTE: backup
-import styles from "./index.module.css"; // NOTE: backup
+// import Heading from "@theme/Heading"; // NOTE: backup
+// import styles from "./index.module.css"; // NOTE: backup
 
 // NOTE: backup
 // function HomepageHeader() {
@@ -36,7 +36,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="QQ Omega combines AI-powered agents to score and rank cryptocurrency projects across fundamentals, tokenomics, on-chain metrics, and market sentiment."
     >
       {/* NOTE: backup */}
       {/* <HomepageHeader /> */}

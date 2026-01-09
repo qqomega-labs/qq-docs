@@ -6,7 +6,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "QQ Omega Labs Docs",
-  tagline: "AI-Powered Crypto Scoring Platform - Quantitative + Qualitative Analysis",
+  tagline:
+    "AI-Powered Crypto Scoring Platform - Quantitative + Qualitative Analysis",
   favicon: "favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -227,6 +228,7 @@ const config: Config = {
           routeBasePath: "/docs",
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/qqomega-labs/qq-docs/tree/main/",
+          sidebarCollapsed: false,
         },
         // BLOG DISABLED
         // blog: {
@@ -275,7 +277,7 @@ const config: Config = {
       title: "QQ Omega",
       logo: {
         alt: "QQ Omega Logo",
-        src: "img/QQlogo.png",
+        src: "img/QQlogo.png", // Overridden by `AnimatedAtomLogo` component.
       },
       style: "dark",
       items: [
@@ -293,8 +295,9 @@ const config: Config = {
         // },
         {
           href: "https://github.com/qqomega-labs",
-          label: "GitHub",
           position: "right",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
         },
       ],
     },

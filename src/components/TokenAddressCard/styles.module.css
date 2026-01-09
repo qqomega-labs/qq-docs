@@ -1,0 +1,377 @@
+/**
+ * TokenAddressCard Component Styles
+ * Glassmorphism card with copy-to-clipboard functionality
+ * Matches TokenomicsInfoCard styling
+ */
+
+/* Mobile-first card styles */
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Gradient border on hover */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Variant styles */
+.variantPink {
+  background: rgba(255, 29, 100, 0.05);
+  border-color: rgba(255, 29, 100, 0.2);
+}
+
+.variantPink .iconContainer {
+  background: rgba(255, 29, 100, 0.15);
+  border-color: rgba(255, 29, 100, 0.3);
+}
+
+.variantPink:hover {
+  background: rgba(255, 29, 100, 0.08);
+  border-color: rgba(255, 29, 100, 0.3);
+  box-shadow:
+    0 8px 24px rgba(255, 29, 100, 0.15),
+    0 0 0 1px rgba(255, 29, 100, 0.1);
+  transform: translateY(-2px);
+}
+
+.variantCyan {
+  background: rgba(0, 212, 255, 0.05);
+  border-color: rgba(0, 212, 255, 0.2);
+}
+
+.variantCyan .iconContainer {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.variantCyan:hover {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow:
+    0 8px 24px rgba(0, 212, 255, 0.15),
+    0 0 0 1px rgba(0, 212, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.variantPurple {
+  background: rgba(179, 102, 255, 0.05);
+  border-color: rgba(179, 102, 255, 0.2);
+}
+
+.variantPurple .iconContainer {
+  background: rgba(179, 102, 255, 0.15);
+  border-color: rgba(179, 102, 255, 0.3);
+}
+
+.variantPurple:hover {
+  background: rgba(179, 102, 255, 0.08);
+  border-color: rgba(179, 102, 255, 0.3);
+  box-shadow:
+    0 8px 24px rgba(179, 102, 255, 0.15),
+    0 0 0 1px rgba(179, 102, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Icon container */
+.iconContainer {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.icon {
+  font-size: 1.25rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Content */
+.content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+  opacity: 0.7;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+/* Address container */
+.addressContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.addressWrapper {
+  flex: 1;
+  min-width: 0;
+}
+
+.addressFull,
+.addressMobile {
+  display: block;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* Mobile: show truncated address */
+.addressMobile {
+  display: block;
+}
+
+.addressFull {
+  display: none;
+}
+
+/* Copy button */
+.copyButton {
+  z-index: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copyButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.copyButton:active {
+  transform: scale(0.95);
+}
+
+.copyButton.copied {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+}
+
+.copyButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+  .card {
+    padding: 0.875rem;
+  }
+
+  .iconContainer {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon {
+    font-size: 1.125rem;
+  }
+
+  .label {
+    font-size: 0.75rem;
+  }
+
+  .addressFull,
+  .addressMobile {
+    font-size: 0.8125rem;
+  }
+
+  .addressMobile {
+    display: none;
+  }
+
+  .addressFull {
+    display: block;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .iconContainer {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    font-size: 1.25rem;
+  }
+
+  .label {
+    font-size: 0.8125rem;
+  }
+
+  .addressFull,
+  .addressMobile {
+    font-size: 0.875rem;
+  }
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .card {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .iconContainer {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .variantPink {
+  background: rgba(255, 29, 100, 0.08);
+  border-color: rgba(255, 29, 100, 0.25);
+}
+
+[data-theme="light"] .variantPink .iconContainer {
+  background: rgba(255, 29, 100, 0.2);
+  border-color: rgba(255, 29, 100, 0.35);
+}
+
+[data-theme="light"] .variantPink:hover {
+  background: rgba(255, 29, 100, 0.12);
+  border-color: rgba(255, 29, 100, 0.35);
+  box-shadow:
+    0 8px 24px rgba(255, 29, 100, 0.2),
+    0 0 0 1px rgba(255, 29, 100, 0.15);
+}
+
+[data-theme="light"] .variantCyan {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.25);
+}
+
+[data-theme="light"] .variantCyan .iconContainer {
+  background: rgba(0, 212, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.35);
+}
+
+[data-theme="light"] .variantCyan:hover {
+  background: rgba(0, 212, 255, 0.12);
+  border-color: rgba(0, 212, 255, 0.35);
+  box-shadow:
+    0 8px 24px rgba(0, 212, 255, 0.2),
+    0 0 0 1px rgba(0, 212, 255, 0.15);
+}
+
+[data-theme="light"] .variantPurple {
+  background: rgba(179, 102, 255, 0.08);
+  border-color: rgba(179, 102, 255, 0.25);
+}
+
+[data-theme="light"] .variantPurple .iconContainer {
+  background: rgba(179, 102, 255, 0.2);
+  border-color: rgba(179, 102, 255, 0.35);
+}
+
+[data-theme="light"] .variantPurple:hover {
+  background: rgba(179, 102, 255, 0.12);
+  border-color: rgba(179, 102, 255, 0.35);
+  box-shadow:
+    0 8px 24px rgba(179, 102, 255, 0.2),
+    0 0 0 1px rgba(179, 102, 255, 0.15);
+}
+
+[data-theme="light"] .addressFull,
+[data-theme="light"] .addressMobile {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .copyButton {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .copyButton:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .iconContainer,
+  .copyButton {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card::before {
+    transition: none;
+  }
+
+  .copyButton:hover,
+  .copyButton:active {
+    transform: none;
+  }
+}

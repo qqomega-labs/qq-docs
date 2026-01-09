@@ -1,40 +1,48 @@
 ---
 title: Timeframes & Ranking
 sidebar_position: 2
+description: QQ Omega's four timeframes - Daily (scalper), Weekly (tactical), Monthly (swing), Yearly (holder) - each with tailored scoring weights for your strategy.
+keywords:
+  - crypto trading timeframes
+  - scalper strategy
+  - swing trading crypto
+  - long-term holder
+  - crypto ranking system
+  - multi-timeframe analysis
+  - tactical trading
+  - QQ Omega timeframes
+image: /img/qq-og-image.png
 ---
 
-## Timeframes & risk profiles
+## Timeframes & Risk Profiles
 
-QQ Omega analyze **3 different timeframes**, for different styles and risk levels:
+QQ Omega analyzes **four different timeframes**, designed for different styles and risk levels:
 
-- **24h view – Short-term (High risk / Fast decisions)**
-  - Focus on intraday moves, narrative spikes, sudden on-chain flows.
-  - For traders who accept noise in exchange for speed.
+- **<span className="gradient-text">Daily – Scalper</span> (High risk / Fast decisions)**
+  - **Data focus**: intraday price and volume, funding, short-term on-chain flows, news spikes.  
+  - **Weighting**: Silicon (TA) and fast Hydrogen (on-chain) dominate, both computed on intraday and last-24h windows. Carbon and Gold are almost muted.  
+  - **Example**: a clean intraday breakout with 24h inflows can score high here even if fundamentals are only average.
 
-- **30d view – Swing / Mid-term (Balanced)**
-  - Smooths out daily noise, tracks trends, unlocks, liquidity shifts.
-  - For users who want signal over a few weeks.
+- **<span className="gradient-text">Weekly – Tactical</span> (Medium risk)**
+  - **Data focus**: 7d momentum, narrative persistence, net flows, positioning shifts.  
+  - **Weighting**: more balanced between Silicon and Hydrogen, evaluated on rolling 7d charts and 7d on-chain flows, with Oxygen (regime) starting to matter more.  
+  - **Example**: a coin with 7d whale accumulation and improving structure can still look strong on this horizon even with messy intraday action.
 
-- **365d view – Long-term (Low frequency / Structural)**
-  - Focus on structural quality: fundamentals, token design, long on-chain trends.
-  - For investors who care about durability and resilience.
+- **<span className="gradient-text">Monthly – Swing</span> (Balanced)** 
+  - **Data focus**: 30d trend health, unlock clusters, liquidity rotation, protocol usage.  
+  - **Weighting**: Hydrogen (usage and ownership) relies on 30d flow and activity windows. Gold (token design and unlocks) gains weight, while Silicon is reduced to a timing overlay using daily and weekly structure.  
+  - **Example**: solid 30d usage and healthy token flows can offset a noisy daily chart and weak short-term sentiment.
+
+- **<span className="gradient-text">Yearly – Holder</span> (Low frequency / Structural)** 
+  - **Data focus**: fundamentals, governance, business model, long on-chain trends, macro regime backdrop.  
+  - **Weighting**: Carbon (fundamentals), Gold (tokenomics), and Oxygen (macro) dominate. Hydrogen focuses on 365d ownership and usage trends, and Silicon is used only as a coarse higher-timeframe risk check based on weekly and monthly structure.  
+  - **Example**: a project with excellent fundamentals and ownership structure can rank high here even if short-term price is under pressure.
 
 
-## Score range & rankings
+Phosphorus reads these horizon-specific views together and surfaces profiles such as “structurally strong, tactically weak”, “structurally fragile, currently euphoric”, or “improving structurally, neutral tactically”.
 
-Thanks to different timeframes, you can see **the same project** with **3 different rankings**.
+## Ranking Views
 
-For each project, QQ Omega can show:
+For each timeframe, QQ Omega generates multiple ranking views that allow crypto assets to be evaluated from different analytical perspectives. Assets can be ordered by a <span className="pink-glow-text">global ranking</span> based on the overall QQ Score, highlighting the strongest opportunities for a given timeframe, or by <span className="pink-glow-text">per area rankings</span> derived from individual swarm scores, enabling specialist leaderboards focused on fundamentals through Carbon, tokenomics through Gold, on-chain behavior through Hydrogen, technical analysis through Silicon, and macro-economy through Oxygen.
 
-- A **0–10 score** per area and global QQ Score.
-- A **percentile rank** vs all tracked projects
-  - (e.g. “Top 10% in Fundamentals”, “Top 20% in Tokenomics”).
-- **3 separate rankings**, one per timeframe:
-  - **24h Ranking** – Short-term positioning
-  - **30d Ranking** – Mid-term positioning
-  - **365d Ranking** – Long-term positioning
-
-This lets you see quickly:
-
-- “Great long-term, but currently under pressure short-term”, or
-- “Short-term hot, but weak long-term structure”.
+This structure allows you to quickly determine which assets are strongest overall at a given moment and which assets dominate a specific analytical pillar within the same timeframe.
