@@ -1,6 +1,17 @@
 ---
 title: Evolution & limitations
 sidebar_position: 4
+description: Learn how QQ Omega AI agents evolve through calibration and backtesting, plus known limitations of systematic crypto scoring models.
+keywords:
+  - AI agent evolution
+  - scoring model calibration
+  - crypto analysis limitations
+  - backtesting crypto
+  - decision support system
+  - model accuracy
+  - systematic scoring
+  - QQ Omega evolution
+image: /img/qq-og-image.png
 ---
 
 ## How Agents Contribute to the Final Score Over Time

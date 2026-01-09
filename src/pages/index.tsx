@@ -36,7 +36,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="QQ Omega combines AI-powered agents to score and rank cryptocurrency projects across fundamentals, tokenomics, on-chain metrics, and market sentiment."
     >
       {/* NOTE: backup */}
       {/* <HomepageHeader /> */}

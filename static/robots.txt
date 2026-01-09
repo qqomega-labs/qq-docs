@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qq-docs.pages.dev/sitemap.xml
+
+# Disallow build artifacts and development files
+Disallow: /.docusaurus/
+Disallow: /node_modules/

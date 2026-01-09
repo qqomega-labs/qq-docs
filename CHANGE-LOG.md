@@ -2,10 +2,22 @@
 
 ## [Unreleased] - 2026-01-09
 
+### Added
+
+- **SEO Infrastructure**
+  - Created `robots.txt` in `/static/` with sitemap reference and crawl directives
+  - Sitemap auto-generated via Docusaurus classic preset at `/sitemap.xml`
+
+- **SEO Frontmatter for Documentation**
+  - Added `description`, `keywords`, and `image` to all AI agent docs (Carbon, Gold, Hydrogen, Silicon, Oxygen, Phosphorus)
+  - Added SEO metadata in all articles.
+
 ### Changed
 
-- Fix Token address copy action doesn't work adding `z-index:1` css rule in `TokenAddressCard` style module.
-- Sidebar menu starts with default open sections, adding `sidebarCollapsed: false` in `docusaurus.config.ts` module.
+- Improved homepage meta description in `src/pages/index.tsx` (was placeholder text)
+- Fixed typo in tokenomics category.json ("trasparent" -> "transparent")
+- Fix Token address copy action doesn't work adding `z-index:1` css rule in `TokenAddressCard` style module
+- Sidebar menu starts with default open sections, adding `sidebarCollapsed: false` in `docusaurus.config.ts` module
 
 ## [Unreleased] - 2026-01-06
 

@@ -1,6 +1,18 @@
 ---
 title: Phosphorus Swarm
 sidebar_position: 7
+description: Phosphorus swarm orchestrates all QQ Omega elements, aggregating scores across daily, weekly, monthly, and yearly timeframes into the Global QQ Score.
+keywords:
+  - Phosphorus swarm
+  - Global QQ Score
+  - score aggregation
+  - multi-timeframe analysis
+  - crypto scoring orchestration
+  - conflict resolution
+  - insight generation
+  - timeframe weighting
+  - QQ Omega integration
+image: /img/qq-og-image.png
 ---
 
 ## <img src="/img/Ipt.png" alt="Phosphorus" style={{height: '2.5em', verticalAlign: 'middle'}} />Phosphorus | Orchestration & Scoring Swarm

@@ -1,6 +1,19 @@
 ---
 title: Gold Swarm
 sidebar_position: 3
+description: Gold swarm analyzes tokenomics - supply mechanics, buybacks, burns, unlock schedules, inflation, staking rewards, and value accrual mechanisms.
+keywords:
+  - Gold swarm
+  - tokenomics analysis
+  - token supply mechanics
+  - buyback analysis
+  - token burn rate
+  - unlock schedule tracking
+  - inflation analysis
+  - staking rewards
+  - token utility scoring
+  - QQ Omega tokenomics
+image: /img/qq-og-image.png
 ---
 
 ## <img src="/img/Igt.png" alt="Gold" style={{height: '2.5em', verticalAlign: 'middle'}} />Gold | Tokenomics Swarm

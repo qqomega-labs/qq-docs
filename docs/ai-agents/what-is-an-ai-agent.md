@@ -1,16 +1,19 @@
 ---
 title: What is a swarm of AI Agent
 sidebar_position: 1
-description: Learn how QQ Omega uses specialized AI agents - each focused on a specific aspect of crypto analysis like fundamentals, tokenomics, or on-chain data - to provide comprehensive cryptocurrency scoring.
+description: Discover how QQ Omega's AI agent swarms work - specialized agents grouped by category (Carbon, Gold, Hydrogen, Silicon, Oxygen, Phosphorus) for comprehensive crypto scoring.
 keywords:
-  - AI agents
-  - crypto AI
-  - agent swarm
-  - specialized analysis
-  - cryptocurrency evaluation
-  - AI-powered scoring
-  - blockchain AI
-image: /img/QQlogo.png
+  - AI agent swarm
+  - crypto AI agents
+  - QQ Omega elements
+  - Carbon swarm
+  - Gold swarm
+  - Hydrogen swarm
+  - Silicon swarm
+  - Oxygen swarm
+  - Phosphorus swarm
+  - specialized crypto analysis
+image: /img/qq-og-image.png
 ---
 
 ## What Is an AI Agent?

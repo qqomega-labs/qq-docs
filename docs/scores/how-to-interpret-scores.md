@@ -1,16 +1,18 @@
 ---
 title: Learning scores
 sidebar_position: 1
-description: Understanding QQ Omega's 0-100 scoring system for cryptocurrency projects. Learn what scores mean across fundamentals, tokenomics, on-chain metrics, technical analysis, and macro trends.
+description: Understand QQ Omega's 0-100 scoring system. Learn what cheap, fair value, and expensive mean for crypto assets based on quality vs valuation analysis.
 keywords:
-  - crypto scores
   - QQ score interpretation
-  - cryptocurrency rating
-  - crypto evaluation
-  - investment scores
-  - crypto metrics
-  - blockchain scoring
-image: /img/QQlogo.png
+  - crypto scoring system
+  - undervalued crypto
+  - overvalued crypto
+  - quality vs valuation
+  - crypto fair value
+  - 0-100 score scale
+  - relative valuation crypto
+  - QQ Omega scores
+image: /img/qq-og-image.png
 ---
 
 ## How to Interpret Scores

@@ -1,17 +1,19 @@
 ---
 title: What is QQ
 sidebar_position: 2
-description: QQ Omega is an AI-powered scoring engine that combines quantitative and qualitative data to evaluate crypto assets across fundamentals, tokenomics, on-chain metrics, technicals, and macro trends.
+description: QQ Omega is a precision scoring engine using AI agents to rate crypto assets 0-100 across fundamentals, tokenomics, on-chain data, technicals, and macro trends.
 keywords:
   - QQ Omega
-  - crypto scoring
-  - AI agents
-  - cryptocurrency analysis
-  - quantitative analysis
-  - qualitative analysis
-  - crypto evaluation
-  - blockchain analytics
-image: /img/QQlogo.png
+  - crypto scoring engine
+  - AI crypto scoring
+  - cryptocurrency ratings
+  - crypto asset evaluation
+  - token analysis
+  - quantitative crypto analysis
+  - qualitative crypto analysis
+  - crypto rankings
+  - investment timeframes
+image: /img/qq-og-image.png
 ---
 
 ## What is QQ Omega?
@@ -27,7 +29,6 @@ Multiple QQ scores are generated for different timeframes by applying distinct w
 This produces separate rankings per timeframe, enabling investors to identify crypto assets that appear <span className="pink-glow-text">undervalued</span> or <span className="pink-glow-text">overvalued</span> relative to their investment horizon.
 
 QQ Omega provides a clear, side by side view of structural strength, market excess, and hype driven behavior, compressing complexity into explainable scores and rankings that support conscious, high conviction investment decisions.
-
 
 :::note
 Think of QQ Omega as a <span className="pink-glow-text">**quant + qual crypto analyst**</span>: it ingests data, structures it, and compresses complexity into **clear scores, rankings, and explainable evaluations** you can use as a base layer to make **conscious investment decisions**.

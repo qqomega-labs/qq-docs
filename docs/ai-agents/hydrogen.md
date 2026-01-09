@@ -1,6 +1,19 @@
 ---
 title: Hydrogen Swarm
 sidebar_position: 4
+description: Hydrogen swarm tracks on-chain behavior - TVL, holder composition, whale accumulation, CEX flows, and capital movements across crypto assets.
+keywords:
+  - Hydrogen swarm
+  - on-chain analysis
+  - TVL tracking
+  - holder composition analysis
+  - whale accumulation
+  - CEX flow analysis
+  - token distribution
+  - capital flow tracking
+  - smart money analysis
+  - QQ Omega on-chain
+image: /img/qq-og-image.png
 ---
 
 ## <img src="/img/Iht.png" alt="Hydrogen" style={{height: '2.5em', verticalAlign: 'middle'}} />Hydrogen | On-chain Flows Swarm
