@@ -82,7 +82,7 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         name: "twitter:image",
-        content: "https://qq-docs.pages.dev/img/qq-og-image.png",
+        content: "https://docs.qqomega.xyz/img/qq-og-image.png",
       },
     },
     // Open Graph Tags
@@ -112,14 +112,14 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         property: "og:url",
-        content: "https://qq-docs.pages.dev",
+        content: "https://docs.qqomega.xyz",
       },
     },
     {
       tagName: "meta",
       attributes: {
         property: "og:image",
-        content: "https://qq-docs.pages.dev/img/qq-og-image.png",
+        content: "https://docs.qqomega.xyz/img/qq-og-image.png",
       },
     },
     {
@@ -200,7 +200,7 @@ const config: Config = {
   ],
 
   // Set the production url of your site here
-  url: "https://qq-docs.pages.dev",
+  url: "https://docs.qqomega.xyz",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",

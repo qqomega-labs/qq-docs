@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed typo in tokenomics category.json ("trasparent" -> "transparent")
 - Fix Token address copy action doesn't work adding `z-index:1` css rule in `TokenAddressCard` style module
 - Sidebar menu starts with default open sections, adding `sidebarCollapsed: false` in `docusaurus.config.ts` module
+- Updated all domain url references.
 
 ## [Unreleased] - 2026-01-06
 
