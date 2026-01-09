@@ -5,6 +5,7 @@
 ### Changed
 
 - Fix Token address copy action doesn't work adding `z-index:1` css rule in `TokenAddressCard` style module.
+- Sidebar menu starts with default open sections, adding `sidebarCollapsed: false` in `docusaurus.config.ts` module.
 
 ## [Unreleased] - 2026-01-06
 
