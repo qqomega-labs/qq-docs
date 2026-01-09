@@ -1,6 +1,17 @@
 ---
 title: Timeframes & Ranking
 sidebar_position: 2
+description: QQ Omega's four timeframes - Daily (scalper), Weekly (tactical), Monthly (swing), Yearly (holder) - each with tailored scoring weights for your strategy.
+keywords:
+  - crypto trading timeframes
+  - scalper strategy
+  - swing trading crypto
+  - long-term holder
+  - crypto ranking system
+  - multi-timeframe analysis
+  - tactical trading
+  - QQ Omega timeframes
+image: /img/qq-og-image.png
 ---
 
 ## Timeframes & Risk Profiles

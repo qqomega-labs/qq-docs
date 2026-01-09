@@ -1,6 +1,17 @@
 ---
 title: Frequency & Quality checks
 sidebar_position: 3
+description: QQ Omega's real-time data updates, quality validation, wash trading detection, and anti-spam filters that ensure accurate crypto scoring.
+keywords:
+  - real-time crypto data
+  - data quality validation
+  - wash trading detection
+  - anti-spam filters
+  - score update frequency
+  - data integrity
+  - crypto data pipeline
+  - QQ Omega data quality
+image: /img/qq-og-image.png
 ---
 
 ## Score Update Frequency

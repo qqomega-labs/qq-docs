@@ -1,6 +1,18 @@
 ---
 title: Carbon Swarm
 sidebar_position: 2
+description: Carbon swarm evaluates crypto fundamentals - team credibility, product quality, governance, security audits, revenue models, and organizational resilience.
+keywords:
+  - Carbon swarm
+  - crypto fundamentals analysis
+  - team credibility scoring
+  - product evaluation
+  - governance assessment
+  - security audit analysis
+  - protocol revenue analysis
+  - regulatory risk assessment
+  - QQ Omega fundamentals
+image: /img/qq-og-image.png
 ---
 
 ## <img src="/img/Ict.png" alt="Carbon" style={{height: '2.5em', verticalAlign: 'middle'}} />Carbon | Fundamentals Swarm

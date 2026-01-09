@@ -1,6 +1,17 @@
 ---
 title: Airdrop
 sidebar_position: 3
+description: $QQ airdrop program with five reward paths. Eligibility rules intentionally undisclosed - follow @QQagents on X for hints and official updates.
+keywords:
+  - QQ airdrop
+  - QQ token distribution
+  - crypto airdrop program
+  - reward paths
+  - airdrop eligibility
+  - QQ community rewards
+  - token giveaway
+  - QQ Omega airdrop
+image: /img/qq-og-image.png
 ---
 
 ### About the $QQ Airdrop Program

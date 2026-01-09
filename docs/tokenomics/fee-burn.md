@@ -1,6 +1,18 @@
 ---
 title: Burn and POL Mechanism
 sidebar_position: 2
+description: $QQ burn mechanism - 12% LP fees for buyback/burn, 17% for Protocol-Owned Liquidity (POL). Target 50%+ supply reduction with on-chain transparency.
+keywords:
+  - QQ token burn
+  - buyback and burn
+  - Protocol-Owned Liquidity
+  - POL mechanism
+  - deflationary token
+  - LP fee allocation
+  - on-chain transparency
+  - token supply reduction
+  - QQ tokenomics
+image: /img/qq-og-image.png
 ---
 
 ### How It Works

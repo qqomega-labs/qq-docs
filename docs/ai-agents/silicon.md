@@ -1,6 +1,19 @@
 ---
 title: Silicon Swarm
 sidebar_position: 5
+description: Silicon swarm performs technical analysis - market structure, support/resistance, order flow, derivatives positioning, liquidations, and liquidity mapping.
+keywords:
+  - Silicon swarm
+  - crypto technical analysis
+  - market structure analysis
+  - support resistance levels
+  - order flow analysis
+  - derivatives positioning
+  - liquidation tracking
+  - VWAP analysis
+  - volume profile
+  - QQ Omega technicals
+image: /img/qq-og-image.png
 ---
 
 ## <img src="/img/Ist.png" alt="Silicon" style={{height: '2.5em', verticalAlign: 'middle'}} />Silicon | Technical Analysis Swarm

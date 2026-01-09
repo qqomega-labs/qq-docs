@@ -1,6 +1,19 @@
 ---
 title: Oxygen Swarm
 sidebar_position: 6
+description: Oxygen swarm monitors macro conditions - interest rates, global liquidity, market regime, altcoin season indicators, and fear/greed sentiment cycles.
+keywords:
+  - Oxygen swarm
+  - crypto macro analysis
+  - interest rate impact
+  - liquidity forecast
+  - market regime detection
+  - altcoin season indicator
+  - fear greed index
+  - Bitcoin dominance
+  - crypto seasonality
+  - QQ Omega macro
+image: /img/qq-og-image.png
 ---
 
 ## <img src="/img/Iot.png" alt="Oxygen" style={{height: '2.5em', verticalAlign: 'middle'}} />Oxygen | Macro & Market Regime Swarm
