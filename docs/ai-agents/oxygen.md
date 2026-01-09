@@ -6,27 +6,17 @@ sidebar_position: 6
 ## <img src="/img/Iot.png" alt="Oxygen" style={{height: '2.5em', verticalAlign: 'middle'}} />Oxygen | Macro & Market Regime Swarm
 
 Oxygen is the element that makes breathing and combustion possible: it’s everywhere, invisible, and yet it decides whether systems can move or suffocate.  
-In QQ Omega, <span className="gradient-text">**Oxygen swarm**</span> plays a similar role in understanding the **macro regime** and **risk appetite** surrounding crypto: the background environment that doesn’t live on a single chart, but quietly pushes everything up or down.
+In QQ Omega, <span className="gradient-text">**Oxygen Swarm**</span> plays a similar role in understanding the **macro regime** and **risk appetite** surrounding crypto: the background environment that doesn’t live on a single chart, but quietly pushes everything up or down.
 
 ### What Oxygen Is
 
-The Oxygen element focuses on <span className="pink-glow-text">**global macroeconomics, monetary policy, and broad crypto market conditions**</span>: the invisible air that all crypto assets must inhale.
+The Oxygen Swarm focuses on <span className="pink-glow-text">**global macroeconomics, monetary policy, and broad crypto market conditions**</span>: the invisible air that all crypto assets must inhale.
 
 Some agents go deep on **interest rates and central banks**: policy paths, forward guidance, inflation trends, and how these shape global risk premia.  
 Others track **global and crypto-native liquidity**: balance sheet expansions, money supply, credit conditions, stablecoin supply, CEX and DEX volumes, and on- and off-ramp friction.  
 Another group maps **crypto-wide regime indicators**: Bitcoin and stablecoin dominance, total and sectoral market caps, altcoin season metrics, fear and greed oscillators, and mathematical seasonality patterns in returns.
 
-Oxygen is a general score that answers a different question: *“In this environment, how hard is it for crypto assets to breathe?”*
-
-:::note
-Oxygen is the only swarm that does **not** score crypto assets individually.
-
-All other swarms output a **per-project score**.  
-Oxygen outputs **one global score** for the current **macro regime**, shared by all crypto assets.
-
-It is the system’s **environment signal**.  
-It scales how aggressive or defensive QQ Omega should be across every token at the same time.
-:::
+Oxygen is a score that answers a different question: *“In this environment, how hard is it for crypto assets to breathe?”*
 
 ### Core Dimensions
 

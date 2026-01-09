@@ -6,11 +6,11 @@ sidebar_position: 5
 ## <img src="/img/Ist.png" alt="Silicon" style={{height: '2.5em', verticalAlign: 'middle'}} />Silicon | Technical Analysis Swarm
 
 Silicon is the base material of modern computing: it turns raw electrical noise into precise, structured signals.  
-In QQ Omega, <span className="gradient-text">**Silicon swarm**</span> plays a similar role for **market data**: it takes noisy OHLCV and market signals and organizes them into clear, machine-readable views on **structure, liquidity, and positioning**.
+In QQ Omega, <span className="gradient-text">**Silicon Swarm**</span> plays a similar role for **market data**: it takes noisy OHLCV and market signals and organizes them into clear, machine-readable views on **structure, liquidity, and positioning**.
 
 ### What Silicon Is
 
-The Silicon element focuses on <span className="pink-glow-text">**technical, order-flow, and derivatives-aware market structure**</span>:  
+The Silicon Swarm focuses on <span className="pink-glow-text">**technical, order-flow, and derivatives-aware market structure**</span>:  
 how price moves, where liquidity is concentrated, and how positioning and leverage can amplify moves.
 
 Some agents specialize in benchmarks widely used for execution, such as VWAP, Fibonacci mapping, volume clusters, and structural swing analysis.  

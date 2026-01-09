@@ -10,7 +10,7 @@ In QQ Omega, <span className="gradient-text">**Hydrogen swarm**</span> plays a s
 
 ### What Hydrogen Is
 
-The Hydrogen element focuses on <span className="pink-glow-text">**on-chain flows and holder behavior**</span>:  
+The Hydrogen Swarm focuses on <span className="pink-glow-text">**on-chain flows and holder behavior**</span>:  
 who owns the token, how concentrated that ownership is, and how balances move between clusters of actors.
 
 Some agents track **how much capital is committed** to a protocol, including TVL across chains, vaults, and strategies.  

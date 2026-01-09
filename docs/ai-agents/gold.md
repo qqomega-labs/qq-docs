@@ -10,7 +10,7 @@ In QQ Omega, <span className="gradient-text">**Gold swarm**</span> plays a simil
 
 ### What Gold Is
 
-The Gold element focuses on <span className="pink-glow-text">**tokenomics**</span>: the part of the system that defines how the token is minted, distributed, used, and eventually removed from circulation, and how all of this shapes buy and sell pressure over time.
+The Gold Swarm focuses on <span className="pink-glow-text">**tokenomics**</span>: the part of the system that defines how the token is minted, distributed, used, and eventually removed from circulation, and how all of this shapes buy and sell pressure over time.
 
 Some agents go deep on **how supply evolves**: emission curves, unlock schedules, staking rewards, inflation, and burn mechanics.  
 Others map **how value flows back to holders**: buybacks, protocol revenue sharing, DeFi yields, and any mechanism that creates structural demand for the token.  
