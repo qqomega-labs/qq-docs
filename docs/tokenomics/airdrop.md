@@ -1,7 +1,7 @@
 ---
 title: Airdrop
 sidebar_position: 3
-description: $QQ airdrop program with five reward paths. Eligibility rules intentionally undisclosed - follow @QQagents on X for hints and official updates.
+description: $QQ airdrop program with five reward paths. Eligibility rules intentionally undisclosed - follow @QQomega_labs on X for hints and official updates.
 keywords:
   - QQ airdrop
   - QQ token distribution
@@ -23,7 +23,7 @@ image: /img/qq-og-image.png
 
 The QQ Airdrop is an ongoing program with <span className="pink-glow-text">five</span> possible reward paths, each governed by its own internal logic. The rules and eligibility criteria are <span className="pink-glow-text">**intentionally undisclosed**</span>. No complete specification of the mechanics is made public, although occasional hints may appear somewhere.
 
-All authoritative information regarding the airdrop is communicated exclusively through the project’s primary channels, including the <span className="pink-badge">[@QQagents](https://x.com/QQagents)</span> account on X and these official documentation pages. The QQ team reserves the right to modify, delay, pause, pause, or discontinue the airdrop program at any time.
+All authoritative information regarding the airdrop is communicated exclusively through the project’s primary channels, including the <span className="pink-badge">[QQ omega](https://x.com/QQomega_labs)</span> account on X and these official documentation pages. The QQ team reserves the right to modify, delay, pause, pause, or discontinue the airdrop program at any time.
 
 #### *General Principles & Disclaimers*
 
