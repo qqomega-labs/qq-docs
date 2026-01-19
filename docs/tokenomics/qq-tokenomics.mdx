@@ -21,25 +21,35 @@ import TokenomicsInfoCard, {
 } from "@site/src/components/TokenomicsInfoCard";
 import TokenAddressCard from "@site/src/components/TokenAddressCard";
 
-### 100,000 $QQ = 1 Ticket Access
+### 1 $QQ = 1 Ticket Access
 
-You need to hold <span className="pink-glow-text">**100,000 $QQ**</span> **or more in your wallet** to unlock and use the **live QQ dashboard**, including real-time scores, rankings, and all features added over time.
+You need to hold <span className="pink-glow-text">**1 $QQ**</span> **or more in your wallet** to unlock and use the **live QQ dashboard**, including real-time scores, rankings, and all features added over time.
 
 <TokenomicsInfoGrid columns={2}>
-  <TokenomicsInfoCard icon="⛓️" label="Chain" value="Base" variant="cyan" />
-  <TokenomicsInfoCard
+    <TokenomicsInfoCard
     icon="🔒"
     label="Max Supply"
-    value="1,000,000,000"
+    value="10,000"
     subtext="Fixed and hard-capped"
     variant="pink"
+    />
+  <TokenomicsInfoCard icon="⛓️" label="Chain" value="Base & Solana" subtext="Base (4,000 QQ) + Solana (6,000 QQ)" variant="pink" />
+</TokenomicsInfoGrid>
+
+<TokenomicsInfoGrid columns={1}>
+  <TokenAddressCard
+    label="Base Token Address"
+    icon="🔵"
+    address="TBD0x07150e919B4De5fD6a63DE1F9384828396f25fDC"
+    variant="cyan"
   />
 </TokenomicsInfoGrid>
 
 <TokenomicsInfoGrid columns={1}>
   <TokenAddressCard
-    icon="📟"
-    address="TBD0x07150e919B4De5fD6a63DE1F9384828396f25fDC"
+    label="Solana Token Address"
+    icon="🟣"
+    address="TBDspl07150e919B4De5fD6a63DE1F9384828396f25fDC"
     variant="purple"
   />
 </TokenomicsInfoGrid>
@@ -48,60 +58,66 @@ You need to hold <span className="pink-glow-text">**100,000 $QQ**</span> **or mo
 
 <TokenomicsPieChart
   data={[
-    {
-      name: "Liquidity pool locked (Base)",
-      value: 75,
-      color: "var(--qq-color-pink-hot)",
-      amount: "750,000,000",
-    },
-    {
-      name: "QQ Community Airdrop",
-      value: 15,
-      color: "var(--qq-color-cyan-bright)",
-      amount: "150,000,000",
-    },
-    {
-      name: "Virtuals Ecosystem Airdrop",
-      value: 3,
-      color: "var(--qq-color-cyan-teal)",
-      amount: "30,000,000",
-    },
-    {
-      name: "veVIRTUAL Airdrop",
-      value: 2,
-      color: "var(--qq-color-cyan-dark)",
-      amount: "20,000,000",
-    },
-    {
-      name: "Core Contributors: qqAlpha",
-      value: 2,
-      color: "var(--qq-color-purple-light)",
-      amount: "20,000,000",
-    },
-    {
-      name: "Core Contributors: qqSigma",
-      value: 2,
-      color: "var(--qq-color-purple-medium)",
-      amount: "20,000,000",
-    },
-    {
-      name: "Strategic Partnerships",
-      value: 1,
-      color: "var(--qq-color-purple-dark)",
-      amount: "10,000,000",
-    },
+{
+  name: "Meteora DBC Stealth Launch",
+  value: 26,
+  color: "#9066FF",
+  amount: "2,600 $QQ (Solana)",
+},
+{
+  name: "LP on Solana (Meteora DAMM V2)",
+  value: 24,
+  color: "#7448FF",
+  amount: "2,400 $QQ (Solana)",
+},
+{
+  name: "LP on Base (Uniswap V3)",
+  value: 24,
+  color: "#2F6BFF",
+  amount: "2,400 $QQ (Base)",
+},
+{
+  name: "QQ Community Airdrop",
+  value: 15,
+  color: "#FF2A7A",
+  amount: "1,500 $QQ (50% Base, 50% Solana)",
+},
+{
+  name: "Virtuals Ecosystem Airdrop",
+  value: 6,
+  color: "#E61E6E",
+  amount: "600 $QQ (Base)",
+},
+{
+  name: "Core Contributors: qqAlpha",
+  value: 2,
+  color: "#E2E6EE", // light gray
+  amount: "200 $QQ (50% Base, 50% Solana)",
+},
+{
+  name: "Core Contributors: qqSigma",
+  value: 2,
+  color: "#C9D0DD", // mid-light gray
+  amount: "200 $QQ (50% Base, 50% Solana)",
+},
+{
+  name: "Strategic Partnerships",
+  value: 1,
+  color: "#B2BCCB", // mid gray (still not dark)
+  amount: "100 $QQ (50% Base, 50% Solana)",
+},
   ]}
   height={450}
 />
 
-### Launchpad: Virtuals Protocol
+### Launchpad: Meteora (Solana)
 
 <TokenomicsInfoGrid columns={1}>
   <TokenomicsInfoCard
-    icon="🚀"
-    label="Virtuals Pegasus Launchpad"
-    value="Fair Launch Model"
-    subtext="No private sale, no preferential allocations. Auto-graduates to Uniswap v2 (Base) after 42,000 $VIRTUAL accumulated."
+    icon="🌊"
+    label="Meteora DBC Launchpad"
+    value="Stealth Launch"
+    subtext="Open-ended bonding curve on Solana. On reaching the $25,000 (in SOL) raise threshold, it migrates to a Meteora DAMM v2 pool and LP time-locked for 2 years."
     variant="pink"
   />
 </TokenomicsInfoGrid>
