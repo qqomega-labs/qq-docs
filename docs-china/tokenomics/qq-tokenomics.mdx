@@ -1,0 +1,129 @@
+---
+title: 代币经济
+sidebar_position: 1
+description: $QQ 代币——在 Base 链发行的固定总量（上限 10,000）。通过 Virtuals Protocol 的 Pegasus 公平启动。持有 1 枚 QQ 即可解锁实时仪表盘与全部功能。
+keywords:
+  - QQ 代币
+  - QQ 代币经济
+  - 固定总量
+  - Base 链代币
+  - Virtuals Protocol 启动
+  - 公平启动
+  - 代币门槛访问
+  - QQ 仪表盘访问
+  - 无私募
+image: /img/qq-og-image.png
+---
+
+import TokenomicsPieChart from "@site/src/components/TokenomicsPieChart";
+import TokenomicsInfoCard, {
+  TokenomicsInfoGrid,
+} from "@site/src/components/TokenomicsInfoCard";
+import TokenAddressCard from "@site/src/components/TokenAddressCard";
+
+### 1 枚 $QQ = 1 张通行票
+
+你需要在钱包中持有 <span className="pink-glow-text">**至少 1 枚 $QQ**</span>，即可解锁并使用 **QQ 实时仪表盘**：包括实时评分、排名，以及未来持续上线的全部功能。
+
+<TokenomicsInfoGrid columns={2}>
+  <TokenomicsInfoCard
+    icon="🔒"
+    label="总供应量"
+    value="10,000"
+    subtext="固定总量，硬上限"
+    variant="pink"
+  />
+  <TokenomicsInfoCard
+    icon="⛓️"
+    label="链"
+    value="Base & Solana"
+    subtext="Base（4,000 QQ）+ Solana（6,000 QQ）"
+    variant="pink"
+  />
+</TokenomicsInfoGrid>
+
+<TokenomicsInfoGrid columns={1}>
+  <TokenAddressCard
+    label="Base 代币地址"
+    icon="🔵"
+    address="TBD0x07150e919B4De5fD6a63DE1F9384828396f25fDC"
+    variant="cyan"
+  />
+</TokenomicsInfoGrid>
+
+<TokenomicsInfoGrid columns={1}>
+  <TokenAddressCard
+    label="Solana 代币地址"
+    icon="🟣"
+    address="TBDspl07150e919B4De5fD6a63DE1F9384828396f25fDC"
+    variant="purple"
+  />
+</TokenomicsInfoGrid>
+
+### $QQ 分配结构
+
+<TokenomicsPieChart
+  data={[
+    {
+      name: "Meteora DBC 隐身启动",
+      value: 26,
+      color: "#9066FF",
+      amount: "2,600 $QQ（Solana）",
+    },
+    {
+      name: "Solana 流动性池（Meteora DAMM V2）",
+      value: 24,
+      color: "#7448FF",
+      amount: "2,400 $QQ（Solana）",
+    },
+    {
+      name: "Base 流动性池（Uniswap V3）",
+      value: 24,
+      color: "#2F6BFF",
+      amount: "2,400 $QQ（Base）",
+    },
+      {
+      name: "Virtuals 生态空投",
+      value: 6,
+      color: "#E61E6E",
+      amount: "600 $QQ（Base）",
+    },
+    {
+      name: "QQ 社区空投",
+      value: 15,
+      color: "#FF2A7A",
+      amount: "1,500 $QQ（50% Base，50% Solana）",
+    },
+    {
+      name: "核心贡献者：qqAlpha",
+      value: 2,
+      color: "#E2E6EE", // light gray
+      amount: "200 $QQ（50% Base，50% Solana）",
+    },
+    {
+      name: "核心贡献者：qqSigma",
+      value: 2,
+      color: "#C9D0DD", // mid-light gray
+      amount: "200 $QQ（50% Base，50% Solana）",
+    },
+    {
+      name: "战略合作伙伴",
+      value: 1,
+      color: "#B2BCCB", // mid gray (still not dark)
+      amount: "100 $QQ（50% Base，50% Solana）",
+    },
+  ]}
+  height={450}
+/>
+
+### 启动平台：Meteora（Solana）
+
+<TokenomicsInfoGrid columns={1}>
+  <TokenomicsInfoCard
+    icon="🌊"
+    label="Meteora DBC 启动平台"
+    value="隐身启动"
+    subtext="Solana 上的开放式联合曲线。达到 $25,000（以 SOL 计）的募集阈值后，将迁移至 Meteora DAMM v2 池，并对 LP 进行 2 年时间锁。"
+    variant="pink"
+  />
+</TokenomicsInfoGrid>

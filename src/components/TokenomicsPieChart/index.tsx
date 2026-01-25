@@ -209,7 +209,7 @@ export default function TokenomicsPieChart({
               <div className={styles.legendName}>{entry.name}</div>
               <div className={styles.legendValue}>{entry.value}%</div>
               {entry.amount && (
-                <div className={styles.legendAmount}>{entry.amount} $QQ</div>
+                <div className={styles.legendAmount}>{entry.amount}</div>
               )}
             </div>
           </div>

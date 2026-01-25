@@ -20,7 +20,9 @@ image: /img/qq-og-image.png
 
 QQ Omega is a high-precision scoring engine that synthesizes <span className="pink-glow-text">quantitative and qualitative intelligence</span> into one coherent evaluation of crypto assets.
 
-Each crypto asset is evaluated across five categories: **Fundamentals, Tokenomics, On-chain, Technicals, and Macro-Economic Regime**, across multiple timeframes. Behind each category is a swarm of **specialized AI agents**, each focused on a specific slice of analysis. For a deeper view into the architecture behind each category, see the <span className="pink-badge">[AI AGENTS SWARMS](/docs/category/ai-agent-swarms)</span> section.
+You can think of QQ Omega as your <span className="pink-glow-text">AI right-hand</span> for crypto assets: a continuously updating layer of analysis designed to help you navigate the most volatile market in the world with more clarity and structure.
+
+Each crypto asset is evaluated across <span className="pink-glow-text">five categories</span>: **Fundamentals, Tokenomics, On-chain, Technicals, and Macro-Economic Regime**, across multiple timeframes. Behind each category is a swarm of **specialized AI agents**, each focused on a specific slice of analysis. For a deeper view into the architecture behind each category, see the <span className="pink-badge">[AI AGENTS SWARMS](/docs/category/ai-agent-swarms)</span> section.
 
 Their analyses are aggregated into a global <span className="pink-glow-text">QQ score</span>, assigning every crypto asset a 0 to 100 score that <span className="pink-glow-text">updates automatically</span> as new data and events unfold.
 
