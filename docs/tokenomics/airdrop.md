@@ -27,14 +27,15 @@ The $QQ Airdrop is an ongoing, multi-season program designed to reward early eco
 
 ### Allocation
 
-- <span className="pink-glow-text">**6% of total supply**</span> is reserved for the <span className="pink-glow-text">**Virtuals ecosystem**</span>.
-- <span className="pink-glow-text">**15% of total supply**</span> is reserved for the <span className="pink-glow-text">**QQ community**</span> and may be distributed across <span className="pink-glow-text">multiple</span> seasons and reward paths.
+- <span className="pink-glow-text">6% of total supply</span> is reserved for the <span className="pink-glow-text">Virtuals ecosystem</span> and will be distributed across <span className="pink-glow-text">multiple</span> seasons and reward paths.
+
+- <span className="pink-glow-text">15% of total supply</span> is reserved for the <span className="pink-glow-text">QQ community</span> and will be distributed across <span className="pink-glow-text">multiple</span> seasons and reward paths.
 
 ### How It Works
 
-The QQ community airdrop may include <span className="pink-glow-text">more than one</span> reward path, each governed by its own internal logic. The rules, signals, and eligibility criteria are <span className="pink-glow-text">**intentionally undisclosed**</span>. No public “checklist” exists, and no action should be assumed to be qualifying by default.
+The QQ airdrop may include <span className="pink-glow-text">more than one</span> reward path, each governed by its own internal logic. The rules, signals, and eligibility criteria are <span className="pink-glow-text">**intentionally undisclosed**</span>. No public “checklist” exists, and no action should be assumed to be qualifying by default.
 
-That said, <span className="pink-glow-text">early adopters</span> and participants who contribute to the ecosystem in meaningful ways may be recognized over time (e.g., product usage, testing, feedback, community participation, contributions that improve the project or its adoption). This is descriptive, not prescriptive: it is **not** a list of requirements.
+That said, <span className="pink-glow-text">early adopters</span> and participants who contribute to the ecosystem in meaningful ways may be recognized over time (e.g., product usage, feedback, community participation, contributions that improve the project or its adoption). This is descriptive, not prescriptive: it is **not** a list of requirements.
 
 All authoritative information regarding the airdrop is communicated exclusively through the project’s primary channels, including the <span className="pink-badge">[QQ omega](https://x.com/QQomega_labs)</span> account on X and these official documentation pages. The QQ team reserves the right to modify, delay, pause, or discontinue the airdrop program at any time.
 

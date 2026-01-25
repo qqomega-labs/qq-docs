@@ -1,0 +1,8 @@
+{
+  "label": "Scores",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Go down the rabbit hole to learn how score engine work."
+  }
+}
