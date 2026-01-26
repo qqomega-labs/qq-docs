@@ -17,7 +17,6 @@ function useNavbarItems() {
  *
  * @customizations
  * - Filters out GitHub link from mobile menu (displayed separately)
- * - Filters out "Docs" link from mobile menu (redundant on mobile)
  * - Maintains original Docusaurus menu functionality
  *
  * @see src/css/custom.css for additional mobile navbar hiding via CSS
@@ -29,17 +28,18 @@ export default function NavbarMobilePrimaryMenu(): ReactNode {
   // Should we allow providing a different list of items?
   const items = useNavbarItems();
 
-  // Filter out the GitHub link and Docs link from mobile menu
+  // Filter out GitHub link and locale dropdown from mobile menu
+  // Both are displayed separately in the mobile sidebar header
   const filteredItems = items.filter(item => {
-    // Remove GitHub link from the list (check both className and href)
+    // Remove GitHub link (check both className and href)
     if ('className' in item && item.className === 'header-github-link') {
       return false;
     }
     if ('href' in item && typeof item.href === 'string' && item.href.includes('github.com')) {
       return false;
     }
-    // Remove Docs link from mobile menu
-    if ('label' in item && item.label === 'Docs') {
+    // Remove locale dropdown (displayed in mobile header instead)
+    if ('type' in item && item.type === 'localeDropdown') {
       return false;
     }
     return true;

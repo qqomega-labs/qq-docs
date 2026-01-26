@@ -157,6 +157,13 @@ const config: Config = {
         content: "en_US",
       },
     },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:locale:alternate",
+        content: "zh_CN",
+      },
+    },
     // Favicon and Icons
     {
       tagName: "link",
@@ -212,12 +219,23 @@ const config: Config = {
 
   onBrokenLinks: "throw",
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "zh-CN"],
+    localeConfigs: {
+      en: {
+        label: "English",
+        direction: "ltr",
+        htmlLang: "en-US",
+        calendar: "gregory",
+      },
+      "zh-CN": {
+        label: "简体中文",
+        direction: "ltr",
+        htmlLang: "zh-CN",
+        calendar: "gregory",
+      },
+    },
   },
 
   presets: [
@@ -254,7 +272,7 @@ const config: Config = {
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
         hashed: true,
-        language: ["en"],
+        language: ["en", "zh"],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
         docsRouteBasePath: "/docs",
@@ -293,6 +311,11 @@ const config: Config = {
         //   label: "Blog",
         //   position: "left",
         // },
+        {
+          type: "localeDropdown",
+          position: "right",
+          className: "locale-dropdown-desktop",
+        },
         {
           href: "https://github.com/qqomega-labs",
           position: "right",

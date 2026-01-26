@@ -16,6 +16,13 @@ bun run start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+### Development with i18n
+
+```bash
+# Start in Chinese locale
+bun run start --locale zh-CN
+```
+
 ## Build
 
 ```bash
@@ -23,6 +30,28 @@ bun run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+**Build specific locale (faster):**
+
+```bash
+bun run build --locale en      # English only
+bun run build --locale zh-CN   # Chinese only
+```
+
+## Internationalization (i18n)
+
+The site supports multiple languages:
+
+- **English (en)** - Default at `/docs/...`
+- **Chinese (zh-CN)** - Available at `/zh-CN/docs/...`
+
+**Generate translation files:**
+
+```bash
+bun run write-translations --locale zh-CN
+```
+
+**Translated content location:** `/i18n/zh-CN/docusaurus-plugin-content-docs/current/`
 
 ## Cloudflare Pages Build
 

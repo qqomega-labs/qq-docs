@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
 
 /**
@@ -31,6 +32,7 @@ export default function AnimatedAtomLogo({
   className = "",
 }: AnimatedAtomLogoProps): React.JSX.Element {
   const [isHovered, setIsHovered] = useState(false);
+  const logoSrc = useBaseUrl("/img/QQlogo.png");
 
   const speedMap = {
     slow: 4000,
@@ -50,7 +52,7 @@ export default function AnimatedAtomLogo({
     >
       {/* Original static logo */}
       <img
-        src="/img/QQlogo.png"
+        src={logoSrc}
         alt="QQ Omega Logo"
         style={{
           width: "100%",
