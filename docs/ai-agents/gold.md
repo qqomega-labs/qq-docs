@@ -19,7 +19,7 @@ image: /img/qq-og-image.png
 ## <img src="/img/Igt.png" alt="Gold" style={{height: '2.5em', verticalAlign: 'middle'}} />Gold | Tokenomics Swarm
 
 Gold is the element humans have historically trusted to store value: scarce, hard to debase, and difficult to fake.  
-In QQ Omega, <span className="gradient-text">**Gold swarm**</span> plays a similar role in understanding how hard or fragile a token really is as a **store-of-value asset**, by dissecting its supply schedule, value capture mechanisms, and incentive design.
+In QQ Omega, <span className="gradient-text">**Gold Swarm**</span> plays a similar role in understanding how hard or fragile a token really is as a **store-of-value asset**, by dissecting its supply schedule, value capture mechanisms, and incentive design.
 
 ### What Gold Is
 

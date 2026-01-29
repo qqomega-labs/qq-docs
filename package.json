@@ -1,7 +1,21 @@
 {
   "name": "qq-docs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
+  "description": "QQ Token official documentation",
+  "keywords": [],
+  "author": "QQ Omega Labs",
+  "contributors": [
+    {
+      "name": "qqalpha",
+      "url": "https://github.com/qqalpha"
+    },
+    {
+      "name": "qqsigma",
+      "url": "https://github.com/qqsigma"
+    }
+  ],
+  "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --no-open",
@@ -10,7 +24,7 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
+    "serve": "docusaurus serve --no-open",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc"

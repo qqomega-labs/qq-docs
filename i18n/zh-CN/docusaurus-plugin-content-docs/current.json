@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "最新版本",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.About QQ Omega": {
+    "message": "关于 QQ Omega",
+    "description": "The label for category 'About QQ Omega' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.About QQ Omega.link.generated-index.description": {
+    "message": "5分钟了解 QQ Omega 最重要的概念。",
+    "description": "The generated-index page description for category 'About QQ Omega' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.AI Agent Swarms": {
+    "message": "AI 代理集群",
+    "description": "The label for category 'AI Agent Swarms' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.AI Agent Swarms.link.generated-index.description": {
+    "message": "深入了解 QQ Omega 的 AI 代理集群。",
+    "description": "The generated-index page description for category 'AI Agent Swarms' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Scores": {
+    "message": "评分系统",
+    "description": "The label for category 'Scores' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Scores.link.generated-index.description": {
+    "message": "深入了解评分引擎的工作原理。",
+    "description": "The generated-index page description for category 'Scores' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.QQ token": {
+    "message": "QQ 代币",
+    "description": "The label for category 'QQ token' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.QQ token.link.generated-index.description": {
+    "message": "QQ 代币生态系统透明清晰的代币经济学。",
+    "description": "The generated-index page description for category 'QQ token' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Roadmap": {
+    "message": "路线图",
+    "description": "The label for category 'Roadmap' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Roadmap.link.generated-index.description": {
+    "message": "未来几年的发展路线图。",
+    "description": "The generated-index page description for category 'Roadmap' in sidebar 'tutorialSidebar'"
+  }
+}

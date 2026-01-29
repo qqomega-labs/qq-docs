@@ -98,6 +98,9 @@
   --ifm-link-color: #ff1d64;
   --ifm-link-hover-color: #ff1d64;
 
+  --ifm-menu-color-background-active: rgba(255, 29, 100, 0.15);
+  --ifm-menu-color-background-hover: rgba(255, 29, 100, 0.08);
+
   --ifm-code-font-size: 95%;
   --ifm-font-family-base:
     system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
@@ -838,6 +841,91 @@
   background: rgba(255, 29, 100, 0.15) !important;
 }
 
+/* Mobile sidebar header Language button - matches theme toggle and GitHub style */
+.navbar-sidebar__lang-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.navbar-sidebar__lang {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border-radius: 6px !important;
+  padding: 0.4rem !important;
+  margin-right: 0.1rem !important;
+  margin-left: 0.1rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.navbar-sidebar__lang svg {
+  width: 20px;
+  height: 20px;
+  transition: all 0.2s ease;
+}
+
+@media (hover: hover) {
+  .navbar-sidebar__lang:hover {
+    background: rgba(255, 29, 100, 0.2) !important;
+  }
+
+  .navbar-sidebar__lang:hover svg {
+    color: var(--qq-color-pink-hot) !important;
+  }
+}
+
+[data-theme="light"] .navbar-sidebar__lang {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-theme="light"] .navbar-sidebar__lang:hover {
+  background: rgba(255, 29, 100, 0.15) !important;
+}
+
+/* Language dropdown menu */
+.navbar-sidebar__lang-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  min-width: 120px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+[data-theme="light"] .navbar-sidebar__lang-dropdown {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-sidebar__lang-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navbar-sidebar__lang-item:hover {
+  background: rgba(255, 29, 100, 0.1);
+  color: var(--qq-color-pink-hot);
+}
+
+.navbar-sidebar__lang-item--active {
+  color: var(--qq-color-pink-hot);
+  font-weight: 600;
+  background: rgba(255, 29, 100, 0.08);
+}
+
 /* Hide GitHub button and Docs link from mobile top navbar */
 @media (max-width: 996px) {
   /* Hide GitHub link from the top navbar container only, not from sidebar */
@@ -913,9 +1001,9 @@
 }
 
 /* Theme toggle button - simplified for proper visibility */
-.clean-btn[title*="theme"],
+.clean-btn[title*="mode"],
 .clean-btn[title*="Switch"],
-button[aria-label*="theme"],
+button[aria-label*="mode"],
 button[aria-label*="Switch"] {
   transition: all 0.2s ease;
   background: rgba(0, 0, 0, 0.3) !important;
@@ -924,9 +1012,9 @@ button[aria-label*="Switch"] {
 }
 
 @media (max-width: 996px) {
-  .clean-btn[title*="theme"],
+  .clean-btn[title*="mode"],
   .clean-btn[title*="Switch"],
-  button[aria-label*="theme"],
+  button[aria-label*="mode"],
   button[aria-label*="Switch"] {
     padding: 0.35rem !important;
     display: flex !important;
@@ -934,65 +1022,65 @@ button[aria-label*="Switch"] {
     justify-content: center !important;
   }
 
-  .clean-btn[title*="theme"] svg,
+  .clean-btn[title*="mode"] svg,
   .clean-btn[title*="Switch"] svg,
-  button[aria-label*="theme"] svg,
+  button[aria-label*="mode"] svg,
   button[aria-label*="Switch"] svg {
     width: 18px !important;
     height: 18px !important;
   }
 }
 
-.clean-btn[title*="theme"] svg,
+.clean-btn[title*="mode"] svg,
 .clean-btn[title*="Switch"] svg,
-button[aria-label*="theme"] svg,
+button[aria-label*="mode"] svg,
 button[aria-label*="Switch"] svg {
   color: #ffffff !important;
 }
 
 @media (hover: hover) {
-  .clean-btn[title*="theme"]:hover,
+  .clean-btn[title*="mode"]:hover,
   .clean-btn[title*="Switch"]:hover,
-  button[aria-label*="theme"]:hover,
+  button[aria-label*="mode"]:hover,
   button[aria-label*="Switch"]:hover {
     background: rgba(255, 29, 100, 0.2) !important;
   }
 
-  .clean-btn[title*="theme"]:hover svg,
+  .clean-btn[title*="mode"]:hover svg,
   .clean-btn[title*="Switch"]:hover svg,
-  button[aria-label*="theme"]:hover svg,
+  button[aria-label*="mode"]:hover svg,
   button[aria-label*="Switch"]:hover svg {
     color: var(--qq-color-pink-hot) !important;
   }
 }
 
 /* Light mode theme toggle */
-[data-theme="light"] .clean-btn[title*="theme"],
+[data-theme="light"] .clean-btn[title*="mode"],
 [data-theme="light"] .clean-btn[title*="Switch"],
-[data-theme="light"] button[aria-label*="theme"],
+[data-theme="light"] button[aria-label*="mode"],
 [data-theme="light"] button[aria-label*="Switch"] {
   background: rgba(255, 255, 255, 0.5) !important;
   border: 1px solid rgba(0, 0, 0, 0.15) !important;
 }
 
-[data-theme="light"] .clean-btn[title*="theme"] svg,
+[data-theme="light"] .clean-btn[title*="mode"] svg,
 [data-theme="light"] .clean-btn[title*="Switch"] svg,
-[data-theme="light"] button[aria-label*="theme"] svg,
+[data-theme="light"] button[aria-label*="mode"] svg,
 [data-theme="light"] button[aria-label*="Switch"] svg {
   color: #1a1a1a !important;
 }
 
 @media (hover: hover) {
-  [data-theme="light"] .clean-btn[title*="theme"]:hover,
+  [data-theme="light"] .clean-btn[title*="mode"]:hover,
   [data-theme="light"] .clean-btn[title*="Switch"]:hover,
-  [data-theme="light"] button[aria-label*="theme"]:hover,
+  [data-theme="light"] button[aria-label*="mode"]:hover,
   [data-theme="light"] button[aria-label*="Switch"]:hover {
     background: rgba(255, 29, 100, 0.15) !important;
   }
 
-  [data-theme="light"] .clean-btn[title*="theme"]:hover svg,
+  [data-theme="light"] .clean-btn[title*="mode"]:hover svg,
   [data-theme="light"] .clean-btn[title*="Switch"]:hover svg,
-  [data-theme="light"] button[aria-label*="theme"]:hover svg,
+  [data-theme="light"] button[aria-label*="mode"]:hover svg,
   [data-theme="light"] button[aria-label*="Switch"]:hover svg {
     color: var(--qq-color-pink-hot) !important;
   }
@@ -1047,28 +1135,32 @@ button[aria-label*="Switch"] svg {
   }
 }
 
-/* Show keyboard shortcuts only on larger tablets */
-@media (min-width: 768px) and (max-width: 996px) {
-  .navbar__search-input,
-  .DocSearch-Button {
-    min-width: 160px !important;
-    max-width: 220px !important;
-  }
+/* Locale dropdown - visible only on desktop (>996px) */
+.locale-dropdown-desktop {
+  display: none !important;
+}
 
-  .navbar__search {
-    max-width: 220px !important;
-  }
-
-  .DocSearch-Button-Keys {
+@media (min-width: 997px) {
+  .locale-dropdown-desktop {
     display: flex !important;
-    gap: 0.2rem !important;
+    align-items: center !important;
   }
 
-  .DocSearch-Button-Key {
-    min-width: 18px !important;
-    min-height: 18px !important;
-    font-size: 0.65rem !important;
-    padding: 0 0.25em !important;
+  /* Fix locale dropdown alignment */
+  .locale-dropdown-desktop > .navbar__link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    flex-direction: row !important;
+  }
+
+  /* Move caret inline with text */
+  .locale-dropdown-desktop > .navbar__link::after {
+    position: static !important;
+    margin: 0 !important;
+    margin-left: 0.25rem !important;
+    border-width: 0.3rem !important;
+    vertical-align: middle !important;
   }
 }
 
@@ -1709,16 +1801,14 @@ button[aria-label*="Switch"] svg {
    SIDEBAR ENHANCEMENTS
    ============================================ */
 
-/* Sidebar with glassmorphism */
+/* Sidebar with solid background */
 aside.theme-doc-sidebar-container {
-  background: rgba(21, 16, 29, 0.6) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: #0f0a1a !important;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="light"] aside.theme-doc-sidebar-container {
-  background: rgba(224, 224, 224, 0.95) !important;
+  background: #d8d8d8 !important;
   border-right-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -2504,6 +2594,15 @@ aside.theme-doc-sidebar-container {
       border-color: #f472b6 !important;
       box-shadow: 0 0 12px rgba(244, 114, 182, 0.4) !important;
     }
+  }
+
+  /* Hide search from mobile sidebar header */
+  .navbar-sidebar__brand .navbar__search,
+  .navbar-sidebar__brand .DocSearch,
+  .navbar-sidebar__brand [class*="searchBox"],
+  .navbar-sidebar__brand svg[class*="search"],
+  .navbar-sidebar__brand mark {
+    display: none !important;
   }
 
   /* Brand section spacing - compact */

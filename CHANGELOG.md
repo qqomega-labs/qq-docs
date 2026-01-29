@@ -5,7 +5,92 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.1.0] - 2026-01-09
+## [v0.2.0] - 2026-01-29 - QQAlpha, QQSigma
+
+### Changed
+
+- Add LICENSE
+- update `package.json`
+
+## [Unreleased] - 2026-01-26 - QQAlpha, QQSigma
+
+### Added
+
+- **Internationalization (i18n) Support**
+  - Configured Docusaurus native i18n with English (default) and Chinese (zh-CN) locales
+  - Created `/i18n/zh-CN/` folder structure with translated documentation
+  - Translated all documentation sections: about-qq-omega, ai-agents, scores, tokenomics, roadmap
+  - Added `code.json`, `navbar.json`, `footer.json` for UI string translations
+
+- **Custom Language Selector for Mobile**
+  - Created custom `LanguageButton` component in mobile sidebar header
+  - Icon-based button matching theme toggle and GitHub button style
+  - Dropdown menu with locale options and active state indicator
+  - Uses `window.location.href` for proper navigation in static builds
+
+- **Desktop Language Selector**
+  - Added `localeDropdown` to navbar with `locale-dropdown-desktop` class
+  - Hidden on mobile/tablet (≤996px), visible only on desktop (>996px)
+  - Styled with proper text and arrow alignment
+
+### Changed
+
+- **Navbar Mobile Sidebar Header** (`src/theme/Navbar/MobileSidebar/Header/index.tsx`)
+  - Added custom `LanguageButton` component with translation icon (文A)
+  - Removed `LocaleDropdownNavbarItem` in favor of custom implementation
+  - Language button positioned between GitHub button and close button
+
+- **Mobile Sidebar PrimaryMenu** (`src/theme/Navbar/MobileSidebar/PrimaryMenu/index.tsx`)
+  - Filtered out `localeDropdown` items from mobile menu (now in header)
+
+- **AnimatedAtomLogo** (`src/components/AnimatedAtomLogo/index.tsx`)
+  - Added `useBaseUrl` hook for logo image path to fix locale compatibility
+
+- **Sidebar Styling** (`src/css/custom.css`)
+  - Removed glassmorphism transparency from sidebar, using solid background
+  - Dark mode: `#0f0a1a`, Light mode: `#d8d8d8`
+
+- **Theme Toggle Button Selectors**
+  - Fixed CSS selectors from `[title*="theme"]` to `[title*="mode"]` to match Docusaurus attributes
+
+- **Package Scripts** (`package.json`)
+  - Added `--no-open` flag to `serve` script to prevent AppleScript errors
+
+### Removed
+
+- **Old Chinese Documentation Structure**
+  - Removed `/docs-china/` folder (migrated to proper i18n structure at `/i18n/zh-CN/`)
+
+### Technical Details
+
+**i18n Structure:**
+
+```
+/i18n/zh-CN/
+├── code.json                           # UI translations
+├── docusaurus-theme-classic/
+│   ├── navbar.json
+│   └── footer.json
+└── docusaurus-plugin-content-docs/
+    ├── current.json                    # Sidebar labels
+    └── current/                        # Translated docs
+```
+
+**Language Selector Implementation:**
+
+- Desktop: Standard Docusaurus `localeDropdown` with CSS visibility control
+- Mobile: Custom React component with `useAlternatePageUtils` for URL generation
+- Styling: Matches existing header buttons (32px, glassmorphism, pink hover)
+
+**CSS Classes Added:**
+
+- `.locale-dropdown-desktop` - Desktop locale dropdown visibility
+- `.navbar-sidebar__lang-wrapper` - Mobile language button container
+- `.navbar-sidebar__lang` - Mobile language button styling
+- `.navbar-sidebar__lang-dropdown` - Mobile dropdown menu
+- `.navbar-sidebar__lang-item` - Dropdown menu items
+
+## [v0.1.0] - 2026-01-09 - QQAlpha, QQSigma
 
 ### Added
 
