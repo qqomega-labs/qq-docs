@@ -1,5 +1,5 @@
 ---
-title: Hydrogen Swarm
+title: 🔵 Hydrogen Swarm
 sidebar_position: 4
 description: Hydrogen swarm tracks on-chain behavior - TVL, holder composition, whale accumulation, CEX flows, and capital movements across crypto assets.
 keywords:

@@ -1,5 +1,5 @@
 ---
-title: Phosphorus Swarm
+title: 🔴 Phosphorus Swarm
 sidebar_position: 7
 description: Phosphorus swarm orchestrates all QQ Omega elements, aggregating scores across daily, weekly, monthly, and yearly timeframes into the Global QQ Score.
 keywords:
