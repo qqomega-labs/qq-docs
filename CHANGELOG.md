@@ -34,6 +34,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`QQlogo_nodots.png`** (`static/img/QQlogo_nodots.png`)
   - Logo asset without electron dots, used as hover state base for animated overlay
 
+### Changed
+
+- **Light mode theme overhaul** (`src/css/custom.css`)
+  - Updated all backgrounds from gray (#d8d8d8) to accessible white (#fafafa, #ffffff)
+  - `--qq-bg-light`: #fafafa, `--qq-bg-light-surface`: #ffffff
+  - `--ifm-background-color`: #fafafa, `--ifm-navbar-background-color`: rgba(255,255,255,0.95)
+  - `--ifm-footer-background-color`: #f5f5f5
+  - All text colors updated from #303030 to #1a1a1a for better contrast
+  - Updated components: navbar, sidebar, cards, TOC, admonitions, back-to-top button, mobile sidebar
+
+- **Sidebar scrollbar** (`src/css/custom.css`)
+  - Changed from pink to neutral colors (gray) for less visual distraction
+  - Dark mode: `rgba(255, 255, 255, 0.2)`, Light mode: `rgba(0, 0, 0, 0.2)`
+
+- **Footer shadow reduced** (`src/theme/Footer/styles.module.css`)
+  - Dark mode: `box-shadow` reduced from `0 -4px 32px rgba(0,0,0,0.3)` to `0 -2px 12px rgba(0,0,0,0.1)`
+  - Light mode: minimal shadow `0 -1px 8px rgba(0,0,0,0.05)`
+  - Gradient starts later (30% instead of 20%) for softer transition
+
+- **TOC widget light mode** (`src/css/custom.css`)
+  - Added glassy pink effect matching dark mode aesthetic
+  - Background: `rgba(255, 240, 245, 0.85)` (soft pink tint)
+  - Border: `rgba(255, 29, 100, 0.15)` (pink border)
+  - Box-shadow: pink glow effect
+
 ## [v0.2.0] - 2026-01-29 - QQAlpha, QQSigma
 
 ### Changed

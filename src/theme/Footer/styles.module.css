@@ -8,8 +8,8 @@
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(0, 0, 0, 0.85) 20%,
-    rgba(0, 0, 0, 0.98) 100%
+    rgba(0, 0, 0, 0.6) 30%,
+    rgba(0, 0, 0, 0.85) 100%
   );
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -17,8 +17,8 @@
   /* No static border - only electron animation */
   border-top: none;
 
-  /* Add subtle box shadow */
-  box-shadow: 0 -4px 32px 0 rgba(0, 0, 0, 0.3);
+  /* Subtle box shadow */
+  box-shadow: 0 -2px 12px 0 rgba(0, 0, 0, 0.1);
 
   position: relative;
 
@@ -103,10 +103,11 @@
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.8) 20%,
-    rgba(255, 255, 255, 0.95) 100%
+    rgba(245, 245, 245, 0.9) 30%,
+    rgba(245, 245, 245, 1) 100%
   );
   border-top: none;
+  box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.05);
 }
 
 /* Enhance footer links with glow effect on hover */
