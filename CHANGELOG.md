@@ -7,6 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - 2026-02-03 - QQAlpha
 
+### Added
+
+- **RadialScoreChart Component** (`src/components/RadialScoreChart/`)
+  - New interactive radial bar chart for multi-dimensional score visualization
+  - Replaces static image in `docs/about/why.mdx`
+  - Uses recharts `RadialBarChart` with glassmorphism styling
+  - 5 scoring categories: Fundamentals, Tokenomics, On-Chain, Technical Analysis, Macro & Market Regime
+  - Colors match TokenomicsPieChart palette (`--qq-color-pink-hot`, `--qq-color-cyan-bright`, etc.)
+  - Center label showing average "QQ Score"
+  - Interactive legend with hover sync to chart segments
+  - Glow effect on hover matching TokenomicsPieChart (`drop-shadow(0 0 8px)`)
+  - Mobile-responsive with adaptive bar sizes and layout
+  - Light/dark theme support via MutationObserver
+  - Exported types (`ScoreData`, `RadialScoreChartProps`) for reusability
+  - Configurable props: `data`, `title`, `height`, `showLegend`, `showCenterScore`, `centerLabel`, `innerRadius`, `outerRadius`
+
+### Changed
+
+- **RadialScoreChart usage** (`docs/about/why.mdx`)
+  - Data now passed externally from MDX (same pattern as TokenomicsPieChart)
+  - Enables content authors to modify scores/categories without touching component code
+
+- **Tooltip styling** (`src/components/RadialScoreChart/`, `src/components/TokenomicsPieChart/`)
+  - Removed pink glow effect from tooltips on both charts
+  - Dark mode: neutral `box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4)`
+  - Light mode: subtle `box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12)`
+
 ### Fixed
 
 - **TokenomicsPieChart hover glitch** (`src/components/TokenomicsPieChart/`)

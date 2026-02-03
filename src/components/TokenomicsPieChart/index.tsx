@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  PieChart,
-  Pie,
-  Cell,
-  ResponsiveContainer,
-  Legend,
-  Tooltip,
-} from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 import styles from "./styles.module.css";
 
 /**
@@ -80,9 +73,9 @@ export default function TokenomicsPieChart({
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(
-    typeof document !== 'undefined'
-      ? document.documentElement.getAttribute('data-theme') !== 'light'
-      : true
+    typeof document !== "undefined"
+      ? document.documentElement.getAttribute("data-theme") !== "light"
+      : true,
   );
   // Track if initial animation has completed to prevent label flickering on hover
   const [initialAnimationDone, setInitialAnimationDone] = useState(false);
@@ -94,23 +87,25 @@ export default function TokenomicsPieChart({
     };
 
     const checkTheme = () => {
-      setIsDarkTheme(document.documentElement.getAttribute('data-theme') === 'dark');
+      setIsDarkTheme(
+        document.documentElement.getAttribute("data-theme") === "dark",
+      );
     };
 
     checkMobile();
     checkTheme();
 
-    window.addEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
 
     // Watch for theme changes
     const observer = new MutationObserver(checkTheme);
     observer.observe(document.documentElement, {
       attributes: true,
-      attributeFilter: ['data-theme'],
+      attributeFilter: ["data-theme"],
     });
 
     return () => {
-      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener("resize", checkMobile);
       observer.disconnect();
     };
   }, []);
@@ -136,7 +131,7 @@ export default function TokenomicsPieChart({
     const x = cx + radius * Math.cos(-midAngle * RADIAN);
     const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
-    const percentText = (percent * 100).toFixed(1) + '%';
+    const percentText = (percent * 100).toFixed(1) + "%";
     const fontSize = isMobile ? 10 : 14;
 
     // On mobile, show only percentage. On desktop, show name for larger segments
@@ -146,11 +141,11 @@ export default function TokenomicsPieChart({
           x={x}
           y={y}
           fill={fill}
-          textAnchor={x > cx ? 'start' : 'end'}
+          textAnchor={x > cx ? "start" : "end"}
           dominantBaseline="central"
           fontSize={fontSize}
           fontWeight={600}
-          style={{ pointerEvents: 'none' }}
+          style={{ pointerEvents: "none" }}
         >
           {percentText}
         </text>
@@ -163,14 +158,18 @@ export default function TokenomicsPieChart({
           x={x}
           y={y}
           fill={fill}
-          textAnchor={x > cx ? 'start' : 'end'}
+          textAnchor={x > cx ? "start" : "end"}
           dominantBaseline="central"
           fontSize={fontSize}
           fontWeight={600}
-          style={{ pointerEvents: 'none' }}
+          style={{ pointerEvents: "none" }}
         >
-          <tspan x={x} dy={0}>{name}</tspan>
-          <tspan x={x} dy={16}>{percentText}</tspan>
+          <tspan x={x} dy={0}>
+            {name}
+          </tspan>
+          <tspan x={x} dy={16}>
+            {percentText}
+          </tspan>
         </text>
       );
     }
@@ -180,11 +179,11 @@ export default function TokenomicsPieChart({
         x={x}
         y={y}
         fill={fill}
-        textAnchor={x > cx ? 'start' : 'end'}
+        textAnchor={x > cx ? "start" : "end"}
         dominantBaseline="central"
         fontSize={fontSize}
         fontWeight={600}
-        style={{ pointerEvents: 'none' }}
+        style={{ pointerEvents: "none" }}
       >
         {percentText}
       </text>
@@ -263,9 +262,11 @@ export default function TokenomicsPieChart({
               paddingAngle={2}
               cornerRadius={3}
               labelLine={{
-                stroke: isDarkTheme ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)",
+                stroke: isDarkTheme
+                  ? "rgba(255, 255, 255, 0.1)"
+                  : "rgba(0, 0, 0, 0.1)",
                 strokeWidth: 2,
-                style: { pointerEvents: 'none' },
+                style: { pointerEvents: "none" },
               }}
               label={renderLabel}
               fill="#8884d8"
@@ -281,12 +282,16 @@ export default function TokenomicsPieChart({
                 <Cell
                   key={`cell-${index}`}
                   fill={entry.color}
-                  stroke={isDarkTheme ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)"}
+                  stroke={
+                    isDarkTheme
+                      ? "rgba(255, 255, 255, 0.1)"
+                      : "rgba(0, 0, 0, 0.1)"
+                  }
                   strokeWidth={activeIndex === index ? 4 : 2}
                   opacity={
                     activeIndex === null || activeIndex === index ? 1 : 0.6
                   }
-                  className={`${styles.pieCell} ${activeIndex === index ? styles.pieCellActive : ''}`}
+                  className={`${styles.pieCell} ${activeIndex === index ? styles.pieCellActive : ""}`}
                 />
               ))}
             </Pie>

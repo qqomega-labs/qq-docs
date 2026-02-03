@@ -17,6 +17,8 @@ keywords:
 image: /img/qq-og-image.png
 ---
 
+import RadialScoreChart from "@site/src/components/RadialScoreChart";
+
 ## Why QQ Omega Exists?
 
 Markets, especially in crypto, are noisy, fast, and emotional.  
@@ -50,12 +52,48 @@ Crypto projects are evaluated with the same seriousness you would apply to real 
 
 ### Who QQ Omega Is For
 
-QQ is built for users who want <span className="pink-glow-text">real financial awareness</span>:  
-to understand when a project’s “good vibes” are backed by substance, and when it’s something to stay away from.
+QQ is built for users who want <span className="pink-glow-text">real financial awareness</span>:
+to understand when a project's "good vibes" are backed by substance, and when it's something to stay away from.
 
 :::note
-Think of QQ Omega as a filter between you and the noise.  
+Think of QQ Omega as a filter between you and the noise.
 It does not tell you what to believe: it shows you <span className="pink-glow-text">**why**</span> a project looks strong or fragile, so you can decide for yourself.
 :::
 
-![QQ Omega Documentation Footer](/img/footer-docs.jpg)
+### Multi-Dimensional Analysis
+
+<RadialScoreChart
+  data={[
+    {
+      name: "Fundamentals",
+      score: 85,
+      fill: "var(--qq-color-pink-hot)",
+      description: "Team, vision, technology, and execution capability",
+    },
+    {
+      name: "Tokenomics",
+      score: 72,
+      fill: "var(--qq-color-cyan-bright)",
+      description: "Token distribution, utility, and economic model",
+    },
+    {
+      name: "On-Chain",
+      score: 68,
+      fill: "var(--qq-color-purple-light)",
+      description: "Transaction activity, holder distribution, and network health",
+    },
+    {
+      name: "Technical Analysis",
+      score: 78,
+      fill: "var(--qq-color-pink-magenta)",
+      description: "Chart patterns, indicators, and price action analysis",
+    },
+    {
+      name: "Macro & Market Regime",
+      score: 65,
+      fill: "var(--qq-color-cyan-teal)",
+      description: "Market conditions, sentiment, and macroeconomic factors",
+    },
+  ]}
+  centerLabel="QQ Score"
+/>
