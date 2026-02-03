@@ -155,14 +155,28 @@
 /* Pie cell animation */
 .pieCell {
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  /* Transition only specific properties to avoid conflict with recharts animations */
+  transition: stroke-width 0.2s ease-out, filter 0.2s ease-out;
+  will-change: stroke-width, filter;
 }
 
-/* Hover effects (desktop only) - subtle opacity change only */
+/* Active state for hovered pie segment */
+.pieCellActive {
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+/* Hover effects (desktop only) - subtle filter change only */
 @media (hover: hover) {
   .pieCell:hover {
-    opacity: 0.9;
+    filter: drop-shadow(0 0 6px currentColor);
   }
+}
+
+/* Stabilize labels and label lines during hover - prevent flickering */
+:global(.recharts-pie-label-text),
+:global(.recharts-pie-label-line) {
+  pointer-events: none;
+  transition: none;
 }
 
 /* Tablet styles */
@@ -395,7 +409,12 @@
   }
 
   .pieCell,
+  .pieCellActive,
   .legendItem {
     transition: none;
+  }
+
+  .pieCellActive {
+    filter: none;
   }
 }

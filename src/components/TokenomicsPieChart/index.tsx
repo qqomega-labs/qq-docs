@@ -84,6 +84,8 @@ export default function TokenomicsPieChart({
       ? document.documentElement.getAttribute('data-theme') !== 'light'
       : true
   );
+  // Track if initial animation has completed to prevent label flickering on hover
+  const [initialAnimationDone, setInitialAnimationDone] = useState(false);
 
   // Detect mobile screen size and theme
   React.useEffect(() => {
@@ -113,11 +115,20 @@ export default function TokenomicsPieChart({
     };
   }, []);
 
+  // Disable animations after initial render to prevent label flickering on hover
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setInitialAnimationDone(true);
+    }, 1300); // Slightly longer than animationDuration (1200ms)
+    return () => clearTimeout(timer);
+  }, []);
+
   // Responsive radii - optimized for mobile readability
   const innerRadius = isMobile ? 65 : 95;
   const outerRadius = isMobile ? 110 : 160;
 
   // Custom label renderer for donut slices - positioned outside
+  // Note: pointerEvents="none" prevents labels from interfering with segment hover
   const renderLabel = (props: any) => {
     const { cx, cy, midAngle, outerRadius, fill, percent, name, value } = props;
     const RADIAN = Math.PI / 180;
@@ -139,6 +150,7 @@ export default function TokenomicsPieChart({
           dominantBaseline="central"
           fontSize={fontSize}
           fontWeight={600}
+          style={{ pointerEvents: 'none' }}
         >
           {percentText}
         </text>
@@ -155,6 +167,7 @@ export default function TokenomicsPieChart({
           dominantBaseline="central"
           fontSize={fontSize}
           fontWeight={600}
+          style={{ pointerEvents: 'none' }}
         >
           <tspan x={x} dy={0}>{name}</tspan>
           <tspan x={x} dy={16}>{percentText}</tspan>
@@ -171,6 +184,7 @@ export default function TokenomicsPieChart({
         dominantBaseline="central"
         fontSize={fontSize}
         fontWeight={600}
+        style={{ pointerEvents: 'none' }}
       >
         {percentText}
       </text>
@@ -251,6 +265,7 @@ export default function TokenomicsPieChart({
               labelLine={{
                 stroke: isDarkTheme ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)",
                 strokeWidth: 2,
+                style: { pointerEvents: 'none' },
               }}
               label={renderLabel}
               fill="#8884d8"
@@ -258,6 +273,7 @@ export default function TokenomicsPieChart({
               animationBegin={0}
               animationDuration={1200}
               animationEasing="ease-out"
+              isAnimationActive={!initialAnimationDone}
               onMouseEnter={onPieEnter}
               onMouseLeave={onPieLeave}
             >
@@ -270,14 +286,7 @@ export default function TokenomicsPieChart({
                   opacity={
                     activeIndex === null || activeIndex === index ? 1 : 0.6
                   }
-                  className={styles.pieCell}
-                  style={{
-                    filter:
-                      activeIndex === index
-                        ? "drop-shadow(0 0 12px currentColor)"
-                        : "none",
-                    transition: "all 0.3s ease",
-                  }}
+                  className={`${styles.pieCell} ${activeIndex === index ? styles.pieCellActive : ''}`}
                 />
               ))}
             </Pie>

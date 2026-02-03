@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - 2026-02-03 - QQAlpha
 
+### Fixed
+
+- **TokenomicsPieChart hover glitch** (`src/components/TokenomicsPieChart/`)
+  - Fixed pie cell glitch: removed inline `transition: all` and `filter` that conflicted with recharts animations
+  - Moved hover effects to CSS classes (`.pieCell`, `.pieCellActive`) with specific transitions for `stroke-width` and `filter` only
+  - Fixed label flickering on hover: added `pointerEvents: 'none'` to all `<text>` elements and `labelLine`
+  - Added `initialAnimationDone` state to disable animations after initial render (1300ms timeout)
+  - Changed `isAnimationActive` from `activeIndex === null` to `!initialAnimationDone` to prevent re-renders on hover
+  - Added global CSS override for `.recharts-pie-label-text` and `.recharts-pie-label-line` with `pointer-events: none` and `transition: none`
+
 ### Changed
 
 - **AnimatedAtomLogo** (`src/components/AnimatedAtomLogo/`)
