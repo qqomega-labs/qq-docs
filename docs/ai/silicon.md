@@ -1,5 +1,5 @@
 ---
-title: Silicon Swarm
+title: 🪙 Silicon Swarm
 sidebar_position: 5
 description: Silicon swarm performs technical analysis - market structure, support/resistance, order flow, derivatives positioning, liquidations, and liquidity mapping.
 keywords:

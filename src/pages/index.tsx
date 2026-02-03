@@ -43,7 +43,7 @@ export default function Home(): ReactNode {
       <main>
         {/* NOTE: backup */}
         {/* <HomepageFeatures /> */}
-        <Redirect to="/docs/category/about-qq-omega" />;
+        <Redirect to="/docs/about/why" />;
       </main>
     </Layout>
   );

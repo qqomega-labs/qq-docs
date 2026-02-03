@@ -5,6 +5,101 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.2.1] - 2026-02-03 - QQAlpha, QQSigma
+
+### Added
+
+- **RadialScoreChart Component** (`src/components/RadialScoreChart/`)
+  - New interactive radial bar chart for multi-dimensional score visualization
+  - Replaces static image in `docs/about/why.mdx`
+  - Uses recharts `RadialBarChart` with glassmorphism styling
+  - 5 scoring categories: Fundamentals, Tokenomics, On-Chain, Technical Analysis, Macro & Market Regime
+  - Colors match TokenomicsPieChart palette (`--qq-color-pink-hot`, `--qq-color-cyan-bright`, etc.)
+  - Center label showing average "QQ Score"
+  - Interactive legend with hover sync to chart segments
+  - Glow effect on hover matching TokenomicsPieChart (`drop-shadow(0 0 8px)`)
+  - Mobile-responsive with adaptive bar sizes and layout
+  - Light/dark theme support via MutationObserver
+  - Exported types (`ScoreData`, `RadialScoreChartProps`) for reusability
+  - Configurable props: `data`, `title`, `height`, `showLegend`, `showCenterScore`, `centerLabel`, `innerRadius`, `outerRadius`
+
+### Changed
+
+- **Homepage redirect** (`src/pages/index.tsx`)
+  - Changed redirect from `/docs/category/about-qq-omega` to `/docs/about/why`
+  - Main entry point now lands directly on "Why QQ Omega Exists" page
+
+- **RadialScoreChart usage** (`docs/about/why.mdx`)
+  - Data now passed externally from MDX (same pattern as TokenomicsPieChart)
+  - Enables content authors to modify scores/categories without touching component code
+
+- **Tooltip styling** (`src/components/RadialScoreChart/`, `src/components/TokenomicsPieChart/`)
+  - Removed pink glow effect from tooltips on both charts
+  - Dark mode: neutral `box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4)`
+  - Light mode: subtle `box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12)`
+
+### Fixed
+
+- **TokenomicsPieChart hover glitch** (`src/components/TokenomicsPieChart/`)
+  - Fixed pie cell glitch: removed inline `transition: all` and `filter` that conflicted with recharts animations
+  - Moved hover effects to CSS classes (`.pieCell`, `.pieCellActive`) with specific transitions for `stroke-width` and `filter` only
+  - Fixed label flickering on hover: added `pointerEvents: 'none'` to all `<text>` elements and `labelLine`
+  - Added `initialAnimationDone` state to disable animations after initial render (1300ms timeout)
+  - Changed `isAnimationActive` from `activeIndex === null` to `!initialAnimationDone` to prevent re-renders on hover
+  - Added global CSS override for `.recharts-pie-label-text` and `.recharts-pie-label-line` with `pointer-events: none` and `transition: none`
+
+### Changed
+
+- **AnimatedAtomLogo** (`src/components/AnimatedAtomLogo/`)
+  - Default logo: `QQlogo.png` (with dots)
+  - On hover: crossfades to `QQlogo_nodots.png` with rotating SVG electron overlay
+  - Hover image swap gated behind `@media (hover: hover)` for mobile safety
+  - Hover image preloaded via `useEffect` + `new Image()` on mount
+
+### Fixed
+
+- **AnimatedAtomLogo rotation not working** (`src/components/AnimatedAtomLogo/`)
+  - Replaced SMIL `<animateTransform>` with CSS `@keyframes rotate` animation
+  - SMIL animations don't work reliably with React's conditional rendering
+  - Added `.rotatingGroup` CSS class with `transform-origin: 512px 512px`
+  - Animation duration passed via CSS custom property `--rotation-duration`
+
+- **AnimatedAtomLogo mobile duplicate dots issue** (`src/components/AnimatedAtomLogo/styles.module.css`)
+  - SVG overlay was rendering on touch devices causing duplicate dots
+  - Root cause: JS hover state activated on touch, but CSS image swap protected by `@media (hover: hover)`
+  - Fix: Added `display: none` to `.svgOverlay` by default, `display: block` only inside `@media (hover: hover)`
+  - Mobile now shows static logo (`QQlogo.png`) without animation artifacts
+
+### Added
+
+- **`QQlogo_nodots.png`** (`static/img/QQlogo_nodots.png`)
+  - Logo asset without electron dots, used as hover state base for animated overlay
+
+### Changed
+
+- **Light mode theme overhaul** (`src/css/custom.css`)
+  - Updated all backgrounds from gray (#d8d8d8) to accessible white (#fafafa, #ffffff)
+  - `--qq-bg-light`: #fafafa, `--qq-bg-light-surface`: #ffffff
+  - `--ifm-background-color`: #fafafa, `--ifm-navbar-background-color`: rgba(255,255,255,0.95)
+  - `--ifm-footer-background-color`: #f5f5f5
+  - All text colors updated from #303030 to #1a1a1a for better contrast
+  - Updated components: navbar, sidebar, cards, TOC, admonitions, back-to-top button, mobile sidebar
+
+- **Sidebar scrollbar** (`src/css/custom.css`)
+  - Changed from pink to neutral colors (gray) for less visual distraction
+  - Dark mode: `rgba(255, 255, 255, 0.2)`, Light mode: `rgba(0, 0, 0, 0.2)`
+
+- **Footer shadow reduced** (`src/theme/Footer/styles.module.css`)
+  - Dark mode: `box-shadow` reduced from `0 -4px 32px rgba(0,0,0,0.3)` to `0 -2px 12px rgba(0,0,0,0.1)`
+  - Light mode: minimal shadow `0 -1px 8px rgba(0,0,0,0.05)`
+  - Gradient starts later (30% instead of 20%) for softer transition
+
+- **TOC widget light mode** (`src/css/custom.css`)
+  - Added glassy pink effect matching dark mode aesthetic
+  - Background: `rgba(255, 240, 245, 0.85)` (soft pink tint)
+  - Border: `rgba(255, 29, 100, 0.15)` (pink border)
+  - Box-shadow: pink glow effect
+
 ## [v0.2.0] - 2026-01-29 - QQAlpha, QQSigma
 
 ### Changed

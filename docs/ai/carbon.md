@@ -1,5 +1,5 @@
 ---
-title: Carbon Swarm
+title: ⚫️ Carbon Swarm
 sidebar_position: 2
 description: Carbon swarm evaluates crypto fundamentals - team credibility, product quality, governance, security audits, revenue models, and organizational resilience.
 keywords:
