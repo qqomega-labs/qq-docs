@@ -25,6 +25,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **Homepage redirect** (`src/pages/index.tsx`)
+  - Changed redirect from `/docs/category/about-qq-omega` to `/docs/about/why`
+  - Main entry point now lands directly on "Why QQ Omega Exists" page
+
 - **RadialScoreChart usage** (`docs/about/why.mdx`)
   - Data now passed externally from MDX (same pattern as TokenomicsPieChart)
   - Enables content authors to modify scores/categories without touching component code
