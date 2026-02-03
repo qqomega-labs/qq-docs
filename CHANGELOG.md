@@ -5,6 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased] - 2026-02-03 - QQAlpha
+
+### Changed
+
+- **AnimatedAtomLogo** (`src/components/AnimatedAtomLogo/`)
+  - Default logo: `QQlogo.png` (with dots)
+  - On hover: crossfades to `QQlogo_nodots.png` with rotating SVG electron overlay
+  - Hover image swap gated behind `@media (hover: hover)` for mobile safety
+  - Hover image preloaded via `useEffect` + `new Image()` on mount
+
+### Fixed
+
+- **AnimatedAtomLogo rotation not working** (`src/components/AnimatedAtomLogo/`)
+  - Replaced SMIL `<animateTransform>` with CSS `@keyframes rotate` animation
+  - SMIL animations don't work reliably with React's conditional rendering
+  - Added `.rotatingGroup` CSS class with `transform-origin: 512px 512px`
+  - Animation duration passed via CSS custom property `--rotation-duration`
+
+- **AnimatedAtomLogo mobile duplicate dots issue** (`src/components/AnimatedAtomLogo/styles.module.css`)
+  - SVG overlay was rendering on touch devices causing duplicate dots
+  - Root cause: JS hover state activated on touch, but CSS image swap protected by `@media (hover: hover)`
+  - Fix: Added `display: none` to `.svgOverlay` by default, `display: block` only inside `@media (hover: hover)`
+  - Mobile now shows static logo (`QQlogo.png`) without animation artifacts
+
+### Added
+
+- **`QQlogo_nodots.png`** (`static/img/QQlogo_nodots.png`)
+  - Logo asset without electron dots, used as hover state base for animated overlay
+
 ## [v0.2.0] - 2026-01-29 - QQAlpha, QQSigma
 
 ### Changed

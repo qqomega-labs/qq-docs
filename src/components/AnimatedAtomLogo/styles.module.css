@@ -1,5 +1,57 @@
-/* Rotation animation - use :global to make it accessible */
-@keyframes :global(logoRotate) {
+/* --------------------------------------------------------
+   AnimatedAtomLogo
+   Mobile-first: static logo only. Hover effects via
+   @media (hover: hover) for pointer devices.
+   -------------------------------------------------------- */
+
+/* CONTAINER */
+.atomLogo {
+  display: inline-block;
+  position: relative;
+}
+
+/* LOGO IMAGES - first image is relative to give container intrinsic size,
+   subsequent images are stacked absolutely on top */
+.logoImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover image stacks on top of the base image, starts invisible */
+.logoHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* SVG overlay for the rotating ball+stick - hidden on touch devices */
+.svgOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: none;
+}
+
+@media (hover: hover) {
+  .svgOverlay {
+    display: block;
+  }
+}
+
+/* Rotating group inside SVG */
+.rotatingGroup {
+  transform-origin: 512px 512px;
+  animation: rotate var(--rotation-duration, 3000ms) linear infinite;
+}
+
+@keyframes rotate {
   from {
     transform: rotate(0deg);
   }
@@ -8,20 +60,32 @@
   }
 }
 
-/* Container */
-.atomLogo {
-  display: inline-block;
-  position: relative;
+/* --------------------------------------------------------
+   HOVER STATES
+   Only apply on devices that truly support hover (no
+   sticky :hover on touch). On mobile the logo stays
+   static as icon1.png.
+   -------------------------------------------------------- */
+@media (hover: hover) {
+  .logoHidden {
+    opacity: 0;
+  }
+
+  .logoVisible {
+    opacity: 1;
+  }
 }
 
-/* Electron group */
-.electronGroup {
-  transform-origin: center;
-}
-
-/* Respect user's motion preferences */
+/* --------------------------------------------------------
+   ACCESSIBILITY
+   Disable all motion for users who prefer reduced motion.
+   -------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
-  .electronGroup {
+  .logoImage {
+    transition: none !important;
+  }
+
+  .rotatingGroup {
     animation: none !important;
   }
 }
