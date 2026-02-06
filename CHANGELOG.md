@@ -29,6 +29,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Smaller hamburger toggle button (18px icons)
   - Reduced padding and gaps throughout navbar
 
+- **Footer text size on iPhone 5/SE** (`src/css/custom.css`)
+  - Reduced footer text sizes for extra-small screens (`max-width: 380px`)
+  - Copyright text: `0.7rem`, footer title: `0.75rem`, link items: `0.7rem`
+  - Reduced footer padding for compact display
+
 - **Update CN docs and align shortened `/docs` folder paths**
 - **Move radial chart from Why to What**
 
