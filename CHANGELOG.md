@@ -5,7 +5,57 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.2.1] - 2026-02-03 - QQAlpha, QQSigma
+## [v0.2.2] - 2026-02-06 (QQAlpha, QQSigma)
+
+### Fixed
+
+- **Hash-link underline removal** (`src/css/custom.css`, `src/theme/DocItem/Layout/styles.module.css`)
+  - Removed unwanted underline/border from heading anchor links (`#` symbols)
+  - Added `text-decoration: none !important` and `border-bottom: none !important` to all `.hash-link` selectors
+  - Excluded `.hash-link` from general link styling with `:not(.hash-link)` selector
+
+- **Manifest.json PWA compliance** (`static/manifest.json`)
+  - Added required `start_url: "/"` field (mandatory for PWA)
+  - Added `scope: "/"` field
+  - Fixed `purpose: "maskable"` to `purpose: "any maskable"` (W3C standard)
+  - Added `orientation: "portrait-primary"`
+  - Updated `name` to "QQ Omega Labs Docs" and `short_name` to "QQ Docs"
+
+- **Mobile navbar overflow on iPhone 5/SE** (`src/css/custom.css`)
+  - Added extra-small screen breakpoint (`max-width: 380px`) for 320px devices
+  - Hidden site title "QQ Omega" on very small screens to prevent overlap
+  - Reduced logo size to `1.75rem`
+  - More compact search box (`max-width: 70px`, `min-width: 50px`)
+  - Smaller hamburger toggle button (18px icons)
+  - Reduced padding and gaps throughout navbar
+
+- **Update CN docs and align shortened `/docs` folder paths**
+- **Move radial chart from Why to What**
+
+### Added
+
+- **Navbar fade shadow effect** (`src/css/custom.css`)
+  - Added `::after` pseudo-element to navbar creating depth illusion on scroll
+  - Content appears to fade/disappear under the navbar
+  - Gradient from page background color to transparent (40px height)
+  - Dark mode: `rgba(15, 10, 26)` matching `--ifm-background-color: #0f0a1a`
+  - Light mode: `rgba(250, 250, 250)` matching `--ifm-background-color: #fafafa`
+
+- **Mobile sidebar neutral scrollbar** (`src/css/custom.css`)
+  - Added scrollbar styles for `.navbar-sidebar` and `.navbar-sidebar__items`
+  - Uses neutral gray colors instead of pink (matching desktop sidebar)
+  - Dark mode: `rgba(255, 255, 255, 0.2)`
+  - Light mode: `rgba(0, 0, 0, 0.2)`
+
+### Changed
+
+- **Scrollbar styling enhancement** (`src/css/custom.css`)
+  - Increased scrollbar width from `10px` to `12px` for better visibility
+  - Increased `border-radius` from `5px` to `10px` for pill-shaped appearance
+  - Increased border from `2px` to `3px` for floating effect
+  - Note: Firefox does not support `border-radius` on scrollbars (browser limitation)
+
+## [v0.2.1] - 2026-02-03 (QQAlpha, QQSigma)
 
 ### Added
 
