@@ -19,6 +19,8 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --no-open",
+    "start:en": "bun run start --locale en",
+    "start:cn": "bun run start --locale zh-CN",
     "build": "docusaurus build",
     "build:cf": "npm install && docusaurus clear && docusaurus build",
     "swizzle": "docusaurus swizzle",

@@ -1,11 +1,12 @@
 import React, { type ReactNode, useState, useRef, useEffect } from "react";
 import { useNavbarMobileSidebar } from "@docusaurus/theme-common/internal";
 import { translate } from "@docusaurus/Translate";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { useAlternatePageUtils } from "@docusaurus/theme-common/internal";
+
 import NavbarColorModeToggle from "@theme/Navbar/ColorModeToggle";
 import IconClose from "@theme/Icon/Close";
 import NavbarLogo from "@theme/Navbar/Logo";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { useAlternatePageUtils } from "@docusaurus/theme-common/internal";
 
 function GitHubButton() {
   return (
@@ -38,7 +39,7 @@ function GitHubButton() {
 
 function LanguageButton() {
   const {
-    i18n: { currentLocale, locales, localeConfigs, defaultLocale },
+    i18n: { currentLocale, locales, localeConfigs },
   } = useDocusaurusContext();
   const alternatePageUtils = useAlternatePageUtils();
   const [isOpen, setIsOpen] = useState(false);
