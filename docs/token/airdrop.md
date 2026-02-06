@@ -18,12 +18,11 @@ image: /img/qq-og-image.png
 
 The $QQ Airdrop is an ongoing, multi-season program designed to reward early ecosystem participation over time.
 
-
 :::note
+
 - Do not expect a complete “how to qualify” guide to be released (some hints may appear).
 - There is **no guarantee** that any specific action, behavior, or contribution will receive rewards.
-:::
-
+  :::
 
 ### Allocation
 
@@ -41,10 +40,10 @@ All authoritative information regarding the airdrop is communicated exclusively 
 
 ---
 
-#### *General Principles & Disclaimers*
+#### _General Principles & Disclaimers_
 
-*At this stage, there is no formal participation process, application, or required action associated with the QQ airdrop. Nothing in this documentation should be interpreted as an offer, solicitation, or invitation to participate in any program or activity.*
-*Any future airdrop distributions, if they occur, are entirely discretionary. No guarantees are made regarding timing, amount, method, or occurrence, and no entitlement, expectation, or right to receive tokens is created.*
-*Any references to “early adopters”, “contributors”, “community”, “participation”, or similar terms describe potential evaluation areas only. They do not constitute instructions, requirements, or promises of reward.*
-*Certain jurisdictions may be excluded from any future distributions without prior notice, and users are solely responsible for ensuring compliance with applicable laws and regulations in their respective jurisdictions.*
-*The QQ team assumes no responsibility or liability for decisions, actions, or outcomes arising from assumptions, expectations, or reliance on potential airdrop activity.*
+_At this stage, there is no formal participation process, application, or required action associated with the QQ airdrop. Nothing in this documentation should be interpreted as an offer, solicitation, or invitation to participate in any program or activity._
+_Any future airdrop distributions, if they occur, are entirely discretionary. No guarantees are made regarding timing, amount, method, or occurrence, and no entitlement, expectation, or right to receive tokens is created._
+_Any references to “early adopters”, “contributors”, “community”, “participation”, or similar terms describe potential evaluation areas only. They do not constitute instructions, requirements, or promises of reward._
+_Certain jurisdictions may be excluded from any future distributions without prior notice, and users are solely responsible for ensuring compliance with applicable laws and regulations in their respective jurisdictions._
+_The QQ team assumes no responsibility or liability for decisions, actions, or outcomes arising from assumptions, expectations, or reliance on potential airdrop activity._
