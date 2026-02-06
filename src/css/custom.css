@@ -2414,6 +2414,26 @@ a:hover {
   }
 }
 
+/* Extra-small screens footer (iPhone 5/SE) */
+@media (max-width: 380px) {
+  .footer {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .footer__copyright {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+  .footer__title {
+    font-size: 0.75rem;
+  }
+
+  .footer__link-item {
+    font-size: 0.7rem;
+  }
+}
+
 /* Breadcrumbs - only active/current item is pink */
 .breadcrumbs__link {
   color: var(--ifm-font-color-base);
