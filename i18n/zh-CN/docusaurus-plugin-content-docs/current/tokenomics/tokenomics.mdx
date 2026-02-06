@@ -1,16 +1,17 @@
 ---
-title: 代币经济
+title: QQ 代币经济
 sidebar_position: 1
-description: $QQ 代币——在 Base 链发行的固定总量（上限 10,000）。通过 Virtuals Protocol 的 Pegasus 公平启动。持有 1 枚 QQ 即可解锁实时仪表盘与全部功能。
+description: $QQ 代币——总量 10,000，固定供应；部署于 Base 与 Solana；通过 Meteora DBC 公平发行。钱包持有 1 枚 $QQ 即可解锁实时仪表盘与全部功能。
 keywords:
   - QQ 代币
   - QQ 代币经济
   - 固定总量
-  - Base 链代币
-  - Virtuals Protocol 启动
-  - 公平启动
-  - 代币门槛访问
-  - QQ 仪表盘访问
+  - Base 代币
+  - Solana 代币
+  - Meteora 发行
+  - 公平发行
+  - 持币解锁
+  - QQ 仪表盘
   - 无私募
 image: /img/qq-og-image.png
 ---
@@ -23,7 +24,7 @@ import TokenAddressCard from "@site/src/components/TokenAddressCard";
 
 ### 1 枚 $QQ = 1 张通行票
 
-你需要在钱包中持有 <span className="pink-glow-text">**至少 1 枚 $QQ**</span>，即可解锁并使用 **QQ 实时仪表盘**：包括实时评分、排名，以及未来持续上线的全部功能。
+你的钱包中只需持有 <span className="pink-glow-text">**≥ 1 枚 $QQ**</span>，即可解锁并使用 **QQ 实时仪表盘**，包括实时分数、排名，以及后续持续上线的全部功能。
 
 <TokenomicsInfoGrid columns={2}>
   <TokenomicsInfoCard
@@ -60,29 +61,29 @@ import TokenAddressCard from "@site/src/components/TokenAddressCard";
   />
 </TokenomicsInfoGrid>
 
-### $QQ 分配结构
+### $QQ 代币分配
 
 <TokenomicsPieChart
   data={[
     {
-      name: "Meteora DBC 隐身启动",
+      name: "Meteora DBC 隐身发行（Stealth Launch）",
       value: 26,
       color: "#9066FF",
       amount: "2,600 $QQ（Solana）",
     },
     {
-      name: "Solana 流动性池（Meteora DAMM V2）",
+      name: "Solana LP（Meteora DAMM v2）",
       value: 24,
       color: "#7448FF",
       amount: "2,400 $QQ（Solana）",
     },
     {
-      name: "Base 流动性池（Uniswap V3）",
+      name: "Base LP（Uniswap v3）",
       value: 24,
       color: "#2F6BFF",
       amount: "2,400 $QQ（Base）",
     },
-      {
+    {
       name: "Virtuals 生态空投",
       value: 6,
       color: "#E61E6E",
@@ -116,14 +117,14 @@ import TokenAddressCard from "@site/src/components/TokenAddressCard";
   height={450}
 />
 
-### 启动平台：Meteora（Solana）
+### Launchpad：Meteora（Solana）
 
 <TokenomicsInfoGrid columns={1}>
   <TokenomicsInfoCard
     icon="🌊"
-    label="Meteora DBC 启动平台"
-    value="隐身启动"
-    subtext="Solana 上的开放式联合曲线。达到 $25,000（以 SOL 计）的募集阈值后，将迁移至 Meteora DAMM v2 池，并对 LP 进行 2 年时间锁。"
+    label="Meteora DBC Launchpad"
+    value="Stealth Launch"
+    subtext="Solana 上的开放式联合曲线（Bonding Curve）。当募集金额达到 25,000 美元（以 SOL 计）阈值后，将迁移至 Meteora DAMM v2 流动性池，并将 LP 锁定 2 年。"
     variant="pink"
   />
 </TokenomicsInfoGrid>
