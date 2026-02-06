@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **CN docs path rename** (`/docs/zh/`)
   - Renamed folder from `tokenomics` to `token` to match shortened URL structure
+  - Renamed folder from `burn+POL` to `burn+pol`
 
 ## [v0.2.2] - 2026-02-06 (QQAlpha, QQSigma)
 
