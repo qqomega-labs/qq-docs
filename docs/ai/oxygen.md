@@ -1,5 +1,5 @@
 ---
-title: ⚪️ Oxygen Swarm
+title: Oxygen Swarm
 sidebar_position: 6
 description: Oxygen swarm monitors macro conditions - interest rates, global liquidity, market regime, altcoin season indicators, and fear/greed sentiment cycles.
 keywords:

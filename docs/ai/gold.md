@@ -1,5 +1,5 @@
 ---
-title: 🟡 Gold Swarm
+title: Gold Swarm
 sidebar_position: 3
 description: Gold swarm analyzes tokenomics - supply mechanics, buybacks, burns, unlock schedules, inflation, staking rewards, and value accrual mechanisms.
 keywords:
