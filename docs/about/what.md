@@ -36,7 +36,7 @@ Behind every category is a swarm of <span className="pink-glow-text">specialized
 
 All category signals are aggregated into a global <span className="pink-glow-text">QQ score</span>: a 0–100 score that updates as new data and events unfold.
 
-QQ Omega produces <span className="pink-glow-text">multiple QQ scores</span> for different timeframes by applying different weights to the underlying agents (short-term views lean more on On-chain + Technicals, long-term views prioritize Fundamentals + Tokenomics). This creates separate rankings per timeframe: “top assets” can differ depending on whether you care about weeks, months, or years. To understand how timeframes and rankings are built and how to read them, see <span className="pink-badge">[TIMEFRAMES & RANKING](/docs/scores/tf+ranking)</span>.
+QQ Omega produces <span className="pink-glow-text">multiple QQ scores</span> for different timeframes by applying different weights to the underlying agents (short-term views lean more on On-chain + Technicals, long-term views prioritize Fundamentals + Tokenomics). This creates separate rankings per timeframe: "top assets" can differ depending on whether you care about weeks, months, or years. To understand how timeframes and rankings are built and how to read them, see <span className="pink-badge">[TIMEFRAMES & RANKING](/docs/scores/tf-ranking)</span>.
 
 The result is a side-by-side view of structural strength vs. market excess, helping you spot assets that look <span className="pink-glow-text">undervalued</span> or <span className="pink-glow-text">overvalued</span> relative to your horizon.
 

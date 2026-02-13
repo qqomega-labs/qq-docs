@@ -1,6 +1,6 @@
 {
   "name": "qq-docs",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "private": true,
   "description": "QQ Token official documentation",
   "keywords": [],
@@ -21,8 +21,8 @@
     "start": "docusaurus start --no-open",
     "start:en": "bun run start --locale en",
     "start:cn": "bun run start --locale zh-CN",
-    "build": "docusaurus build",
-    "build:cf": "npm install && docusaurus clear && docusaurus build",
+    "build": "docusaurus build && node scripts/enhance-sitemap.js",
+    "build:cf": "npm install && docusaurus clear && docusaurus build && node scripts/enhance-sitemap.js",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -46,7 +46,9 @@
     "@docusaurus/tsconfig": "^3.9.2",
     "@docusaurus/types": "^3.9.2",
     "@easyops-cn/docusaurus-search-local": "^0.52.2",
-    "typescript": "^5.9.3"
+    "@types/xml2js": "^0.4.14",
+    "typescript": "^5.9.3",
+    "xml2js": "^0.6.2"
   },
   "browserslist": {
     "production": [
