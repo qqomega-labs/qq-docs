@@ -9,9 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- **Google Search Console sitemap validation** (`docs/token/`, `docs/scores/`)
-  - Renamed `burn&pol.md` to `burn-and-pol.md` to remove special character from URL path
-  - Renamed `tf+ranking.md` to `tf-ranking.md` to remove special character from URL path
+- **Google Search Console sitemap validation** (`docs/token/`, `docs/scores/`, `i18n/zh-CN/`)
+  - Renamed `burn&pol.md` to `burn-and-pol.md` (English) to remove special character from URL path
+  - Renamed `burn&POL.md` to `burn-and-pol.md` (Chinese) to match English naming convention
+  - Renamed `tf+ranking.md` to `tf-ranking.md` in both English and Chinese locales
   - Updated internal link references in `docs/about/what.md`
   - Special characters (`&`, `+`) in file names caused sitemap validation errors in Google Search Console
 
