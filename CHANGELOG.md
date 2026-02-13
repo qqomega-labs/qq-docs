@@ -5,7 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - 2026-02-06 (QQAlpha, QQSigma)
+## [v0.2.5] - 2026-02-13 (QQAlpha, QQSigma)
+
+### Fixed
+
+- **Google Search Console sitemap validation** (`docs/token/`, `docs/scores/`)
+  - Renamed `burn&pol.md` to `burn-and-pol.md` to remove special character from URL path
+  - Renamed `tf+ranking.md` to `tf-ranking.md` to remove special character from URL path
+  - Updated internal link references in `docs/about/what.md`
+  - Special characters (`&`, `+`) in file names caused sitemap validation errors in Google Search Console
+
+### Added
+
+- **Enhanced sitemap generation** (`scripts/enhance-sitemap.js`, `package.json`)
+  - Post-build script to improve `sitemap.xml` compliance with search engine requirements
+  - Adds `lastmod` dates (current build date) to all URL entries
+  - Formats XML with proper indentation and newlines for better readability
+  - Processes both main sitemap and locale-specific sitemaps (`en`, `zh-CN`)
+  - Integrated into build process via `build` and `build:cf` npm scripts
+  - Dependencies: `xml2js` for XML parsing and formatting
+
+## [v0.2.4] - 2026-02-06 (QQAlpha, QQSigma)
 
 ### Added
 
