@@ -15,7 +15,7 @@
       "url": "https://github.com/qqsigma"
     }
   ],
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --no-open",
