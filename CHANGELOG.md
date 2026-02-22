@@ -5,7 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v0.2.5] - 2026-02-13 (QQAlpha, QQSigma)
+## [v0.2.5] - 2026-02-22 (QQAlpha, QQSigma)
+
+### Changed
+
+- `docs/token/tokenomics.mdx`: Updated Meteora DBC raise threshold from $25,000 to $20,000 USDC.
+
+## [Unreleased] - 2026-02-19 (QQAlpha, QQSigma)
+
+### Changed
+
+- Updated `LICENSE` terms and conditions.
+- Updated `license` key value in `package.json`.
+
+## [Unreleased] - 2026-02-13 (QQAlpha, QQSigma)
 
 ### Fixed
 
@@ -32,7 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Google Search Console code in `static` folder** (`/static/`)
 
-## [v0.2.4] - 2026-02-06 (QQAlpha, QQSigma)
+## [Unreleased] - 2026-02-06 (QQAlpha, QQSigma)
 
 ### Fixed
 
