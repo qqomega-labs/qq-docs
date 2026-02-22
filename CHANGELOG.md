@@ -45,7 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Google Search Console code in `static` folder** (`/static/`)
 
-## [v0.2.4] - 2026-02-06 (QQAlpha, QQSigma)
+## [Unreleased] - 2026-02-06 (QQAlpha, QQSigma)
 
 ### Fixed
 
