@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - `docs/token/tokenomics.mdx`: Updated contract address for Solana and Base.
-- Restored `blog` folder and excluded from the repo in `.gitignore`.
+- Restored `blog` folder and explicity excluded from the repo in `.gitignore`.
 - Project cleanup.
 
 ## [v0.2.5] - 2026-02-22 (QQAlpha, QQSigma)
