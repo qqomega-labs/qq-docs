@@ -260,6 +260,7 @@ const config: Config = {
         //   onInlineAuthors: "warn",
         //   onUntruncatedBlogPosts: "warn",
         // },
+        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
