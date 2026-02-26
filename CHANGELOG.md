@@ -5,7 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.0.0] - 2026-02-26 (QQAlpha, QQSigma)
+## [v1.0.0] - 2026-02-27 (QQAlpha, QQSigma)
+
+### Changed
+
+- **Reduced `QQOmega_logo_32x32.svg` padding** (`static/img/QQOmega_logo_32x32.svg`)
+  - Updated viewBox from `0 0 1024 1024` to `170 165 684 694` to match `favicon.svg` cropping
+  - Logo now renders larger within the 32x32 frame, consistent with the favicon set
+
+## [Unreleased] - 2026-02-26 (QQAlpha, QQSigma)
 
 ### Changed
 
