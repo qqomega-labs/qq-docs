@@ -10,12 +10,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - **Favicon overhaul** (`static/`, `docusaurus.config.ts`)
-  - Regenerated full favicon set from `QQOmega_logo.svg` source using `rsvg-convert` + ImageMagick
+  - Created no-padding SVG variant (`QQOmega_logo_nopad.svg`) with cropped viewBox for larger logo rendering
+  - Regenerated full favicon set with ~3% padding and rounded corners (~22% radius, iOS-style)
   - New `favicon.ico` with 3 embedded sizes (16x16, 32x32, 48x48)
-  - New `favicon.svg` (6.4KB) replacing bloated `icon0.svg` (3.7MB)
+  - New `favicon.svg` with cropped viewBox and SVG `clip-path` for rounded corners
   - New `favicon-16x16.png` and `favicon-32x32.png` with correct declared sizes
   - Regenerated `apple-touch-icon.png` (180x180), `web-app-manifest-192x192.png`, `web-app-manifest-512x512.png`
   - Updated `headTags` in `docusaurus.config.ts`: SVG favicon priority, correct PNG sizes, renamed `apple-mobile-web-app-title` to "QQ Omega"
+
+### Added
+
+- `static/img/QQOmega_logo_nopad.svg`: cropped viewBox variant of the logo for favicon generation
 
 ### Removed
 
