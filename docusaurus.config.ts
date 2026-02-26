@@ -169,17 +169,26 @@ const config: Config = {
       tagName: "link",
       attributes: {
         rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        href: "/icon1.png",
+        type: "image/svg+xml",
+        href: "/favicon.svg",
       },
     },
     {
       tagName: "link",
       attributes: {
         rel: "icon",
-        type: "image/svg+xml",
-        href: "/icon0.svg",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/favicon-32x32.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/favicon-16x16.png",
       },
     },
     {
@@ -187,7 +196,7 @@ const config: Config = {
       attributes: {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        href: "/apple-icon.png",
+        href: "/apple-touch-icon.png",
       },
     },
     {
@@ -201,7 +210,7 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         name: "apple-mobile-web-app-title",
-        content: "QQ docs",
+        content: "QQ Omega",
       },
     },
   ],

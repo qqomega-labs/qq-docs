@@ -2347,30 +2347,19 @@ a:hover {
   color: var(--ifm-color-content-secondary);
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
   position: relative;
-  padding-top: 1rem;
+  padding: 0.5rem 1rem 1.25rem !important;
 }
 
 [data-theme="light"] .footer {
   border-top-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Override any footer dividers to match theme */
+/* Hide default footer dividers */
 .footer hr,
 .footer__separator,
 .footer > hr,
 .footer > div > hr {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  border-top-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-[data-theme="light"] .footer hr,
-[data-theme="light"] .footer__separator,
-[data-theme="light"] .footer > hr,
-[data-theme="light"] .footer > div > hr {
-  background-color: rgba(0, 0, 0, 0.1) !important;
-  border-color: rgba(0, 0, 0, 0.1) !important;
-  border-top-color: rgba(0, 0, 0, 0.1) !important;
+  display: none !important;
 }
 
 .footer__link-item {

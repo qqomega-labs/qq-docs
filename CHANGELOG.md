@@ -5,7 +5,47 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.0.0] - 2026-02-25 (QQAlpha, QQSigma)
+## [v1.0.0] - 2026-02-26 (QQAlpha, QQSigma)
+
+### Changed
+
+- **Favicon overhaul** (`static/`, `docusaurus.config.ts`)
+  - Regenerated full favicon set from `QQOmega_logo.svg` source using `rsvg-convert` + ImageMagick
+  - New `favicon.ico` with 3 embedded sizes (16x16, 32x32, 48x48)
+  - New `favicon.svg` (6.4KB) replacing bloated `icon0.svg` (3.7MB)
+  - New `favicon-16x16.png` and `favicon-32x32.png` with correct declared sizes
+  - Regenerated `apple-touch-icon.png` (180x180), `web-app-manifest-192x192.png`, `web-app-manifest-512x512.png`
+  - Updated `headTags` in `docusaurus.config.ts`: SVG favicon priority, correct PNG sizes, renamed `apple-mobile-web-app-title` to "QQ Omega"
+
+### Removed
+
+- Obsolete favicon files: `icon0.svg` (3.7MB), `icon1.png`, `icon2.png`, `img/favicon.ico` (non-square 32x27)
+
+### Fixed
+
+- `img/favicon.ico` was 32x27px (non-square, distorted rendering)
+- `icon1.png` was 96x96 but declared as `sizes="32x32"` in `<head>` tags
+
+- **Footer electron animation** (`src/theme/Footer/styles.module.css`)
+  - Rewritten with GPU-accelerated `transform: translateX()` for smooth movement
+  - Soft `radial-gradient` glow replaces hard-edged `linear-gradient` dot
+  - Added `z-index: 1` so glow extends below the line over footer content
+  - Added `overflow-x: clip` to prevent horizontal scrollbar
+  - Added `will-change: transform, opacity` for rendering optimization
+
+- **Footer height reduction** (`src/css/custom.css`, `src/theme/Footer/styles.module.css`)
+  - Reduced footer padding from `2rem` to `0.5rem` top / `1.25rem` bottom
+  - Reduced `.footer__copyright` spacing from `1.5rem` to `0.5rem`
+  - Copyright font size set to `0.875rem` (matching sidebar menu links)
+  - Responsive copyright font: `0.7rem` on mobile, `0.6rem` on extra-small screens
+
+### Removed
+
+- **Footer dividers** (`src/css/custom.css`, `src/theme/Footer/styles.module.css`)
+  - Hidden default Docusaurus `<hr>` / `.footer__separator` with `display: none`
+  - Removed `border-top` from `.footer__copyright` section
+
+## [Unreleased] - 2026-02-25 (QQAlpha, QQSigma)
 
 ### Changed
 
