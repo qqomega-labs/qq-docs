@@ -21,7 +21,7 @@ A beautiful, responsive pie chart component for displaying tokenomics distributi
 title: Tokenomics
 ---
 
-import TokenomicsPieChart from '@site/src/components/TokenomicsPieChart';
+import TokenomicsPieChart from "@site/src/components/TokenomicsPieChart";
 
 ## Token Distribution
 
@@ -43,15 +43,15 @@ import TokenomicsPieChart from '@site/src/components/TokenomicsPieChart';
 ### With Custom Data
 
 ```mdx
-import TokenomicsPieChart from '@site/src/components/TokenomicsPieChart';
+import TokenomicsPieChart from "@site/src/components/TokenomicsPieChart";
 
 <TokenomicsPieChart
   title="Custom Token Distribution"
   data={[
-    { name: 'Public Sale', value: 40, color: 'var(--qq-color-pink-hot)' },
-    { name: 'Liquidity', value: 30, color: 'var(--qq-color-cyan-bright)' },
-    { name: 'Team', value: 20, color: 'var(--qq-color-purple-light)' },
-    { name: 'Reserve', value: 10, color: 'var(--qq-color-cyan-teal)' },
+    { name: "Public Sale", value: 40, color: "var(--qq-color-pink-hot)" },
+    { name: "Liquidity", value: 30, color: "var(--qq-color-cyan-bright)" },
+    { name: "Team", value: 20, color: "var(--qq-color-purple-light)" },
+    { name: "Reserve", value: 10, color: "var(--qq-color-cyan-teal)" },
   ]}
   height={450}
 />
@@ -59,19 +59,19 @@ import TokenomicsPieChart from '@site/src/components/TokenomicsPieChart';
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `data` | `TokenomicsData[]` | Default tokenomics data | Array of chart data objects |
-| `title` | `string` | `"Token Distribution"` | Chart title (optional) |
-| `height` | `number` | `400` | Chart height in pixels |
+| Prop     | Type               | Default                 | Description                 |
+| -------- | ------------------ | ----------------------- | --------------------------- |
+| `data`   | `TokenomicsData[]` | Default tokenomics data | Array of chart data objects |
+| `title`  | `string`           | `"Token Distribution"`  | Chart title (optional)      |
+| `height` | `number`           | `400`                   | Chart height in pixels      |
 
 ### TokenomicsData Type
 
 ```typescript
 interface TokenomicsData {
-  name: string;   // Segment name (e.g., "Liquidity Pool")
-  value: number;  // Percentage value (e.g., 30)
-  color: string;  // CSS color (use CSS custom properties from theme)
+  name: string; // Segment name (e.g., "Liquidity Pool")
+  value: number; // Percentage value (e.g., 30)
+  color: string; // CSS color (use CSS custom properties from theme)
 }
 ```
 
@@ -108,33 +108,6 @@ The component uses CSS Modules with mobile-first responsive design:
 - **Desktop** (> 1024px): Full layout with 2.5rem padding
 
 The glassmorphism effect adapts based on device capabilities to ensure optimal performance.
-
-## Examples in Docs
-
-### In Tokenomics Page
-
-```mdx
----
-title: QQ Token Allocation
-sidebar_position: 1
----
-
-import TokenomicsPieChart from '@site/src/components/TokenomicsPieChart';
-
-# QQ Token Allocation
-
-Our tokenomics are designed to ensure long-term sustainability and fair distribution.
-
-<TokenomicsPieChart title="QQ Token Distribution" />
-
-## Distribution Breakdown
-
-- **Liquidity Pool (30%)**: Ensures deep liquidity for trading
-- **Staking Rewards (25%)**: Incentivizes long-term holders
-- **Team & Advisors (20%)**: Vested over 24 months
-- **Marketing & Partnerships (15%)**: Growth and ecosystem development
-- **Treasury Reserve (10%)**: Emergency fund and future initiatives
-```
 
 ## Accessibility
 

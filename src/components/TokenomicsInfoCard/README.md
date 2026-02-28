@@ -17,14 +17,9 @@ Beautiful glassmorphism card component for displaying tokenomics information wit
 ### Single Card
 
 ```mdx
-import TokenomicsInfoCard from '@site/src/components/TokenomicsInfoCard';
+import TokenomicsInfoCard from "@site/src/components/TokenomicsInfoCard";
 
-<TokenomicsInfoCard
-  icon="⛓️"
-  label="Chain"
-  value="Base"
-  variant="cyan"
-/>
+<TokenomicsInfoCard icon="⛓️" label="Chain" value="Base" variant="cyan" />
 ```
 
 ### Card with Subtext
@@ -42,15 +37,12 @@ import TokenomicsInfoCard from '@site/src/components/TokenomicsInfoCard';
 ### Grid of Cards
 
 ```mdx
-import TokenomicsInfoCard, { TokenomicsInfoGrid } from '@site/src/components/TokenomicsInfoCard';
+import TokenomicsInfoCard, {
+  TokenomicsInfoGrid,
+} from "@site/src/components/TokenomicsInfoCard";
 
 <TokenomicsInfoGrid columns={3}>
-  <TokenomicsInfoCard
-    icon="⛓️"
-    label="Chain"
-    value="Base"
-    variant="cyan"
-  />
+  <TokenomicsInfoCard icon="⛓️" label="Chain" value="Base" variant="cyan" />
   <TokenomicsInfoCard
     icon="📍"
     label="Token Address"
@@ -71,36 +63,39 @@ import TokenomicsInfoCard, { TokenomicsInfoGrid } from '@site/src/components/Tok
 
 ### TokenomicsInfoCard
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `icon` | `string` | - | Emoji or icon to display (optional) |
-| `label` | `string` | **required** | Card label text (uppercase) |
-| `value` | `string` | **required** | Main value to display |
-| `subtext` | `string` | - | Additional info text below value (optional) |
-| `variant` | `'pink' \| 'cyan' \| 'purple'` | `'pink'` | Color theme variant |
-| `className` | `string` | `''` | Additional CSS classes |
+| Prop        | Type                           | Default      | Description                                 |
+| ----------- | ------------------------------ | ------------ | ------------------------------------------- |
+| `icon`      | `string`                       | -            | Emoji or icon to display (optional)         |
+| `label`     | `string`                       | **required** | Card label text (uppercase)                 |
+| `value`     | `string`                       | **required** | Main value to display                       |
+| `subtext`   | `string`                       | -            | Additional info text below value (optional) |
+| `variant`   | `'pink' \| 'cyan' \| 'purple'` | `'pink'`     | Color theme variant                         |
+| `className` | `string`                       | `''`         | Additional CSS classes                      |
 
 ### TokenomicsInfoGrid
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `children` | `ReactNode` | **required** | TokenomicsInfoCard components |
-| `columns` | `1 \| 2 \| 3` | `3` | Number of columns on desktop |
-| `className` | `string` | `''` | Additional CSS classes |
+| Prop        | Type          | Default      | Description                   |
+| ----------- | ------------- | ------------ | ----------------------------- |
+| `children`  | `ReactNode`   | **required** | TokenomicsInfoCard components |
+| `columns`   | `1 \| 2 \| 3` | `3`          | Number of columns on desktop  |
+| `className` | `string`      | `''`         | Additional CSS classes        |
 
 ## Color Variants
 
 ### Pink (`variant="pink"`)
+
 - Uses `--qq-gradient-crypto-pink`
 - Best for: Supply, allocation percentages, financial data
 - Hover: Pink glow effect
 
 ### Cyan (`variant="cyan"`)
+
 - Uses `--qq-gradient-crypto-cyan`
 - Best for: Technical info, blockchain data, addresses
 - Hover: Cyan glow effect
 
 ### Purple (`variant="purple"`)
+
 - Uses `--qq-gradient-crypto-purple`
 - Best for: Metadata, dates, general information
 - Hover: Purple glow effect
@@ -108,16 +103,19 @@ import TokenomicsInfoCard, { TokenomicsInfoGrid } from '@site/src/components/Tok
 ## Responsive Behavior
 
 **Mobile (< 768px):**
+
 - All grids display as 1 column
 - Compact padding (1.5rem)
 - Smaller font sizes
 
 **Tablet (768px - 1024px):**
+
 - 2-column and 3-column grids display as 2 columns
 - Medium padding (1.75rem)
 - Medium font sizes
 
 **Desktop (> 1024px):**
+
 - 3-column grids display as 3 columns
 - Full padding (2rem)
 - Large font sizes
@@ -132,8 +130,8 @@ import TokenomicsInfoCard, { TokenomicsInfoGrid } from '@site/src/components/Tok
   <TokenomicsInfoCard
     icon="🚀"
     label="Virtuals Pegasus Launchpad"
-    value="Fair Launch Model"
-    subtext="No private sale, no preferential allocations"
+    value="Stealth Launch Model"
+    subtext=""
     variant="pink"
   />
 </TokenomicsInfoGrid>
@@ -201,6 +199,7 @@ Override styles using CSS modules or global CSS:
 ## Browser Support
 
 Works in all modern browsers that support:
+
 - CSS backdrop-filter
 - CSS custom properties
 - CSS Grid
