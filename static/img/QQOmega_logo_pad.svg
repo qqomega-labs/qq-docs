@@ -1,7 +1,7 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="180 175 664 674" width="664" height="674">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
 	<style>
-		.s0 { fill: #01030e }
-		.s1 { fill: #fd015a }
+		.s0 { fill: #01030e } 
+		.s1 { fill: #fd015a } 
 	</style>
 	<g id="img1">
 		<path id="Path 0" class="s0" d="m0 512v512h1024v-1024h-1024z"/>
