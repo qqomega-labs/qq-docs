@@ -41,9 +41,9 @@ They share the same mission, but each agent has its own dataset, rules, and way 
 
 ## Elements = Swarms of Agents
 
-In QQ Omega, each category (Fundamentals, Tokenomics, and others) is **a full swarm**: a cluster of narrow specialist AI agents working together.
+In QQ Omega, each dimension (Fundamentals, Tokenomics, and others) is **a full swarm**: a cluster of narrow specialist AI agents working together.
 
-Each category has one <span className="pink-glow-text">**Element**</span> associated with it:
+Each dimension has one <span className="pink-glow-text">**Element**</span> associated with it:
 
 
 | Swarm | Area |

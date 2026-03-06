@@ -17,7 +17,7 @@ image: /img/qq-og-image.png
 
 ## How to Interpret Scores
 
-QQ assigns a <span className="pink-glow-text">**0–100 score**</span> to each dimension (Fundamentals, Tokenomics, On-chain, TA, Macro) and a **global QQ Score** per project. These scores are designed to be read as a relative measure of quality versus valuation, not as absolute signals.
+QQ assigns a <span className="pink-glow-text">**0–100 score**</span> to each dimension (Fundamentals, Tokenomics, On-chain, TA, Macro) and a **global QQ Score** per project. These scores are designed to be read as a relative measure of quality versus valuation.
 
 General reading:
 
