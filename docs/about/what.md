@@ -30,13 +30,13 @@ You can use QQ Omega as a continuously updating base layer to answer one questio
 
 ### How the scoring works
 
-Each crypto asset is evaluated across <span className="pink-glow-text">five categories</span>: **Fundamentals, Tokenomics, On-chain, Technicals, and Macro-Economic Regime**.
+Each crypto asset is evaluated across <span className="pink-glow-text">five dimensions</span>: **Fundamentals, Tokenomics, On-chain, Technicals, and Macro-Economic Regime**.
 
-Behind every category is a swarm of <span className="pink-glow-text">specialized AI agents</span>, each focused on a narrow slice of analysis (for example: distribution quality, unlock pressure, liquidity depth, holder behavior, momentum structure, or regime shifts). For a deeper view into the architecture behind each category, see the <span className="pink-badge">[AI AGENTS SWARMS](/docs/ai/what)</span> section.
+Behind every category is a swarm of <span className="pink-glow-text">specialized AI agents</span>, each focused on a narrow slice of analysis (for example: distribution quality, unlock pressure, liquidity depth, holder behavior, momentum structure, or regime shifts). Each swarm outputs a clear, summarized <span className="pink-glow-text">score for its dimension</span>, designed to be understood at a glance. For a deeper view into the architecture behind each category, see the <span className="pink-badge">[AI AGENTS SWARMS](/docs/ai/what)</span> section.
 
-All category signals are aggregated into a global <span className="pink-glow-text">QQ score</span>: a 0–100 score that updates as new data and events unfold.
+All <span className="pink-glow-text">dimension scores</span> are aggregated into a global <span className="pink-glow-text">QQ score</span>: a 0–100 score that updates as new data and events unfold.
 
-QQ Omega produces <span className="pink-glow-text">multiple QQ scores</span> for different timeframes by applying different weights to the underlying agents (short-term views lean more on On-chain + Technicals, long-term views prioritize Fundamentals + Tokenomics). This creates separate rankings per timeframe: "top assets" can differ depending on whether you care about weeks, months, or years. To understand how timeframes and rankings are built and how to read them, see <span className="pink-badge">[TIMEFRAMES & RANKING](/docs/scores/tf-ranking)</span>.
+QQ Omega produces <span className="pink-glow-text">multiple QQ scores</span> for different timeframes by applying different weights to the underlying agents (short-term views lean more on On-chain + Technicals, long-term views prioritize Fundamentals + Tokenomics). This creates separate rankings per timeframe: "top assets" can differ depending on whether you care about days, weeks, months, or years. To understand how timeframes and rankings are built and how to read them, see <span className="pink-badge">[TIMEFRAMES & RANKING](/docs/scores/tf-ranking)</span>.
 
 The result is a side-by-side view of structural strength vs. market excess, helping you spot assets that look <span className="pink-glow-text">undervalued</span> or <span className="pink-glow-text">overvalued</span> relative to your horizon.
 
