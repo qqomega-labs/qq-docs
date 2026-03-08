@@ -1,7 +1,6 @@
 {
   "name": "qq-docs",
-  "version": "1.0.2",
-  "private": true,
+  "version": "1.0.3",
   "description": "QQ Omega token official documentation",
   "keywords": [],
   "author": "QQ Omega Labs",
@@ -15,7 +14,7 @@
       "url": "https://github.com/qqsigma"
     }
   ],
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start --no-open",
