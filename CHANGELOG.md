@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.3] - 2026-03-08 (QQSigma)
+
+### Added
+
+- **CoinGecko token logo** (`static/img/QQOmega_logo_200x200.png`)
+  - Generated 200x200px PNG with transparent background from `QQOmega_logo.svg`
+  - Removed dark background (Path 0) and inner dark fill (Path 2) for full transparency
+  - Only pink (#fd015a) QQ shape visible on transparent background
+  - Meets CoinGecko token image requirements (200x200px, PNG, transparent background)
+- **Transparent SVG variant** (`static/img/QQOmega_logo_transparent.svg`)
+  - SVG version of the logo without dark background rectangle
+
+### Changed
+
+- **Apache 2.0 License** (`LICENSE`, `package.json`, `README.md`)
+  - Changed license from proprietary to Apache 2.0 for build-in-public initiative
+  - Allows commercial use with attribution requirement
+  - Added license and build-in-public badges to README
+
 ## [v1.0.2] - 2026-03-06 (QQAlpha,QQSigma)
 
 - Renamed `static/img/QQOmega_logo.svg` in `static/img/QQOmega_logo_pad.svg`

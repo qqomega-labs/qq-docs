@@ -1,5 +1,9 @@
 # QQ official docs
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Build in Public](https://img.shields.io/badge/Build-in%20Public-brightgreen.svg)](https://github.com/qqomegalabs)
+
+
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ## Installation
