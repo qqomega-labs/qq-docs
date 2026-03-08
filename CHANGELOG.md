@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.0.3] - 2026-03-08 (QQSigma)
+## [Unreleased] - 2026-03-08 (QQAlpha)
 
 ### Added
 
@@ -19,10 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- **Apache 2.0 License** (`LICENSE`, `package.json`, `README.md`)
-  - Changed license from proprietary to Apache 2.0 for build-in-public initiative
-  - Allows commercial use with attribution requirement
-  - Added license and build-in-public badges to README
+- **MIT License** (`LICENSE`, `TRADEMARK.md`, `package.json`, `README.md`)
+  - Changed license from Apache 2.0 to MIT for consistency with `qq-omega-landing`
+  - MIT is simpler and more common for documentation/frontend projects
+  - Added `TRADEMARK.md` file with detailed trademark policy
+  - Added trademark protection section in LICENSE to preserve QQ Omega Labs brand assets
+  - Badge updated in README.md
 
 ## [v1.0.2] - 2026-03-06 (QQAlpha,QQSigma)
 
