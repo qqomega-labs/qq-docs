@@ -17,7 +17,11 @@ const config: Config = {
 
   // SEO and PWA configuration
   headTags: [
-    // SEO Meta Tags
+    // SEO Meta Tags - keep only static/global tags here.
+    // Per-page dynamic tags (og:url, og:title, og:description, twitter:title,
+    // twitter:description) are handled automatically by Docusaurus from frontmatter.
+    // Adding them here would produce duplicate meta tags on every page, which
+    // causes Google to treat all pages as duplicates of the homepage.
     {
       tagName: "meta",
       attributes: {
@@ -29,19 +33,11 @@ const config: Config = {
     {
       tagName: "meta",
       attributes: {
-        name: "description",
-        content:
-          "QQ Omega combines AI-powered agents to score and rank cryptocurrency projects across fundamentals, tokenomics, on-chain metrics, technicals, and macro trends. Get clear, actionable scores for smarter crypto investments.",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
         name: "author",
         content: "QQ Omega Labs",
       },
     },
-    // Twitter Card Tags
+    // Twitter Card Tags (static/global only)
     {
       tagName: "meta",
       attributes: {
@@ -66,53 +62,17 @@ const config: Config = {
     {
       tagName: "meta",
       attributes: {
-        name: "twitter:title",
-        content: "QQ Omega Labs - AI-Powered Crypto Scoring Platform",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        name: "twitter:description",
-        content:
-          "Combining quantitative and qualitative data to evaluate every aspect of crypto assets with specialized AI agents.",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
         name: "twitter:image",
         content: "https://docs.qqomega.xyz/img/qq-og-image.png",
       },
     },
-    // Open Graph Tags
+    // Open Graph Tags (static/global only - og:url, og:title, og:description
+    // are intentionally omitted; Docusaurus injects them dynamically per page)
     {
       tagName: "meta",
       attributes: {
         property: "og:type",
         content: "website",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        property: "og:title",
-        content: "QQ Omega Labs - AI-Powered Crypto Scoring Platform",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        property: "og:description",
-        content:
-          "QQ Omega combines AI-powered agents to score and rank cryptocurrency projects. Get clear, actionable scores for smarter crypto investments.",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        property: "og:url",
-        content: "https://docs.qqomega.xyz",
       },
     },
     {
@@ -270,6 +230,15 @@ const config: Config = {
         //   onUntruncatedBlogPosts: "warn",
         // },
         blog: false,
+        sitemap: {
+          lastmod: "date",
+          changefreq: null,
+          priority: null,
+          // Exclude auto-generated pages with no standalone value for Google.
+          // /search has noindex injected by the search plugin — keep it out.
+          ignorePatterns: ["/tags/**", "/search"],
+          filename: "sitemap.xml",
+        },
         theme: {
           customCss: "./src/css/custom.css",
         },

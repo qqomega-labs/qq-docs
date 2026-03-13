@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.4] - 2026-03-13 (QQAlpha)
+
+### Fixed
+
+- **SEO: sitemap not readable by Google** (`docusaurus.config.ts`, `scripts/enhance-sitemap.js`)
+  - `enhance-sitemap.js` was corrupting `sitemap.xml` by parsing and rebuilding the XML with `xml2js`, which silently removed or mishandled the sitemap index format that Docusaurus v3 generates by default
+  - Rewrote the script to detect sitemap type (`urlset` vs `sitemapindex`) and use safe string-based `lastmod` injection instead of full XML parse/rebuild - avoids namespace corruption
+  - `sitemapindex` files are now left untouched; `sitemap-N.xml` sub-sitemaps are processed correctly
+  - Added native `sitemap.lastmod: "date"` config to the Docusaurus classic preset so Docusaurus generates `lastmod` natively - the post-build script is now a safety net only
+- **SEO: duplicate meta tags causing canonical confusion** (`docusaurus.config.ts`)
+  - Removed static `og:url`, `og:title`, `og:description`, `twitter:title`, `twitter:description` from global `headTags` - these were injected on every page with the homepage URL/title, causing Google to treat all pages as duplicates of the homepage
+  - Docusaurus injects these tags dynamically per-page from frontmatter; global overrides were conflicting
+- **SEO: `/search` page included in sitemap** (`docusaurus.config.ts`)
+  - Added `/search` to `ignorePatterns` - the search page has `noindex` injected by the search plugin, including it in the sitemap sends conflicting signals to Google
+- **SEO: zh-CN sitemap not discoverable by Google** (`static/robots.txt`)
+  - Added `Sitemap: https://docs.qqomega.xyz/zh-CN/sitemap.xml` to `robots.txt`
+  - Without this entry Google had no automatic path to discover the Chinese locale pages (28 URLs)
+
 ## [v1.0.3] - 2026-03-08 (QQAlpha)
 
 ### Added
