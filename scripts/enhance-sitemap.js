@@ -47,7 +47,7 @@ function injectLastmod(content, date) {
   // Match <url> blocks that contain <loc> but no <lastmod>.
   return content.replace(/<url>([\s\S]*?)<\/url>/g, (match) => {
     if (match.includes('<lastmod>')) return match;
-    return match.replace('</url>', `  <lastmod>${date}</lastmod>\n  </url>`);
+    return match.replace('</url>', `<lastmod>${date}</lastmod></url>`);
   });
 }
 

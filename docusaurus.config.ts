@@ -180,6 +180,8 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
+  // Canonical URLs without trailing slashes avoids duplicate indexing.
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -235,8 +237,10 @@ const config: Config = {
           changefreq: null,
           priority: null,
           // Exclude auto-generated pages with no standalone value for Google.
-          // /search has noindex injected by the search plugin — keep it out.
-          ignorePatterns: ["/tags/**", "/search"],
+          // **/search covers /search (en) and /zh-CN/search (zh-CN locale)
+          // both have noindex injected by the search plugin.
+          // **/tags/** covers all locale tag pages.
+          ignorePatterns: ["**/tags/**", "**/search"],
           filename: "sitemap.xml",
         },
         theme: {
