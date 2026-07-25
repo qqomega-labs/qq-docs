@@ -5,11 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Consolidates to a single package manager (Bun).
+
+#### Changed
+
+- **Cloudflare Pages build**: `build:cf` now installs dependencies with
+  `bun install` instead of `npm install`. Cloudflare's build image ships Bun,
+  so no separate npm install step is required (still relies on
+  `SKIP_DEPENDENCY_INSTALL=true` to let the script own the install step).
+
+#### Removed
+
+- **`package-lock.json`**: no longer needed now that both local dev and
+  Cloudflare Pages use Bun exclusively. `bun.lock` is the single source of
+  truth for dependency resolution.
+
 ## [Unreleased] - 2026-07-25 (QQAlpha)
 
-Keeps Cloudflare installs reproducible by aligning package metadata and lockfiles.
+### Keeps Cloudflare installs reproducible by aligning package metadata and lockfiles.
 
-### Changed
+#### Changed
 
 - **Cloudflare dependency resolution**: promoted browser compatibility data packages
   to direct dependencies so Cloudflare can resolve the same versions during npm
@@ -19,15 +36,15 @@ Keeps Cloudflare installs reproducible by aligning package metadata and lockfile
 
 ## [Unreleased] - 2026-07-25 (QQSigma)
 
-Refreshes the docs positioning so traders and investors can understand QQ faster.
+### Refreshes the docs positioning so traders and investors can understand QQ faster.
 
-### Added
+#### Added
 
 - **Interactive score concept**: replaced the static radial visualization with an
   interactive `QQHexSphere` concept that makes the multi-dimensional scoring model
   feel more product-like and easier to explore.
 
-### Changed
+#### Changed
 
 - **Sharper QQ positioning**: rewrote the core `what`, `why`, and `how` pages to
   explain QQ more clearly as a decision-making edge for traders and investors,
@@ -39,9 +56,9 @@ Refreshes the docs positioning so traders and investors can understand QQ faster
 
 ## [Unreleased] - 2026-04-22 (QQSigma)
 
-Makes the score documentation easier to trust by showing how the final score is built.
+### Makes the score documentation easier to trust by showing how the final score is built.
 
-### Added
+#### Added
 
 - **Traceable scoring pipeline**: documented the four-level path from component to
   factor to dimension to final QQ Score, so readers can understand where score
@@ -49,9 +66,9 @@ Makes the score documentation easier to trust by showing how the final score is 
 
 ## [Unreleased] - 2026-03-13 (QQAlpha)
 
-Tightens sitemap output so search engines receive cleaner canonical URLs.
+### Tightens sitemap output so search engines receive cleaner canonical URLs.
 
-### Fixed
+#### Fixed
 
 - **Locale search pages in sitemap**: excluded localized `/search` routes from the
   sitemap, aligning sitemap output with the existing `noindex` behavior and
