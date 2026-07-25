@@ -37,8 +37,8 @@ For example, an asset may fall into the “cheap zone” when it exhibits strong
 
 QQ highlights these mismatches so you can decide whether to <span className="pink-glow-text">**accumulate**</span> in favorable conditions or <span className="pink-glow-text">**take profit / reduce risk**</span> when conditions appear stretched.
 
-### How the 0–100 is built
+### How the score engine is built
 
-Each **QQ Score** sits at the top of a <span className="pink-glow-text">**four-level pipeline**</span>. It is not a single judgment: it is a layered aggregation. At the base, **components** capture atomic sub-signals. These roll up into **factors**, the first business-readable signal inside a dimension. Factors then aggregate into **dimension scores** (the 5 swarms: Fundamentals, Tokenomics, On-chain, TA, Macro). Dimension scores are weighted per timeframe to produce the final **QQ Score** (4 per asset: Daily, Weekly, Monthly, Yearly).
+Each **QQ Score** sits at the top of a <span className="pink-glow-text">**four-level scores pipeline**</span>: it is a layered aggregation of agents / data insight. At the base, **components** capture atomic sub-signals. These roll up into **factors**, the first business-readable signal inside a dimension. Factors then aggregate into **dimension scores** (the 5 swarms: Fundamentals, Tokenomics, On-chain, TA, Macro). Dimension scores are weighted per timeframe to produce the final **QQ Score** (4 per asset: Daily, Weekly, Monthly, Yearly).
 
 This layered structure is what makes QQ scores <span className="pink-glow-text">**traceable**</span>: when a score moves, you can drill down to the dimension that drove it, the factor inside that dimension, and the component signal that triggered the change.
