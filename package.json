@@ -21,7 +21,7 @@
     "start:en": "bun run start --locale en",
     "start:cn": "bun run start --locale zh-CN",
     "build": "docusaurus build && node scripts/enhance-sitemap.js",
-    "build:cf": "npm install && docusaurus clear && docusaurus build && node scripts/enhance-sitemap.js",
+    "build:cf": "bun install && docusaurus clear && docusaurus build && node scripts/enhance-sitemap.js",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
