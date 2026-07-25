@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [Unreleased] - 2026-07-25 (QQAlpha)
 
 ### Consolidates to a single package manager (Bun).
 
@@ -21,8 +21,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`package-lock.json`**: no longer needed now that both local dev and
   Cloudflare Pages use Bun exclusively. `bun.lock` is the single source of
   truth for dependency resolution.
-
-## [Unreleased] - 2026-07-25 (QQAlpha)
 
 ### Keeps Cloudflare installs reproducible by aligning package metadata and lockfiles.
 
