@@ -3,7 +3,6 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Build in Public](https://img.shields.io/badge/Build-in%20Public-brightgreen.svg)](https://github.com/qqomegalabs)
 
-
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ## Installation
@@ -57,45 +56,34 @@ bun run write-translations --locale zh-CN
 
 **Translated content location:** `/i18n/zh-CN/docusaurus-plugin-content-docs/current/`
 
-## Cloudflare Pages Build
+## Build
 
-This project uses **Bun** for local development but **npm** for Cloudflare Pages deployment.
+This project uses **Bun** as the single package manager for both local development and deployment.
 
-### Build Command (Cloudflare Pages)
+### Build Command
 
 ```bash
-npm run build:cf
+bun run build:cf
 ```
 
-This command runs: `npm install && docusaurus clear && docusaurus build`
+This command runs: `bun install && docusaurus clear && docusaurus build`
 
-### Important: Dual Package Manager Setup
+The project relies on `SKIP_DEPENDENCY_INSTALL=true` so Cloudflare's own
+auto-install step is skipped and `build:cf` handles installation itself via Bun.
 
-**When adding new dependencies:**
+### Adding Dependencies
 
-1. Add with Bun (for local development):
+```bash
+bun add <package-name>
+git add bun.lock package.json
+git commit -m "chore: add <package-name>"
+```
 
-   ```bash
-   bun add <package-name>
-   ```
+Only `bun.lock` needs to be committed — there is no `package-lock.json` to keep in sync anymore.
 
-2. Update npm lock file (for Cloudflare Pages):
+### Hosting Configuration
 
-   ```bash
-   npm install
-   ```
-
-3. Commit both lock files:
-   ```bash
-   git add bun.lock package-lock.json package.json
-   git commit -m "chore: add <package-name>"
-   ```
-
-**Why this is needed:** Cloudflare Pages uses `npm ci` which requires `package-lock.json` to be in sync with `package.json`.
-If you only use Bun, the npm lock file becomes outdated and builds will fail.
-
-### Cloudflare Pages Configuration
-
-- **Build command:** `npm run build:cf`
+- **Build command:** `bun run build:cf`
 - **Build output directory:** `build`
 - **Node version:** >=20.0
+- **Environment variable:** `SKIP_DEPENDENCY_INSTALL=true`
